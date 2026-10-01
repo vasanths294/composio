@@ -42,7 +42,6 @@ Tool schemas (`data/*_tools.json`) and every LLM reply (`data/llm_cache.json`) a
 - **`graph.html`:** interactive graph. Filter by app, click a tool to see what it needs and feeds, click an edge to see why it exists, and use "Show precursor chain" to see everything an agent may need to call first.
 - **`data/graph.json`:** nodes with each required param's `kind` and producers, plus edges with `from`, `to`, `param`, `score`, and `reason`.
 - **`src/plan.ts`:** turns the graph into an execution plan: what to ask the user (shared context once), and which tool to call first, recursively.
-- **`run_log.md`:** a summary of every run, stamped with its commit. It's the full development history, failures included.
 
 ## Approach
 
