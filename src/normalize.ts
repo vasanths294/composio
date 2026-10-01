@@ -27,30 +27,37 @@ const VERB_ALIASES: Record<string, string> = {
   FIND: "SEARCH", QUERY: "SEARCH", FETCH: "GET", RETRIEVE: "GET", READ: "GET",
   ADD: "CREATE", INSERT: "CREATE", PATCH: "UPDATE", EDIT: "UPDATE", MODIFY: "UPDATE", REMOVE: "DELETE",
 };
-const VERBS = new Set([
-  ...Object.keys(VERB_ALIASES),
-  "LIST", "SEARCH", "GET", "CREATE", "UPDATE", "DELETE", "SEND", "REPLY", "FORWARD", "MOVE",
-  "COPY", "UPLOAD", "DOWNLOAD", "EXPORT", "SHARE", "MERGE", "CHECK", "SET", "CLEAR", "WATCH",
-  "STOP", "CANCEL", "RUN", "RERUN", "APPROVE", "LOCK", "UNLOCK", "ARCHIVE", "RESTORE", "TRASH",
-  "UNTRASH", "RENAME", "REPLACE", "APPEND", "DUPLICATE", "MARK", "ASSIGN", "FOLLOW", "UNFOLLOW",
-  "BLOCK", "UNBLOCK", "ENABLE", "DISABLE", "COMPARE", "REVIEW", "DISMISS", "REQUEST", "SUBMIT",
-  "VERIFY", "TEST", "EXECUTE", "EMPTY", "STAR", "UNSTAR", "PIN", "UNPIN", "TRANSFER",
-]);
+const VERBS = new Set([...Object.keys(VERB_ALIASES), "LIST", "SEARCH", "GET", "CREATE", "UPDATE", "DELETE", "SEND", "REPLY", "MOVE", "COPY"]);
 const FILLER = new Set(["A", "AN", "THE", "FOR", "OF", "TO", "BY", "IN", "ON", "FROM", "WITH", "AND"]);
 
-export function parseSlug(slug: string): Pick<Tool, "app" | "verb" | "resource"> {
-  const tokens = slug.toUpperCase().split("_").filter((t) => t && t !== "GOOGLESUPER");
-  const appToken = tokens[0] ?? "UNKNOWN";
-  const app = appToken.startsWith("GOOGLE") && appToken.length > 6 ? appToken.slice(6) : appToken;
-  const rest = tokens.slice(1);
-  const i = rest.findIndex((t) => VERBS.has(t));
-  const verb = i >= 0 ? (rest[i] ?? "OTHER") : "OTHER";
-  const tail = i >= 0 && i < rest.length - 1 ? rest.slice(i + 1) : rest.filter((_, j) => j !== i);
-  const resource = tail
+export function parseSlug(slug: string, toolkit: Toolkit): Pick<Tool, "verb" | "resource"> {
+  const prefix = `${toolkit.toUpperCase()}_`;
+  const tokens = (slug.startsWith(prefix) ? slug.slice(prefix.length) : slug).split("_").filter(Boolean);
+  const known = tokens.findIndex((t) => VERBS.has(t));
+  const i = known >= 0 ? known : 0;
+  const verb = tokens[i] ?? "UNKNOWN";
+  const after = tokens.slice(i + 1);
+  const resource = (after.length > 0 ? after : tokens.slice(0, i))
     .filter((t) => !FILLER.has(t))
     .map((t) => singular(t.toLowerCase()))
     .join("_");
-  return { app, verb: VERB_ALIASES[verb] ?? verb, resource: resource || "unknown" };
+  return { verb: VERB_ALIASES[verb] ?? verb, resource: resource || "unknown" };
+}
+
+const SERVICE_ALIASES: Record<string, string> = { spreadsheets: "sheets", documents: "docs", presentations: "slides" };
+const GENERIC_SERVICES = new Set(["userinfo", "openid", "cloud", "drive"]);
+
+function appOf(raw: Json, toolkit: Toolkit): string {
+  const scopes = Array.isArray(raw.scopes) ? raw.scopes.filter((s): s is string => typeof s === "string") : [];
+  const services = [
+    ...new Set(
+      scopes
+        .map((s) => (s.includes("mail.google.com") ? "gmail" : (/\/auth\/([a-z]+)/.exec(s)?.[1] ?? "")))
+        .filter(Boolean)
+        .map((s) => SERVICE_ALIASES[s] ?? s),
+    ),
+  ];
+  return services.find((s) => !GENERIC_SERVICES.has(s)) ?? services[0] ?? toolkit;
 }
 
 function typeOf(p: Json): string {
@@ -154,13 +161,13 @@ function normalizeTool(raw: Json, toolkit: Toolkit): Tool | null {
   const slug = str(raw.slug);
   if (!slug || raw.isDeprecated === true) return null;
 
-  const { app, verb, resource } = parseSlug(slug);
+  const { verb, resource } = parseSlug(slug, toolkit);
   const { required, optional } = readParams(raw.inputParameters);
   return {
     slug,
     title: str(raw.name),
     toolkit,
-    app,
+    app: appOf(raw, toolkit),
     verb,
     resource,
     description: str(raw.description).trim(),
@@ -193,7 +200,7 @@ export async function normalizeTools(): Promise<Tool[]> {
       `### ${toolkit}: ${kit.length} tools (${raw.length - kit.length} deprecated/invalid skipped)`,
       `apps: ${tally(kit, (t) => t.app)}`,
       `verbs: ${tally(kit, (t) => t.verb)}`,
-      `no verb: ${kit.filter((t) => t.verb === "OTHER").slice(0, 8).map((t) => t.slug).join(", ") || "none"}`,
+      `resources: ${tally(kit, (t) => t.resource, 15)}`,
       `outputs: ${tally(kit, (t) => (t.outputs.length === 0 ? "none" : t.outputs.length <= 3 ? "thin(1-3)" : "rich(4+)"))}`,
       `top required (share of tools): ${topRequired}`,
     );

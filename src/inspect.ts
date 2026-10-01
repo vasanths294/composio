@@ -20,6 +20,8 @@ export async function inspectTools(): Promise<void> {
       `### ${toolkit}: ${tools.length} tools`,
       `keys: ${tally(tools.flatMap((t) => Object.keys(t)), (k) => k)}`,
       `prefixes: ${tally(tools, (t) => slug(t).split("_")[0] ?? "?")}`,
+      `scopes: ${tally(tools.flatMap((t) => (Array.isArray(t.scopes) ? t.scopes.map(String) : [])), (s) => s, 15)}`,
+      `tags: ${tally(tools.flatMap((t) => (Array.isArray(t.tags) ? t.tags.map(String) : [])), (s) => s, 15)}`,
     );
 
     for (const pattern of SAMPLES[toolkit]) {
