@@ -187,3 +187,90 @@ still unresolved: discussion_number:10  id:7  name:5  presentation_id:5  form_id
 ## 2026-10-01 06:13 · a74ec4f · eval
 PASS  recall 27/27 (100%)
 false positives: 0  wrongly resolved: 0  wrongly incoming: 0  invariant breaks: 0  unknown slugs: 0
+
+## 2026-10-01 06:44 · c38c9b9 · fetch
+googlesuper: cached
+github: cached
+
+## 2026-10-01 06:44 · c38c9b9 · normalize
+### googlesuper: 459 tools (37 deprecated/invalid skipped)
+apps: drive:78  analytics:65  gmail:56  docs:56  sheets:49  calendar:44  googlesuper:39  tasks:16  meetings:15  photoslibrary:13  cloud:13  slides:6  maps:4  contacts:3  admin:2
+verbs: GET:94  LIST:81  CREATE:65  UPDATE:54  DELETE:32  SEARCH:20  MUTATE:18  MOVE:7  BATCH:5  CLEAR:5  COPY:4  EXPORT:4  RUN:4  SEND:4  DOWNLOAD:3  EVENTS:3  GEOCODE:3  UNTRASH:3  UPLOAD:3  REPLACE:2
+resources: event:11  file:10  message:9  calendar:8  spreadsheet_value:7  task:7  label:7  acl:6  media_item:6  drive:6  permission:6  task_list:6  watch:5  property:5  document:5
+outputs: rich(4+):366  thin(1-3):93
+top required (share of tools): spreadsheet_id:53(12%)  file_id:51(11%)  document_id:35(8%)  parent:35(8%)  name:32(7%)  id:20(4%)  calendar_id:19(4%)  operations:18(4%)  sheet_id:12(3%)  range:11(2%)  tasklist_id:10(2%)  address:8(2%)  property:8(2%)  comment_id:8(2%)  message_id:7(2%)  value_input_option:7(2%)  title:7(2%)  event_id:7(2%)  sheet_name:6(1%)  requests:6(1%)  type:6(1%)  presentation_id:6(1%)  property_key:5(1%)  drive_id:5(1%)  thread_id:5(1%)
+### github: 874 tools (22 deprecated/invalid skipped)
+apps: github:874
+verbs: LIST:227  GET:191  CREATE:114  DELETE:113  UPDATE:49  SET:26  SEARCH:20  CHECK:17  DOWNLOAD:6  RESTORE:6  DISABLE:4  ENABLE:4  MANAGE:4  REVIEW:4  CANCEL:3  CLEAR:3  FOLLOW:3  REPLACE:3  REQUEST:3  RE:3
+resources: user:9  pull_request:9  repository:9  issue:8  gist:7  repository_webhook:7  issue_comment:6  organization_webhook:6  release:6  repository_invitation:5  codespace_authenticated_user:5  commit:5  commit_comment:5  deployment_branch_policy:5  gist_comment:5
+outputs: rich(4+):615  thin(1-3):259
+top required (share of tools): owner:436(50%)  repo:435(50%)  org:188(22%)  username:75(9%)  name:46(5%)  secret_name:40(5%)  branch:38(4%)  team_slug:36(4%)  pull_number:27(3%)  issue_number:26(3%)  environment_name:24(3%)  package_type:24(3%)  comment_id:22(3%)  package_name:21(2%)  run_id:19(2%)  hook_id:19(2%)  ref:17(2%)  repository_id:15(2%)  gist_id:15(2%)  runner_id:14(2%)  project_number:13(1%)  body:13(1%)  discussion_number:13(1%)  codespace_name:11(1%)  package_version_id:10(1%)
+
+## 2026-10-01 06:44 · c38c9b9 · graph
+context params: googlesuper=[]  github=[repo, owner, org]
+param kinds: context:1059  tool:630  user:506  unresolved:221  either:178
+edges: 1661  nodes with incoming: 690/1333
+edge reasons: schema match:1617  description hint:44
+top unresolved: parent:22  id:13  discussion_number:13  property:7  client_id:7  ref:7  name:6  presentation_id:6  item_id:6  sha:6  comment_number:6  thread_id:6  hook_id:5  rule_id:4  album_id:4  conference_record_id:4  reply_id:3  migration_id:3  ghsa_id:3  comment_id:3
+
+## 2026-10-01 06:44 · c38c9b9 · refine
+model: openai/gpt-4o-mini  tools sent: 203  cached: 193  errors: 0
+params resolved: 181  edges added: 310
+still unresolved: discussion_number:10  id:7  name:5  presentation_id:5  form_id:2  page_object_id:2  comment_number:2  header_id:1  i_cal_uid:1  transcript_id:1  video_id:1  client_id:1  account_id:1  attempt_number:1  list_id:1
+  + GOOGLESUPER_ACL_LIST > GOOGLESUPER_ACL_DELETE [rule_id] 0.9
+  + GOOGLESUPER_ACL_LIST > GOOGLESUPER_ACL_GET [rule_id] 0.81
+  + GOOGLESUPER_ACL_LIST > GOOGLESUPER_ACL_PATCH [rule_id] 0.9
+  + GOOGLESUPER_ACL_LIST > GOOGLESUPER_ACL_UPDATE [rule_id] 0.9
+  + GOOGLESUPER_LIST_ALBUMS > GOOGLESUPER_ADD_ENRICHMENT [album_id] 0.81
+  + GOOGLESUPER_FIND_FOLDER > GOOGLESUPER_ADD_PARENT [id] 0.81
+  + GOOGLESUPER_FIND_FILE > GOOGLESUPER_ADD_PARENT [id] 0.72
+  + GOOGLESUPER_LIST_ALBUMS > GOOGLESUPER_BATCH_ADD_MEDIA_ITEMS [album_id] 0.81
+
+## 2026-10-01 06:44 · c38c9b9 · eval
+PASS  recall 27/27 (100%)
+false positives: 0  wrongly resolved: 0  wrongly incoming: 0  invariant breaks: 0  unknown slugs: 0
+
+## 2026-10-01 06:44 · c38c9b9 · fetch
+googlesuper: cached
+github: cached
+
+## 2026-10-01 06:44 · c38c9b9 · normalize
+### googlesuper: 459 tools (37 deprecated/invalid skipped)
+apps: drive:78  analytics:65  gmail:56  docs:56  sheets:49  calendar:44  googlesuper:39  tasks:16  meetings:15  photoslibrary:13  cloud:13  slides:6  maps:4  contacts:3  admin:2
+verbs: GET:94  LIST:81  CREATE:65  UPDATE:54  DELETE:32  SEARCH:20  MUTATE:18  MOVE:7  BATCH:5  CLEAR:5  COPY:4  EXPORT:4  RUN:4  SEND:4  DOWNLOAD:3  EVENTS:3  GEOCODE:3  UNTRASH:3  UPLOAD:3  REPLACE:2
+resources: event:11  file:10  message:9  calendar:8  spreadsheet_value:7  task:7  label:7  acl:6  media_item:6  drive:6  permission:6  task_list:6  watch:5  property:5  document:5
+outputs: rich(4+):366  thin(1-3):93
+top required (share of tools): spreadsheet_id:53(12%)  file_id:51(11%)  document_id:35(8%)  parent:35(8%)  name:32(7%)  id:20(4%)  calendar_id:19(4%)  operations:18(4%)  sheet_id:12(3%)  range:11(2%)  tasklist_id:10(2%)  address:8(2%)  property:8(2%)  comment_id:8(2%)  message_id:7(2%)  value_input_option:7(2%)  title:7(2%)  event_id:7(2%)  sheet_name:6(1%)  requests:6(1%)  type:6(1%)  presentation_id:6(1%)  property_key:5(1%)  drive_id:5(1%)  thread_id:5(1%)
+### github: 874 tools (22 deprecated/invalid skipped)
+apps: github:874
+verbs: LIST:227  GET:191  CREATE:114  DELETE:113  UPDATE:49  SET:26  SEARCH:20  CHECK:17  DOWNLOAD:6  RESTORE:6  DISABLE:4  ENABLE:4  MANAGE:4  REVIEW:4  CANCEL:3  CLEAR:3  FOLLOW:3  REPLACE:3  REQUEST:3  RE:3
+resources: user:9  pull_request:9  repository:9  issue:8  gist:7  repository_webhook:7  issue_comment:6  organization_webhook:6  release:6  repository_invitation:5  codespace_authenticated_user:5  commit:5  commit_comment:5  deployment_branch_policy:5  gist_comment:5
+outputs: rich(4+):615  thin(1-3):259
+top required (share of tools): owner:436(50%)  repo:435(50%)  org:188(22%)  username:75(9%)  name:46(5%)  secret_name:40(5%)  branch:38(4%)  team_slug:36(4%)  pull_number:27(3%)  issue_number:26(3%)  environment_name:24(3%)  package_type:24(3%)  comment_id:22(3%)  package_name:21(2%)  run_id:19(2%)  hook_id:19(2%)  ref:17(2%)  repository_id:15(2%)  gist_id:15(2%)  runner_id:14(2%)  project_number:13(1%)  body:13(1%)  discussion_number:13(1%)  codespace_name:11(1%)  package_version_id:10(1%)
+
+## 2026-10-01 06:45 · c38c9b9 · graph
+context params: googlesuper=[]  github=[repo, owner, org]
+param kinds: context:1059  tool:630  user:506  unresolved:221  either:178
+edges: 1661  nodes with incoming: 690/1333
+edge reasons: schema match:1617  description hint:44
+top unresolved: parent:22  id:13  discussion_number:13  property:7  client_id:7  ref:7  name:6  presentation_id:6  item_id:6  sha:6  comment_number:6  thread_id:6  hook_id:5  rule_id:4  album_id:4  conference_record_id:4  reply_id:3  migration_id:3  ghsa_id:3  comment_id:3
+
+## 2026-10-01 06:45 · c38c9b9 · refine
+model: openai/gpt-4o-mini  tools sent: 203  cached: 193  errors: 0
+params resolved: 181  edges added: 310
+still unresolved: discussion_number:10  id:7  name:5  presentation_id:5  form_id:2  page_object_id:2  comment_number:2  header_id:1  i_cal_uid:1  transcript_id:1  video_id:1  client_id:1  account_id:1  attempt_number:1  list_id:1
+  + GOOGLESUPER_ACL_LIST > GOOGLESUPER_ACL_DELETE [rule_id] 0.9
+  + GOOGLESUPER_ACL_LIST > GOOGLESUPER_ACL_GET [rule_id] 0.81
+  + GOOGLESUPER_ACL_LIST > GOOGLESUPER_ACL_PATCH [rule_id] 0.9
+  + GOOGLESUPER_ACL_LIST > GOOGLESUPER_ACL_UPDATE [rule_id] 0.9
+  + GOOGLESUPER_LIST_ALBUMS > GOOGLESUPER_ADD_ENRICHMENT [album_id] 0.81
+  + GOOGLESUPER_FIND_FOLDER > GOOGLESUPER_ADD_PARENT [id] 0.81
+  + GOOGLESUPER_FIND_FILE > GOOGLESUPER_ADD_PARENT [id] 0.72
+  + GOOGLESUPER_LIST_ALBUMS > GOOGLESUPER_BATCH_ADD_MEDIA_ITEMS [album_id] 0.81
+
+## 2026-10-01 06:45 · c38c9b9 · viz
+graph.html: 1333 nodes, 1971 edges
+
+## 2026-10-01 06:45 · c38c9b9 · eval
+PASS  recall 27/27 (100%)
+false positives: 0  wrongly resolved: 0  wrongly incoming: 0  invariant breaks: 0  unknown slugs: 0

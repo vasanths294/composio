@@ -39420,17 +39420,10 @@
     },
     {
       "from": "GOOGLESUPER_ACL_LIST",
-      "to": "GOOGLESUPER_ACL_PATCH",
+      "to": "GOOGLESUPER_ACL_DELETE",
       "param": "rule_id",
       "score": 0.9,
-      "reason": "llm: This tool retrieves existing ACL rule IDs needed for the update."
-    },
-    {
-      "from": "GOOGLESUPER_LIST_ALBUMS",
-      "to": "GOOGLESUPER_ADD_ENRICHMENT",
-      "param": "album_id",
-      "score": 0.81,
-      "reason": "llm: This tool lists all albums and provides their identifiers."
+      "reason": "llm: It retrieves the list of access control rules, providing the necessary 'rule_id' values."
     },
     {
       "from": "GOOGLESUPER_ACL_LIST",
@@ -39441,10 +39434,10 @@
     },
     {
       "from": "GOOGLESUPER_ACL_LIST",
-      "to": "GOOGLESUPER_ACL_DELETE",
+      "to": "GOOGLESUPER_ACL_PATCH",
       "param": "rule_id",
       "score": 0.9,
-      "reason": "llm: It retrieves the list of access control rules, providing the necessary 'rule_id' values."
+      "reason": "llm: This tool retrieves existing ACL rule IDs needed for the update."
     },
     {
       "from": "GOOGLESUPER_ACL_LIST",
@@ -39452,6 +39445,13 @@
       "param": "rule_id",
       "score": 0.9,
       "reason": "llm: It retrieves the list of ACLs and provides the necessary 'rule_id' values."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_ALBUMS",
+      "to": "GOOGLESUPER_ADD_ENRICHMENT",
+      "param": "album_id",
+      "score": 0.81,
+      "reason": "llm: This tool lists all albums and provides their identifiers."
     },
     {
       "from": "GOOGLESUPER_FIND_FOLDER",
@@ -39466,20 +39466,6 @@
       "param": "id",
       "score": 0.72,
       "reason": "llm: This tool can find files and folders, returning their IDs."
-    },
-    {
-      "from": "GOOGLESUPER_LIST_MEDIA_ITEMS",
-      "to": "GOOGLESUPER_BATCH_GET_MEDIA_ITEMS",
-      "param": "media_item_ids",
-      "score": 0.81,
-      "reason": "llm: Lists media items which can provide their identifiers."
-    },
-    {
-      "from": "GOOGLESUPER_SEARCH_MEDIA_ITEMS",
-      "to": "GOOGLESUPER_BATCH_GET_MEDIA_ITEMS",
-      "param": "media_item_ids",
-      "score": 0.81,
-      "reason": "llm: Searches for media items and returns their identifiers."
     },
     {
       "from": "GOOGLESUPER_LIST_ALBUMS",
@@ -39503,11 +39489,18 @@
       "reason": "llm: Searches for media items, returning their IDs."
     },
     {
-      "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
-      "to": "GOOGLESUPER_BATCH_RUN_REPORTS",
-      "param": "property",
+      "from": "GOOGLESUPER_LIST_MEDIA_ITEMS",
+      "to": "GOOGLESUPER_BATCH_GET_MEDIA_ITEMS",
+      "param": "media_item_ids",
       "score": 0.81,
-      "reason": "llm: This tool lists GA4 properties, providing the necessary property resource names."
+      "reason": "llm: Lists media items which can provide their identifiers."
+    },
+    {
+      "from": "GOOGLESUPER_SEARCH_MEDIA_ITEMS",
+      "to": "GOOGLESUPER_BATCH_GET_MEDIA_ITEMS",
+      "param": "media_item_ids",
+      "score": 0.81,
+      "reason": "llm: Searches for media items and returns their identifiers."
     },
     {
       "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
@@ -39532,17 +39525,10 @@
     },
     {
       "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
-      "to": "GOOGLESUPER_CREATE_AUDIENCE_LIST",
-      "param": "parent",
+      "to": "GOOGLESUPER_BATCH_RUN_REPORTS",
+      "param": "property",
       "score": 0.81,
-      "reason": "llm: This tool lists GA4 properties which can provide the required property_id for the parent parameter."
-    },
-    {
-      "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
-      "to": "GOOGLESUPER_CREATE_RECURRING_AUDIENCE_LIST",
-      "param": "parent",
-      "score": 0.81,
-      "reason": "llm: This tool lists GA4 properties, which can provide the required property resource name in the correct format."
+      "reason": "llm: This tool lists GA4 properties, providing the necessary property resource names."
     },
     {
       "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
@@ -39567,10 +39553,31 @@
     },
     {
       "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+      "to": "GOOGLESUPER_CREATE_AUDIENCE_EXPORT",
+      "param": "parent",
+      "score": 0.81,
+      "reason": "llm: This tool lists GA4 properties which can provide the required property resource name."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+      "to": "GOOGLESUPER_CREATE_AUDIENCE_LIST",
+      "param": "parent",
+      "score": 0.81,
+      "reason": "llm: This tool lists GA4 properties which can provide the required property_id for the parent parameter."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
       "to": "GOOGLESUPER_CREATE_EXPANDED_DATA_SET",
       "param": "parent",
       "score": 0.81,
       "reason": "llm: This tool lists GA4 properties and provides their parent resource names."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+      "to": "GOOGLESUPER_CREATE_RECURRING_AUDIENCE_LIST",
+      "param": "parent",
+      "score": 0.81,
+      "reason": "llm: This tool lists GA4 properties, which can provide the required property resource name in the correct format."
     },
     {
       "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
@@ -39580,11 +39587,11 @@
       "reason": "llm: This tool lists GA4 properties which can provide the required property identifier."
     },
     {
-      "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
-      "to": "GOOGLESUPER_CREATE_AUDIENCE_EXPORT",
-      "param": "parent",
+      "from": "GOOGLESUPER_FIND_FILE",
+      "to": "GOOGLESUPER_CREATE_SHORTCUT_TO_FILE",
+      "param": "target_id",
       "score": 0.81,
-      "reason": "llm: This tool lists GA4 properties which can provide the required property resource name."
+      "reason": "llm: This tool can find files and folders in Google Drive, returning their IDs."
     },
     {
       "from": "GOOGLESUPER_LIST_SUB_ACCOUNTS",
@@ -39592,13 +39599,6 @@
       "param": "child_id",
       "score": 0.72,
       "reason": "llm: Returns sub-account details including customer_id which can be used as child_id."
-    },
-    {
-      "from": "GOOGLESUPER_FIND_FILE",
-      "to": "GOOGLESUPER_CREATE_SHORTCUT_TO_FILE",
-      "param": "target_id",
-      "score": 0.81,
-      "reason": "llm: This tool can find files and folders in Google Drive, returning their IDs."
     },
     {
       "from": "GOOGLESUPER_FIND_FILE",
@@ -39657,13 +39657,6 @@
       "reason": "llm: This tool lists calendar IDs which can be used as destination identifiers."
     },
     {
-      "from": "GOOGLESUPER_LIST_ALBUMS",
-      "to": "GOOGLESUPER_GET_ALBUM",
-      "param": "album_id",
-      "score": 0.81,
-      "reason": "llm: Lists all albums which can provide the album_id needed."
-    },
-    {
       "from": "GOOGLESUPER_GET_PLACE_DETAILS",
       "to": "GOOGLESUPER_GEOCODE_PLACE",
       "param": "place_id",
@@ -39683,6 +39676,13 @@
       "param": "place_id",
       "score": 0.63,
       "reason": "llm: Searches for places and returns their IDs."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_ALBUMS",
+      "to": "GOOGLESUPER_GET_ALBUM",
+      "param": "album_id",
+      "score": 0.81,
+      "reason": "llm: Lists all albums which can provide the album_id needed."
     },
     {
       "from": "GOOGLESUPER_LIST_MEDIA_ITEMS",
@@ -39706,13 +39706,6 @@
       "reason": "llm: This tool lists properties and provides their identifiers."
     },
     {
-      "from": "GOOGLESUPER_LIST_DATA_MANAGER_CONVERSION_ACTIONS",
-      "to": "GOOGLESUPER_GET_CONVERSION_ACTION_TAG_SNIPPETS",
-      "param": "conversion_action_id",
-      "score": 0.81,
-      "reason": "llm: This tool lists conversion actions and provides their numeric IDs."
-    },
-    {
       "from": "GOOGLESUPER_GET_CAMPAIGN_BY_NAME",
       "to": "GOOGLESUPER_GET_CAMPAIGN_BY_ID",
       "param": "id",
@@ -39725,6 +39718,13 @@
       "param": "child_id",
       "score": 0.72,
       "reason": "llm: Returns customer_id which can be used as child_id."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_DATA_MANAGER_CONVERSION_ACTIONS",
+      "to": "GOOGLESUPER_GET_CONVERSION_ACTION_TAG_SNIPPETS",
+      "param": "conversion_action_id",
+      "score": 0.81,
+      "reason": "llm: This tool lists conversion actions and provides their numeric IDs."
     },
     {
       "from": "GOOGLESUPER_LIST_CONVERSION_EVENTS",
@@ -39762,13 +39762,6 @@
       "reason": "llm: This tool lists conference records and can provide the space name which is needed to retrieve the space ID."
     },
     {
-      "from": "GOOGLESUPER_LIST_CONFERENCE_RECORDS",
-      "to": "GOOGLESUPER_GET_RECORDINGS_BY_CONFERENCE_RECORD_ID",
-      "param": "conference_record_id",
-      "score": 0.81,
-      "reason": "llm: This tool lists conference records which can provide the required conference_record_id."
-    },
-    {
       "from": "GOOGLESUPER_FIND_FILE",
       "to": "GOOGLESUPER_GET_PARENT",
       "param": "parent_id",
@@ -39797,6 +39790,13 @@
       "reason": "llm: This tool lists send-as aliases for a Gmail account, which includes valid email addresses."
     },
     {
+      "from": "GOOGLESUPER_LIST_CONFERENCE_RECORDS",
+      "to": "GOOGLESUPER_GET_RECORDINGS_BY_CONFERENCE_RECORD_ID",
+      "param": "conference_record_id",
+      "score": 0.81,
+      "reason": "llm: This tool lists conference records which can provide the required conference_record_id."
+    },
+    {
       "from": "GOOGLESUPER_LIST_REPLIES",
       "to": "GOOGLESUPER_GET_REPLY",
       "param": "reply_id",
@@ -39819,6 +39819,13 @@
     },
     {
       "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+      "to": "GOOGLESUPER_LIST_ADSENSE_LINKS",
+      "param": "parent",
+      "score": 0.81,
+      "reason": "llm: This tool lists GA4 properties which can provide the required property resource name."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
       "to": "GOOGLESUPER_LIST_AUDIENCE_EXPORTS",
       "param": "parent",
       "score": 0.81,
@@ -39833,24 +39840,10 @@
     },
     {
       "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
-      "to": "GOOGLESUPER_LIST_ADSENSE_LINKS",
-      "param": "parent",
-      "score": 0.81,
-      "reason": "llm: This tool lists GA4 properties which can provide the required property resource name."
-    },
-    {
-      "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
       "to": "GOOGLESUPER_LIST_CALCULATED_METRICS",
       "param": "parent",
       "score": 0.81,
       "reason": "llm: This tool lists GA4 properties and provides their parent identifiers."
-    },
-    {
-      "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
-      "to": "GOOGLESUPER_LIST_CUSTOM_METRICS",
-      "param": "parent",
-      "score": 0.81,
-      "reason": "llm: This tool lists GA4 properties and provides their identifiers, which can be used as the parent parameter."
     },
     {
       "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
@@ -39868,6 +39861,13 @@
     },
     {
       "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+      "to": "GOOGLESUPER_LIST_CUSTOM_METRICS",
+      "param": "parent",
+      "score": 0.81,
+      "reason": "llm: This tool lists GA4 properties and provides their identifiers, which can be used as the parent parameter."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
       "to": "GOOGLESUPER_LIST_DATA_STREAMS",
       "param": "parent",
       "score": 0.81,
@@ -39879,13 +39879,6 @@
       "param": "parent",
       "score": 0.72,
       "reason": "llm: This tool lists GA4 properties which can provide the required propertyId for the parent parameter."
-    },
-    {
-      "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
-      "to": "GOOGLESUPER_LIST_KEY_EVENTS",
-      "param": "parent",
-      "score": 0.81,
-      "reason": "llm: This tool lists GA4 properties which can provide the required property ID in the correct format."
     },
     {
       "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
@@ -39903,31 +39896,17 @@
     },
     {
       "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+      "to": "GOOGLESUPER_LIST_KEY_EVENTS",
+      "param": "parent",
+      "score": 0.81,
+      "reason": "llm: This tool lists GA4 properties which can provide the required property ID in the correct format."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
       "to": "GOOGLESUPER_LIST_MEASUREMENT_PROTOCOL_SECRETS",
       "param": "parent",
       "score": 0.72,
       "reason": "llm: This tool lists GA4 properties which can provide the parent resource name needed for the Measurement Protocol Secrets."
-    },
-    {
-      "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
-      "to": "GOOGLESUPER_LIST_REPORTING_DATA_ANNOTATIONS",
-      "param": "parent",
-      "score": 0.81,
-      "reason": "llm: This tool lists GA4 properties and provides the required resource name format."
-    },
-    {
-      "from": "GOOGLESUPER_LIST_ACCOUNT_SUMMARIES",
-      "to": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
-      "param": "filter",
-      "score": 0.81,
-      "reason": "llm: This tool provides account summaries which can include the necessary parent account resource names for filtering."
-    },
-    {
-      "from": "GOOGLESUPER_LIST_ACCOUNTS_V1_BETA",
-      "to": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
-      "param": "filter",
-      "score": 0.72,
-      "reason": "llm: This tool lists all Google Analytics accounts, which can help identify parent accounts for filtering."
     },
     {
       "from": "GOOGLESUPER_LIST_PARTICIPANTS",
@@ -39944,11 +39923,18 @@
       "reason": "llm: Lists conference records, providing their unique identifiers."
     },
     {
-      "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
-      "to": "GOOGLESUPER_LIST_REPORT_TASKS",
-      "param": "parent",
+      "from": "GOOGLESUPER_LIST_ACCOUNT_SUMMARIES",
+      "to": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+      "param": "filter",
       "score": 0.81,
-      "reason": "llm: This tool lists GA4 properties which can provide the required property identifier."
+      "reason": "llm: This tool provides account summaries which can include the necessary parent account resource names for filtering."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_ACCOUNTS_V1_BETA",
+      "to": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+      "param": "filter",
+      "score": 0.72,
+      "reason": "llm: This tool lists all Google Analytics accounts, which can help identify parent accounts for filtering."
     },
     {
       "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
@@ -39956,6 +39942,20 @@
       "param": "parent",
       "score": 0.81,
       "reason": "llm: This tool lists GA4 properties and provides their resource names, which can be used as the parent parameter."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+      "to": "GOOGLESUPER_LIST_REPORTING_DATA_ANNOTATIONS",
+      "param": "parent",
+      "score": 0.81,
+      "reason": "llm: This tool lists GA4 properties and provides the required resource name format."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+      "to": "GOOGLESUPER_LIST_REPORT_TASKS",
+      "param": "parent",
+      "score": 0.81,
+      "reason": "llm: This tool lists GA4 properties which can provide the required property identifier."
     },
     {
       "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
@@ -40035,18 +40035,11 @@
       "reason": "llm: It retrieves the latest version of a presentation, providing the presentationId."
     },
     {
-      "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
-      "to": "GOOGLESUPER_RUN_PIVOT_REPORT",
-      "param": "property",
-      "score": 0.81,
-      "reason": "llm: This tool lists GA4 properties, providing the necessary property resource names."
-    },
-    {
-      "from": "GOOGLESUPER_GET_PROPERTY",
-      "to": "GOOGLESUPER_RUN_PIVOT_REPORT",
-      "param": "property",
-      "score": 0.72,
-      "reason": "llm: This tool retrieves detailed information about a specific GA4 property, including its resource name."
+      "from": "GOOGLESUPER_LIST_SHARED_DRIVES",
+      "to": "GOOGLESUPER_PRESENTATIONS_PAGES_GET",
+      "param": "presentation_id",
+      "score": 0.63,
+      "reason": "llm: Can provide IDs of shared drives which may include presentations."
     },
     {
       "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
@@ -40063,11 +40056,18 @@
       "reason": "llm: This tool retrieves a single GA4 property by its resource name, which can help confirm the property details."
     },
     {
-      "from": "GOOGLESUPER_LIST_SHARED_DRIVES",
-      "to": "GOOGLESUPER_PRESENTATIONS_PAGES_GET",
-      "param": "presentation_id",
-      "score": 0.63,
-      "reason": "llm: Can provide IDs of shared drives which may include presentations."
+      "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+      "to": "GOOGLESUPER_RUN_PIVOT_REPORT",
+      "param": "property",
+      "score": 0.81,
+      "reason": "llm: This tool lists GA4 properties, providing the necessary property resource names."
+    },
+    {
+      "from": "GOOGLESUPER_GET_PROPERTY",
+      "to": "GOOGLESUPER_RUN_PIVOT_REPORT",
+      "param": "property",
+      "score": 0.72,
+      "reason": "llm: This tool retrieves detailed information about a specific GA4 property, including its resource name."
     },
     {
       "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
@@ -40105,27 +40105,6 @@
       "reason": "llm: This tool retrieves detailed information about a specific GA4 property, including its resource name."
     },
     {
-      "from": "GOOGLESUPER_SETTINGS_LIST",
-      "to": "GOOGLESUPER_SETTINGS_GET",
-      "param": "setting",
-      "score": 0.81,
-      "reason": "llm: Returns all user settings, allowing to locate a specific setting by its id."
-    },
-    {
-      "from": "GOOGLESUPER_LIST_ALBUMS",
-      "to": "GOOGLESUPER_UPDATE_ALBUM",
-      "param": "album_id",
-      "score": 0.81,
-      "reason": "llm: Lists all albums, providing their identifiers."
-    },
-    {
-      "from": "GOOGLESUPER_LIST_MEASUREMENT_PROTOCOL_SECRETS",
-      "to": "GOOGLESUPER_SEND_EVENTS",
-      "param": "measurement_id",
-      "score": 0.81,
-      "reason": "llm: This tool lists measurement protocol secrets which include measurement IDs."
-    },
-    {
       "from": "GOOGLESUPER_SEARCH_PEOPLE",
       "to": "GOOGLESUPER_SEND_EMAIL",
       "param": "recipient_email",
@@ -40147,6 +40126,27 @@
       "reason": "llm: Lists send-as aliases which include email addresses."
     },
     {
+      "from": "GOOGLESUPER_LIST_MEASUREMENT_PROTOCOL_SECRETS",
+      "to": "GOOGLESUPER_SEND_EVENTS",
+      "param": "measurement_id",
+      "score": 0.81,
+      "reason": "llm: This tool lists measurement protocol secrets which include measurement IDs."
+    },
+    {
+      "from": "GOOGLESUPER_SETTINGS_LIST",
+      "to": "GOOGLESUPER_SETTINGS_GET",
+      "param": "setting",
+      "score": 0.81,
+      "reason": "llm: Returns all user settings, allowing to locate a specific setting by its id."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_ALBUMS",
+      "to": "GOOGLESUPER_UPDATE_ALBUM",
+      "param": "album_id",
+      "score": 0.81,
+      "reason": "llm: Lists all albums, providing their identifiers."
+    },
+    {
       "from": "GOOGLESUPER_SEARCH_DOCUMENTS",
       "to": "GOOGLESUPER_UPDATE_DOCUMENT_MARKDOWN",
       "param": "id",
@@ -40159,6 +40159,20 @@
       "param": "id",
       "score": 0.72,
       "reason": "llm: This tool retrieves a document by ID and returns the document ID."
+    },
+    {
+      "from": "GOOGLESUPER_SEARCH_DOCUMENTS",
+      "to": "GOOGLESUPER_UPDATE_EXISTING_DOCUMENT",
+      "param": "document_id",
+      "score": 0.81,
+      "reason": "llm: This tool can search for documents and return their IDs."
+    },
+    {
+      "from": "GOOGLESUPER_GET_DOCUMENT_BY_ID",
+      "to": "GOOGLESUPER_UPDATE_EXISTING_DOCUMENT",
+      "param": "document_id",
+      "score": 0.72,
+      "reason": "llm: This tool retrieves a document by its ID, which can be used to confirm the document exists."
     },
     {
       "from": "GOOGLESUPER_SEARCH_MEDIA_ITEMS",
@@ -40182,18 +40196,18 @@
       "reason": "llm: Lists media items which can provide their identifiers."
     },
     {
-      "from": "GOOGLESUPER_LIST_CONFERENCE_RECORDS",
-      "to": "GOOGLESUPER_UPDATE_SPACE",
-      "param": "name",
-      "score": 0.72,
-      "reason": "llm: Lists conference records which may include space identifiers."
-    },
-    {
       "from": "GOOGLESUPER_LIST_REPLIES",
       "to": "GOOGLESUPER_UPDATE_REPLY",
       "param": "reply_id",
       "score": 0.81,
       "reason": "llm: This tool lists replies and provides their IDs, which can be used as reply_id."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_CONFERENCE_RECORDS",
+      "to": "GOOGLESUPER_UPDATE_SPACE",
+      "param": "name",
+      "score": 0.72,
+      "reason": "llm: Lists conference records which may include space identifiers."
     },
     {
       "from": "GOOGLESUPER_LIST_TASKS",
@@ -40208,48 +40222,6 @@
       "param": "id",
       "score": 0.81,
       "reason": "llm: This tool lists all tasks and includes their IDs."
-    },
-    {
-      "from": "GITHUB_LIST_ACCESSIBLE_REPOSITORIES",
-      "to": "GITHUB_ABORT_REPOSITORY_MIGRATION",
-      "param": "migration_id",
-      "score": 0.72,
-      "reason": "llm: This tool returns repository IDs which may include migration IDs."
-    },
-    {
-      "from": "GITHUB_FIND_REPOSITORIES",
-      "to": "GITHUB_ABORT_REPOSITORY_MIGRATION",
-      "param": "migration_id",
-      "score": 0.63,
-      "reason": "llm: This tool returns repository IDs that could potentially include migration IDs."
-    },
-    {
-      "from": "GOOGLESUPER_SEARCH_DOCUMENTS",
-      "to": "GOOGLESUPER_UPDATE_EXISTING_DOCUMENT",
-      "param": "document_id",
-      "score": 0.81,
-      "reason": "llm: This tool can search for documents and return their IDs."
-    },
-    {
-      "from": "GOOGLESUPER_GET_DOCUMENT_BY_ID",
-      "to": "GOOGLESUPER_UPDATE_EXISTING_DOCUMENT",
-      "param": "document_id",
-      "score": 0.72,
-      "reason": "llm: This tool retrieves a document by its ID, which can be used to confirm the document exists."
-    },
-    {
-      "from": "GOOGLESUPER_GET_CHANGES_START_PAGE_TOKEN",
-      "to": "GOOGLESUPER_WATCH_CHANGES",
-      "param": "id",
-      "score": 0.81,
-      "reason": "llm: This tool returns a starting pageToken that can serve as a unique ID for the channel."
-    },
-    {
-      "from": "GOOGLESUPER_LIST_DRIVE_CHANGES",
-      "to": "GOOGLESUPER_WATCH_CHANGES",
-      "param": "id",
-      "score": 0.72,
-      "reason": "llm: This tool can provide a unique starting page token that can be used as an ID for the channel."
     },
     {
       "from": "GOOGLESUPER_LIST_MEASUREMENT_PROTOCOL_SECRETS",
@@ -40278,6 +40250,34 @@
       "param": "measurement_id",
       "score": 0.63,
       "reason": "llm: This tool lists key events which may include measurement IDs."
+    },
+    {
+      "from": "GOOGLESUPER_GET_CHANGES_START_PAGE_TOKEN",
+      "to": "GOOGLESUPER_WATCH_CHANGES",
+      "param": "id",
+      "score": 0.81,
+      "reason": "llm: This tool returns a starting pageToken that can serve as a unique ID for the channel."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_DRIVE_CHANGES",
+      "to": "GOOGLESUPER_WATCH_CHANGES",
+      "param": "id",
+      "score": 0.72,
+      "reason": "llm: This tool can provide a unique starting page token that can be used as an ID for the channel."
+    },
+    {
+      "from": "GITHUB_LIST_ACCESSIBLE_REPOSITORIES",
+      "to": "GITHUB_ABORT_REPOSITORY_MIGRATION",
+      "param": "migration_id",
+      "score": 0.72,
+      "reason": "llm: This tool returns repository IDs which may include migration IDs."
+    },
+    {
+      "from": "GITHUB_FIND_REPOSITORIES",
+      "to": "GITHUB_ABORT_REPOSITORY_MIGRATION",
+      "param": "migration_id",
+      "score": 0.63,
+      "reason": "llm: This tool returns repository IDs that could potentially include migration IDs."
     },
     {
       "from": "GITHUB_LIST_APP_INSTALLATIONS",
@@ -40371,27 +40371,6 @@
       "reason": "llm: This tool retrieves all autolinks configured for a repository, which includes url_template values."
     },
     {
-      "from": "GITHUB_LIST_APPS_WITH_ACCESS_TO_THE_PROTECTED_BRANCH",
-      "to": "GITHUB_CREATE_A_SCOPED_ACCESS_TOKEN",
-      "param": "client_id",
-      "score": 0.63,
-      "reason": "llm: This tool lists GitHub Apps which may include their client IDs."
-    },
-    {
-      "from": "GITHUB_LIST_FORKS",
-      "to": "GITHUB_CREATE_A_TEMPORARY_PRIVATE_FORK",
-      "param": "ghsa_id",
-      "score": 0.72,
-      "reason": "llm: Lists forks for a specified repository, which may include relevant GHSA IDs."
-    },
-    {
-      "from": "GITHUB_LIST_REPOSITORIES",
-      "to": "GITHUB_CREATE_A_TEMPORARY_PRIVATE_FORK",
-      "param": "ghsa_id",
-      "score": 0.63,
-      "reason": "llm: Lists repositories which may include associated GHSA IDs."
-    },
-    {
       "from": "GITHUB_LIST_COMMITS",
       "to": "GITHUB_CREATE_A_REFERENCE",
       "param": "sha",
@@ -40413,6 +40392,13 @@
       "reason": "llm: Lists check runs for a commit SHA, providing the SHA."
     },
     {
+      "from": "GITHUB_LIST_APPS_WITH_ACCESS_TO_THE_PROTECTED_BRANCH",
+      "to": "GITHUB_CREATE_A_SCOPED_ACCESS_TOKEN",
+      "param": "client_id",
+      "score": 0.63,
+      "reason": "llm: This tool lists GitHub Apps which may include their client IDs."
+    },
+    {
       "from": "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_REPOSITORY",
       "to": "GITHUB_CREATE_A_SNAPSHOT_OF_DEPENDENCIES_FOR_A_REPOSITORY",
       "param": "sha",
@@ -40425,27 +40411,6 @@
       "param": "sha",
       "score": 0.63,
       "reason": "llm: Lists commit comments which may include commit SHA."
-    },
-    {
-      "from": "GITHUB_LIST_COMMITS",
-      "to": "GITHUB_CREATE_BRANCH",
-      "param": "sha",
-      "score": 0.81,
-      "reason": "llm: Lists commits and provides their SHA values."
-    },
-    {
-      "from": "GITHUB_LIST_BRANCHES_FOR_HEAD_COMMIT",
-      "to": "GITHUB_CREATE_BRANCH",
-      "param": "sha",
-      "score": 0.72,
-      "reason": "llm: Lists branches for a specific commit SHA, which can be used to identify existing commits."
-    },
-    {
-      "from": "GITHUB_LIST_BRANCHES",
-      "to": "GITHUB_CREATE_BRANCH",
-      "param": "sha",
-      "score": 0.72,
-      "reason": "llm: Lists all branches in a repository, which includes commit information."
     },
     {
       "from": "GITHUB_LIST_REPOSITORY_TAGS",
@@ -40476,11 +40441,39 @@
       "reason": "llm: Can return SHAs of files in the comparison which may be used as object SHAs."
     },
     {
-      "from": "GITHUB_GET_CATALOG_MODELS",
-      "to": "GITHUB_CREATE_INFERENCE_EMBEDDINGS",
-      "param": "model",
+      "from": "GITHUB_LIST_FORKS",
+      "to": "GITHUB_CREATE_A_TEMPORARY_PRIVATE_FORK",
+      "param": "ghsa_id",
+      "score": 0.72,
+      "reason": "llm: Lists forks for a specified repository, which may include relevant GHSA IDs."
+    },
+    {
+      "from": "GITHUB_LIST_REPOSITORIES",
+      "to": "GITHUB_CREATE_A_TEMPORARY_PRIVATE_FORK",
+      "param": "ghsa_id",
+      "score": 0.63,
+      "reason": "llm: Lists repositories which may include associated GHSA IDs."
+    },
+    {
+      "from": "GITHUB_LIST_COMMITS",
+      "to": "GITHUB_CREATE_BRANCH",
+      "param": "sha",
       "score": 0.81,
-      "reason": "llm: This tool provides a list of available AI models, including their IDs, which can be used as the model parameter."
+      "reason": "llm: Lists commits and provides their SHA values."
+    },
+    {
+      "from": "GITHUB_LIST_BRANCHES_FOR_HEAD_COMMIT",
+      "to": "GITHUB_CREATE_BRANCH",
+      "param": "sha",
+      "score": 0.72,
+      "reason": "llm: Lists branches for a specific commit SHA, which can be used to identify existing commits."
+    },
+    {
+      "from": "GITHUB_LIST_BRANCHES",
+      "to": "GITHUB_CREATE_BRANCH",
+      "param": "sha",
+      "score": 0.72,
+      "reason": "llm: Lists all branches in a repository, which includes commit information."
     },
     {
       "from": "GITHUB_GET_CATALOG_MODELS",
@@ -40488,6 +40481,13 @@
       "param": "model",
       "score": 0.81,
       "reason": "llm: This tool provides a list of available AI models, including their IDs which can be used as the model parameter."
+    },
+    {
+      "from": "GITHUB_GET_CATALOG_MODELS",
+      "to": "GITHUB_CREATE_INFERENCE_EMBEDDINGS",
+      "param": "model",
+      "score": 0.81,
+      "reason": "llm: This tool provides a list of available AI models, including their IDs, which can be used as the model parameter."
     },
     {
       "from": "GITHUB_LIST_SELF_HOSTED_RUNNERS_FOR_A_REPOSITORY",
@@ -40525,6 +40525,20 @@
       "reason": "llm: Retrieves all comments for a specific commit, which can include discussion comments."
     },
     {
+      "from": "GITHUB_GET_AN_APP",
+      "to": "GITHUB_DELETE_APP_AUTHORIZATION",
+      "param": "client_id",
+      "score": 0.81,
+      "reason": "llm: This tool retrieves information about an existing GitHub App, including its client_id."
+    },
+    {
+      "from": "GITHUB_LIST_APP_INSTALLATIONS",
+      "to": "GITHUB_DELETE_APP_AUTHORIZATION",
+      "param": "client_id",
+      "score": 0.72,
+      "reason": "llm: This tool lists GitHub App installations which can provide the client_id for the OAuth App."
+    },
+    {
       "from": "GITHUB_LIST_APP_INSTALLATIONS",
       "to": "GITHUB_DELETE_APP_TOKEN",
       "param": "client_id",
@@ -40544,34 +40558,6 @@
       "param": "thread_id",
       "score": 0.81,
       "reason": "llm: This tool lists notification threads and directly provides their IDs."
-    },
-    {
-      "from": "GITHUB_GET_AN_APP",
-      "to": "GITHUB_DELETE_APP_AUTHORIZATION",
-      "param": "client_id",
-      "score": 0.81,
-      "reason": "llm: This tool retrieves information about an existing GitHub App, including its client_id."
-    },
-    {
-      "from": "GITHUB_LIST_APP_INSTALLATIONS",
-      "to": "GITHUB_DELETE_APP_AUTHORIZATION",
-      "param": "client_id",
-      "score": 0.72,
-      "reason": "llm: This tool lists GitHub App installations which can provide the client_id for the OAuth App."
-    },
-    {
-      "from": "GITHUB_LIST_GIST_COMMENTS",
-      "to": "GITHUB_DELETE_GIST_COMMENT",
-      "param": "comment_id",
-      "score": 0.9,
-      "reason": "llm: Lists comments for a specified GitHub Gist, returning their IDs."
-    },
-    {
-      "from": "GITHUB_LIST_GITHUB_ACTIONS_CACHES_FOR_A_REPOSITORY",
-      "to": "GITHUB_DELETE_GITHUB_ACTIONS_CACHE_BY_ID",
-      "param": "cache_id",
-      "score": 0.81,
-      "reason": "llm: This tool lists GitHub Actions caches for a repository and returns their IDs."
     },
     {
       "from": "GITHUB_LIST_CODE_SCANNING_ANALYSES_FOR_A_REPOSITORY",
@@ -40609,25 +40595,18 @@
       "reason": "llm: Lists issue comments including those on pull requests, providing comment IDs."
     },
     {
-      "from": "GITHUB_LIST_REACTIONS_FOR_A_COMMIT_COMMENT",
-      "to": "GITHUB_DELETE_TEAM_DISCUSSION_COMMENT_REACTION",
-      "param": "reaction_id",
-      "score": 0.81,
-      "reason": "llm: Lists reactions for a specific commit comment, providing reaction IDs."
+      "from": "GITHUB_LIST_GIST_COMMENTS",
+      "to": "GITHUB_DELETE_GIST_COMMENT",
+      "param": "comment_id",
+      "score": 0.9,
+      "reason": "llm: Lists comments for a specified GitHub Gist, returning their IDs."
     },
     {
-      "from": "GITHUB_LIST_REACTIONS_FOR_AN_ISSUE_COMMENT",
-      "to": "GITHUB_DELETE_TEAM_DISCUSSION_COMMENT_REACTION",
-      "param": "reaction_id",
+      "from": "GITHUB_LIST_GITHUB_ACTIONS_CACHES_FOR_A_REPOSITORY",
+      "to": "GITHUB_DELETE_GITHUB_ACTIONS_CACHE_BY_ID",
+      "param": "cache_id",
       "score": 0.81,
-      "reason": "llm: Lists reactions for a specific issue comment, providing reaction IDs."
-    },
-    {
-      "from": "GITHUB_LIST_REACTIONS_FOR_A_PULL_REQUEST_REVIEW_COMMENT",
-      "to": "GITHUB_DELETE_TEAM_DISCUSSION_COMMENT_REACTION",
-      "param": "reaction_id",
-      "score": 0.81,
-      "reason": "llm: Lists reactions for a pull request review comment, providing reaction IDs."
+      "reason": "llm: This tool lists GitHub Actions caches for a repository and returns their IDs."
     },
     {
       "from": "GITHUB_LIST_REVIEWS_FOR_A_PULL_REQUEST",
@@ -40673,6 +40652,27 @@
     },
     {
       "from": "GITHUB_LIST_REACTIONS_FOR_A_COMMIT_COMMENT",
+      "to": "GITHUB_DELETE_TEAM_DISCUSSION_COMMENT_REACTION",
+      "param": "reaction_id",
+      "score": 0.81,
+      "reason": "llm: Lists reactions for a specific commit comment, providing reaction IDs."
+    },
+    {
+      "from": "GITHUB_LIST_REACTIONS_FOR_AN_ISSUE_COMMENT",
+      "to": "GITHUB_DELETE_TEAM_DISCUSSION_COMMENT_REACTION",
+      "param": "reaction_id",
+      "score": 0.81,
+      "reason": "llm: Lists reactions for a specific issue comment, providing reaction IDs."
+    },
+    {
+      "from": "GITHUB_LIST_REACTIONS_FOR_A_PULL_REQUEST_REVIEW_COMMENT",
+      "to": "GITHUB_DELETE_TEAM_DISCUSSION_COMMENT_REACTION",
+      "param": "reaction_id",
+      "score": 0.81,
+      "reason": "llm: Lists reactions for a pull request review comment, providing reaction IDs."
+    },
+    {
+      "from": "GITHUB_LIST_REACTIONS_FOR_A_COMMIT_COMMENT",
       "to": "GITHUB_DELETE_TEAM_DISCUSSION_REACTION",
       "param": "reaction_id",
       "score": 0.72,
@@ -40693,6 +40693,27 @@
       "reason": "llm: Lists reactions for issue comments, providing reaction IDs."
     },
     {
+      "from": "GITHUB_LIST_USERS_BLOCKED_BY_THE_AUTHENTICATED_USER",
+      "to": "GITHUB_DELETE_USER_LIST",
+      "param": "list_id",
+      "score": 0.72,
+      "reason": "llm: Returns user IDs which can be used as list IDs."
+    },
+    {
+      "from": "GITHUB_LIST_FOLLOWERS_OF_A_USER",
+      "to": "GITHUB_DELETE_USER_LIST",
+      "param": "list_id",
+      "score": 0.63,
+      "reason": "llm: Returns follower IDs which can be used as list IDs."
+    },
+    {
+      "from": "GITHUB_LIST_FOLLOWERS_OF_THE_AUTHENTICATED_USER",
+      "to": "GITHUB_DELETE_USER_LIST",
+      "param": "list_id",
+      "score": 0.63,
+      "reason": "llm: Returns follower IDs which can be used as list IDs."
+    },
+    {
       "from": "GITHUB_LIST_REPOSITORY_RULE_SUITES",
       "to": "GITHUB_DOWNLOAD_A_REPOSITORY_ARCHIVE_TAR",
       "param": "ref",
@@ -40719,6 +40740,41 @@
       "param": "ref",
       "score": 0.63,
       "reason": "llm: Returns refs associated with code scanning analyses for a repository."
+    },
+    {
+      "from": "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_WORKFLOW",
+      "to": "GITHUB_DOWNLOAD_WORKFLOW_RUN_ATTEMPT_LOGS",
+      "param": "attempt_number",
+      "score": 0.72,
+      "reason": "llm: This tool lists workflow runs and can provide the necessary attempt number."
+    },
+    {
+      "from": "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_REPOSITORY",
+      "to": "GITHUB_DOWNLOAD_WORKFLOW_RUN_ATTEMPT_LOGS",
+      "param": "attempt_number",
+      "score": 0.72,
+      "reason": "llm: This tool lists workflow runs for a repository and can provide the necessary attempt number."
+    },
+    {
+      "from": "GITHUB_LIST_JOBS_FOR_A_WORKFLOW_RUN",
+      "to": "GITHUB_DOWNLOAD_WORKFLOW_RUN_ATTEMPT_LOGS",
+      "param": "attempt_number",
+      "score": 0.63,
+      "reason": "llm: This tool lists jobs for a specific workflow run, which can help identify the attempt number."
+    },
+    {
+      "from": "GITHUB_LIST_ORG_PROJECT_VIEW_ITEMS",
+      "to": "GITHUB_GET_A_PROJECT_CARD",
+      "param": "card_id",
+      "score": 0.72,
+      "reason": "llm: This tool lists items for a specific view within a GitHub organization's project, which can include project cards."
+    },
+    {
+      "from": "GITHUB_LIST_PROJECT_COLUMNS",
+      "to": "GITHUB_GET_A_PROJECT_CARD",
+      "param": "card_id",
+      "score": 0.63,
+      "reason": "llm: This tool lists all columns of a project, which may include cards and their IDs."
     },
     {
       "from": "GITHUB_LIST_REPOSITORY_TAGS",
@@ -40749,76 +40805,6 @@
       "reason": "llm: This tool lists notification threads and provides their unique identifiers."
     },
     {
-      "from": "GITHUB_LIST_ORG_PROJECT_VIEW_ITEMS",
-      "to": "GITHUB_GET_A_PROJECT_CARD",
-      "param": "card_id",
-      "score": 0.72,
-      "reason": "llm: This tool lists items for a specific view within a GitHub organization's project, which can include project cards."
-    },
-    {
-      "from": "GITHUB_LIST_PROJECT_COLUMNS",
-      "to": "GITHUB_GET_A_PROJECT_CARD",
-      "param": "card_id",
-      "score": 0.63,
-      "reason": "llm: This tool lists all columns of a project, which may include cards and their IDs."
-    },
-    {
-      "from": "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_WORKFLOW",
-      "to": "GITHUB_DOWNLOAD_WORKFLOW_RUN_ATTEMPT_LOGS",
-      "param": "attempt_number",
-      "score": 0.72,
-      "reason": "llm: This tool lists workflow runs and can provide the necessary attempt number."
-    },
-    {
-      "from": "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_REPOSITORY",
-      "to": "GITHUB_DOWNLOAD_WORKFLOW_RUN_ATTEMPT_LOGS",
-      "param": "attempt_number",
-      "score": 0.72,
-      "reason": "llm: This tool lists workflow runs for a repository and can provide the necessary attempt number."
-    },
-    {
-      "from": "GITHUB_LIST_JOBS_FOR_A_WORKFLOW_RUN",
-      "to": "GITHUB_DOWNLOAD_WORKFLOW_RUN_ATTEMPT_LOGS",
-      "param": "attempt_number",
-      "score": 0.63,
-      "reason": "llm: This tool lists jobs for a specific workflow run, which can help identify the attempt number."
-    },
-    {
-      "from": "GITHUB_LIST_USERS_BLOCKED_BY_THE_AUTHENTICATED_USER",
-      "to": "GITHUB_DELETE_USER_LIST",
-      "param": "list_id",
-      "score": 0.72,
-      "reason": "llm: Returns user IDs which can be used as list IDs."
-    },
-    {
-      "from": "GITHUB_LIST_FOLLOWERS_OF_A_USER",
-      "to": "GITHUB_DELETE_USER_LIST",
-      "param": "list_id",
-      "score": 0.63,
-      "reason": "llm: Returns follower IDs which can be used as list IDs."
-    },
-    {
-      "from": "GITHUB_LIST_FOLLOWERS_OF_THE_AUTHENTICATED_USER",
-      "to": "GITHUB_DELETE_USER_LIST",
-      "param": "list_id",
-      "score": 0.63,
-      "reason": "llm: Returns follower IDs which can be used as list IDs."
-    },
-    {
-      "from": "GITHUB_LIST_REPOSITORY_WEBHOOKS",
-      "to": "GITHUB_GET_A_WEBHOOK_CONFIGURATION_FOR_A_REPOSITORY",
-      "param": "hook_id",
-      "score": 0.81,
-      "reason": "llm: This tool retrieves a list of webhooks for a repository and returns their IDs."
-    },
-    {
-      "from": "GITHUB_LIST_ORGANIZATION_WEBHOOKS",
-      "to": "GITHUB_GET_A_WEBHOOK_CONFIGURATION_FOR_AN_ORGANIZATION",
-      "param": "hook_id",
-      "score": 0.81,
-      "reason": "llm: This tool lists all webhooks for a specified GitHub organization and returns their IDs."
-    },
-    {
       "from": "GITHUB_LIST_EVENTS_FOR_THE_AUTHENTICATED_USER",
       "to": "GITHUB_GET_A_THREAD_SUBSCRIPTION_FOR_THE_AUTHENTICATED_USER",
       "param": "thread_id",
@@ -40840,11 +40826,18 @@
       "reason": "llm: Lists issues assigned to the user, which may include relevant IDs."
     },
     {
-      "from": "GITHUB_LIST_CODE_SCANNING_ANALYSES_FOR_A_REPOSITORY",
-      "to": "GITHUB_GET_CODE_SCANNING_ANALYSIS",
-      "param": "analysis_id",
+      "from": "GITHUB_LIST_ORGANIZATION_WEBHOOKS",
+      "to": "GITHUB_GET_A_WEBHOOK_CONFIGURATION_FOR_AN_ORGANIZATION",
+      "param": "hook_id",
       "score": 0.81,
-      "reason": "llm: This tool lists code scanning analyses and directly provides the analysis_id needed."
+      "reason": "llm: This tool lists all webhooks for a specified GitHub organization and returns their IDs."
+    },
+    {
+      "from": "GITHUB_LIST_REPOSITORY_WEBHOOKS",
+      "to": "GITHUB_GET_A_WEBHOOK_CONFIGURATION_FOR_A_REPOSITORY",
+      "param": "hook_id",
+      "score": 0.81,
+      "reason": "llm: This tool retrieves a list of webhooks for a repository and returns their IDs."
     },
     {
       "from": "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_WORKFLOW",
@@ -40882,39 +40875,11 @@
       "reason": "llm: Returns keys of available codes of conduct."
     },
     {
-      "from": "GITHUB_LIST_DEPLOYMENT_STATUSES",
-      "to": "GITHUB_GET_DEPLOYMENT_STATUS",
-      "param": "status_id",
+      "from": "GITHUB_LIST_CODE_SCANNING_ANALYSES_FOR_A_REPOSITORY",
+      "to": "GITHUB_GET_CODE_SCANNING_ANALYSIS",
+      "param": "analysis_id",
       "score": 0.81,
-      "reason": "llm: This tool lists all statuses for a given deployment and provides their IDs."
-    },
-    {
-      "from": "GITHUB_SEARCH_GITHUB_GRAPHQL",
-      "to": "GITHUB_GET_DISCUSSION",
-      "param": "discussion_number",
-      "score": 0.63,
-      "reason": "llm: Can search discussions and return relevant counts."
-    },
-    {
-      "from": "GITHUB_LIST_CODESPACES_FOR_A_USER_IN_ORGANIZATION",
-      "to": "GITHUB_GET_DETAILS_ABOUT_A_CODESPACE_EXPORT",
-      "param": "export_id",
-      "score": 0.81,
-      "reason": "llm: Lists codespaces which can provide the latest export ID."
-    },
-    {
-      "from": "GITHUB_LIST_CODESPACES_FOR_THE_AUTHENTICATED_USER",
-      "to": "GITHUB_GET_DETAILS_ABOUT_A_CODESPACE_EXPORT",
-      "param": "export_id",
-      "score": 0.81,
-      "reason": "llm: Lists codespaces which can provide the latest export ID."
-    },
-    {
-      "from": "GITHUB_LIST_CODESPACES_FOR_THE_ORGANIZATION",
-      "to": "GITHUB_GET_DETAILS_ABOUT_A_CODESPACE_EXPORT",
-      "param": "export_id",
-      "score": 0.81,
-      "reason": "llm: Lists codespaces which can provide the latest export ID."
+      "reason": "llm: This tool lists code scanning analyses and directly provides the analysis_id needed."
     },
     {
       "from": "GITHUB_LIST_COMMITS",
@@ -40938,18 +40903,39 @@
       "reason": "llm: Finds commits using a query string, returning SHAs that can be used as commit references."
     },
     {
-      "from": "GITHUB_LIST_ORGANIZATIONS_FOR_THE_AUTHENTICATED_USER",
-      "to": "GITHUB_GET_ENTERPRISE_MEMBER_INVITATION",
-      "param": "enterprise_slug",
+      "from": "GITHUB_LIST_DEPLOYMENT_STATUSES",
+      "to": "GITHUB_GET_DEPLOYMENT_STATUS",
+      "param": "status_id",
       "score": 0.81,
-      "reason": "llm: This tool lists organizations the authenticated user is a member of, which can provide the necessary enterprise slug."
+      "reason": "llm: This tool lists all statuses for a given deployment and provides their IDs."
     },
     {
-      "from": "GITHUB_LIST_ORGANIZATIONS_FOR_USER",
-      "to": "GITHUB_GET_ENTERPRISE_MEMBER_INVITATION",
-      "param": "enterprise_slug",
-      "score": 0.72,
-      "reason": "llm: This tool lists public organization memberships for a user, which may include the enterprise slug."
+      "from": "GITHUB_LIST_CODESPACES_FOR_A_USER_IN_ORGANIZATION",
+      "to": "GITHUB_GET_DETAILS_ABOUT_A_CODESPACE_EXPORT",
+      "param": "export_id",
+      "score": 0.81,
+      "reason": "llm: Lists codespaces which can provide the latest export ID."
+    },
+    {
+      "from": "GITHUB_LIST_CODESPACES_FOR_THE_AUTHENTICATED_USER",
+      "to": "GITHUB_GET_DETAILS_ABOUT_A_CODESPACE_EXPORT",
+      "param": "export_id",
+      "score": 0.81,
+      "reason": "llm: Lists codespaces which can provide the latest export ID."
+    },
+    {
+      "from": "GITHUB_LIST_CODESPACES_FOR_THE_ORGANIZATION",
+      "to": "GITHUB_GET_DETAILS_ABOUT_A_CODESPACE_EXPORT",
+      "param": "export_id",
+      "score": 0.81,
+      "reason": "llm: Lists codespaces which can provide the latest export ID."
+    },
+    {
+      "from": "GITHUB_SEARCH_GITHUB_GRAPHQL",
+      "to": "GITHUB_GET_DISCUSSION",
+      "param": "discussion_number",
+      "score": 0.63,
+      "reason": "llm: Can search discussions and return relevant counts."
     },
     {
       "from": "GITHUB_LIST_COMMENT_CHANGES",
@@ -40973,67 +40959,25 @@
       "reason": "llm: Retrieves comments for commits, including their IDs."
     },
     {
+      "from": "GITHUB_LIST_ORGANIZATIONS_FOR_THE_AUTHENTICATED_USER",
+      "to": "GITHUB_GET_ENTERPRISE_MEMBER_INVITATION",
+      "param": "enterprise_slug",
+      "score": 0.81,
+      "reason": "llm: This tool lists organizations the authenticated user is a member of, which can provide the necessary enterprise slug."
+    },
+    {
+      "from": "GITHUB_LIST_ORGANIZATIONS_FOR_USER",
+      "to": "GITHUB_GET_ENTERPRISE_MEMBER_INVITATION",
+      "param": "enterprise_slug",
+      "score": 0.72,
+      "reason": "llm: This tool lists public organization memberships for a user, which may include the enterprise slug."
+    },
+    {
       "from": "GITHUB_LIST_GIST_COMMENTS",
       "to": "GITHUB_GET_GIST_COMMENT",
       "param": "comment_id",
       "score": 0.9,
       "reason": "llm: Lists comments for a specified Gist, providing the comment IDs needed."
-    },
-    {
-      "from": "GITHUB_LIST_COMMONLY_USED_LICENSES",
-      "to": "GITHUB_GET_LICENSE",
-      "param": "license",
-      "score": 0.81,
-      "reason": "llm: Returns a list of commonly used licenses including their keys."
-    },
-    {
-      "from": "GITHUB_LIST_LICENSES_GRAPH_QL",
-      "to": "GITHUB_GET_LICENSE",
-      "param": "license",
-      "score": 0.81,
-      "reason": "llm: Fetches all known open source licenses including their keys."
-    },
-    {
-      "from": "GITHUB_LIST_GITHUB_PAGES_BUILDS",
-      "to": "GITHUB_GET_GITHUB_PAGES_BUILD",
-      "param": "build_id",
-      "score": 0.81,
-      "reason": "llm: Lists builds and provides build_id directly."
-    },
-    {
-      "from": "GITHUB_GET_LATEST_PAGES_BUILD",
-      "to": "GITHUB_GET_GITHUB_PAGES_BUILD",
-      "param": "build_id",
-      "score": 0.72,
-      "reason": "llm: Provides information about the latest build, which can include build_id."
-    },
-    {
-      "from": "GITHUB_LIST_CODE_SCANNING_ANALYSES_FOR_A_REPOSITORY",
-      "to": "GITHUB_GET_INFORMATION_ABOUT_A_SARIF_UPLOAD",
-      "param": "sarif_id",
-      "score": 0.72,
-      "reason": "llm: This tool lists code scanning analyses and includes SARIF IDs in its output."
-    },
-    {
-      "from": "GITHUB_LIST_GLOBAL_SECURITY_ADVISORIES",
-      "to": "GITHUB_GET_GLOBAL_SECURITY_ADVISORY",
-      "param": "ghsa_id",
-      "score": 0.81,
-      "reason": "llm: This tool lists global security advisories and includes the ghsa_id in its output."
-    },
-    {
-      "from": "GITHUB_LIST_SECURITY_ADVISORIES_GRAPHQL",
-      "to": "GITHUB_GET_GLOBAL_SECURITY_ADVISORY",
-      "param": "ghsa_id",
-      "score": 0.72,
-      "reason": "llm: This tool can query security advisories and includes ghsa_id in its results."
-    },
-    {
-      "from": "GITHUB_LIST_REPOSITORY_SECURITY_ADVISORIES",
-      "to": "GITHUB_GET_GLOBAL_SECURITY_ADVISORY",
-      "param": "ghsa_id",
-      "score": 0.63,
-      "reason": "llm: This tool lists security advisories for a repository and includes ghsa_id."
     },
     {
       "from": "GITHUB_LIST_GIST_COMMITS",
@@ -41057,18 +41001,74 @@
       "reason": "llm: Lists public gists, which may include SHA information related to the gists."
     },
     {
-      "from": "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_WORKFLOW",
-      "to": "GITHUB_GET_PENDING_DEPLOYMENTS_FOR_A_WORKFLOW_RUN",
-      "param": "run_id",
+      "from": "GITHUB_LIST_GITHUB_PAGES_BUILDS",
+      "to": "GITHUB_GET_GITHUB_PAGES_BUILD",
+      "param": "build_id",
       "score": 0.81,
-      "reason": "llm: Lists workflow runs and provides their IDs."
+      "reason": "llm: Lists builds and provides build_id directly."
     },
     {
-      "from": "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_REPOSITORY",
-      "to": "GITHUB_GET_PENDING_DEPLOYMENTS_FOR_A_WORKFLOW_RUN",
-      "param": "run_id",
+      "from": "GITHUB_GET_LATEST_PAGES_BUILD",
+      "to": "GITHUB_GET_GITHUB_PAGES_BUILD",
+      "param": "build_id",
+      "score": 0.72,
+      "reason": "llm: Provides information about the latest build, which can include build_id."
+    },
+    {
+      "from": "GITHUB_LIST_GLOBAL_SECURITY_ADVISORIES",
+      "to": "GITHUB_GET_GLOBAL_SECURITY_ADVISORY",
+      "param": "ghsa_id",
       "score": 0.81,
-      "reason": "llm: Lists workflow runs for a repository and provides their IDs."
+      "reason": "llm: This tool lists global security advisories and includes the ghsa_id in its output."
+    },
+    {
+      "from": "GITHUB_LIST_SECURITY_ADVISORIES_GRAPHQL",
+      "to": "GITHUB_GET_GLOBAL_SECURITY_ADVISORY",
+      "param": "ghsa_id",
+      "score": 0.72,
+      "reason": "llm: This tool can query security advisories and includes ghsa_id in its results."
+    },
+    {
+      "from": "GITHUB_LIST_REPOSITORY_SECURITY_ADVISORIES",
+      "to": "GITHUB_GET_GLOBAL_SECURITY_ADVISORY",
+      "param": "ghsa_id",
+      "score": 0.63,
+      "reason": "llm: This tool lists security advisories for a repository and includes ghsa_id."
+    },
+    {
+      "from": "GITHUB_LIST_CODE_SCANNING_ANALYSES_FOR_A_REPOSITORY",
+      "to": "GITHUB_GET_INFORMATION_ABOUT_A_SARIF_UPLOAD",
+      "param": "sarif_id",
+      "score": 0.72,
+      "reason": "llm: This tool lists code scanning analyses and includes SARIF IDs in its output."
+    },
+    {
+      "from": "GITHUB_LIST_COMMONLY_USED_LICENSES",
+      "to": "GITHUB_GET_LICENSE",
+      "param": "license",
+      "score": 0.81,
+      "reason": "llm: Returns a list of commonly used licenses including their keys."
+    },
+    {
+      "from": "GITHUB_LIST_LICENSES_GRAPH_QL",
+      "to": "GITHUB_GET_LICENSE",
+      "param": "license",
+      "score": 0.81,
+      "reason": "llm: Fetches all known open source licenses including their keys."
+    },
+    {
+      "from": "GITHUB_LIST_LICENSES_GRAPH_QL",
+      "to": "GITHUB_GET_LICENSE_GRAPH_QL",
+      "param": "key",
+      "score": 0.81,
+      "reason": "llm: Provides a complete list of licenses including their keys."
+    },
+    {
+      "from": "GITHUB_LIST_COMMONLY_USED_LICENSES",
+      "to": "GITHUB_GET_LICENSE_GRAPH_QL",
+      "param": "key",
+      "score": 0.81,
+      "reason": "llm: Retrieves commonly used licenses and their keys."
     },
     {
       "from": "GITHUB_LIST_ORG_PROJECT_VIEW_ITEMS",
@@ -41092,25 +41092,18 @@
       "reason": "llm: Returns item IDs from a user's project view."
     },
     {
-      "from": "GITHUB_LIST_LICENSES_GRAPH_QL",
-      "to": "GITHUB_GET_LICENSE_GRAPH_QL",
-      "param": "key",
+      "from": "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_WORKFLOW",
+      "to": "GITHUB_GET_PENDING_DEPLOYMENTS_FOR_A_WORKFLOW_RUN",
+      "param": "run_id",
       "score": 0.81,
-      "reason": "llm: Provides a complete list of licenses including their keys."
+      "reason": "llm: Lists workflow runs and provides their IDs."
     },
     {
-      "from": "GITHUB_LIST_COMMONLY_USED_LICENSES",
-      "to": "GITHUB_GET_LICENSE_GRAPH_QL",
-      "param": "key",
+      "from": "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_REPOSITORY",
+      "to": "GITHUB_GET_PENDING_DEPLOYMENTS_FOR_A_WORKFLOW_RUN",
+      "param": "run_id",
       "score": 0.81,
-      "reason": "llm: Retrieves commonly used licenses and their keys."
-    },
-    {
-      "from": "GITHUB_LIST_REPOSITORY_WEBHOOKS",
-      "to": "GITHUB_GET_REPOSITORY_WEBHOOK_DELIVERY",
-      "param": "hook_id",
-      "score": 0.81,
-      "reason": "llm: This tool retrieves a list of webhooks for a repository, providing the necessary hook_id."
+      "reason": "llm: Lists workflow runs for a repository and provides their IDs."
     },
     {
       "from": "GITHUB_LIST_REPOSITORY_SECURITY_ADVISORIES",
@@ -41134,6 +41127,20 @@
       "reason": "llm: This tool allows querying security advisories and can return ghsa_id among other details."
     },
     {
+      "from": "GITHUB_LIST_REPOSITORY_WEBHOOKS",
+      "to": "GITHUB_GET_REPOSITORY_WEBHOOK_DELIVERY",
+      "param": "hook_id",
+      "score": 0.81,
+      "reason": "llm: This tool retrieves a list of webhooks for a repository, providing the necessary hook_id."
+    },
+    {
+      "from": "GITHUB_LIST_CHECK_RUNS_IN_A_CHECK_SUITE",
+      "to": "GITHUB_GET_THE_COMBINED_STATUS_FOR_A_SPECIFIC_REFERENCE",
+      "param": "ref",
+      "score": 0.63,
+      "reason": "llm: Lists check runs which can provide commit references."
+    },
+    {
       "from": "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_WORKFLOW",
       "to": "GITHUB_GET_THE_REVIEW_HISTORY_FOR_A_WORKFLOW_RUN",
       "param": "run_id",
@@ -41146,13 +41153,6 @@
       "param": "run_id",
       "score": 0.81,
       "reason": "llm: This tool lists workflow runs for a repository and provides their IDs."
-    },
-    {
-      "from": "GITHUB_LIST_ASSIGNMENTS_FOR_A_CLASSROOM",
-      "to": "GITHUB_LIST_ACCEPTED_ASSIGNMENTS_FOR_AN_ASSIGNMENT",
-      "param": "assignment_id",
-      "score": 0.81,
-      "reason": "llm: This tool lists all assignments and provides their unique identifiers."
     },
     {
       "from": "GITHUB_LIST_DEPLOYMENTS",
@@ -41176,13 +41176,6 @@
       "reason": "llm: Lists GitHub Pages builds which may include deployment IDs."
     },
     {
-      "from": "GITHUB_LIST_CHECK_RUNS_IN_A_CHECK_SUITE",
-      "to": "GITHUB_GET_THE_COMBINED_STATUS_FOR_A_SPECIFIC_REFERENCE",
-      "param": "ref",
-      "score": 0.63,
-      "reason": "llm: Lists check runs which can provide commit references."
-    },
-    {
       "from": "GITHUB_LIST_PROJECT_ITEMS_FOR_USER",
       "to": "GITHUB_GET_USER_PROJECT_ITEM",
       "param": "item_id",
@@ -41204,60 +41197,11 @@
       "reason": "llm: Returns item IDs from an organization's project view."
     },
     {
-      "from": "GITHUB_LIST_ORGANIZATION_PROJECTS",
-      "to": "GITHUB_LIST_ORG_PROJECT_VIEW_ITEMS",
-      "param": "view_number",
-      "score": 0.72,
-      "reason": "llm: This tool lists projects for a specified organization, which can help identify the view number."
-    },
-    {
-      "from": "GITHUB_LIST_USER_PROJECTS",
-      "to": "GITHUB_LIST_PROJECT_VIEW_ITEMS_FOR_USER",
-      "param": "view_number",
+      "from": "GITHUB_LIST_ASSIGNMENTS_FOR_A_CLASSROOM",
+      "to": "GITHUB_LIST_ACCEPTED_ASSIGNMENTS_FOR_AN_ASSIGNMENT",
+      "param": "assignment_id",
       "score": 0.81,
-      "reason": "llm: This tool returns project numbers which can be used to identify project views."
-    },
-    {
-      "from": "GITHUB_GET_A_PROJECT",
-      "to": "GITHUB_LIST_PROJECT_VIEW_ITEMS_FOR_USER",
-      "param": "view_number",
-      "score": 0.72,
-      "reason": "llm: This tool retrieves project details including the project number."
-    },
-    {
-      "from": "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_REPOSITORY",
-      "to": "GITHUB_LIST_CHECK_SUITES_FOR_A_GIT_REFERENCE",
-      "param": "ref",
-      "score": 0.72,
-      "reason": "llm: Lists workflow runs allowing filtering by branch, which can provide the ref needed."
-    },
-    {
-      "from": "GITHUB_LIST_CODE_SCANNING_ANALYSES_FOR_A_REPOSITORY",
-      "to": "GITHUB_LIST_CHECK_SUITES_FOR_A_GIT_REFERENCE",
-      "param": "ref",
-      "score": 0.63,
-      "reason": "llm: Can filter by Git reference, providing potential values for ref."
-    },
-    {
-      "from": "GITHUB_LIST_ORG_RESOURCE_ACCESS_TOKENS",
-      "to": "GITHUB_LIST_TOKEN_ACCESS_REPOSITORIES",
-      "param": "pat_id",
-      "score": 0.81,
-      "reason": "llm: This tool lists fine-grained personal access tokens and provides their IDs."
-    },
-    {
-      "from": "GITHUB_LIST_NOTIFICATIONS",
-      "to": "GITHUB_MARK_A_THREAD_AS_DONE",
-      "param": "thread_id",
-      "score": 0.9,
-      "reason": "llm: This tool returns the notification threads along with their IDs, which can be used to mark them as done."
-    },
-    {
-      "from": "GITHUB_LIST_TEAMS_THAT_ARE_ASSIGNED_TO_AN_ORGANIZATION_ROLE",
-      "to": "GITHUB_LOOKUP_ENTERPRISE_ADMINISTRATOR_INVITATION",
-      "param": "enterprise_slug",
-      "score": 0.63,
-      "reason": "llm: This tool lists teams assigned to roles within an organization, which may include the enterprise slug."
+      "reason": "llm: This tool lists all assignments and provides their unique identifiers."
     },
     {
       "from": "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_REPOSITORY",
@@ -41281,11 +41225,60 @@
       "reason": "llm: Lists runs for a specified workflow which can include references like commit SHA or branch."
     },
     {
-      "from": "GITHUB_LIST_SPONSORABLES",
-      "to": "GITHUB_PUBLISH_SPONSORS_TIER_GRAPH_QL",
-      "param": "tier_id",
+      "from": "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_REPOSITORY",
+      "to": "GITHUB_LIST_CHECK_SUITES_FOR_A_GIT_REFERENCE",
+      "param": "ref",
       "score": 0.72,
-      "reason": "llm: This tool lists sponsorable entities which may include draft sponsors tiers."
+      "reason": "llm: Lists workflow runs allowing filtering by branch, which can provide the ref needed."
+    },
+    {
+      "from": "GITHUB_LIST_CODE_SCANNING_ANALYSES_FOR_A_REPOSITORY",
+      "to": "GITHUB_LIST_CHECK_SUITES_FOR_A_GIT_REFERENCE",
+      "param": "ref",
+      "score": 0.63,
+      "reason": "llm: Can filter by Git reference, providing potential values for ref."
+    },
+    {
+      "from": "GITHUB_LIST_ORGANIZATION_PROJECTS",
+      "to": "GITHUB_LIST_ORG_PROJECT_VIEW_ITEMS",
+      "param": "view_number",
+      "score": 0.72,
+      "reason": "llm: This tool lists projects for a specified organization, which can help identify the view number."
+    },
+    {
+      "from": "GITHUB_LIST_USER_PROJECTS",
+      "to": "GITHUB_LIST_PROJECT_VIEW_ITEMS_FOR_USER",
+      "param": "view_number",
+      "score": 0.81,
+      "reason": "llm: This tool returns project numbers which can be used to identify project views."
+    },
+    {
+      "from": "GITHUB_GET_A_PROJECT",
+      "to": "GITHUB_LIST_PROJECT_VIEW_ITEMS_FOR_USER",
+      "param": "view_number",
+      "score": 0.72,
+      "reason": "llm: This tool retrieves project details including the project number."
+    },
+    {
+      "from": "GITHUB_LIST_ORG_RESOURCE_ACCESS_TOKENS",
+      "to": "GITHUB_LIST_TOKEN_ACCESS_REPOSITORIES",
+      "param": "pat_id",
+      "score": 0.81,
+      "reason": "llm: This tool lists fine-grained personal access tokens and provides their IDs."
+    },
+    {
+      "from": "GITHUB_LIST_TEAMS_THAT_ARE_ASSIGNED_TO_AN_ORGANIZATION_ROLE",
+      "to": "GITHUB_LOOKUP_ENTERPRISE_ADMINISTRATOR_INVITATION",
+      "param": "enterprise_slug",
+      "score": 0.63,
+      "reason": "llm: This tool lists teams assigned to roles within an organization, which may include the enterprise slug."
+    },
+    {
+      "from": "GITHUB_LIST_NOTIFICATIONS",
+      "to": "GITHUB_MARK_A_THREAD_AS_DONE",
+      "param": "thread_id",
+      "score": 0.9,
+      "reason": "llm: This tool returns the notification threads along with their IDs, which can be used to mark them as done."
     },
     {
       "from": "GITHUB_LIST_NOTIFICATIONS",
@@ -41293,13 +41286,6 @@
       "param": "thread_id",
       "score": 0.9,
       "reason": "llm: This tool lists notification threads and provides their IDs."
-    },
-    {
-      "from": "GITHUB_LIST_APP_INSTALLATIONS",
-      "to": "GITHUB_REMOVE_A_REPOSITORY_FROM_AN_APP_INSTALLATION",
-      "param": "installation_id",
-      "score": 0.81,
-      "reason": "llm: This tool lists GitHub App installations, which will provide the installation_id needed."
     },
     {
       "from": "GITHUB_LIST_BRANCHES",
@@ -41323,6 +41309,34 @@
       "reason": "llm: Lists references in a repository that match a given pattern, which can include branch names."
     },
     {
+      "from": "GITHUB_LIST_SPONSORABLES",
+      "to": "GITHUB_PUBLISH_SPONSORS_TIER_GRAPH_QL",
+      "param": "tier_id",
+      "score": 0.72,
+      "reason": "llm: This tool lists sponsorable entities which may include draft sponsors tiers."
+    },
+    {
+      "from": "GITHUB_LIST_APP_INSTALLATIONS",
+      "to": "GITHUB_REMOVE_A_REPOSITORY_FROM_AN_APP_INSTALLATION",
+      "param": "installation_id",
+      "score": 0.81,
+      "reason": "llm: This tool lists GitHub App installations, which will provide the installation_id needed."
+    },
+    {
+      "from": "GITHUB_LIST_SELF_HOSTED_RUNNERS_FOR_AN_ORGANIZATION",
+      "to": "GITHUB_REMOVE_CUSTOM_LABEL_FROM_REPO_RUNNER",
+      "param": "runner_id",
+      "score": 0.81,
+      "reason": "llm: This tool lists self-hosted runners and provides their unique identifiers."
+    },
+    {
+      "from": "GITHUB_LIST_SELF_HOSTED_RUNNERS_FOR_A_REPOSITORY",
+      "to": "GITHUB_REMOVE_CUSTOM_LABEL_FROM_REPO_RUNNER",
+      "param": "runner_id",
+      "score": 0.81,
+      "reason": "llm: This tool lists self-hosted runners for a specific repository and provides their unique identifiers."
+    },
+    {
       "from": "GITHUB_LIST_APP_INSTALLATIONS",
       "to": "GITHUB_RESET_A_TOKEN",
       "param": "client_id",
@@ -41344,39 +41358,11 @@
       "reason": "llm: This tool lists requests for organization resources which may include client_id information."
     },
     {
-      "from": "GITHUB_LIST_SELF_HOSTED_RUNNERS_FOR_AN_ORGANIZATION",
-      "to": "GITHUB_REMOVE_CUSTOM_LABEL_FROM_REPO_RUNNER",
-      "param": "runner_id",
-      "score": 0.81,
-      "reason": "llm: This tool lists self-hosted runners and provides their unique identifiers."
-    },
-    {
-      "from": "GITHUB_LIST_SELF_HOSTED_RUNNERS_FOR_A_REPOSITORY",
-      "to": "GITHUB_REMOVE_CUSTOM_LABEL_FROM_REPO_RUNNER",
-      "param": "runner_id",
-      "score": 0.81,
-      "reason": "llm: This tool lists self-hosted runners for a specific repository and provides their unique identifiers."
-    },
-    {
       "from": "GITHUB_LIST_SPONSORABLES",
       "to": "GITHUB_RETIRE_SPONSORS_TIER",
       "param": "tier_id",
       "score": 0.72,
       "reason": "llm: This tool lists sponsorable entities and provides their IDs, which can be used as tier_id."
-    },
-    {
-      "from": "GITHUB_LIST_ORGANIZATION_REPOSITORIES",
-      "to": "GITHUB_UNLOCK_ORGANIZATION_REPOSITORY",
-      "param": "migration_id",
-      "score": 0.81,
-      "reason": "llm: This tool lists repositories for a specified organization, which can include migration details."
-    },
-    {
-      "from": "GITHUB_LIST_NOTIFICATIONS",
-      "to": "GITHUB_SET_A_THREAD_SUBSCRIPTION",
-      "param": "thread_id",
-      "score": 0.81,
-      "reason": "llm: This tool lists notification threads and includes their IDs, which can be used as thread_id."
     },
     {
       "from": "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_WORKFLOW",
@@ -41393,53 +41379,18 @@
       "reason": "llm: Lists workflow runs for a repository and provides their IDs."
     },
     {
-      "from": "GITHUB_SEARCH_GITHUB_GRAPHQL",
-      "to": "GITHUB_UPDATE_A_DISCUSSION",
-      "param": "discussion_number",
-      "score": 0.63,
-      "reason": "llm: Can search discussions and return counts, which may include discussion numbers."
-    },
-    {
-      "from": "GITHUB_LIST_COMMITS",
-      "to": "GITHUB_UPDATE_A_REFERENCE",
-      "param": "sha",
+      "from": "GITHUB_LIST_NOTIFICATIONS",
+      "to": "GITHUB_SET_A_THREAD_SUBSCRIPTION",
+      "param": "thread_id",
       "score": 0.81,
-      "reason": "llm: Lists commits which include SHA values."
+      "reason": "llm: This tool lists notification threads and includes their IDs, which can be used as thread_id."
     },
     {
-      "from": "GITHUB_GET_A_REFERENCE",
-      "to": "GITHUB_UPDATE_A_REFERENCE",
-      "param": "sha",
-      "score": 0.72,
-      "reason": "llm: Retrieves a reference that includes the SHA of the commit."
-    },
-    {
-      "from": "GITHUB_LIST_CHECK_RUNS_FOR_A_REF",
-      "to": "GITHUB_UPDATE_A_REFERENCE",
-      "param": "sha",
-      "score": 0.63,
-      "reason": "llm: Lists check runs for a commit SHA, providing the SHA in the output."
-    },
-    {
-      "from": "GITHUB_LIST_COMMENT_CHANGES",
-      "to": "GITHUB_UPDATE_A_DISCUSSION_COMMENT",
-      "param": "comment_number",
+      "from": "GITHUB_LIST_ORGANIZATION_REPOSITORIES",
+      "to": "GITHUB_UNLOCK_ORGANIZATION_REPOSITORY",
+      "param": "migration_id",
       "score": 0.81,
-      "reason": "llm: Lists comment changes which include comment IDs."
-    },
-    {
-      "from": "GITHUB_LIST_COMMENTS_FOR_A_PULL_REQUEST_REVIEW",
-      "to": "GITHUB_UPDATE_A_DISCUSSION_COMMENT",
-      "param": "comment_number",
-      "score": 0.72,
-      "reason": "llm: Lists comments for a specific review, providing comment IDs."
-    },
-    {
-      "from": "GITHUB_LIST_COMMIT_COMMENTS",
-      "to": "GITHUB_UPDATE_A_DISCUSSION_COMMENT",
-      "param": "comment_number",
-      "score": 0.72,
-      "reason": "llm: Retrieves comments for a specific commit, including comment IDs."
+      "reason": "llm: This tool lists repositories for a specified organization, which can include migration details."
     },
     {
       "from": "GITHUB_LIST_REPOSITORIES_FOR_A_USER",
@@ -41463,25 +41414,32 @@
       "reason": "llm: Lists starred repositories for a user, which may include migration details."
     },
     {
-      "from": "GITHUB_LIST_ORGANIZATION_WEBHOOKS",
-      "to": "GITHUB_UPDATE_ORGANIZATION_WEBHOOK_CONFIGURATION",
-      "param": "hook_id",
-      "score": 0.9,
-      "reason": "llm: This tool lists all webhooks for a specified organization and returns their unique identifiers."
-    },
-    {
-      "from": "GITHUB_GET_A_THREAD_SUBSCRIPTION_FOR_THE_AUTHENTICATED_USER",
-      "to": "GITHUB_UPDATE_SUBSCRIPTION",
-      "param": "subscribable_id",
-      "score": 0.72,
-      "reason": "llm: This tool retrieves subscription details for a specific notification thread, which can provide the necessary subscribable_id."
-    },
-    {
-      "from": "GITHUB_GET_A_REPOSITORY_SUBSCRIPTION",
-      "to": "GITHUB_UPDATE_SUBSCRIPTION",
-      "param": "subscribable_id",
+      "from": "GITHUB_SEARCH_GITHUB_GRAPHQL",
+      "to": "GITHUB_UPDATE_A_DISCUSSION",
+      "param": "discussion_number",
       "score": 0.63,
-      "reason": "llm: This tool gets subscription details for a repository, which may include the subscribable_id."
+      "reason": "llm: Can search discussions and return counts, which may include discussion numbers."
+    },
+    {
+      "from": "GITHUB_LIST_COMMENT_CHANGES",
+      "to": "GITHUB_UPDATE_A_DISCUSSION_COMMENT",
+      "param": "comment_number",
+      "score": 0.81,
+      "reason": "llm: Lists comment changes which include comment IDs."
+    },
+    {
+      "from": "GITHUB_LIST_COMMENTS_FOR_A_PULL_REQUEST_REVIEW",
+      "to": "GITHUB_UPDATE_A_DISCUSSION_COMMENT",
+      "param": "comment_number",
+      "score": 0.72,
+      "reason": "llm: Lists comments for a specific review, providing comment IDs."
+    },
+    {
+      "from": "GITHUB_LIST_COMMIT_COMMENTS",
+      "to": "GITHUB_UPDATE_A_DISCUSSION_COMMENT",
+      "param": "comment_number",
+      "score": 0.72,
+      "reason": "llm: Retrieves comments for a specific commit, including comment IDs."
     },
     {
       "from": "GITHUB_LIST_GIST_COMMENTS",
@@ -41505,6 +41463,41 @@
       "reason": "llm: Lists comments for a specific review on a GitHub pull request, providing comment IDs."
     },
     {
+      "from": "GITHUB_LIST_COMMITS",
+      "to": "GITHUB_UPDATE_A_REFERENCE",
+      "param": "sha",
+      "score": 0.81,
+      "reason": "llm: Lists commits which include SHA values."
+    },
+    {
+      "from": "GITHUB_GET_A_REFERENCE",
+      "to": "GITHUB_UPDATE_A_REFERENCE",
+      "param": "sha",
+      "score": 0.72,
+      "reason": "llm: Retrieves a reference that includes the SHA of the commit."
+    },
+    {
+      "from": "GITHUB_LIST_CHECK_RUNS_FOR_A_REF",
+      "to": "GITHUB_UPDATE_A_REFERENCE",
+      "param": "sha",
+      "score": 0.63,
+      "reason": "llm: Lists check runs for a commit SHA, providing the SHA in the output."
+    },
+    {
+      "from": "GITHUB_LIST_ORGANIZATION_WEBHOOKS",
+      "to": "GITHUB_UPDATE_ORGANIZATION_WEBHOOK_CONFIGURATION",
+      "param": "hook_id",
+      "score": 0.9,
+      "reason": "llm: This tool lists all webhooks for a specified organization and returns their unique identifiers."
+    },
+    {
+      "from": "GITHUB_LIST_REPOSITORY_WEBHOOKS",
+      "to": "GITHUB_UPDATE_REPOSITORY_WEBHOOK_CONFIGURATION",
+      "param": "hook_id",
+      "score": 0.9,
+      "reason": "llm: This tool retrieves a list of webhooks for a repository and includes their unique identifiers."
+    },
+    {
       "from": "GITHUB_LIST_ORG_RESOURCE_ACCESS_TOKENS",
       "to": "GITHUB_UPDATE_RESOURCE_ACCESS_WITH_TOKENS",
       "param": "pat_ids",
@@ -41526,11 +41519,18 @@
       "reason": "llm: This tool lists repositories that a token has requested access to, providing token IDs."
     },
     {
-      "from": "GITHUB_LIST_REPOSITORY_WEBHOOKS",
-      "to": "GITHUB_UPDATE_REPOSITORY_WEBHOOK_CONFIGURATION",
-      "param": "hook_id",
-      "score": 0.9,
-      "reason": "llm: This tool retrieves a list of webhooks for a repository and includes their unique identifiers."
+      "from": "GITHUB_GET_A_THREAD_SUBSCRIPTION_FOR_THE_AUTHENTICATED_USER",
+      "to": "GITHUB_UPDATE_SUBSCRIPTION",
+      "param": "subscribable_id",
+      "score": 0.72,
+      "reason": "llm: This tool retrieves subscription details for a specific notification thread, which can provide the necessary subscribable_id."
+    },
+    {
+      "from": "GITHUB_GET_A_REPOSITORY_SUBSCRIPTION",
+      "to": "GITHUB_UPDATE_SUBSCRIPTION",
+      "param": "subscribable_id",
+      "score": 0.63,
+      "reason": "llm: This tool gets subscription details for a repository, which may include the subscribable_id."
     },
     {
       "from": "GITHUB_LIST_PROJECT_ITEMS_FOR_USER",

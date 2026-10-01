@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tool dependency graph · Google Super & GitHub</title>
+<script src="https://cdn.jsdelivr.net/npm/cytoscape@3.34.3/dist/cytoscape.min.js"></script>
+<style>
+  :root { --bg: #fafaf9; --panel: #fff; --ink: #1c1917; --muted: #78716c; --line: #e7e5e4; --accent: #2563eb; }
+  * { box-sizing: border-box; }
+  body { margin: 0; height: 100vh; display: grid; grid-template-columns: 340px 1fr; font: 14px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--ink); background: var(--bg); }
+  aside { overflow-y: auto; padding: 16px; background: var(--panel); border-right: 1px solid var(--line); }
+  #cy { width: 100%; height: 100vh; }
+  h1 { margin: 0 0 4px; font-size: 16px; }
+  h2 { margin: 0 0 6px; font-size: 13px; word-break: break-all; }
+  h3 { margin: 14px 0 4px; font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+  .muted { color: var(--muted); font-size: 12px; }
+  label { display: block; margin: 14px 0 4px; font-size: 12px; color: var(--muted); }
+  select, input[type=search] { width: 100%; padding: 6px 8px; font: inherit; border: 1px solid var(--line); border-radius: 6px; }
+  .check { display: flex; gap: 6px; align-items: center; margin-top: 10px; font-size: 13px; }
+  .legend { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 12px; }
+  .legend i { display: inline-block; width: 18px; margin-right: 4px; vertical-align: middle; border-top: 2px solid #94a3b8; }
+  .legend i.llm { border-top-style: dashed; }
+  #details { margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--line); }
+  .param { margin: 6px 0; }
+  .kind { margin-left: 4px; padding: 1px 6px; font-size: 11px; border-radius: 10px; background: #f5f5f4; }
+  .kind.tool { background: #dbeafe; } .kind.either { background: #e0e7ff; } .kind.context { background: #fef3c7; } .kind.unresolved { background: #fee2e2; }
+  .link { display: block; margin-left: 12px; font-size: 12px; color: var(--muted); cursor: pointer; word-break: break-all; }
+  .link:hover { color: var(--accent); }
+  button { margin: 10px 6px 0 0; padding: 6px 10px; font: inherit; background: #fff; border: 1px solid var(--line); border-radius: 6px; cursor: pointer; }
+  button:hover { border-color: var(--accent); }
+</style>
+</head>
+<body>
+<aside>
+  <h1>Tool dependency graph</h1>
+  <div class="muted" id="stats"></div>
+  <label for="app">App</label>
+  <select id="app"></select>
+  <label for="search">Find a tool</label>
+  <input id="search" type="search" list="slugs" placeholder="e.g. REPLY_TO_THREAD">
+  <datalist id="slugs"></datalist>
+  <div class="check"><input type="checkbox" id="isolated"><span>Show tools with no links</span></div>
+  <h3>Legend</h3>
+  <div class="legend"><span><i></i>schema / description match</span><span><i class="llm"></i>LLM-resolved</span></div>
+  <div class="muted">Arrows point from the precursor to the tool that needs it, labelled with the parameter supplied.</div>
+  <div id="details" class="muted">Click a tool to see what it needs, or click an edge to see why it exists.</div>
+</aside>
+<div id="cy"></div>
+<script>
+const GRAPH = /*DATA*/null;
+
+const PALETTE = ["#2563eb", "#dc2626", "#16a34a", "#d97706", "#9333ea", "#0891b2", "#db2777", "#65a30d", "#4f46e5", "#ea580c", "#0d9488", "#7c3aed", "#be123c", "#475569", "#a16207"];
+const CHAIN_DEPTH = 3;
+
+const byId = new Map(GRAPH.nodes.map((n) => [n.slug, n]));
+const apps = [...new Set(GRAPH.nodes.map((n) => n.app))].sort();
+const color = Object.fromEntries(apps.map((a, i) => [a, PALETTE[i % PALETTE.length]]));
+const incoming = new Map();
+const outgoing = new Map();
+for (const e of GRAPH.edges) {
+  if (!incoming.has(e.to)) incoming.set(e.to, []);
+  if (!outgoing.has(e.from)) outgoing.set(e.from, []);
+  incoming.get(e.to).push(e);
+  outgoing.get(e.from).push(e);
+}
+
+const short = (slug) => slug.replace(/^(GOOGLESUPER|GITHUB)_/, "");
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+const $ = (id) => document.getElementById(id);
+
+const cy = cytoscape({
+  container: $("cy"),
+  minZoom: 0.1,
+  style: [
+    { selector: "node", style: { label: "data(label)", "background-color": "data(color)", width: 14, height: 14, "font-size": 9, color: "#44403c", "text-valign": "bottom", "text-margin-y": 3 } },
+    { selector: "node:selected", style: { "border-width": 3, "border-color": "#111", width: 20, height: 20 } },
+    { selector: "edge", style: { width: "mapData(score, 0.6, 1, 1, 3)", "line-color": "#cbd5e1", "target-arrow-color": "#cbd5e1", "target-arrow-shape": "triangle", "arrow-scale": 0.8, "curve-style": "bezier", label: "data(param)", "font-size": 7, color: "#64748b", "text-rotation": "autorotate", "text-background-color": "#fff", "text-background-opacity": 0.8 } },
+    { selector: "edge.llm", style: { "line-style": "dashed" } },
+    { selector: ".hl", style: { "line-color": "#2563eb", "target-arrow-color": "#2563eb", "z-index": 9 } },
+    { selector: ".faded", style: { opacity: 0.12 } },
+  ],
+});
+
+function render(slugs, edges, layout) {
+  cy.elements().remove();
+  cy.add([...slugs].map((s) => ({ data: { id: s, label: short(s), color: color[byId.get(s).app] } })));
+  cy.add(edges.map((e, i) => ({ data: { id: `e${i}`, source: e.from, target: e.to, param: e.param, score: e.score, reason: e.reason }, classes: e.reason.startsWith("llm") ? "llm" : "" })));
+  cy.layout(layout).run();
+}
+
+function showApp(app) {
+  const inApp = GRAPH.nodes.filter((n) => n.app === app).map((n) => n.slug);
+  const set = new Set(inApp);
+  const edges = GRAPH.edges.filter((e) => set.has(e.to) || set.has(e.from));
+  const slugs = new Set(edges.flatMap((e) => [e.from, e.to]));
+  if ($("isolated").checked) inApp.forEach((s) => slugs.add(s));
+  render(slugs, edges, { name: "cose", animate: false, nodeRepulsion: () => 9000, idealEdgeLength: () => 90, numIter: 1200 });
+  $("details").innerHTML = `<span class="muted">${set.size} tools in ${esc(app)}, ${edges.length} edges. Click a tool for details.</span>`;
+}
+
+/** Every precursor up to CHAIN_DEPTH steps back: what an agent may need to call first. */
+function showChain(slug) {
+  const slugs = new Set([slug]);
+  const edges = [];
+  let frontier = [slug];
+  for (let depth = 0; depth < CHAIN_DEPTH && frontier.length; depth++) {
+    const next = [];
+    for (const s of frontier) {
+      for (const e of incoming.get(s) ?? []) {
+        edges.push(e);
+        if (!slugs.has(e.from)) next.push(e.from);
+        slugs.add(e.from);
+      }
+    }
+    frontier = next;
+  }
+  render(slugs, edges, { name: "breadthfirst", directed: true, spacingFactor: 1.3 });
+  cy.getElementById(slug).select();
+  showDetails(slug);
+}
+
+function showDetails(slug) {
+  const node = byId.get(slug);
+  const needs = node.needs.map((r) => {
+    const producers = r.producers.map((p) => `<span class="link" data-slug="${p}">← ${esc(short(p))}</span>`).join("");
+    return `<div class="param">${esc(r.param)}<span class="kind ${r.kind}">${r.kind}</span>${producers}</div>`;
+  });
+  const feeds = (outgoing.get(slug) ?? []).map((e) => `<span class="link" data-slug="${e.to}">→ ${esc(short(e.to))} [${esc(e.param)}]</span>`);
+  $("details").innerHTML = `
+    <h2>${esc(slug)}</h2>
+    <div class="muted">${esc(node.app)} · ${esc(node.verb)} · ${esc(node.resource)}</div>
+    <h3>Needs</h3>${needs.join("") || '<span class="muted">No required inputs</span>'}
+    <h3>Feeds (${feeds.length})</h3>${feeds.slice(0, 25).join("") || '<span class="muted">Nothing</span>'}
+    <button id="chain">Show precursor chain</button><button id="back">Back to ${esc(node.app)}</button>`;
+  $("chain").onclick = () => showChain(slug);
+  $("back").onclick = () => selectApp(node.app);
+  cy.elements().removeClass("hl faded");
+  const el = cy.getElementById(slug);
+  if (el.nonempty()) {
+    cy.elements().not(el.closedNeighborhood()).addClass("faded");
+    el.connectedEdges().addClass("hl");
+  }
+}
+
+function focus(slug) {
+  if (!byId.has(slug)) return;
+  const el = cy.getElementById(slug);
+  if (el.empty()) return showChain(slug);
+  cy.elements().unselect();
+  el.select();
+  cy.animate({ center: { eles: el }, duration: 300 });
+  showDetails(slug);
+}
+
+function selectApp(app) {
+  $("app").value = app;
+  showApp(app);
+}
+
+$("details").addEventListener("click", (ev) => {
+  const slug = ev.target.dataset?.slug;
+  if (slug) focus(slug);
+});
+cy.on("tap", "node", (ev) => showDetails(ev.target.id()));
+cy.on("tap", "edge", (ev) => {
+  const d = ev.target.data();
+  $("details").innerHTML = `<h2>${esc(short(d.source))} → ${esc(short(d.target))}</h2>
+    <div class="param">supplies <b>${esc(d.param)}</b> · score ${d.score}</div><div class="muted">${esc(d.reason)}</div>`;
+});
+cy.on("tap", (ev) => {
+  if (ev.target === cy) cy.elements().removeClass("hl faded");
+});
+
+const llmEdges = GRAPH.edges.filter((e) => e.reason.startsWith("llm")).length;
+$("stats").textContent = `${GRAPH.nodes.length} tools · ${GRAPH.edges.length} edges (${llmEdges} LLM-resolved)`;
+$("app").innerHTML = apps.map((a) => `<option value="${a}">${a} (${GRAPH.nodes.filter((n) => n.app === a).length})</option>`).join("");
+$("slugs").innerHTML = GRAPH.nodes.map((n) => `<option value="${n.slug}">`).join("");
+$("app").onchange = () => showApp($("app").value);
+$("isolated").onchange = () => showApp($("app").value);
+$("search").onchange = () => focus($("search").value.trim().toUpperCase());
+
+selectApp(apps.includes("gmail") ? "gmail" : apps[0]);
+</script>
+</body>
+</html>
