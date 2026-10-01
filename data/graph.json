@@ -9,8 +9,10 @@
       "needs": [
         {
           "param": "rule_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_ACL_LIST"
+          ]
         },
         {
           "param": "calendar_id",
@@ -31,8 +33,10 @@
       "needs": [
         {
           "param": "rule_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_ACL_LIST"
+          ]
         },
         {
           "param": "calendar_id",
@@ -92,8 +96,10 @@
       "needs": [
         {
           "param": "rule_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_ACL_LIST"
+          ]
         },
         {
           "param": "calendar_id",
@@ -119,8 +125,10 @@
         },
         {
           "param": "rule_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_ACL_LIST"
+          ]
         },
         {
           "param": "calendar_id",
@@ -168,8 +176,10 @@
       "needs": [
         {
           "param": "album_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_ALBUMS"
+          ]
         },
         {
           "param": "album_position",
@@ -231,8 +241,11 @@
       "needs": [
         {
           "param": "id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_FIND_FOLDER",
+            "GOOGLESUPER_FIND_FILE"
+          ]
         },
         {
           "param": "file_id",
@@ -420,13 +433,17 @@
       "needs": [
         {
           "param": "album_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_ALBUMS"
+          ]
         },
         {
           "param": "media_item_ids",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_MEDIA_ITEMS"
+          ]
         }
       ]
     },
@@ -530,8 +547,11 @@
       "needs": [
         {
           "param": "media_item_ids",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_MEDIA_ITEMS",
+            "GOOGLESUPER_SEARCH_MEDIA_ITEMS"
+          ]
         }
       ]
     },
@@ -601,8 +621,11 @@
       "needs": [
         {
           "param": "property",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+            "GOOGLESUPER_LIST_ACCOUNT_SUMMARIES"
+          ]
         },
         {
           "param": "requests",
@@ -620,8 +643,11 @@
       "needs": [
         {
           "param": "property",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+            "GOOGLESUPER_LIST_ACCOUNT_SUMMARIES"
+          ]
         },
         {
           "param": "requests",
@@ -847,8 +873,12 @@
       "needs": [
         {
           "param": "property",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+            "GOOGLESUPER_LIST_ACCOUNT_SUMMARIES",
+            "GOOGLESUPER_LIST_ACCOUNTS_V1_BETA"
+          ]
         }
       ]
     },
@@ -1069,8 +1099,10 @@
       "needs": [
         {
           "param": "parent",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_PROPERTIES_FILTERED"
+          ]
         },
         {
           "param": "audience",
@@ -1092,8 +1124,10 @@
       "needs": [
         {
           "param": "parent",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_PROPERTIES_FILTERED"
+          ]
         },
         {
           "param": "audience",
@@ -1332,8 +1366,10 @@
       "needs": [
         {
           "param": "parent",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_PROPERTIES_FILTERED"
+          ]
         },
         {
           "param": "expanded_data_set",
@@ -1593,8 +1629,10 @@
       "needs": [
         {
           "param": "parent",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_PROPERTIES_FILTERED"
+          ]
         },
         {
           "param": "audience",
@@ -1651,8 +1689,10 @@
       "needs": [
         {
           "param": "parent",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_PROPERTIES_FILTERED"
+          ]
         }
       ]
     },
@@ -1697,8 +1737,10 @@
         },
         {
           "param": "target_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_FIND_FILE"
+          ]
         }
       ]
     },
@@ -1828,8 +1870,10 @@
       "needs": [
         {
           "param": "child_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_SUB_ACCOUNTS"
+          ]
         },
         {
           "param": "folder_id",
@@ -2128,8 +2172,11 @@
         },
         {
           "param": "parent_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_FIND_FILE",
+            "GOOGLESUPER_FIND_FOLDER"
+          ]
         }
       ]
     },
@@ -2200,8 +2247,10 @@
         },
         {
           "param": "reply_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_REPLIES"
+          ]
         },
         {
           "param": "comment_id",
@@ -2269,8 +2318,10 @@
       "needs": [
         {
           "param": "tab_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_GET_DOCUMENT_END_INDEX"
+          ]
         },
         {
           "param": "document_id",
@@ -2436,8 +2487,10 @@
         },
         {
           "param": "revision_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_REVISIONS"
+          ]
         }
       ]
     },
@@ -2495,8 +2548,11 @@
       "needs": [
         {
           "param": "space_name",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_CONFERENCE_RECORDS",
+            "GOOGLESUPER_GET_CONFERENCE_RECORD_BY_NAME"
+          ]
         }
       ]
     },
@@ -2618,8 +2674,10 @@
         },
         {
           "param": "destination",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_CALENDARS"
+          ]
         }
       ]
     },
@@ -2949,8 +3007,12 @@
       "needs": [
         {
           "param": "place_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_GET_PLACE_DETAILS",
+            "GOOGLESUPER_NEARBY_SEARCH",
+            "GOOGLESUPER_TEXT_SEARCH"
+          ]
         }
       ]
     },
@@ -3040,8 +3102,10 @@
       "needs": [
         {
           "param": "album_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_ALBUMS"
+          ]
         }
       ]
     },
@@ -3054,8 +3118,10 @@
       "needs": [
         {
           "param": "app_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_MEDIA_ITEMS"
+          ]
         }
       ]
     },
@@ -3102,8 +3168,11 @@
       "needs": [
         {
           "param": "name",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_ACCESSIBLE_CUSTOMERS",
+            "GOOGLESUPER_LIST_CALENDARS"
+          ]
         }
       ]
     },
@@ -3116,13 +3185,17 @@
       "needs": [
         {
           "param": "audience_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_AUDIENCES"
+          ]
         },
         {
           "param": "property_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_PROPERTIES_FILTERED"
+          ]
         }
       ]
     },
@@ -3183,8 +3256,10 @@
       "needs": [
         {
           "param": "id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_GET_CAMPAIGN_BY_NAME"
+          ]
         }
       ]
     },
@@ -3219,8 +3294,10 @@
       "needs": [
         {
           "param": "child_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_SUB_ACCOUNTS"
+          ]
         },
         {
           "param": "folder_id",
@@ -3305,8 +3382,10 @@
       "needs": [
         {
           "param": "conversion_action_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_DATA_MANAGER_CONVERSION_ACTIONS"
+          ]
         }
       ]
     },
@@ -3319,8 +3398,11 @@
       "needs": [
         {
           "param": "request_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_CONVERSION_EVENTS",
+            "GOOGLESUPER_GET_CONVERSION_ACTION_TAG_SNIPPETS"
+          ]
         }
       ]
     },
@@ -3373,8 +3455,11 @@
       "needs": [
         {
           "param": "name",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_ACCESSIBLE_CUSTOMERS",
+            "GOOGLESUPER_LIST_BUILDINGS"
+          ]
         }
       ]
     },
@@ -3387,8 +3472,11 @@
       "needs": [
         {
           "param": "name",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_ACCESSIBLE_CUSTOMERS",
+            "GOOGLESUPER_LIST_CALENDARS"
+          ]
         }
       ]
     },
@@ -3606,8 +3694,12 @@
       "needs": [
         {
           "param": "name",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_ACCOUNT_SUMMARIES",
+            "GOOGLESUPER_LIST_ACCOUNTS_V1_BETA",
+            "GOOGLESUPER_LIST_GOOGLE_ADS_LINKS"
+          ]
         }
       ]
     },
@@ -3662,8 +3754,12 @@
       "needs": [
         {
           "param": "media_item_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_SEARCH_MEDIA_ITEMS",
+            "GOOGLESUPER_LIST_MEDIA_ITEMS",
+            "GOOGLESUPER_BATCH_GET_MEDIA_ITEMS"
+          ]
         }
       ]
     },
@@ -3676,8 +3772,10 @@
       "needs": [
         {
           "param": "space_name",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_CONFERENCE_RECORDS"
+          ]
         }
       ]
     },
@@ -3690,8 +3788,10 @@
       "needs": [
         {
           "param": "name",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_ACCESSIBLE_CUSTOMERS"
+          ]
         }
       ]
     },
@@ -3732,8 +3832,11 @@
         },
         {
           "param": "parent_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_FIND_FILE",
+            "GOOGLESUPER_FIND_FOLDER"
+          ]
         }
       ]
     },
@@ -3796,8 +3899,11 @@
       "needs": [
         {
           "param": "email",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_SEND_AS",
+            "GOOGLESUPER_LIST_FORWARDING_ADDRESSES"
+          ]
         }
       ]
     },
@@ -3903,8 +4009,10 @@
       "needs": [
         {
           "param": "conference_record_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_CONFERENCE_RECORDS"
+          ]
         }
       ]
     },
@@ -3942,8 +4050,10 @@
         },
         {
           "param": "reply_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_REPLIES"
+          ]
         },
         {
           "param": "comment_id",
@@ -4199,8 +4309,10 @@
       "needs": [
         {
           "param": "conference_record_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_CONFERENCE_RECORDS"
+          ]
         }
       ]
     },
@@ -4289,8 +4401,10 @@
       "needs": [
         {
           "param": "id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_GET_CHILD"
+          ]
         },
         {
           "param": "folder_id",
@@ -4624,8 +4738,10 @@
       "needs": [
         {
           "param": "parent",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_PROPERTIES_FILTERED"
+          ]
         }
       ]
     },
@@ -4672,8 +4788,10 @@
       "needs": [
         {
           "param": "parent",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_PROPERTIES_FILTERED"
+          ]
         }
       ]
     },
@@ -4686,8 +4804,10 @@
       "needs": [
         {
           "param": "parent",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_PROPERTIES_FILTERED"
+          ]
         }
       ]
     },
@@ -4736,8 +4856,10 @@
       "needs": [
         {
           "param": "parent",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_PROPERTIES_FILTERED"
+          ]
         }
       ]
     },
@@ -4846,8 +4968,10 @@
       "needs": [
         {
           "param": "parent",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_PROPERTIES_FILTERED"
+          ]
         }
       ]
     },
@@ -4890,8 +5014,10 @@
       "needs": [
         {
           "param": "parent",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_PROPERTIES_FILTERED"
+          ]
         }
       ]
     },
@@ -4912,8 +5038,10 @@
       "needs": [
         {
           "param": "parent",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_PROPERTIES_FILTERED"
+          ]
         }
       ]
     },
@@ -4970,8 +5098,10 @@
       "needs": [
         {
           "param": "parent",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_PROPERTIES_FILTERED"
+          ]
         }
       ]
     },
@@ -5078,8 +5208,11 @@
       "needs": [
         {
           "param": "parent",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+            "GOOGLESUPER_LIST_ACCOUNT_SUMMARIES"
+          ]
         }
       ]
     },
@@ -5109,8 +5242,10 @@
       "needs": [
         {
           "param": "parent",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_PROPERTIES_FILTERED"
+          ]
         }
       ]
     },
@@ -5139,8 +5274,10 @@
       "needs": [
         {
           "param": "parent",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_PROPERTIES_FILTERED"
+          ]
         }
       ]
     },
@@ -5177,13 +5314,17 @@
       "needs": [
         {
           "param": "participant_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_PARTICIPANTS"
+          ]
         },
         {
           "param": "conference_record_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_CONFERENCE_RECORDS"
+          ]
         }
       ]
     },
@@ -5214,8 +5355,11 @@
       "needs": [
         {
           "param": "filter",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_ACCOUNT_SUMMARIES",
+            "GOOGLESUPER_LIST_ACCOUNTS_V1_BETA"
+          ]
         }
       ]
     },
@@ -5242,8 +5386,10 @@
       "needs": [
         {
           "param": "parent",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_PROPERTIES_FILTERED"
+          ]
         }
       ]
     },
@@ -5281,8 +5427,10 @@
       "needs": [
         {
           "param": "parent",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_PROPERTIES_FILTERED"
+          ]
         }
       ]
     },
@@ -5295,8 +5443,10 @@
       "needs": [
         {
           "param": "parent",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_PROPERTIES_FILTERED"
+          ]
         }
       ]
     },
@@ -5327,8 +5477,10 @@
       "needs": [
         {
           "param": "parent",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_PROPERTIES_FILTERED"
+          ]
         }
       ]
     },
@@ -5411,8 +5563,10 @@
       "needs": [
         {
           "param": "parent",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_PROPERTIES_FILTERED"
+          ]
         }
       ]
     },
@@ -5425,8 +5579,10 @@
       "needs": [
         {
           "param": "parent",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_PROPERTIES_FILTERED"
+          ]
         }
       ]
     },
@@ -5477,8 +5633,10 @@
         },
         {
           "param": "conference_record_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_CONFERENCE_RECORDS"
+          ]
         }
       ]
     },
@@ -5626,8 +5784,11 @@
         },
         {
           "param": "destination_folder_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_FIND_FOLDER",
+            "GOOGLESUPER_FIND_FILE"
+          ]
         }
       ]
     },
@@ -6064,8 +6225,11 @@
         },
         {
           "param": "user_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_CSE_IDENTITIES",
+            "GOOGLESUPER_LIST_LABELS"
+          ]
         }
       ]
     },
@@ -6183,8 +6347,10 @@
       "needs": [
         {
           "param": "photo_reference",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_SEARCH_MEDIA_ITEMS"
+          ]
         }
       ]
     },
@@ -6211,8 +6377,11 @@
       "needs": [
         {
           "param": "template_presentation_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_GET_PRESENTATION",
+            "GOOGLESUPER_PRESENTATIONS_GET"
+          ]
         }
       ]
     },
@@ -6249,8 +6418,10 @@
         },
         {
           "param": "presentation_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_SHARED_DRIVES"
+          ]
         }
       ]
     },
@@ -6486,8 +6657,11 @@
         },
         {
           "param": "property",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+            "GOOGLESUPER_GET_PROPERTY"
+          ]
         }
       ]
     },
@@ -6505,8 +6679,11 @@
         },
         {
           "param": "property",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+            "GOOGLESUPER_GET_PROPERTY"
+          ]
         }
       ]
     },
@@ -6519,8 +6696,12 @@
       "needs": [
         {
           "param": "property",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+            "GOOGLESUPER_GET_PROPERTY",
+            "GOOGLESUPER_LIST_ACCOUNT_SUMMARIES"
+          ]
         }
       ]
     },
@@ -6533,8 +6714,11 @@
       "needs": [
         {
           "param": "property",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+            "GOOGLESUPER_GET_PROPERTY"
+          ]
         }
       ]
     },
@@ -6646,8 +6830,12 @@
         },
         {
           "param": "recipient_email",
-          "kind": "user",
-          "producers": []
+          "kind": "either",
+          "producers": [
+            "GOOGLESUPER_FETCH_EMAILS",
+            "GOOGLESUPER_LIST_FORWARDING_ADDRESSES",
+            "GOOGLESUPER_LIST_SEND_AS"
+          ]
         }
       ]
     },
@@ -6675,8 +6863,10 @@
         },
         {
           "param": "measurement_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_MEASUREMENT_PROTOCOL_SECRETS"
+          ]
         }
       ]
     },
@@ -6754,8 +6944,10 @@
       "needs": [
         {
           "param": "setting",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_SETTINGS_LIST"
+          ]
         }
       ]
     },
@@ -7129,8 +7321,10 @@
       "needs": [
         {
           "param": "album_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_ALBUMS"
+          ]
         }
       ]
     },
@@ -7246,8 +7440,11 @@
       "needs": [
         {
           "param": "id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_SEARCH_DOCUMENTS",
+            "GOOGLESUPER_GET_DOCUMENT"
+          ]
         },
         {
           "param": "markdown",
@@ -7371,8 +7568,11 @@
         },
         {
           "param": "document_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_SEARCH_DOCUMENTS",
+            "GOOGLESUPER_GET_DOCUMENT_BY_ID"
+          ]
         }
       ]
     },
@@ -7519,8 +7719,12 @@
         },
         {
           "param": "media_item_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_MEDIA_ITEMS",
+            "GOOGLESUPER_SEARCH_MEDIA_ITEMS",
+            "GOOGLESUPER_BATCH_GET_MEDIA_ITEMS"
+          ]
         }
       ]
     },
@@ -7607,8 +7811,10 @@
         },
         {
           "param": "reply_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_REPLIES"
+          ]
         },
         {
           "param": "comment_id",
@@ -7665,8 +7871,11 @@
       "needs": [
         {
           "param": "name",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_CONFERENCE_RECORDS",
+            "GOOGLESUPER_LIST_CALENDAR_RESOURCES"
+          ]
         }
       ]
     },
@@ -7782,8 +7991,11 @@
       "needs": [
         {
           "param": "id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_TASKS",
+            "GOOGLESUPER_LIST_ALL_TASKS"
+          ]
         },
         {
           "param": "title",
@@ -7967,8 +8179,10 @@
         },
         {
           "param": "client_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_MEASUREMENT_PROTOCOL_SECRETS"
+          ]
         },
         {
           "param": "api_secret",
@@ -7977,8 +8191,10 @@
         },
         {
           "param": "measurement_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_MEASUREMENT_PROTOCOL_SECRETS"
+          ]
         }
       ]
     },
@@ -8040,8 +8256,11 @@
       "needs": [
         {
           "param": "id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GOOGLESUPER_LIST_DRIVE_CHANGES",
+            "GOOGLESUPER_GET_DRIVE"
+          ]
         },
         {
           "param": "type",
@@ -8130,8 +8349,11 @@
       "needs": [
         {
           "param": "migration_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_ACCESSIBLE_REPOSITORIES",
+            "GITHUB_FIND_REPOSITORIES"
+          ]
         }
       ]
     },
@@ -8466,8 +8688,10 @@
         },
         {
           "param": "installation_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_APP_INSTALLATIONS"
+          ]
         }
       ]
     },
@@ -9383,8 +9607,12 @@
       "needs": [
         {
           "param": "item_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_ORG_PROJECT_VIEW_ITEMS",
+            "GITHUB_LIST_PROJECT_VIEW_ITEMS_FOR_USER",
+            "GITHUB_LIST_PROJECT_ITEMS_FOR_USER"
+          ]
         },
         {
           "param": "field_id",
@@ -9584,8 +9812,10 @@
         },
         {
           "param": "runner_group_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_SELF_HOSTED_RUNNERS_FOR_AN_ORGANIZATION"
+          ]
         }
       ]
     },
@@ -9858,8 +10088,12 @@
       "needs": [
         {
           "param": "sha",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_COMMITS",
+            "GITHUB_LIST_COMMITS_ON_A_PULL_REQUEST",
+            "GITHUB_LIST_BRANCHES_FOR_HEAD_COMMIT"
+          ]
         },
         {
           "param": "repo",
@@ -10257,13 +10491,17 @@
         },
         {
           "param": "key_prefix",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_REPOSITORY_AUTOLINKS"
+          ]
         },
         {
           "param": "url_template",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_REPOSITORY_AUTOLINKS"
+          ]
         }
       ]
     },
@@ -10505,8 +10743,12 @@
         },
         {
           "param": "sha",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_COMMITS",
+            "GITHUB_GET_A_REFERENCE",
+            "GITHUB_LIST_CHECK_RUNS_FOR_A_REF"
+          ]
         },
         {
           "param": "repo",
@@ -10912,8 +11154,10 @@
       "needs": [
         {
           "param": "client_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_APP_INSTALLATIONS"
+          ]
         },
         {
           "param": "access_token",
@@ -10936,8 +11180,11 @@
         },
         {
           "param": "sha",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_REPOSITORY",
+            "GITHUB_LIST_CODE_SCANNING_ANALYSES_FOR_A_REPOSITORY"
+          ]
         },
         {
           "param": "repo",
@@ -10970,8 +11217,10 @@
       "needs": [
         {
           "param": "tag",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_REPOSITORY_TAGS"
+          ]
         },
         {
           "param": "repo",
@@ -10985,8 +11234,12 @@
         },
         {
           "param": "object",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_GET_A_TAG",
+            "GITHUB_GET_COMMIT_OBJECT",
+            "GITHUB_COMPARE_TWO_COMMITS"
+          ]
         },
         {
           "param": "message",
@@ -11033,8 +11286,11 @@
         },
         {
           "param": "ghsa_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_FORKS",
+            "GITHUB_LIST_REPOSITORIES"
+          ]
         }
       ]
     },
@@ -11230,8 +11486,10 @@
       "needs": [
         {
           "param": "model",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_GET_CATALOG_MODELS"
+          ]
         },
         {
           "param": "messages",
@@ -11254,8 +11512,10 @@
         },
         {
           "param": "model",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_GET_CATALOG_MODELS"
+          ]
         }
       ]
     },
@@ -11312,8 +11572,12 @@
         },
         {
           "param": "runner_group_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_SELF_HOSTED_RUNNERS_FOR_AN_ORGANIZATION",
+            "GITHUB_LIST_SELF_HOSTED_RUNNERS_FOR_A_REPOSITORY",
+            "GITHUB_GET_A_SELF_HOSTED_RUNNER_FOR_AN_ORGANIZATION"
+          ]
         }
       ]
     },
@@ -11782,8 +12046,12 @@
         },
         {
           "param": "comment_number",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_ISSUE_COMMENTS",
+            "GITHUB_LIST_COMMENTS_FOR_A_PULL_REQUEST_REVIEW",
+            "GITHUB_LIST_COMMIT_COMMENTS"
+          ]
         },
         {
           "param": "discussion_number",
@@ -12052,8 +12320,11 @@
       "needs": [
         {
           "param": "client_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_GET_AN_APP",
+            "GITHUB_LIST_APP_INSTALLATIONS"
+          ]
         },
         {
           "param": "access_token",
@@ -12071,8 +12342,12 @@
       "needs": [
         {
           "param": "client_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_APP_INSTALLATIONS",
+            "GITHUB_LIST_APPS_WITH_ACCESS_TO_THE_PROTECTED_BRANCH",
+            "GITHUB_LIST_ACCESSIBLE_REPOSITORIES"
+          ]
         },
         {
           "param": "access_token",
@@ -12520,8 +12795,10 @@
       "needs": [
         {
           "param": "thread_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_NOTIFICATIONS"
+          ]
         }
       ]
     },
@@ -12624,8 +12901,10 @@
         },
         {
           "param": "analysis_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_CODE_SCANNING_ANALYSES_FOR_A_REPOSITORY"
+          ]
         }
       ]
     },
@@ -12897,8 +13176,10 @@
         },
         {
           "param": "discussion_number",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_SEARCH_GITHUB_GRAPHQL"
+          ]
         }
       ]
     },
@@ -12925,8 +13206,12 @@
         },
         {
           "param": "comment_number",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_ISSUE_COMMENTS",
+            "GITHUB_LIST_ISSUE_COMMENTS_FOR_A_REPOSITORY",
+            "GITHUB_LIST_COMMENTS_FOR_A_PULL_REQUEST_REVIEW"
+          ]
         },
         {
           "param": "discussion_number",
@@ -13081,8 +13366,10 @@
         },
         {
           "param": "comment_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_GIST_COMMENTS"
+          ]
         }
       ]
     },
@@ -13105,8 +13392,10 @@
         },
         {
           "param": "cache_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_GITHUB_ACTIONS_CACHES_FOR_A_REPOSITORY"
+          ]
         }
       ]
     },
@@ -13543,8 +13832,11 @@
         },
         {
           "param": "review_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_REVIEWS_FOR_A_PULL_REQUEST",
+            "GITHUB_LIST_REVIEW_COMMENTS_ON_A_PULL_REQUEST"
+          ]
         },
         {
           "param": "pull_number",
@@ -13599,8 +13891,12 @@
       "needs": [
         {
           "param": "item_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_PROJECT_VIEW_ITEMS_FOR_USER",
+            "GITHUB_LIST_ORG_PROJECT_VIEW_ITEMS",
+            "GITHUB_LIST_PROJECT_ITEMS_FOR_USER"
+          ]
         },
         {
           "param": "username",
@@ -13782,8 +14078,12 @@
         },
         {
           "param": "reaction_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_REACTIONS_FOR_A_COMMIT_COMMENT",
+            "GITHUB_LIST_REACTIONS_FOR_AN_ISSUE",
+            "GITHUB_LIST_REACTIONS_FOR_AN_ISSUE_COMMENT"
+          ]
         },
         {
           "param": "discussion_number",
@@ -14039,8 +14339,11 @@
       "needs": [
         {
           "param": "ref",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_REPOSITORY_RULE_SUITES",
+            "GITHUB_LIST_CODE_SCANNING_ANALYSES_FOR_A_REPOSITORY"
+          ]
         },
         {
           "param": "repo",
@@ -14063,8 +14366,11 @@
       "needs": [
         {
           "param": "ref",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_REPOSITORY_RULE_SUITES",
+            "GITHUB_LIST_CODE_SCANNING_ANALYSES_FOR_A_REPOSITORY"
+          ]
         },
         {
           "param": "repo",
@@ -14131,8 +14437,12 @@
         },
         {
           "param": "attempt_number",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_WORKFLOW",
+            "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_REPOSITORY",
+            "GITHUB_LIST_JOBS_FOR_A_WORKFLOW_RUN"
+          ]
         }
       ]
     },
@@ -15306,8 +15616,11 @@
       "needs": [
         {
           "param": "card_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_PROJECT_COLUMNS",
+            "GITHUB_LIST_REPOSITORY_PROJECTS"
+          ]
         }
       ]
     },
@@ -15843,8 +16156,12 @@
         },
         {
           "param": "tag_sha",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_REPOSITORY_TAGS",
+            "GITHUB_GET_A_RELEASE_BY_TAG_NAME",
+            "GITHUB_LIST_MATCHING_REFERENCES"
+          ]
         }
       ]
     },
@@ -15880,8 +16197,10 @@
       "needs": [
         {
           "param": "thread_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_NOTIFICATIONS"
+          ]
         }
       ]
     },
@@ -15953,8 +16272,10 @@
         },
         {
           "param": "hook_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_ORGANIZATION_WEBHOOKS"
+          ]
         }
       ]
     },
@@ -15977,8 +16298,10 @@
         },
         {
           "param": "hook_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_REPOSITORY_WEBHOOKS"
+          ]
         }
       ]
     },
@@ -16083,8 +16406,12 @@
         },
         {
           "param": "attempt_number",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_WORKFLOW",
+            "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_REPOSITORY",
+            "GITHUB_LIST_JOBS_FOR_A_WORKFLOW_RUN"
+          ]
         }
       ]
     },
@@ -16231,8 +16558,11 @@
       "needs": [
         {
           "param": "key",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_CODES_OF_CONDUCT",
+            "GITHUB_LIST_CODES_OF_CONDUCT_GRAPHQL"
+          ]
         }
       ]
     },
@@ -16307,8 +16637,10 @@
         },
         {
           "param": "analysis_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_CODE_SCANNING_ANALYSES_FOR_A_REPOSITORY"
+          ]
         }
       ]
     },
@@ -16440,8 +16772,12 @@
       "needs": [
         {
           "param": "ref",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_COMMITS",
+            "GITHUB_LIST_COMMITS_ON_A_PULL_REQUEST",
+            "GITHUB_SEARCH_COMMITS"
+          ]
         },
         {
           "param": "repo",
@@ -16703,8 +17039,10 @@
         },
         {
           "param": "status_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_DEPLOYMENT_STATUSES"
+          ]
         },
         {
           "param": "deployment_id",
@@ -16724,8 +17062,12 @@
       "needs": [
         {
           "param": "export_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_CODESPACES_FOR_A_USER_IN_ORGANIZATION",
+            "GITHUB_LIST_CODESPACES_FOR_THE_AUTHENTICATED_USER",
+            "GITHUB_LIST_CODESPACES_FOR_THE_ORGANIZATION"
+          ]
         },
         {
           "param": "codespace_name",
@@ -16760,8 +17102,10 @@
         },
         {
           "param": "discussion_number",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_SEARCH_GITHUB_GRAPHQL"
+          ]
         }
       ]
     },
@@ -16788,8 +17132,12 @@
         },
         {
           "param": "comment_number",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_COMMENT_CHANGES",
+            "GITHUB_LIST_ISSUE_COMMENTS",
+            "GITHUB_LIST_ISSUE_COMMENTS_FOR_A_REPOSITORY"
+          ]
         },
         {
           "param": "discussion_number",
@@ -16824,8 +17172,11 @@
         },
         {
           "param": "enterprise_slug",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_ORGANIZATIONS_FOR_THE_AUTHENTICATED_USER",
+            "GITHUB_LIST_ORGANIZATIONS_FOR_USER"
+          ]
         }
       ]
     },
@@ -16873,8 +17224,10 @@
         },
         {
           "param": "comment_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_GIST_COMMENTS"
+          ]
         }
       ]
     },
@@ -16887,8 +17240,11 @@
       "needs": [
         {
           "param": "sha",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_GIST_COMMITS",
+            "GITHUB_GET_GIST"
+          ]
         },
         {
           "param": "gist_id",
@@ -17022,8 +17378,11 @@
         },
         {
           "param": "build_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_GITHUB_PAGES_BUILDS",
+            "GITHUB_GET_LATEST_PAGES_BUILD"
+          ]
         }
       ]
     },
@@ -17050,8 +17409,12 @@
       "needs": [
         {
           "param": "ghsa_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_GLOBAL_SECURITY_ADVISORIES",
+            "GITHUB_LIST_SECURITY_ADVISORIES_GRAPHQL",
+            "GITHUB_LIST_REPOSITORY_SECURITY_ADVISORIES"
+          ]
         }
       ]
     },
@@ -17098,8 +17461,10 @@
         },
         {
           "param": "sarif_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_CODE_SCANNING_ANALYSES_FOR_A_REPOSITORY"
+          ]
         }
       ]
     },
@@ -17228,8 +17593,11 @@
       "needs": [
         {
           "param": "license",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_COMMONLY_USED_LICENSES",
+            "GITHUB_LIST_LICENSES_GRAPH_QL"
+          ]
         }
       ]
     },
@@ -17242,8 +17610,11 @@
       "needs": [
         {
           "param": "key",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_LICENSES_GRAPH_QL",
+            "GITHUB_LIST_COMMONLY_USED_LICENSES"
+          ]
         }
       ]
     },
@@ -17337,8 +17708,12 @@
         },
         {
           "param": "item_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_ORG_PROJECT_VIEW_ITEMS",
+            "GITHUB_LIST_PROJECT_ITEMS_FOR_USER",
+            "GITHUB_LIST_PROJECT_VIEW_ITEMS_FOR_USER"
+          ]
         },
         {
           "param": "project_number",
@@ -17506,8 +17881,11 @@
         },
         {
           "param": "run_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_WORKFLOW",
+            "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_REPOSITORY"
+          ]
         }
       ]
     },
@@ -17875,8 +18253,12 @@
         },
         {
           "param": "ghsa_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_REPOSITORY_SECURITY_ADVISORIES",
+            "GITHUB_LIST_GLOBAL_SECURITY_ADVISORIES",
+            "GITHUB_LIST_SECURITY_ADVISORIES_GRAPHQL"
+          ]
         }
       ]
     },
@@ -17899,8 +18281,10 @@
         },
         {
           "param": "hook_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_REPOSITORY_WEBHOOKS"
+          ]
         },
         {
           "param": "delivery_id",
@@ -18079,8 +18463,11 @@
       "needs": [
         {
           "param": "ref",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_CHECK_RUNS_IN_A_CHECK_SUITE",
+            "GITHUB_LIST_INSTANCES_OF_A_CODE_SCANNING_ALERT"
+          ]
         },
         {
           "param": "repo",
@@ -18189,8 +18576,11 @@
         },
         {
           "param": "run_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_WORKFLOW",
+            "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_REPOSITORY"
+          ]
         }
       ]
     },
@@ -18213,8 +18603,11 @@
         },
         {
           "param": "pages_deployment_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_DEPLOYMENTS",
+            "GITHUB_LIST_DEPLOYMENT_STATUSES"
+          ]
         }
       ]
     },
@@ -18325,8 +18718,12 @@
       "needs": [
         {
           "param": "item_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_PROJECT_ITEMS_FOR_USER",
+            "GITHUB_LIST_PROJECT_VIEW_ITEMS_FOR_USER",
+            "GITHUB_LIST_ORG_PROJECT_VIEW_ITEMS"
+          ]
         },
         {
           "param": "username",
@@ -18536,8 +18933,10 @@
       "needs": [
         {
           "param": "assignment_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_ASSIGNMENTS_FOR_A_CLASSROOM"
+          ]
         }
       ]
     },
@@ -18760,8 +19159,12 @@
       "needs": [
         {
           "param": "ref",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_REPOSITORY",
+            "GITHUB_LIST_CHECK_RUNS_IN_A_CHECK_SUITE",
+            "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_WORKFLOW"
+          ]
         },
         {
           "param": "repo",
@@ -18812,8 +19215,12 @@
       "needs": [
         {
           "param": "ref",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_REPOSITORY",
+            "GITHUB_LIST_REPOSITORY_RULE_SUITES",
+            "GITHUB_LIST_CODE_SCANNING_ANALYSES_FOR_A_REPOSITORY"
+          ]
         },
         {
           "param": "repo",
@@ -19947,8 +20354,12 @@
         },
         {
           "param": "attempt_number",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_JOBS_FOR_A_WORKFLOW_RUN",
+            "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_WORKFLOW",
+            "GITHUB_GET_A_WORKFLOW_RUN"
+          ]
         }
       ]
     },
@@ -20398,8 +20809,10 @@
         },
         {
           "param": "view_number",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_ORGANIZATION_PROJECTS"
+          ]
         },
         {
           "param": "project_number",
@@ -20679,8 +21092,10 @@
         },
         {
           "param": "view_number",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_GET_USERS_PROJECTS_V2"
+          ]
         },
         {
           "param": "project_number",
@@ -21075,8 +21490,12 @@
         },
         {
           "param": "comment_number",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_ISSUE_COMMENTS",
+            "GITHUB_LIST_COMMENTS_FOR_A_PULL_REQUEST_REVIEW",
+            "GITHUB_LIST_COMMIT_COMMENTS"
+          ]
         },
         {
           "param": "discussion_number",
@@ -22393,8 +22812,10 @@
         },
         {
           "param": "pat_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_ORG_RESOURCE_ACCESS_TOKENS"
+          ]
         }
       ]
     },
@@ -22602,8 +23023,10 @@
         },
         {
           "param": "enterprise_slug",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_TEAMS_THAT_ARE_ASSIGNED_TO_AN_ORGANIZATION_ROLE"
+          ]
         }
       ]
     },
@@ -22774,8 +23197,10 @@
       "needs": [
         {
           "param": "thread_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_NOTIFICATIONS"
+          ]
         }
       ]
     },
@@ -22788,8 +23213,10 @@
       "needs": [
         {
           "param": "thread_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_NOTIFICATIONS"
+          ]
         }
       ]
     },
@@ -22851,8 +23278,12 @@
         },
         {
           "param": "head",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_BRANCHES",
+            "GITHUB_LIST_BRANCHES_FOR_HEAD_COMMIT",
+            "GITHUB_LIST_MATCHING_REFERENCES"
+          ]
         },
         {
           "param": "repo",
@@ -22979,8 +23410,10 @@
       "needs": [
         {
           "param": "tier_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_SPONSORABLES"
+          ]
         }
       ]
     },
@@ -23343,8 +23776,10 @@
         },
         {
           "param": "installation_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_APP_INSTALLATIONS"
+          ]
         }
       ]
     },
@@ -23458,8 +23893,11 @@
         },
         {
           "param": "runner_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_SELF_HOSTED_RUNNERS_FOR_A_REPOSITORY",
+            "GITHUB_LIST_SELF_HOSTED_RUNNERS_FOR_AN_ORGANIZATION"
+          ]
         }
       ]
     },
@@ -24470,8 +24908,10 @@
       "needs": [
         {
           "param": "client_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_APP_INSTALLATIONS"
+          ]
         },
         {
           "param": "access_token",
@@ -24657,8 +25097,10 @@
       "needs": [
         {
           "param": "tier_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_SPONSORABLES"
+          ]
         }
       ]
     },
@@ -24736,8 +25178,11 @@
         },
         {
           "param": "run_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_WORKFLOW",
+            "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_REPOSITORY"
+          ]
         },
         {
           "param": "comment",
@@ -25061,8 +25506,10 @@
       "needs": [
         {
           "param": "thread_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_NOTIFICATIONS"
+          ]
         }
       ]
     },
@@ -25893,8 +26340,12 @@
         },
         {
           "param": "migration_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_ORGANIZATION_REPOSITORIES",
+            "GITHUB_LIST_REPOSITORIES",
+            "GITHUB_LIST_ATTESTATION_REPOSITORIES"
+          ]
         }
       ]
     },
@@ -25912,8 +26363,12 @@
         },
         {
           "param": "migration_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_REPOSITORIES_FOR_A_USER",
+            "GITHUB_LIST_REPOSITORIES_FOR_THE_AUTHENTICATED_USER",
+            "GITHUB_LIST_REPOSITORIES_STARRED_BY_A_USER"
+          ]
         }
       ]
     },
@@ -26126,8 +26581,10 @@
         },
         {
           "param": "discussion_number",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_SEARCH_GITHUB_GRAPHQL"
+          ]
         }
       ]
     },
@@ -26159,8 +26616,12 @@
         },
         {
           "param": "comment_number",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_COMMENT_CHANGES",
+            "GITHUB_LIST_ISSUE_COMMENTS",
+            "GITHUB_LIST_ISSUE_COMMENTS_FOR_A_REPOSITORY"
+          ]
         },
         {
           "param": "discussion_number",
@@ -26210,8 +26671,10 @@
         },
         {
           "param": "comment_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_GIST_COMMENTS"
+          ]
         }
       ]
     },
@@ -26839,8 +27302,10 @@
         },
         {
           "param": "hook_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_ORGANIZATION_WEBHOOKS"
+          ]
         }
       ]
     },
@@ -26981,8 +27446,10 @@
         },
         {
           "param": "hook_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_REPOSITORY_WEBHOOKS"
+          ]
         }
       ]
     },
@@ -27000,8 +27467,10 @@
         },
         {
           "param": "pat_ids",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_ORG_RESOURCE_ACCESS_TOKENS"
+          ]
         }
       ]
     },
@@ -27041,8 +27510,11 @@
       "needs": [
         {
           "param": "subscribable_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_GET_A_THREAD_SUBSCRIPTION_FOR_THE_AUTHENTICATED_USER",
+            "GITHUB_GET_A_REPOSITORY_SUBSCRIPTION"
+          ]
         }
       ]
     },
@@ -27098,13 +27570,19 @@
       "needs": [
         {
           "param": "item_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_PROJECT_ITEMS_FOR_USER",
+            "GITHUB_LIST_PROJECT_VIEW_ITEMS_FOR_USER"
+          ]
         },
         {
           "param": "list_ids",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_PROJECT_ITEMS_FOR_USER",
+            "GITHUB_LIST_PROJECT_VIEW_ITEMS_FOR_USER"
+          ]
         }
       ]
     },
@@ -27122,8 +27600,12 @@
         },
         {
           "param": "item_id",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_PROJECT_ITEMS_FOR_USER",
+            "GITHUB_LIST_PROJECT_VIEW_ITEMS_FOR_USER",
+            "GITHUB_LIST_ORG_PROJECT_VIEW_ITEMS"
+          ]
         },
         {
           "param": "field_id",
@@ -27270,8 +27752,10 @@
       "needs": [
         {
           "param": "ref",
-          "kind": "unresolved",
-          "producers": []
+          "kind": "tool",
+          "producers": [
+            "GITHUB_LIST_REPO_DEV_CONTAINER_CONFIGS_FOR_USER"
+          ]
         },
         {
           "param": "repo",
@@ -38926,6 +39410,2120 @@
       "param": "commit_sha",
       "score": 0.9,
       "reason": "data.commit.sha"
+    },
+    {
+      "from": "GOOGLESUPER_ACL_LIST",
+      "to": "GOOGLESUPER_ACL_UPDATE",
+      "param": "rule_id",
+      "score": 0.9,
+      "reason": "llm: It retrieves the list of ACL rules, providing the necessary 'rule_id' values."
+    },
+    {
+      "from": "GOOGLESUPER_ACL_LIST",
+      "to": "GOOGLESUPER_ACL_DELETE",
+      "param": "rule_id",
+      "score": 0.9,
+      "reason": "llm: It retrieves the list of ACLs which includes the rule_id needed for deletion."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_ALBUMS",
+      "to": "GOOGLESUPER_ADD_ENRICHMENT",
+      "param": "album_id",
+      "score": 0.9,
+      "reason": "llm: This tool lists all albums and provides their identifiers."
+    },
+    {
+      "from": "GOOGLESUPER_ACL_LIST",
+      "to": "GOOGLESUPER_ACL_GET",
+      "param": "rule_id",
+      "score": 0.81,
+      "reason": "llm: This tool retrieves the list of ACL rules, providing the necessary rule_id values."
+    },
+    {
+      "from": "GOOGLESUPER_ACL_LIST",
+      "to": "GOOGLESUPER_ACL_PATCH",
+      "param": "rule_id",
+      "score": 0.9,
+      "reason": "llm: This tool retrieves existing ACL rule IDs needed for the update."
+    },
+    {
+      "from": "GOOGLESUPER_FIND_FOLDER",
+      "to": "GOOGLESUPER_ADD_PARENT",
+      "param": "id",
+      "score": 0.81,
+      "reason": "llm: This tool can find folders and return their IDs."
+    },
+    {
+      "from": "GOOGLESUPER_FIND_FILE",
+      "to": "GOOGLESUPER_ADD_PARENT",
+      "param": "id",
+      "score": 0.81,
+      "reason": "llm: This tool can find files and folders, returning their IDs."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_MEDIA_ITEMS",
+      "to": "GOOGLESUPER_BATCH_GET_MEDIA_ITEMS",
+      "param": "media_item_ids",
+      "score": 0.81,
+      "reason": "llm: Lists media items which can provide the required media item identifiers."
+    },
+    {
+      "from": "GOOGLESUPER_SEARCH_MEDIA_ITEMS",
+      "to": "GOOGLESUPER_BATCH_GET_MEDIA_ITEMS",
+      "param": "media_item_ids",
+      "score": 0.81,
+      "reason": "llm: Searches for media items and can return their identifiers."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+      "to": "GOOGLESUPER_BATCH_RUN_PIVOT_REPORTS",
+      "param": "property",
+      "score": 0.81,
+      "reason": "llm: This tool lists GA4 properties, providing the necessary property resource name."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_ACCOUNT_SUMMARIES",
+      "to": "GOOGLESUPER_BATCH_RUN_PIVOT_REPORTS",
+      "param": "property",
+      "score": 0.72,
+      "reason": "llm: This tool provides summaries of Google Analytics accounts, which can include properties."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+      "to": "GOOGLESUPER_BATCH_RUN_REPORTS",
+      "param": "property",
+      "score": 0.81,
+      "reason": "llm: This tool lists GA4 properties, providing the necessary property resource name."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_ACCOUNT_SUMMARIES",
+      "to": "GOOGLESUPER_BATCH_RUN_REPORTS",
+      "param": "property",
+      "score": 0.72,
+      "reason": "llm: This tool provides summaries of accounts and their properties, which can help identify property resource names."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_ALBUMS",
+      "to": "GOOGLESUPER_BATCH_ADD_MEDIA_ITEMS",
+      "param": "album_id",
+      "score": 0.81,
+      "reason": "llm: Lists all albums which can provide the album_id needed."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_MEDIA_ITEMS",
+      "to": "GOOGLESUPER_BATCH_ADD_MEDIA_ITEMS",
+      "param": "media_item_ids",
+      "score": 0.81,
+      "reason": "llm: Lists media items created by this application which can provide media_item_ids."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+      "to": "GOOGLESUPER_CREATE_AUDIENCE_EXPORT",
+      "param": "parent",
+      "score": 0.81,
+      "reason": "llm: This tool lists GA4 properties which can provide the required property resource name."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+      "to": "GOOGLESUPER_CREATE_EXPANDED_DATA_SET",
+      "param": "parent",
+      "score": 0.81,
+      "reason": "llm: This tool lists GA4 properties and provides the parent property resource name."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+      "to": "GOOGLESUPER_CREATE_AUDIENCE_LIST",
+      "param": "parent",
+      "score": 0.81,
+      "reason": "llm: This tool lists GA4 properties which can provide the required property_id for the parent parameter."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+      "to": "GOOGLESUPER_CHECK_COMPATIBILITY",
+      "param": "property",
+      "score": 0.81,
+      "reason": "llm: This tool lists GA4 properties which can provide the required property resource name."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_ACCOUNT_SUMMARIES",
+      "to": "GOOGLESUPER_CHECK_COMPATIBILITY",
+      "param": "property",
+      "score": 0.72,
+      "reason": "llm: This tool provides summaries of Google Analytics accounts and their properties."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_ACCOUNTS_V1_BETA",
+      "to": "GOOGLESUPER_CHECK_COMPATIBILITY",
+      "param": "property",
+      "score": 0.63,
+      "reason": "llm: This tool lists Google Analytics accounts which may include properties."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+      "to": "GOOGLESUPER_CREATE_RECURRING_AUDIENCE_LIST",
+      "param": "parent",
+      "score": 0.81,
+      "reason": "llm: This tool lists GA4 properties which can provide the required property_id for the parent parameter."
+    },
+    {
+      "from": "GOOGLESUPER_FIND_FILE",
+      "to": "GOOGLESUPER_CREATE_SHORTCUT_TO_FILE",
+      "param": "target_id",
+      "score": 0.81,
+      "reason": "llm: This tool can find files and folders in Google Drive and returns their IDs."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+      "to": "GOOGLESUPER_CREATE_REPORT_TASK",
+      "param": "parent",
+      "score": 0.81,
+      "reason": "llm: This tool lists GA4 properties which can provide the required property identifier."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_SUB_ACCOUNTS",
+      "to": "GOOGLESUPER_DELETE_CHILD",
+      "param": "child_id",
+      "score": 0.81,
+      "reason": "llm: This tool returns sub-accounts which include customer IDs that can be used as child IDs."
+    },
+    {
+      "from": "GOOGLESUPER_FIND_FILE",
+      "to": "GOOGLESUPER_DELETE_PARENT",
+      "param": "parent_id",
+      "score": 0.81,
+      "reason": "llm: It can find files and folders, returning their IDs."
+    },
+    {
+      "from": "GOOGLESUPER_FIND_FOLDER",
+      "to": "GOOGLESUPER_DELETE_PARENT",
+      "param": "parent_id",
+      "score": 0.81,
+      "reason": "llm: It specifically finds folders and returns their IDs."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_REPLIES",
+      "to": "GOOGLESUPER_DELETE_REPLY",
+      "param": "reply_id",
+      "score": 0.9,
+      "reason": "llm: This tool lists replies and provides their IDs, which can be used to resolve the reply_id parameter."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_REVISIONS",
+      "to": "GOOGLESUPER_DOWNLOAD_FILE_REVISION",
+      "param": "revision_id",
+      "score": 0.81,
+      "reason": "llm: This tool lists file revisions and provides their IDs."
+    },
+    {
+      "from": "GOOGLESUPER_GET_DOCUMENT_END_INDEX",
+      "to": "GOOGLESUPER_DELETE_TAB",
+      "param": "tab_id",
+      "score": 0.81,
+      "reason": "llm: This tool returns tab_id which can be used as the parameter for deleting a tab."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_CONFERENCE_RECORDS",
+      "to": "GOOGLESUPER_END_ACTIVE_CONFERENCE",
+      "param": "space_name",
+      "score": 0.81,
+      "reason": "llm: Lists conference records which include space information."
+    },
+    {
+      "from": "GOOGLESUPER_GET_CONFERENCE_RECORD_BY_NAME",
+      "to": "GOOGLESUPER_END_ACTIVE_CONFERENCE",
+      "param": "space_name",
+      "score": 0.81,
+      "reason": "llm: Retrieves detailed information about a specific conference including its space."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_ALBUMS",
+      "to": "GOOGLESUPER_GET_ALBUM",
+      "param": "album_id",
+      "score": 0.81,
+      "reason": "llm: This tool lists all albums and can provide the album_id needed."
+    },
+    {
+      "from": "GOOGLESUPER_GET_PLACE_DETAILS",
+      "to": "GOOGLESUPER_GEOCODE_PLACE",
+      "param": "place_id",
+      "score": 0.81,
+      "reason": "llm: Returns place details including place_id."
+    },
+    {
+      "from": "GOOGLESUPER_NEARBY_SEARCH",
+      "to": "GOOGLESUPER_GEOCODE_PLACE",
+      "param": "place_id",
+      "score": 0.72,
+      "reason": "llm: Returns places with their ids, which can be used as place_id."
+    },
+    {
+      "from": "GOOGLESUPER_TEXT_SEARCH",
+      "to": "GOOGLESUPER_GEOCODE_PLACE",
+      "param": "place_id",
+      "score": 0.63,
+      "reason": "llm: Returns places that include place ids."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_CALENDARS",
+      "to": "GOOGLESUPER_EVENTS_MOVE",
+      "param": "destination",
+      "score": 0.81,
+      "reason": "llm: This tool lists calendars and provides their IDs, which can be used as the destination calendar identifier."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_MEDIA_ITEMS",
+      "to": "GOOGLESUPER_GET_APP",
+      "param": "app_id",
+      "score": 0.72,
+      "reason": "llm: This tool lists media items created by the application, which can provide the app ID indirectly through its context."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_AUDIENCES",
+      "to": "GOOGLESUPER_GET_AUDIENCE",
+      "param": "audience_id",
+      "score": 0.81,
+      "reason": "llm: This tool lists audiences and provides their IDs."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+      "to": "GOOGLESUPER_GET_AUDIENCE",
+      "param": "property_id",
+      "score": 0.81,
+      "reason": "llm: This tool lists properties and provides their IDs."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_SUB_ACCOUNTS",
+      "to": "GOOGLESUPER_GET_CHILD",
+      "param": "child_id",
+      "score": 0.81,
+      "reason": "llm: Returns customer_id which can be used as child_id."
+    },
+    {
+      "from": "GOOGLESUPER_GET_CAMPAIGN_BY_NAME",
+      "to": "GOOGLESUPER_GET_CAMPAIGN_BY_ID",
+      "param": "id",
+      "score": 0.72,
+      "reason": "llm: This tool can retrieve the campaign by its name, which can then provide the id needed for the GetCampaignById tool."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_ACCESSIBLE_CUSTOMERS",
+      "to": "GOOGLESUPER_GET_ATTRIBUTION_SETTINGS",
+      "param": "name",
+      "score": 0.72,
+      "reason": "llm: This tool provides resource names that can be used to construct the required property_id for the attribution settings."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_CALENDARS",
+      "to": "GOOGLESUPER_GET_ATTRIBUTION_SETTINGS",
+      "param": "name",
+      "score": 0.63,
+      "reason": "llm: This tool lists calendars which may provide IDs that can be formatted to match the required property_id structure."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_CONVERSION_EVENTS",
+      "to": "GOOGLESUPER_GET_CONVERSION_INGESTION_STATUS",
+      "param": "request_id",
+      "score": 0.63,
+      "reason": "llm: Can provide conversion events which may include request_id in their details."
+    },
+    {
+      "from": "GOOGLESUPER_GET_CONVERSION_ACTION_TAG_SNIPPETS",
+      "to": "GOOGLESUPER_GET_CONVERSION_INGESTION_STATUS",
+      "param": "request_id",
+      "score": 0.63,
+      "reason": "llm: Can provide conversion action IDs which may relate to request_id."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_DATA_MANAGER_CONVERSION_ACTIONS",
+      "to": "GOOGLESUPER_GET_CONVERSION_ACTION_TAG_SNIPPETS",
+      "param": "conversion_action_id",
+      "score": 0.81,
+      "reason": "llm: This tool lists conversion actions and provides their numeric IDs."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_ACCESSIBLE_CUSTOMERS",
+      "to": "GOOGLESUPER_GET_DATA_RETENTION_SETTINGS",
+      "param": "name",
+      "score": 0.72,
+      "reason": "llm: This tool provides resource names that can be used to construct the required property_id for the data retention settings."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_BUILDINGS",
+      "to": "GOOGLESUPER_GET_DATA_RETENTION_SETTINGS",
+      "param": "name",
+      "score": 0.63,
+      "reason": "llm: This tool lists buildings with buildingId that can be used to form the required property_id."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_ACCESSIBLE_CUSTOMERS",
+      "to": "GOOGLESUPER_GET_DATA_SHARING_SETTINGS",
+      "param": "name",
+      "score": 0.72,
+      "reason": "llm: This tool lists Google Ads customer resource names which can provide account_id needed for the data sharing settings."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_CALENDARS",
+      "to": "GOOGLESUPER_GET_DATA_SHARING_SETTINGS",
+      "param": "name",
+      "score": 0.63,
+      "reason": "llm: This tool lists calendars which may include account identifiers relevant for data sharing settings."
+    },
+    {
+      "from": "GOOGLESUPER_SEARCH_MEDIA_ITEMS",
+      "to": "GOOGLESUPER_GET_MEDIA_ITEM_DOWNLOAD",
+      "param": "media_item_id",
+      "score": 0.81,
+      "reason": "llm: Searches for media items and returns their IDs."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_MEDIA_ITEMS",
+      "to": "GOOGLESUPER_GET_MEDIA_ITEM_DOWNLOAD",
+      "param": "media_item_id",
+      "score": 0.72,
+      "reason": "llm: Lists media items which can provide media_item_id."
+    },
+    {
+      "from": "GOOGLESUPER_BATCH_GET_MEDIA_ITEMS",
+      "to": "GOOGLESUPER_GET_MEDIA_ITEM_DOWNLOAD",
+      "param": "media_item_id",
+      "score": 0.63,
+      "reason": "llm: Returns media items for specified identifiers, which can include media_item_id."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_ACCESSIBLE_CUSTOMERS",
+      "to": "GOOGLESUPER_GET_METADATA",
+      "param": "name",
+      "score": 0.72,
+      "reason": "llm: This tool returns resource names which can be used to construct the required property_id for the metadata."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_CONFERENCE_RECORDS",
+      "to": "GOOGLESUPER_GET_MEET",
+      "param": "space_name",
+      "score": 0.72,
+      "reason": "llm: Lists conference records which may include space names usable as space IDs."
+    },
+    {
+      "from": "GOOGLESUPER_FIND_FILE",
+      "to": "GOOGLESUPER_GET_PARENT",
+      "param": "parent_id",
+      "score": 0.81,
+      "reason": "llm: Can find files and return their IDs."
+    },
+    {
+      "from": "GOOGLESUPER_FIND_FOLDER",
+      "to": "GOOGLESUPER_GET_PARENT",
+      "param": "parent_id",
+      "score": 0.81,
+      "reason": "llm: Can find folders and return their IDs."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_SEND_AS",
+      "to": "GOOGLESUPER_GET_PERMISSION_ID_FOR_EMAIL",
+      "param": "email",
+      "score": 0.81,
+      "reason": "llm: This tool provides email addresses that can be used to retrieve the permission ID."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_FORWARDING_ADDRESSES",
+      "to": "GOOGLESUPER_GET_PERMISSION_ID_FOR_EMAIL",
+      "param": "email",
+      "score": 0.72,
+      "reason": "llm: This tool lists email addresses that are allowed for forwarding, which can be used as valid email inputs."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_ACCOUNT_SUMMARIES",
+      "to": "GOOGLESUPER_GET_GOOGLE_SIGNALS_SETTINGS",
+      "param": "name",
+      "score": 0.72,
+      "reason": "llm: This tool provides account summaries which include the property_id needed for the Google Signals settings."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_ACCOUNTS_V1_BETA",
+      "to": "GOOGLESUPER_GET_GOOGLE_SIGNALS_SETTINGS",
+      "param": "name",
+      "score": 0.72,
+      "reason": "llm: This tool lists Google Analytics accounts which can help identify the property_id required."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_GOOGLE_ADS_LINKS",
+      "to": "GOOGLESUPER_GET_GOOGLE_SIGNALS_SETTINGS",
+      "param": "name",
+      "score": 0.63,
+      "reason": "llm: This tool lists Google Ads links that may include relevant property_id information."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_REPLIES",
+      "to": "GOOGLESUPER_GET_REPLY",
+      "param": "reply_id",
+      "score": 0.9,
+      "reason": "llm: This tool lists replies and provides their IDs, which can be used as reply_id."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_CONFERENCE_RECORDS",
+      "to": "GOOGLESUPER_GET_RECORDINGS_BY_CONFERENCE_RECORD_ID",
+      "param": "conference_record_id",
+      "score": 0.81,
+      "reason": "llm: Lists past conference records which can provide the conference_record_id needed."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_CONFERENCE_RECORDS",
+      "to": "GOOGLESUPER_GET_TRANSCRIPTS_BY_CONFERENCE_RECORD_ID",
+      "param": "conference_record_id",
+      "score": 0.81,
+      "reason": "llm: This tool lists conference records and provides the necessary conference_record_id."
+    },
+    {
+      "from": "GOOGLESUPER_GET_CHILD",
+      "to": "GOOGLESUPER_INSERT_CHILD",
+      "param": "id",
+      "score": 0.81,
+      "reason": "llm: This tool retrieves a specific child reference for a folder and returns the ID needed for the parameter."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+      "to": "GOOGLESUPER_LIST_ADSENSE_LINKS",
+      "param": "parent",
+      "score": 0.81,
+      "reason": "llm: This tool lists GA4 properties which can provide the required property ID in the correct format."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+      "to": "GOOGLESUPER_LIST_AUDIENCE_LISTS",
+      "param": "parent",
+      "score": 0.72,
+      "reason": "llm: This tool lists GA4 properties which can provide the required property ID."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+      "to": "GOOGLESUPER_LIST_AUDIENCE_EXPORTS",
+      "param": "parent",
+      "score": 0.81,
+      "reason": "llm: This tool lists GA4 properties which can provide the required property identifier."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+      "to": "GOOGLESUPER_LIST_CALCULATED_METRICS",
+      "param": "parent",
+      "score": 0.81,
+      "reason": "llm: This tool lists GA4 properties which can provide the required property identifier."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+      "to": "GOOGLESUPER_LIST_CONVERSION_EVENTS",
+      "param": "parent",
+      "score": 0.81,
+      "reason": "llm: This tool lists GA4 properties which can provide the required property ID in the correct format."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+      "to": "GOOGLESUPER_LIST_DATA_STREAMS",
+      "param": "parent",
+      "score": 0.81,
+      "reason": "llm: This tool lists GA4 properties which can provide the required property ID."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+      "to": "GOOGLESUPER_LIST_EVENT_CREATE_RULES",
+      "param": "parent",
+      "score": 0.72,
+      "reason": "llm: This tool lists GA4 properties which can provide the required propertyId for the parent parameter."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+      "to": "GOOGLESUPER_LIST_CUSTOM_METRICS",
+      "param": "parent",
+      "score": 0.81,
+      "reason": "llm: This tool lists GA4 properties which can provide the required property identifier."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+      "to": "GOOGLESUPER_LIST_GOOGLE_ADS_LINKS",
+      "param": "parent",
+      "score": 0.72,
+      "reason": "llm: This tool lists GA4 properties which can provide the required property resource name."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_ACCOUNT_SUMMARIES",
+      "to": "GOOGLESUPER_LIST_GOOGLE_ADS_LINKS",
+      "param": "parent",
+      "score": 0.63,
+      "reason": "llm: This tool retrieves summaries of Google Analytics accounts which may include properties."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+      "to": "GOOGLESUPER_LIST_KEY_EVENTS",
+      "param": "parent",
+      "score": 0.81,
+      "reason": "llm: This tool lists GA4 properties which can provide the required property ID for the parent parameter."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+      "to": "GOOGLESUPER_LIST_MEASUREMENT_PROTOCOL_SECRETS",
+      "param": "parent",
+      "score": 0.81,
+      "reason": "llm: This tool lists GA4 properties which can provide the required parent data stream information."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+      "to": "GOOGLESUPER_LIST_RECURRING_AUDIENCE_LISTS",
+      "param": "parent",
+      "score": 0.81,
+      "reason": "llm: This tool lists GA4 properties which can provide the required property ID in the correct format."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_ACCOUNT_SUMMARIES",
+      "to": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+      "param": "filter",
+      "score": 0.72,
+      "reason": "llm: Provides account summaries which can include parent account information for filtering."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_ACCOUNTS_V1_BETA",
+      "to": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+      "param": "filter",
+      "score": 0.72,
+      "reason": "llm: Lists all Google Analytics accounts which can be used to derive parent account information."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+      "to": "GOOGLESUPER_LIST_REPORT_TASKS",
+      "param": "parent",
+      "score": 0.81,
+      "reason": "llm: This tool lists GA4 properties which can provide the required property identifier."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_PARTICIPANTS",
+      "to": "GOOGLESUPER_LIST_PARTICIPANT_SESSIONS",
+      "param": "participant_id",
+      "score": 0.81,
+      "reason": "llm: Lists participants in a conference, providing their unique identifiers."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_CONFERENCE_RECORDS",
+      "to": "GOOGLESUPER_LIST_PARTICIPANT_SESSIONS",
+      "param": "conference_record_id",
+      "score": 0.81,
+      "reason": "llm: Lists conference records, providing their unique identifiers."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+      "to": "GOOGLESUPER_LIST_REPORTING_DATA_ANNOTATIONS",
+      "param": "parent",
+      "score": 0.81,
+      "reason": "llm: This tool lists GA4 properties and provides the required property format."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+      "to": "GOOGLESUPER_LIST_SEARCH_ADS360_LINKS",
+      "param": "parent",
+      "score": 0.81,
+      "reason": "llm: This tool lists GA4 properties and provides the parent resource name."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+      "to": "GOOGLESUPER_LIST_SUBPROPERTY_SYNC_CONFIGS",
+      "param": "parent",
+      "score": 0.81,
+      "reason": "llm: This tool lists GA4 properties which can provide the required property resource name."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_CONFERENCE_RECORDS",
+      "to": "GOOGLESUPER_LIST_TRANSCRIPT_ENTRIES",
+      "param": "conference_record_id",
+      "score": 0.81,
+      "reason": "llm: This tool lists conference records which can provide the conference_record_id needed."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+      "to": "GOOGLESUPER_LIST_SUBPROPERTY_EVENT_FILTERS",
+      "param": "parent",
+      "score": 0.81,
+      "reason": "llm: This tool lists GA4 properties which can provide the required property_id."
+    },
+    {
+      "from": "GOOGLESUPER_FIND_FOLDER",
+      "to": "GOOGLESUPER_MOVE_SPREADSHEET_TO_FOLDER",
+      "param": "destination_folder_id",
+      "score": 0.81,
+      "reason": "llm: This tool finds Google Drive folders and returns their IDs."
+    },
+    {
+      "from": "GOOGLESUPER_FIND_FILE",
+      "to": "GOOGLESUPER_MOVE_SPREADSHEET_TO_FOLDER",
+      "param": "destination_folder_id",
+      "score": 0.81,
+      "reason": "llm: This tool can find files and folders in Google Drive, returning their IDs."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_CSE_IDENTITIES",
+      "to": "GOOGLESUPER_PATCH_LABEL",
+      "param": "user_id",
+      "score": 0.81,
+      "reason": "llm: This tool retrieves the authenticated user's email address."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_LABELS",
+      "to": "GOOGLESUPER_PATCH_LABEL",
+      "param": "user_id",
+      "score": 0.72,
+      "reason": "llm: This tool retrieves labels for a Gmail account, which can include the user's email."
+    },
+    {
+      "from": "GOOGLESUPER_GET_PRESENTATION",
+      "to": "GOOGLESUPER_PRESENTATIONS_COPY_FROM_TEMPLATE",
+      "param": "template_presentation_id",
+      "score": 0.81,
+      "reason": "llm: It retrieves the presentation ID needed for the template."
+    },
+    {
+      "from": "GOOGLESUPER_PRESENTATIONS_GET",
+      "to": "GOOGLESUPER_PRESENTATIONS_COPY_FROM_TEMPLATE",
+      "param": "template_presentation_id",
+      "score": 0.81,
+      "reason": "llm: It provides the presentation ID required for duplication."
+    },
+    {
+      "from": "GOOGLESUPER_SEARCH_MEDIA_ITEMS",
+      "to": "GOOGLESUPER_PLACE_PHOTO",
+      "param": "photo_reference",
+      "score": 0.63,
+      "reason": "llm: Can search for media items which may include photo references."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_SHARED_DRIVES",
+      "to": "GOOGLESUPER_PRESENTATIONS_PAGES_GET",
+      "param": "presentation_id",
+      "score": 0.63,
+      "reason": "llm: Lists shared drives which may contain presentations."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+      "to": "GOOGLESUPER_RUN_PIVOT_REPORT",
+      "param": "property",
+      "score": 0.81,
+      "reason": "llm: This tool lists GA4 properties, providing the necessary property resource name."
+    },
+    {
+      "from": "GOOGLESUPER_GET_PROPERTY",
+      "to": "GOOGLESUPER_RUN_PIVOT_REPORT",
+      "param": "property",
+      "score": 0.81,
+      "reason": "llm: This tool retrieves detailed information about a specific GA4 property, including its resource name."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+      "to": "GOOGLESUPER_RUN_FUNNEL_REPORT",
+      "param": "property",
+      "score": 0.81,
+      "reason": "llm: This tool lists GA4 properties, providing the necessary property resource name."
+    },
+    {
+      "from": "GOOGLESUPER_GET_PROPERTY",
+      "to": "GOOGLESUPER_RUN_FUNNEL_REPORT",
+      "param": "property",
+      "score": 0.81,
+      "reason": "llm: This tool retrieves a specific GA4 property by its resource name."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+      "to": "GOOGLESUPER_RUN_REPORT",
+      "param": "property",
+      "score": 0.81,
+      "reason": "llm: This tool lists GA4 properties, providing the necessary property_id."
+    },
+    {
+      "from": "GOOGLESUPER_GET_PROPERTY",
+      "to": "GOOGLESUPER_RUN_REPORT",
+      "param": "property",
+      "score": 0.81,
+      "reason": "llm: This tool retrieves a specific GA4 property, which includes the property_id."
+    },
+    {
+      "from": "GOOGLESUPER_FETCH_EMAILS",
+      "to": "GOOGLESUPER_SEND_EMAIL",
+      "param": "recipient_email",
+      "score": 0.81,
+      "reason": "llm: Fetches email messages which include sender and recipient email addresses."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_FORWARDING_ADDRESSES",
+      "to": "GOOGLESUPER_SEND_EMAIL",
+      "param": "recipient_email",
+      "score": 0.72,
+      "reason": "llm: Lists forwarding addresses which are valid email addresses."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_SEND_AS",
+      "to": "GOOGLESUPER_SEND_EMAIL",
+      "param": "recipient_email",
+      "score": 0.72,
+      "reason": "llm: Lists send-as aliases which include valid email addresses."
+    },
+    {
+      "from": "GOOGLESUPER_SETTINGS_LIST",
+      "to": "GOOGLESUPER_SETTINGS_GET",
+      "param": "setting",
+      "score": 0.81,
+      "reason": "llm: Returns all user settings including their identifiers."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_MEASUREMENT_PROTOCOL_SECRETS",
+      "to": "GOOGLESUPER_SEND_EVENTS",
+      "param": "measurement_id",
+      "score": 0.81,
+      "reason": "llm: This tool lists measurement protocol secrets which include the measurement ID."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+      "to": "GOOGLESUPER_RUN_REALTIME_REPORT",
+      "param": "property",
+      "score": 0.81,
+      "reason": "llm: This tool lists GA4 properties, providing the necessary property ID."
+    },
+    {
+      "from": "GOOGLESUPER_GET_PROPERTY",
+      "to": "GOOGLESUPER_RUN_REALTIME_REPORT",
+      "param": "property",
+      "score": 0.81,
+      "reason": "llm: This tool retrieves a specific GA4 property by its resource name, which includes the property ID."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_ACCOUNT_SUMMARIES",
+      "to": "GOOGLESUPER_RUN_REALTIME_REPORT",
+      "param": "property",
+      "score": 0.72,
+      "reason": "llm: This tool provides summaries of accounts and their properties, which can help identify property IDs."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_ALBUMS",
+      "to": "GOOGLESUPER_UPDATE_ALBUM",
+      "param": "album_id",
+      "score": 0.9,
+      "reason": "llm: This tool lists all albums and provides their identifiers."
+    },
+    {
+      "from": "GOOGLESUPER_SEARCH_DOCUMENTS",
+      "to": "GOOGLESUPER_UPDATE_EXISTING_DOCUMENT",
+      "param": "document_id",
+      "score": 0.81,
+      "reason": "llm: It can search for documents and return their IDs."
+    },
+    {
+      "from": "GOOGLESUPER_GET_DOCUMENT_BY_ID",
+      "to": "GOOGLESUPER_UPDATE_EXISTING_DOCUMENT",
+      "param": "document_id",
+      "score": 0.72,
+      "reason": "llm: It retrieves a document by its ID, which can be used as the document_id."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_REPLIES",
+      "to": "GOOGLESUPER_UPDATE_REPLY",
+      "param": "reply_id",
+      "score": 0.9,
+      "reason": "llm: This tool lists replies and provides their IDs, which can be used as reply_id."
+    },
+    {
+      "from": "GOOGLESUPER_SEARCH_DOCUMENTS",
+      "to": "GOOGLESUPER_UPDATE_DOCUMENT_MARKDOWN",
+      "param": "id",
+      "score": 0.81,
+      "reason": "llm: This tool can search for documents and return their IDs."
+    },
+    {
+      "from": "GOOGLESUPER_GET_DOCUMENT",
+      "to": "GOOGLESUPER_UPDATE_DOCUMENT_MARKDOWN",
+      "param": "id",
+      "score": 0.72,
+      "reason": "llm: This tool retrieves a document by ID and returns the documentId."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_MEDIA_ITEMS",
+      "to": "GOOGLESUPER_UPDATE_MEDIA_ITEM",
+      "param": "media_item_id",
+      "score": 0.81,
+      "reason": "llm: Lists media items which can provide the media_item_id."
+    },
+    {
+      "from": "GOOGLESUPER_SEARCH_MEDIA_ITEMS",
+      "to": "GOOGLESUPER_UPDATE_MEDIA_ITEM",
+      "param": "media_item_id",
+      "score": 0.81,
+      "reason": "llm: Searches for media items which can provide the media_item_id."
+    },
+    {
+      "from": "GOOGLESUPER_BATCH_GET_MEDIA_ITEMS",
+      "to": "GOOGLESUPER_UPDATE_MEDIA_ITEM",
+      "param": "media_item_id",
+      "score": 0.81,
+      "reason": "llm: Returns media item results which include media_item_id."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_MEASUREMENT_PROTOCOL_SECRETS",
+      "to": "GOOGLESUPER_VALIDATE_EVENTS",
+      "param": "client_id",
+      "score": 0.72,
+      "reason": "llm: Lists measurement protocol secrets which may include client identifiers."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_MEASUREMENT_PROTOCOL_SECRETS",
+      "to": "GOOGLESUPER_VALIDATE_EVENTS",
+      "param": "measurement_id",
+      "score": 0.72,
+      "reason": "llm: Lists measurement protocol secrets which may include measurement IDs."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_CONFERENCE_RECORDS",
+      "to": "GOOGLESUPER_UPDATE_SPACE",
+      "param": "name",
+      "score": 0.72,
+      "reason": "llm: Lists conference records which include space identifiers."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_CALENDAR_RESOURCES",
+      "to": "GOOGLESUPER_UPDATE_SPACE",
+      "param": "name",
+      "score": 0.63,
+      "reason": "llm: Lists calendar resources which may include conference spaces."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_TASKS",
+      "to": "GOOGLESUPER_UPDATE_TASK_FULL",
+      "param": "id",
+      "score": 0.81,
+      "reason": "llm: This tool retrieves tasks and their IDs from a Google Tasks list."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_ALL_TASKS",
+      "to": "GOOGLESUPER_UPDATE_TASK_FULL",
+      "param": "id",
+      "score": 0.81,
+      "reason": "llm: This tool lists all tasks across all task lists, providing their IDs."
+    },
+    {
+      "from": "GOOGLESUPER_LIST_DRIVE_CHANGES",
+      "to": "GOOGLESUPER_WATCH_CHANGES",
+      "param": "id",
+      "score": 0.72,
+      "reason": "llm: It provides a unique token for monitoring changes which can be used as an ID."
+    },
+    {
+      "from": "GOOGLESUPER_GET_DRIVE",
+      "to": "GOOGLESUPER_WATCH_CHANGES",
+      "param": "id",
+      "score": 0.63,
+      "reason": "llm: It returns the ID of a shared drive which can be used as a unique identifier."
+    },
+    {
+      "from": "GITHUB_LIST_APP_INSTALLATIONS",
+      "to": "GITHUB_ADD_REPOSITORY_TO_APP_INSTALLATION",
+      "param": "installation_id",
+      "score": 0.81,
+      "reason": "llm: This tool lists GitHub App installations accessible to the authenticated user, which can provide the installation_id needed."
+    },
+    {
+      "from": "GITHUB_LIST_ACCESSIBLE_REPOSITORIES",
+      "to": "GITHUB_ABORT_REPOSITORY_MIGRATION",
+      "param": "migration_id",
+      "score": 0.72,
+      "reason": "llm: This tool returns repository IDs which may include migration IDs."
+    },
+    {
+      "from": "GITHUB_FIND_REPOSITORIES",
+      "to": "GITHUB_ABORT_REPOSITORY_MIGRATION",
+      "param": "migration_id",
+      "score": 0.63,
+      "reason": "llm: This tool returns repository IDs that could potentially include migration IDs."
+    },
+    {
+      "from": "GITHUB_LIST_ORG_PROJECT_VIEW_ITEMS",
+      "to": "GITHUB_CLEAR_PROJECT_V2_ITEM_FIELD_VALUE",
+      "param": "item_id",
+      "score": 0.81,
+      "reason": "llm: This tool lists items for an organization project view and provides item IDs."
+    },
+    {
+      "from": "GITHUB_LIST_PROJECT_VIEW_ITEMS_FOR_USER",
+      "to": "GITHUB_CLEAR_PROJECT_V2_ITEM_FIELD_VALUE",
+      "param": "item_id",
+      "score": 0.81,
+      "reason": "llm: This tool lists items for a user's GitHub Projects view and provides item IDs."
+    },
+    {
+      "from": "GITHUB_LIST_PROJECT_ITEMS_FOR_USER",
+      "to": "GITHUB_CLEAR_PROJECT_V2_ITEM_FIELD_VALUE",
+      "param": "item_id",
+      "score": 0.81,
+      "reason": "llm: This tool lists items for a user-owned GitHub project and provides item IDs."
+    },
+    {
+      "from": "GITHUB_LIST_SELF_HOSTED_RUNNERS_FOR_AN_ORGANIZATION",
+      "to": "GITHUB_CONFIGURE_JIT_RUNNER_FOR_ORG",
+      "param": "runner_group_id",
+      "score": 0.81,
+      "reason": "llm: This tool lists self-hosted runners which may include runner group IDs."
+    },
+    {
+      "from": "GITHUB_LIST_COMMITS",
+      "to": "GITHUB_CREATE_A_COMMIT_STATUS",
+      "param": "sha",
+      "score": 0.81,
+      "reason": "llm: Lists commits and provides SHA values."
+    },
+    {
+      "from": "GITHUB_LIST_COMMITS_ON_A_PULL_REQUEST",
+      "to": "GITHUB_CREATE_A_COMMIT_STATUS",
+      "param": "sha",
+      "score": 0.72,
+      "reason": "llm: Lists commits for a pull request and provides SHA values."
+    },
+    {
+      "from": "GITHUB_LIST_BRANCHES_FOR_HEAD_COMMIT",
+      "to": "GITHUB_CREATE_A_COMMIT_STATUS",
+      "param": "sha",
+      "score": 0.63,
+      "reason": "llm: Lists branches for a commit SHA, which can be used to identify the commit."
+    },
+    {
+      "from": "GITHUB_LIST_APP_INSTALLATIONS",
+      "to": "GITHUB_CREATE_A_SCOPED_ACCESS_TOKEN",
+      "param": "client_id",
+      "score": 0.72,
+      "reason": "llm: Lists GitHub App installations which include client_id information."
+    },
+    {
+      "from": "GITHUB_LIST_REPOSITORY_AUTOLINKS",
+      "to": "GITHUB_CREATE_AN_AUTOLINK_REFERENCE_FOR_A_REPOSITORY",
+      "param": "key_prefix",
+      "score": 0.81,
+      "reason": "llm: Returns key_prefix directly from existing autolinks."
+    },
+    {
+      "from": "GITHUB_LIST_REPOSITORY_AUTOLINKS",
+      "to": "GITHUB_CREATE_AN_AUTOLINK_REFERENCE_FOR_A_REPOSITORY",
+      "param": "url_template",
+      "score": 0.81,
+      "reason": "llm: Returns url_template directly from existing autolinks."
+    },
+    {
+      "from": "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_REPOSITORY",
+      "to": "GITHUB_CREATE_A_SNAPSHOT_OF_DEPENDENCIES_FOR_A_REPOSITORY",
+      "param": "sha",
+      "score": 0.72,
+      "reason": "llm: This tool returns workflow runs which include head SHA values."
+    },
+    {
+      "from": "GITHUB_LIST_CODE_SCANNING_ANALYSES_FOR_A_REPOSITORY",
+      "to": "GITHUB_CREATE_A_SNAPSHOT_OF_DEPENDENCIES_FOR_A_REPOSITORY",
+      "param": "sha",
+      "score": 0.63,
+      "reason": "llm: This tool provides analyses that include IDs which can be related to commit SHAs."
+    },
+    {
+      "from": "GITHUB_LIST_COMMITS",
+      "to": "GITHUB_CREATE_A_REFERENCE",
+      "param": "sha",
+      "score": 0.81,
+      "reason": "llm: Lists commits which include SHA values."
+    },
+    {
+      "from": "GITHUB_GET_A_REFERENCE",
+      "to": "GITHUB_CREATE_A_REFERENCE",
+      "param": "sha",
+      "score": 0.72,
+      "reason": "llm: Retrieves a reference that includes the SHA of the object."
+    },
+    {
+      "from": "GITHUB_LIST_CHECK_RUNS_FOR_A_REF",
+      "to": "GITHUB_CREATE_A_REFERENCE",
+      "param": "sha",
+      "score": 0.63,
+      "reason": "llm: Lists check runs for a commit SHA, providing the SHA as output."
+    },
+    {
+      "from": "GITHUB_LIST_FORKS",
+      "to": "GITHUB_CREATE_A_TEMPORARY_PRIVATE_FORK",
+      "param": "ghsa_id",
+      "score": 0.72,
+      "reason": "llm: Lists forks of a repository which may include relevant GHSA IDs."
+    },
+    {
+      "from": "GITHUB_LIST_REPOSITORIES",
+      "to": "GITHUB_CREATE_A_TEMPORARY_PRIVATE_FORK",
+      "param": "ghsa_id",
+      "score": 0.63,
+      "reason": "llm: Lists repositories which may have associated GHSA IDs."
+    },
+    {
+      "from": "GITHUB_GET_CATALOG_MODELS",
+      "to": "GITHUB_CREATE_INFERENCE_CHAT_COMPLETIONS",
+      "param": "model",
+      "score": 0.9,
+      "reason": "llm: This tool provides a list of available AI models, including their IDs, which can be used as the model parameter."
+    },
+    {
+      "from": "GITHUB_LIST_REPOSITORY_TAGS",
+      "to": "GITHUB_CREATE_A_TAG_OBJECT",
+      "param": "tag",
+      "score": 0.81,
+      "reason": "llm: Lists existing tags which can be used as tag names."
+    },
+    {
+      "from": "GITHUB_GET_A_TAG",
+      "to": "GITHUB_CREATE_A_TAG_OBJECT",
+      "param": "object",
+      "score": 0.72,
+      "reason": "llm: Provides the SHA of the Git object that the tag points to."
+    },
+    {
+      "from": "GITHUB_GET_COMMIT_OBJECT",
+      "to": "GITHUB_CREATE_A_TAG_OBJECT",
+      "param": "object",
+      "score": 0.72,
+      "reason": "llm: Returns the SHA of a specific commit which can be used as the object."
+    },
+    {
+      "from": "GITHUB_COMPARE_TWO_COMMITS",
+      "to": "GITHUB_CREATE_A_TAG_OBJECT",
+      "param": "object",
+      "score": 0.63,
+      "reason": "llm: Can provide SHAs of commits for comparison."
+    },
+    {
+      "from": "GITHUB_GET_CATALOG_MODELS",
+      "to": "GITHUB_CREATE_INFERENCE_EMBEDDINGS",
+      "param": "model",
+      "score": 0.9,
+      "reason": "llm: This tool provides a list of available AI models, including their IDs which can be used as the model parameter."
+    },
+    {
+      "from": "GITHUB_LIST_SELF_HOSTED_RUNNERS_FOR_AN_ORGANIZATION",
+      "to": "GITHUB_CREATE_JIT_RUNNER_CONFIG",
+      "param": "runner_group_id",
+      "score": 0.72,
+      "reason": "llm: Lists self-hosted runners which may include runner group IDs."
+    },
+    {
+      "from": "GITHUB_LIST_SELF_HOSTED_RUNNERS_FOR_A_REPOSITORY",
+      "to": "GITHUB_CREATE_JIT_RUNNER_CONFIG",
+      "param": "runner_group_id",
+      "score": 0.72,
+      "reason": "llm: Lists self-hosted runners which may include runner group IDs."
+    },
+    {
+      "from": "GITHUB_GET_A_SELF_HOSTED_RUNNER_FOR_AN_ORGANIZATION",
+      "to": "GITHUB_CREATE_JIT_RUNNER_CONFIG",
+      "param": "runner_group_id",
+      "score": 0.72,
+      "reason": "llm: Retrieves details about a specific runner including its ID."
+    },
+    {
+      "from": "GITHUB_GET_AN_APP",
+      "to": "GITHUB_DELETE_APP_AUTHORIZATION",
+      "param": "client_id",
+      "score": 0.81,
+      "reason": "llm: This tool retrieves information about an existing GitHub App, including its client_id."
+    },
+    {
+      "from": "GITHUB_LIST_APP_INSTALLATIONS",
+      "to": "GITHUB_DELETE_APP_AUTHORIZATION",
+      "param": "client_id",
+      "score": 0.72,
+      "reason": "llm: This tool lists GitHub App installations which may include the client_id of the OAuth App."
+    },
+    {
+      "from": "GITHUB_LIST_ISSUE_COMMENTS",
+      "to": "GITHUB_CREATE_REACTION_FOR_A_TEAM_DISCUSSION_COMMENT",
+      "param": "comment_number",
+      "score": 0.72,
+      "reason": "llm: Lists comments for a specified issue, which can include discussion comments."
+    },
+    {
+      "from": "GITHUB_LIST_COMMENTS_FOR_A_PULL_REQUEST_REVIEW",
+      "to": "GITHUB_CREATE_REACTION_FOR_A_TEAM_DISCUSSION_COMMENT",
+      "param": "comment_number",
+      "score": 0.72,
+      "reason": "llm: Lists comments for a specific review on a pull request, which can include discussion comments."
+    },
+    {
+      "from": "GITHUB_LIST_COMMIT_COMMENTS",
+      "to": "GITHUB_CREATE_REACTION_FOR_A_TEAM_DISCUSSION_COMMENT",
+      "param": "comment_number",
+      "score": 0.72,
+      "reason": "llm: Retrieves all comments for a specific commit, which can include discussion comments."
+    },
+    {
+      "from": "GITHUB_LIST_APP_INSTALLATIONS",
+      "to": "GITHUB_DELETE_APP_TOKEN",
+      "param": "client_id",
+      "score": 0.81,
+      "reason": "llm: Lists GitHub App installations which include client_id information."
+    },
+    {
+      "from": "GITHUB_LIST_APPS_WITH_ACCESS_TO_THE_PROTECTED_BRANCH",
+      "to": "GITHUB_DELETE_APP_TOKEN",
+      "param": "client_id",
+      "score": 0.72,
+      "reason": "llm: Lists GitHub Apps which may include client_id as part of their details."
+    },
+    {
+      "from": "GITHUB_LIST_ACCESSIBLE_REPOSITORIES",
+      "to": "GITHUB_DELETE_APP_TOKEN",
+      "param": "client_id",
+      "score": 0.63,
+      "reason": "llm: Lists repositories accessible through a GitHub App installation, which may include client_id."
+    },
+    {
+      "from": "GITHUB_LIST_NOTIFICATIONS",
+      "to": "GITHUB_DELETE_A_THREAD_SUBSCRIPTION",
+      "param": "thread_id",
+      "score": 0.81,
+      "reason": "llm: This tool lists notification threads and provides their IDs."
+    },
+    {
+      "from": "GITHUB_LIST_CODE_SCANNING_ANALYSES_FOR_A_REPOSITORY",
+      "to": "GITHUB_DELETE_CODE_SCANNING_ANALYSIS",
+      "param": "analysis_id",
+      "score": 0.81,
+      "reason": "llm: This tool lists code scanning analyses and provides their IDs."
+    },
+    {
+      "from": "GITHUB_LIST_GIST_COMMENTS",
+      "to": "GITHUB_DELETE_GIST_COMMENT",
+      "param": "comment_id",
+      "score": 0.9,
+      "reason": "llm: Directly returns comment IDs for specified gists."
+    },
+    {
+      "from": "GITHUB_SEARCH_GITHUB_GRAPHQL",
+      "to": "GITHUB_DELETE_DISCUSSION",
+      "param": "discussion_number",
+      "score": 0.63,
+      "reason": "llm: Can search for discussions which may include their numbers."
+    },
+    {
+      "from": "GITHUB_LIST_GITHUB_ACTIONS_CACHES_FOR_A_REPOSITORY",
+      "to": "GITHUB_DELETE_GITHUB_ACTIONS_CACHE_BY_ID",
+      "param": "cache_id",
+      "score": 0.81,
+      "reason": "llm: This tool lists GitHub Actions caches for a repository and returns their IDs."
+    },
+    {
+      "from": "GITHUB_LIST_REVIEWS_FOR_A_PULL_REQUEST",
+      "to": "GITHUB_DELETE_PENDING_REVIEW",
+      "param": "review_id",
+      "score": 0.81,
+      "reason": "llm: This tool lists reviews for a pull request, which includes pending reviews that can provide the review_id needed."
+    },
+    {
+      "from": "GITHUB_LIST_REVIEW_COMMENTS_ON_A_PULL_REQUEST",
+      "to": "GITHUB_DELETE_PENDING_REVIEW",
+      "param": "review_id",
+      "score": 0.72,
+      "reason": "llm: This tool lists review comments on a pull request, which may include pending reviews and their IDs."
+    },
+    {
+      "from": "GITHUB_LIST_PROJECT_VIEW_ITEMS_FOR_USER",
+      "to": "GITHUB_DELETE_PROJECT_ITEM_FOR_USER",
+      "param": "item_id",
+      "score": 0.81,
+      "reason": "llm: This tool lists items for a user's GitHub Projects (v2) view and returns the required item IDs."
+    },
+    {
+      "from": "GITHUB_LIST_ORG_PROJECT_VIEW_ITEMS",
+      "to": "GITHUB_DELETE_PROJECT_ITEM_FOR_USER",
+      "param": "item_id",
+      "score": 0.81,
+      "reason": "llm: This tool lists items for an organization project view and returns the required item IDs."
+    },
+    {
+      "from": "GITHUB_LIST_PROJECT_ITEMS_FOR_USER",
+      "to": "GITHUB_DELETE_PROJECT_ITEM_FOR_USER",
+      "param": "item_id",
+      "score": 0.81,
+      "reason": "llm: This tool lists items for a user-owned GitHub project and returns the required item IDs."
+    },
+    {
+      "from": "GITHUB_LIST_REACTIONS_FOR_A_COMMIT_COMMENT",
+      "to": "GITHUB_DELETE_TEAM_DISCUSSION_REACTION",
+      "param": "reaction_id",
+      "score": 0.72,
+      "reason": "llm: Lists reactions for commit comments, providing reaction IDs."
+    },
+    {
+      "from": "GITHUB_LIST_REACTIONS_FOR_AN_ISSUE",
+      "to": "GITHUB_DELETE_TEAM_DISCUSSION_REACTION",
+      "param": "reaction_id",
+      "score": 0.72,
+      "reason": "llm: Lists reactions for issues, providing reaction IDs."
+    },
+    {
+      "from": "GITHUB_LIST_REACTIONS_FOR_AN_ISSUE_COMMENT",
+      "to": "GITHUB_DELETE_TEAM_DISCUSSION_REACTION",
+      "param": "reaction_id",
+      "score": 0.72,
+      "reason": "llm: Lists reactions for issue comments, providing reaction IDs."
+    },
+    {
+      "from": "GITHUB_LIST_ISSUE_COMMENTS",
+      "to": "GITHUB_DELETE_DISCUSSION_COMMENT",
+      "param": "comment_number",
+      "score": 0.81,
+      "reason": "llm: Lists comments for a specified issue, providing comment IDs."
+    },
+    {
+      "from": "GITHUB_LIST_ISSUE_COMMENTS_FOR_A_REPOSITORY",
+      "to": "GITHUB_DELETE_DISCUSSION_COMMENT",
+      "param": "comment_number",
+      "score": 0.81,
+      "reason": "llm: Lists issue comments for an accessible repository, providing comment IDs."
+    },
+    {
+      "from": "GITHUB_LIST_COMMENTS_FOR_A_PULL_REQUEST_REVIEW",
+      "to": "GITHUB_DELETE_DISCUSSION_COMMENT",
+      "param": "comment_number",
+      "score": 0.81,
+      "reason": "llm: Lists comments for a specific review on a pull request, providing comment IDs."
+    },
+    {
+      "from": "GITHUB_LIST_REPOSITORY_RULE_SUITES",
+      "to": "GITHUB_DOWNLOAD_A_REPOSITORY_ARCHIVE_TAR",
+      "param": "ref",
+      "score": 0.72,
+      "reason": "llm: Returns refs associated with rule suites."
+    },
+    {
+      "from": "GITHUB_LIST_CODE_SCANNING_ANALYSES_FOR_A_REPOSITORY",
+      "to": "GITHUB_DOWNLOAD_A_REPOSITORY_ARCHIVE_TAR",
+      "param": "ref",
+      "score": 0.63,
+      "reason": "llm: Returns refs associated with code scanning analyses."
+    },
+    {
+      "from": "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_WORKFLOW",
+      "to": "GITHUB_DOWNLOAD_WORKFLOW_RUN_ATTEMPT_LOGS",
+      "param": "attempt_number",
+      "score": 0.81,
+      "reason": "llm: This tool lists workflow runs and provides the necessary attempt number."
+    },
+    {
+      "from": "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_REPOSITORY",
+      "to": "GITHUB_DOWNLOAD_WORKFLOW_RUN_ATTEMPT_LOGS",
+      "param": "attempt_number",
+      "score": 0.81,
+      "reason": "llm: This tool lists workflow runs for a repository and provides the necessary attempt number."
+    },
+    {
+      "from": "GITHUB_LIST_JOBS_FOR_A_WORKFLOW_RUN",
+      "to": "GITHUB_DOWNLOAD_WORKFLOW_RUN_ATTEMPT_LOGS",
+      "param": "attempt_number",
+      "score": 0.72,
+      "reason": "llm: This tool lists jobs for a specific workflow run, which can help identify the attempt number."
+    },
+    {
+      "from": "GITHUB_LIST_REPOSITORY_RULE_SUITES",
+      "to": "GITHUB_DOWNLOAD_A_REPOSITORY_ARCHIVE_ZIP",
+      "param": "ref",
+      "score": 0.72,
+      "reason": "llm: Returns refs associated with rule suites."
+    },
+    {
+      "from": "GITHUB_LIST_CODE_SCANNING_ANALYSES_FOR_A_REPOSITORY",
+      "to": "GITHUB_DOWNLOAD_A_REPOSITORY_ARCHIVE_ZIP",
+      "param": "ref",
+      "score": 0.63,
+      "reason": "llm: Returns refs associated with code scanning analyses."
+    },
+    {
+      "from": "GITHUB_LIST_PROJECT_COLUMNS",
+      "to": "GITHUB_GET_A_PROJECT_CARD",
+      "param": "card_id",
+      "score": 0.72,
+      "reason": "llm: Lists columns of a project which can contain cards, providing their IDs."
+    },
+    {
+      "from": "GITHUB_LIST_REPOSITORY_PROJECTS",
+      "to": "GITHUB_GET_A_PROJECT_CARD",
+      "param": "card_id",
+      "score": 0.63,
+      "reason": "llm: Lists classic projects associated with a repository, which can include project cards."
+    },
+    {
+      "from": "GITHUB_LIST_REPOSITORY_TAGS",
+      "to": "GITHUB_GET_A_TAG",
+      "param": "tag_sha",
+      "score": 0.81,
+      "reason": "llm: Lists tags which can provide the SHA of the tag object."
+    },
+    {
+      "from": "GITHUB_GET_A_RELEASE_BY_TAG_NAME",
+      "to": "GITHUB_GET_A_TAG",
+      "param": "tag_sha",
+      "score": 0.72,
+      "reason": "llm: Can provide the ID of a release which may include the tag SHA."
+    },
+    {
+      "from": "GITHUB_LIST_MATCHING_REFERENCES",
+      "to": "GITHUB_GET_A_TAG",
+      "param": "tag_sha",
+      "score": 0.63,
+      "reason": "llm: Lists references including tags which can help identify the SHA."
+    },
+    {
+      "from": "GITHUB_LIST_ORGANIZATION_WEBHOOKS",
+      "to": "GITHUB_GET_A_WEBHOOK_CONFIGURATION_FOR_AN_ORGANIZATION",
+      "param": "hook_id",
+      "score": 0.81,
+      "reason": "llm: This tool lists all webhooks for a specified organization and provides their IDs."
+    },
+    {
+      "from": "GITHUB_LIST_REPOSITORY_WEBHOOKS",
+      "to": "GITHUB_GET_A_WEBHOOK_CONFIGURATION_FOR_A_REPOSITORY",
+      "param": "hook_id",
+      "score": 0.81,
+      "reason": "llm: This tool retrieves a list of webhooks for a repository, providing the hook_id directly."
+    },
+    {
+      "from": "GITHUB_LIST_NOTIFICATIONS",
+      "to": "GITHUB_GET_A_THREAD",
+      "param": "thread_id",
+      "score": 0.9,
+      "reason": "llm: This tool returns notification threads including their unique thread_id."
+    },
+    {
+      "from": "GITHUB_LIST_CODE_SCANNING_ANALYSES_FOR_A_REPOSITORY",
+      "to": "GITHUB_GET_CODE_SCANNING_ANALYSIS",
+      "param": "analysis_id",
+      "score": 0.81,
+      "reason": "llm: This tool lists code scanning analyses and provides the analysis_id directly."
+    },
+    {
+      "from": "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_WORKFLOW",
+      "to": "GITHUB_GET_A_WORKFLOW_RUN_ATTEMPT",
+      "param": "attempt_number",
+      "score": 0.72,
+      "reason": "llm: This tool lists workflow runs which can provide the necessary attempt numbers."
+    },
+    {
+      "from": "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_REPOSITORY",
+      "to": "GITHUB_GET_A_WORKFLOW_RUN_ATTEMPT",
+      "param": "attempt_number",
+      "score": 0.72,
+      "reason": "llm: This tool lists workflow runs for a repository, allowing access to attempt numbers."
+    },
+    {
+      "from": "GITHUB_LIST_JOBS_FOR_A_WORKFLOW_RUN",
+      "to": "GITHUB_GET_A_WORKFLOW_RUN_ATTEMPT",
+      "param": "attempt_number",
+      "score": 0.63,
+      "reason": "llm: This tool lists jobs for a specific workflow run, which can indirectly provide information about attempts."
+    },
+    {
+      "from": "GITHUB_LIST_CODES_OF_CONDUCT",
+      "to": "GITHUB_GET_CODE_OF_CONDUCT_GRAPH_QL",
+      "param": "key",
+      "score": 0.81,
+      "reason": "llm: Returns keys of available codes of conduct."
+    },
+    {
+      "from": "GITHUB_LIST_CODES_OF_CONDUCT_GRAPHQL",
+      "to": "GITHUB_GET_CODE_OF_CONDUCT_GRAPH_QL",
+      "param": "key",
+      "score": 0.81,
+      "reason": "llm: Returns keys of available codes of conduct."
+    },
+    {
+      "from": "GITHUB_LIST_COMMITS",
+      "to": "GITHUB_GET_COMMIT_STATUSES",
+      "param": "ref",
+      "score": 0.81,
+      "reason": "llm: Lists commits and provides SHA which can be used as a ref."
+    },
+    {
+      "from": "GITHUB_LIST_COMMITS_ON_A_PULL_REQUEST",
+      "to": "GITHUB_GET_COMMIT_STATUSES",
+      "param": "ref",
+      "score": 0.81,
+      "reason": "llm: Lists commits for a pull request and provides SHA which can be used as a ref."
+    },
+    {
+      "from": "GITHUB_SEARCH_COMMITS",
+      "to": "GITHUB_GET_COMMIT_STATUSES",
+      "param": "ref",
+      "score": 0.72,
+      "reason": "llm: Finds commits and provides SHA which can be used as a ref."
+    },
+    {
+      "from": "GITHUB_LIST_DEPLOYMENT_STATUSES",
+      "to": "GITHUB_GET_DEPLOYMENT_STATUS",
+      "param": "status_id",
+      "score": 0.81,
+      "reason": "llm: This tool lists all statuses for a given deployment and provides the status IDs directly."
+    },
+    {
+      "from": "GITHUB_SEARCH_GITHUB_GRAPHQL",
+      "to": "GITHUB_GET_DISCUSSION",
+      "param": "discussion_number",
+      "score": 0.63,
+      "reason": "llm: Can search discussions and return counts, which may include discussion numbers."
+    },
+    {
+      "from": "GITHUB_LIST_ORGANIZATIONS_FOR_THE_AUTHENTICATED_USER",
+      "to": "GITHUB_GET_ENTERPRISE_MEMBER_INVITATION",
+      "param": "enterprise_slug",
+      "score": 0.72,
+      "reason": "llm: This tool lists organizations the authenticated user is a member of, which can provide the necessary enterprise slug."
+    },
+    {
+      "from": "GITHUB_LIST_ORGANIZATIONS_FOR_USER",
+      "to": "GITHUB_GET_ENTERPRISE_MEMBER_INVITATION",
+      "param": "enterprise_slug",
+      "score": 0.72,
+      "reason": "llm: This tool lists public organization memberships for a user, which can help identify the enterprise slug."
+    },
+    {
+      "from": "GITHUB_LIST_GIST_COMMENTS",
+      "to": "GITHUB_GET_GIST_COMMENT",
+      "param": "comment_id",
+      "score": 0.9,
+      "reason": "llm: Directly lists comments for a specified Gist, providing comment IDs."
+    },
+    {
+      "from": "GITHUB_LIST_GIST_COMMITS",
+      "to": "GITHUB_GET_GIST_REVISION",
+      "param": "sha",
+      "score": 0.72,
+      "reason": "llm: Lists all commits for a specified gist, providing SHA values."
+    },
+    {
+      "from": "GITHUB_GET_GIST",
+      "to": "GITHUB_GET_GIST_REVISION",
+      "param": "sha",
+      "score": 0.63,
+      "reason": "llm: Fetches a specific GitHub gist, which may include SHA in its details."
+    },
+    {
+      "from": "GITHUB_LIST_COMMENT_CHANGES",
+      "to": "GITHUB_GET_DISCUSSION_COMMENT",
+      "param": "comment_number",
+      "score": 0.72,
+      "reason": "llm: Lists comment changes which include comment IDs."
+    },
+    {
+      "from": "GITHUB_LIST_ISSUE_COMMENTS",
+      "to": "GITHUB_GET_DISCUSSION_COMMENT",
+      "param": "comment_number",
+      "score": 0.72,
+      "reason": "llm: Lists comments for a specified issue, providing comment IDs."
+    },
+    {
+      "from": "GITHUB_LIST_ISSUE_COMMENTS_FOR_A_REPOSITORY",
+      "to": "GITHUB_GET_DISCUSSION_COMMENT",
+      "param": "comment_number",
+      "score": 0.72,
+      "reason": "llm: Lists issue comments including those on pull requests, providing comment IDs."
+    },
+    {
+      "from": "GITHUB_LIST_GITHUB_PAGES_BUILDS",
+      "to": "GITHUB_GET_GITHUB_PAGES_BUILD",
+      "param": "build_id",
+      "score": 0.81,
+      "reason": "llm: Lists builds which include build_id as part of the output."
+    },
+    {
+      "from": "GITHUB_GET_LATEST_PAGES_BUILD",
+      "to": "GITHUB_GET_GITHUB_PAGES_BUILD",
+      "param": "build_id",
+      "score": 0.72,
+      "reason": "llm: Provides information about the latest build which can include build_id."
+    },
+    {
+      "from": "GITHUB_LIST_COMMONLY_USED_LICENSES",
+      "to": "GITHUB_GET_LICENSE",
+      "param": "license",
+      "score": 0.81,
+      "reason": "llm: Provides a list of commonly used licenses including their keys."
+    },
+    {
+      "from": "GITHUB_LIST_LICENSES_GRAPH_QL",
+      "to": "GITHUB_GET_LICENSE",
+      "param": "license",
+      "score": 0.81,
+      "reason": "llm: Fetches all known open source licenses with their keys."
+    },
+    {
+      "from": "GITHUB_LIST_GLOBAL_SECURITY_ADVISORIES",
+      "to": "GITHUB_GET_GLOBAL_SECURITY_ADVISORY",
+      "param": "ghsa_id",
+      "score": 0.81,
+      "reason": "llm: This tool lists global security advisories and includes the ghsa_id in its output."
+    },
+    {
+      "from": "GITHUB_LIST_SECURITY_ADVISORIES_GRAPHQL",
+      "to": "GITHUB_GET_GLOBAL_SECURITY_ADVISORY",
+      "param": "ghsa_id",
+      "score": 0.72,
+      "reason": "llm: This tool can query security advisories and includes ghsa_id in the results."
+    },
+    {
+      "from": "GITHUB_LIST_REPOSITORY_SECURITY_ADVISORIES",
+      "to": "GITHUB_GET_GLOBAL_SECURITY_ADVISORY",
+      "param": "ghsa_id",
+      "score": 0.63,
+      "reason": "llm: This tool lists repository security advisories and includes ghsa_id in its output."
+    },
+    {
+      "from": "GITHUB_LIST_CODE_SCANNING_ANALYSES_FOR_A_REPOSITORY",
+      "to": "GITHUB_GET_INFORMATION_ABOUT_A_SARIF_UPLOAD",
+      "param": "sarif_id",
+      "score": 0.81,
+      "reason": "llm: This tool returns analyses that include SARIF IDs."
+    },
+    {
+      "from": "GITHUB_LIST_CODESPACES_FOR_A_USER_IN_ORGANIZATION",
+      "to": "GITHUB_GET_DETAILS_ABOUT_A_CODESPACE_EXPORT",
+      "param": "export_id",
+      "score": 0.81,
+      "reason": "llm: This tool lists codespaces and provides their IDs, which can be used to identify the latest export."
+    },
+    {
+      "from": "GITHUB_LIST_CODESPACES_FOR_THE_AUTHENTICATED_USER",
+      "to": "GITHUB_GET_DETAILS_ABOUT_A_CODESPACE_EXPORT",
+      "param": "export_id",
+      "score": 0.81,
+      "reason": "llm: This tool lists codespaces for the authenticated user and provides their IDs."
+    },
+    {
+      "from": "GITHUB_LIST_CODESPACES_FOR_THE_ORGANIZATION",
+      "to": "GITHUB_GET_DETAILS_ABOUT_A_CODESPACE_EXPORT",
+      "param": "export_id",
+      "score": 0.81,
+      "reason": "llm: This tool lists active/pending codespaces for an organization and provides their IDs."
+    },
+    {
+      "from": "GITHUB_LIST_ORG_PROJECT_VIEW_ITEMS",
+      "to": "GITHUB_GET_ORGANIZATION_PROJECT_ITEM",
+      "param": "item_id",
+      "score": 0.81,
+      "reason": "llm: This tool returns a list of project items including their IDs."
+    },
+    {
+      "from": "GITHUB_LIST_PROJECT_ITEMS_FOR_USER",
+      "to": "GITHUB_GET_ORGANIZATION_PROJECT_ITEM",
+      "param": "item_id",
+      "score": 0.81,
+      "reason": "llm: This tool returns a list of project items including their IDs."
+    },
+    {
+      "from": "GITHUB_LIST_PROJECT_VIEW_ITEMS_FOR_USER",
+      "to": "GITHUB_GET_ORGANIZATION_PROJECT_ITEM",
+      "param": "item_id",
+      "score": 0.81,
+      "reason": "llm: This tool returns a list of project items including their IDs."
+    },
+    {
+      "from": "GITHUB_LIST_REPOSITORY_WEBHOOKS",
+      "to": "GITHUB_GET_REPOSITORY_WEBHOOK_DELIVERY",
+      "param": "hook_id",
+      "score": 0.81,
+      "reason": "llm: This tool retrieves a list of webhooks for a repository, providing the necessary hook_id."
+    },
+    {
+      "from": "GITHUB_LIST_LICENSES_GRAPH_QL",
+      "to": "GITHUB_GET_LICENSE_GRAPH_QL",
+      "param": "key",
+      "score": 0.81,
+      "reason": "llm: Provides a complete list of licenses including their keys."
+    },
+    {
+      "from": "GITHUB_LIST_COMMONLY_USED_LICENSES",
+      "to": "GITHUB_GET_LICENSE_GRAPH_QL",
+      "param": "key",
+      "score": 0.81,
+      "reason": "llm: Retrieves commonly used licenses and their keys."
+    },
+    {
+      "from": "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_WORKFLOW",
+      "to": "GITHUB_GET_PENDING_DEPLOYMENTS_FOR_A_WORKFLOW_RUN",
+      "param": "run_id",
+      "score": 0.81,
+      "reason": "llm: This tool lists workflow runs and provides their IDs, which can be used as run_id."
+    },
+    {
+      "from": "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_REPOSITORY",
+      "to": "GITHUB_GET_PENDING_DEPLOYMENTS_FOR_A_WORKFLOW_RUN",
+      "param": "run_id",
+      "score": 0.81,
+      "reason": "llm: This tool lists workflow runs for a repository and provides their IDs, which can be used as run_id."
+    },
+    {
+      "from": "GITHUB_LIST_REPOSITORY_SECURITY_ADVISORIES",
+      "to": "GITHUB_GET_REPOSITORY_SECURITY_ADVISORY",
+      "param": "ghsa_id",
+      "score": 0.81,
+      "reason": "llm: This tool returns GHSA identifiers among other advisory details."
+    },
+    {
+      "from": "GITHUB_LIST_GLOBAL_SECURITY_ADVISORIES",
+      "to": "GITHUB_GET_REPOSITORY_SECURITY_ADVISORY",
+      "param": "ghsa_id",
+      "score": 0.81,
+      "reason": "llm: This tool returns GHSA identifiers among other advisory details."
+    },
+    {
+      "from": "GITHUB_LIST_SECURITY_ADVISORIES_GRAPHQL",
+      "to": "GITHUB_GET_REPOSITORY_SECURITY_ADVISORY",
+      "param": "ghsa_id",
+      "score": 0.72,
+      "reason": "llm: This tool can query for security advisories and return GHSA identifiers."
+    },
+    {
+      "from": "GITHUB_LIST_CHECK_RUNS_IN_A_CHECK_SUITE",
+      "to": "GITHUB_GET_THE_COMBINED_STATUS_FOR_A_SPECIFIC_REFERENCE",
+      "param": "ref",
+      "score": 0.72,
+      "reason": "llm: Returns check runs which can include commit references."
+    },
+    {
+      "from": "GITHUB_LIST_INSTANCES_OF_A_CODE_SCANNING_ALERT",
+      "to": "GITHUB_GET_THE_COMBINED_STATUS_FOR_A_SPECIFIC_REFERENCE",
+      "param": "ref",
+      "score": 0.63,
+      "reason": "llm: Returns instances with commit SHA which can be used as a reference."
+    },
+    {
+      "from": "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_WORKFLOW",
+      "to": "GITHUB_GET_THE_REVIEW_HISTORY_FOR_A_WORKFLOW_RUN",
+      "param": "run_id",
+      "score": 0.81,
+      "reason": "llm: This tool lists workflow runs and provides their IDs."
+    },
+    {
+      "from": "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_REPOSITORY",
+      "to": "GITHUB_GET_THE_REVIEW_HISTORY_FOR_A_WORKFLOW_RUN",
+      "param": "run_id",
+      "score": 0.81,
+      "reason": "llm: This tool lists workflow runs for a repository and provides their IDs."
+    },
+    {
+      "from": "GITHUB_LIST_ASSIGNMENTS_FOR_A_CLASSROOM",
+      "to": "GITHUB_LIST_ACCEPTED_ASSIGNMENTS_FOR_AN_ASSIGNMENT",
+      "param": "assignment_id",
+      "score": 0.81,
+      "reason": "llm: This tool provides the assignment IDs needed for the accepted assignments."
+    },
+    {
+      "from": "GITHUB_LIST_PROJECT_ITEMS_FOR_USER",
+      "to": "GITHUB_GET_USER_PROJECT_ITEM",
+      "param": "item_id",
+      "score": 0.81,
+      "reason": "llm: Returns item IDs directly."
+    },
+    {
+      "from": "GITHUB_LIST_PROJECT_VIEW_ITEMS_FOR_USER",
+      "to": "GITHUB_GET_USER_PROJECT_ITEM",
+      "param": "item_id",
+      "score": 0.81,
+      "reason": "llm: Returns item IDs directly."
+    },
+    {
+      "from": "GITHUB_LIST_ORG_PROJECT_VIEW_ITEMS",
+      "to": "GITHUB_GET_USER_PROJECT_ITEM",
+      "param": "item_id",
+      "score": 0.81,
+      "reason": "llm: Returns item IDs directly."
+    },
+    {
+      "from": "GITHUB_LIST_DEPLOYMENTS",
+      "to": "GITHUB_GET_THE_STATUS_OF_A_GITHUB_PAGES_DEPLOYMENT",
+      "param": "pages_deployment_id",
+      "score": 0.81,
+      "reason": "llm: Lists deployments which include the deployment ID needed."
+    },
+    {
+      "from": "GITHUB_LIST_DEPLOYMENT_STATUSES",
+      "to": "GITHUB_GET_THE_STATUS_OF_A_GITHUB_PAGES_DEPLOYMENT",
+      "param": "pages_deployment_id",
+      "score": 0.81,
+      "reason": "llm: Lists statuses for deployments which include the deployment ID."
+    },
+    {
+      "from": "GITHUB_LIST_JOBS_FOR_A_WORKFLOW_RUN",
+      "to": "GITHUB_LIST_JOBS_FOR_A_WORKFLOW_RUN_ATTEMPT",
+      "param": "attempt_number",
+      "score": 0.81,
+      "reason": "llm: It provides job details including the attempt number."
+    },
+    {
+      "from": "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_WORKFLOW",
+      "to": "GITHUB_LIST_JOBS_FOR_A_WORKFLOW_RUN_ATTEMPT",
+      "param": "attempt_number",
+      "score": 0.72,
+      "reason": "llm: It lists workflow runs which can include attempt numbers."
+    },
+    {
+      "from": "GITHUB_GET_A_WORKFLOW_RUN",
+      "to": "GITHUB_LIST_JOBS_FOR_A_WORKFLOW_RUN_ATTEMPT",
+      "param": "attempt_number",
+      "score": 0.63,
+      "reason": "llm: It retrieves specific workflow run details which may include attempt information."
+    },
+    {
+      "from": "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_REPOSITORY",
+      "to": "GITHUB_LIST_CHECK_SUITES_FOR_A_GIT_REFERENCE",
+      "param": "ref",
+      "score": 0.81,
+      "reason": "llm: Returns branch or commit SHA values that can be used as input for the check suites."
+    },
+    {
+      "from": "GITHUB_LIST_REPOSITORY_RULE_SUITES",
+      "to": "GITHUB_LIST_CHECK_SUITES_FOR_A_GIT_REFERENCE",
+      "param": "ref",
+      "score": 0.72,
+      "reason": "llm: Returns ref values that can be used as input for the check suites."
+    },
+    {
+      "from": "GITHUB_LIST_CODE_SCANNING_ANALYSES_FOR_A_REPOSITORY",
+      "to": "GITHUB_LIST_CHECK_SUITES_FOR_A_GIT_REFERENCE",
+      "param": "ref",
+      "score": 0.63,
+      "reason": "llm: Returns ref values that can be used as input for the check suites."
+    },
+    {
+      "from": "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_REPOSITORY",
+      "to": "GITHUB_LIST_CHECK_RUNS_FOR_A_REF",
+      "param": "ref",
+      "score": 0.72,
+      "reason": "llm: Lists workflow runs which can provide commit SHA, branch, or tag names."
+    },
+    {
+      "from": "GITHUB_LIST_CHECK_RUNS_IN_A_CHECK_SUITE",
+      "to": "GITHUB_LIST_CHECK_RUNS_FOR_A_REF",
+      "param": "ref",
+      "score": 0.63,
+      "reason": "llm: Lists check runs that can include commit SHA or branch names."
+    },
+    {
+      "from": "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_WORKFLOW",
+      "to": "GITHUB_LIST_CHECK_RUNS_FOR_A_REF",
+      "param": "ref",
+      "score": 0.63,
+      "reason": "llm: Lists workflow runs that can provide commit SHA, branch, or tag names."
+    },
+    {
+      "from": "GITHUB_GET_USERS_PROJECTS_V2",
+      "to": "GITHUB_LIST_PROJECT_VIEW_ITEMS_FOR_USER",
+      "param": "view_number",
+      "score": 0.81,
+      "reason": "llm: This tool also returns project numbers which can be used as view_number."
+    },
+    {
+      "from": "GITHUB_LIST_ORGANIZATION_PROJECTS",
+      "to": "GITHUB_LIST_ORG_PROJECT_VIEW_ITEMS",
+      "param": "view_number",
+      "score": 0.72,
+      "reason": "llm: This tool lists projects for a specified organization, which can help identify the view number."
+    },
+    {
+      "from": "GITHUB_LIST_ORG_RESOURCE_ACCESS_TOKENS",
+      "to": "GITHUB_LIST_TOKEN_ACCESS_REPOSITORIES",
+      "param": "pat_id",
+      "score": 0.9,
+      "reason": "llm: This tool directly returns the 'id' of fine-grained personal access tokens."
+    },
+    {
+      "from": "GITHUB_LIST_NOTIFICATIONS",
+      "to": "GITHUB_MARK_A_THREAD_AS_DONE",
+      "param": "thread_id",
+      "score": 0.9,
+      "reason": "llm: Returns notification threads with their IDs."
+    },
+    {
+      "from": "GITHUB_LIST_TEAMS_THAT_ARE_ASSIGNED_TO_AN_ORGANIZATION_ROLE",
+      "to": "GITHUB_LOOKUP_ENTERPRISE_ADMINISTRATOR_INVITATION",
+      "param": "enterprise_slug",
+      "score": 0.63,
+      "reason": "llm: This tool lists teams assigned to specific roles within an organization, which may include the enterprise slug."
+    },
+    {
+      "from": "GITHUB_LIST_NOTIFICATIONS",
+      "to": "GITHUB_MARK_A_THREAD_AS_READ",
+      "param": "thread_id",
+      "score": 0.81,
+      "reason": "llm: It provides the notification thread IDs needed for marking as read."
+    },
+    {
+      "from": "GITHUB_LIST_ISSUE_COMMENTS",
+      "to": "GITHUB_LIST_REACTIONS_FOR_A_TEAM_DISCUSSION_COMMENT",
+      "param": "comment_number",
+      "score": 0.72,
+      "reason": "llm: Lists comments for a specified issue, which can include discussion comments."
+    },
+    {
+      "from": "GITHUB_LIST_COMMENTS_FOR_A_PULL_REQUEST_REVIEW",
+      "to": "GITHUB_LIST_REACTIONS_FOR_A_TEAM_DISCUSSION_COMMENT",
+      "param": "comment_number",
+      "score": 0.72,
+      "reason": "llm: Lists comments for a specific review on a pull request, which may include discussion comments."
+    },
+    {
+      "from": "GITHUB_LIST_COMMIT_COMMENTS",
+      "to": "GITHUB_LIST_REACTIONS_FOR_A_TEAM_DISCUSSION_COMMENT",
+      "param": "comment_number",
+      "score": 0.72,
+      "reason": "llm: Retrieves all comments for a specific commit, which may include discussion comments."
+    },
+    {
+      "from": "GITHUB_LIST_SPONSORABLES",
+      "to": "GITHUB_PUBLISH_SPONSORS_TIER_GRAPH_QL",
+      "param": "tier_id",
+      "score": 0.72,
+      "reason": "llm: This tool lists sponsorable entities which may include draft sponsors tiers."
+    },
+    {
+      "from": "GITHUB_LIST_BRANCHES",
+      "to": "GITHUB_MERGE_A_BRANCH",
+      "param": "head",
+      "score": 0.81,
+      "reason": "llm: Lists all branches in the repository, providing branch names that can be used as head."
+    },
+    {
+      "from": "GITHUB_LIST_BRANCHES_FOR_HEAD_COMMIT",
+      "to": "GITHUB_MERGE_A_BRANCH",
+      "param": "head",
+      "score": 0.81,
+      "reason": "llm: Lists branches for a specific commit SHA, providing branch names that can be used as head."
+    },
+    {
+      "from": "GITHUB_LIST_MATCHING_REFERENCES",
+      "to": "GITHUB_MERGE_A_BRANCH",
+      "param": "head",
+      "score": 0.72,
+      "reason": "llm: Lists references in the repository that can include branch names."
+    },
+    {
+      "from": "GITHUB_LIST_APP_INSTALLATIONS",
+      "to": "GITHUB_REMOVE_A_REPOSITORY_FROM_AN_APP_INSTALLATION",
+      "param": "installation_id",
+      "score": 0.81,
+      "reason": "llm: This tool lists GitHub App installations which will provide the installation_id."
+    },
+    {
+      "from": "GITHUB_LIST_SELF_HOSTED_RUNNERS_FOR_A_REPOSITORY",
+      "to": "GITHUB_REMOVE_CUSTOM_LABEL_FROM_REPO_RUNNER",
+      "param": "runner_id",
+      "score": 0.81,
+      "reason": "llm: Directly returns runner IDs for self-hosted runners in a repository."
+    },
+    {
+      "from": "GITHUB_LIST_SELF_HOSTED_RUNNERS_FOR_AN_ORGANIZATION",
+      "to": "GITHUB_REMOVE_CUSTOM_LABEL_FROM_REPO_RUNNER",
+      "param": "runner_id",
+      "score": 0.81,
+      "reason": "llm: Directly returns runner IDs for self-hosted runners in an organization."
+    },
+    {
+      "from": "GITHUB_LIST_SPONSORABLES",
+      "to": "GITHUB_RETIRE_SPONSORS_TIER",
+      "param": "tier_id",
+      "score": 0.72,
+      "reason": "llm: This tool provides IDs of sponsorable entities, which may include tiers."
+    },
+    {
+      "from": "GITHUB_LIST_APP_INSTALLATIONS",
+      "to": "GITHUB_RESET_A_TOKEN",
+      "param": "client_id",
+      "score": 0.72,
+      "reason": "llm: This tool lists GitHub App installations which include client_id information."
+    },
+    {
+      "from": "GITHUB_LIST_NOTIFICATIONS",
+      "to": "GITHUB_SET_A_THREAD_SUBSCRIPTION",
+      "param": "thread_id",
+      "score": 0.81,
+      "reason": "llm: This tool lists notification threads and includes their IDs."
+    },
+    {
+      "from": "GITHUB_LIST_ORGANIZATION_REPOSITORIES",
+      "to": "GITHUB_UNLOCK_ORGANIZATION_REPOSITORY",
+      "param": "migration_id",
+      "score": 0.81,
+      "reason": "llm: This tool lists repositories for an organization, which can include migration details."
+    },
+    {
+      "from": "GITHUB_LIST_REPOSITORIES",
+      "to": "GITHUB_UNLOCK_ORGANIZATION_REPOSITORY",
+      "param": "migration_id",
+      "score": 0.81,
+      "reason": "llm: This tool lists repositories accessible to the user, which may include migration-related repositories."
+    },
+    {
+      "from": "GITHUB_LIST_ATTESTATION_REPOSITORIES",
+      "to": "GITHUB_UNLOCK_ORGANIZATION_REPOSITORY",
+      "param": "migration_id",
+      "score": 0.72,
+      "reason": "llm: This tool lists attestation repositories, which may be relevant for migrations."
+    },
+    {
+      "from": "GITHUB_SEARCH_GITHUB_GRAPHQL",
+      "to": "GITHUB_UPDATE_A_DISCUSSION",
+      "param": "discussion_number",
+      "score": 0.63,
+      "reason": "llm: Can search discussions and return counts, which may include discussion numbers."
+    },
+    {
+      "from": "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_WORKFLOW",
+      "to": "GITHUB_REVIEW_PENDING_DEPLOYMENTS_FOR_A_WORKFLOW_RUN",
+      "param": "run_id",
+      "score": 0.81,
+      "reason": "llm: This tool lists workflow runs and provides their IDs."
+    },
+    {
+      "from": "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_REPOSITORY",
+      "to": "GITHUB_REVIEW_PENDING_DEPLOYMENTS_FOR_A_WORKFLOW_RUN",
+      "param": "run_id",
+      "score": 0.81,
+      "reason": "llm: This tool lists workflow runs for a repository and provides their IDs."
+    },
+    {
+      "from": "GITHUB_LIST_GIST_COMMENTS",
+      "to": "GITHUB_UPDATE_A_GIST_COMMENT",
+      "param": "comment_id",
+      "score": 0.81,
+      "reason": "llm: Directly returns comment IDs for existing gist comments."
+    },
+    {
+      "from": "GITHUB_LIST_ORGANIZATION_WEBHOOKS",
+      "to": "GITHUB_UPDATE_ORGANIZATION_WEBHOOK_CONFIGURATION",
+      "param": "hook_id",
+      "score": 0.9,
+      "reason": "llm: This tool lists all webhooks for a specified organization and returns their IDs."
+    },
+    {
+      "from": "GITHUB_LIST_REPOSITORIES_FOR_A_USER",
+      "to": "GITHUB_UNLOCK_USER_REPOSITORY",
+      "param": "migration_id",
+      "score": 0.72,
+      "reason": "llm: Lists repositories for a user, which may include migration details."
+    },
+    {
+      "from": "GITHUB_LIST_REPOSITORIES_FOR_THE_AUTHENTICATED_USER",
+      "to": "GITHUB_UNLOCK_USER_REPOSITORY",
+      "param": "migration_id",
+      "score": 0.72,
+      "reason": "llm: Lists repositories for the authenticated user, which may include migration details."
+    },
+    {
+      "from": "GITHUB_LIST_REPOSITORIES_STARRED_BY_A_USER",
+      "to": "GITHUB_UNLOCK_USER_REPOSITORY",
+      "param": "migration_id",
+      "score": 0.72,
+      "reason": "llm: Lists starred repositories for a user, which may include migration details."
+    },
+    {
+      "from": "GITHUB_LIST_ORG_RESOURCE_ACCESS_TOKENS",
+      "to": "GITHUB_UPDATE_RESOURCE_ACCESS_WITH_TOKENS",
+      "param": "pat_ids",
+      "score": 0.9,
+      "reason": "llm: This tool lists approved fine-grained personal access tokens and provides their IDs."
+    },
+    {
+      "from": "GITHUB_LIST_REPOSITORY_WEBHOOKS",
+      "to": "GITHUB_UPDATE_REPOSITORY_WEBHOOK_CONFIGURATION",
+      "param": "hook_id",
+      "score": 0.9,
+      "reason": "llm: This tool retrieves a list of webhooks for a repository, providing the necessary hook_id."
+    },
+    {
+      "from": "GITHUB_LIST_COMMENT_CHANGES",
+      "to": "GITHUB_UPDATE_A_DISCUSSION_COMMENT",
+      "param": "comment_number",
+      "score": 0.81,
+      "reason": "llm: This tool lists comment changes and provides comment IDs."
+    },
+    {
+      "from": "GITHUB_LIST_ISSUE_COMMENTS",
+      "to": "GITHUB_UPDATE_A_DISCUSSION_COMMENT",
+      "param": "comment_number",
+      "score": 0.81,
+      "reason": "llm: This tool lists comments for a specified issue and provides comment IDs."
+    },
+    {
+      "from": "GITHUB_LIST_ISSUE_COMMENTS_FOR_A_REPOSITORY",
+      "to": "GITHUB_UPDATE_A_DISCUSSION_COMMENT",
+      "param": "comment_number",
+      "score": 0.81,
+      "reason": "llm: This tool lists issue comments for a repository and provides comment IDs."
+    },
+    {
+      "from": "GITHUB_GET_A_THREAD_SUBSCRIPTION_FOR_THE_AUTHENTICATED_USER",
+      "to": "GITHUB_UPDATE_SUBSCRIPTION",
+      "param": "subscribable_id",
+      "score": 0.72,
+      "reason": "llm: This tool retrieves subscription details for a specific notification thread, which can provide the necessary subscribable_id."
+    },
+    {
+      "from": "GITHUB_GET_A_REPOSITORY_SUBSCRIPTION",
+      "to": "GITHUB_UPDATE_SUBSCRIPTION",
+      "param": "subscribable_id",
+      "score": 0.63,
+      "reason": "llm: This tool gets subscription details for a repository, which may include the subscribable_id."
+    },
+    {
+      "from": "GITHUB_LIST_PROJECT_ITEMS_FOR_USER",
+      "to": "GITHUB_UPDATE_USER_LISTS_FOR_ITEM",
+      "param": "item_id",
+      "score": 0.81,
+      "reason": "llm: Returns item IDs from user-owned GitHub projects."
+    },
+    {
+      "from": "GITHUB_LIST_PROJECT_VIEW_ITEMS_FOR_USER",
+      "to": "GITHUB_UPDATE_USER_LISTS_FOR_ITEM",
+      "param": "item_id",
+      "score": 0.81,
+      "reason": "llm: Returns item IDs from a user's GitHub Projects view."
+    },
+    {
+      "from": "GITHUB_LIST_PROJECT_ITEMS_FOR_USER",
+      "to": "GITHUB_UPDATE_USER_LISTS_FOR_ITEM",
+      "param": "list_ids",
+      "score": 0.81,
+      "reason": "llm: Can provide list of item IDs that can be used as list IDs."
+    },
+    {
+      "from": "GITHUB_LIST_PROJECT_VIEW_ITEMS_FOR_USER",
+      "to": "GITHUB_UPDATE_USER_LISTS_FOR_ITEM",
+      "param": "list_ids",
+      "score": 0.81,
+      "reason": "llm: Can provide list of item IDs that can be used as list IDs."
+    },
+    {
+      "from": "GITHUB_LIST_PROJECT_ITEMS_FOR_USER",
+      "to": "GITHUB_UPDATE_USER_PROJECT_ITEM",
+      "param": "item_id",
+      "score": 0.81,
+      "reason": "llm: This tool lists items for a user-owned GitHub project and returns item IDs."
+    },
+    {
+      "from": "GITHUB_LIST_PROJECT_VIEW_ITEMS_FOR_USER",
+      "to": "GITHUB_UPDATE_USER_PROJECT_ITEM",
+      "param": "item_id",
+      "score": 0.81,
+      "reason": "llm: This tool lists items for a user's GitHub Projects (v2) view and returns item IDs."
+    },
+    {
+      "from": "GITHUB_LIST_ORG_PROJECT_VIEW_ITEMS",
+      "to": "GITHUB_UPDATE_USER_PROJECT_ITEM",
+      "param": "item_id",
+      "score": 0.81,
+      "reason": "llm: This tool lists items for an organization project view and returns item IDs."
+    },
+    {
+      "from": "GITHUB_LIST_REPO_DEV_CONTAINER_CONFIGS_FOR_USER",
+      "to": "GITHUB_VERIFY_DEV_CONTAINER_PERMISSIONS_ACCEPTED",
+      "param": "ref",
+      "score": 0.81,
+      "reason": "llm: This tool lists devcontainer configurations which include references."
     }
   ]
 }

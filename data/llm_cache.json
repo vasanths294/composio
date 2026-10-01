@@ -1,0 +1,3568 @@
+{
+  "82284e52c1b14fd6": {
+    "params": [
+      {
+        "param": "rule_id",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_ACL_LIST",
+            "confidence": 1,
+            "reason": "It retrieves the list of ACL rules, providing the necessary 'rule_id' values."
+          }
+        ]
+      }
+    ]
+  },
+  "2175301d17c73870": {
+    "params": [
+      {
+        "param": "rule_id",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_ACL_LIST",
+            "confidence": 1,
+            "reason": "It retrieves the list of ACLs which includes the rule_id needed for deletion."
+          }
+        ]
+      }
+    ]
+  },
+  "074674d0b809109a": {
+    "params": [
+      {
+        "param": "album_id",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_ALBUMS",
+            "confidence": 1,
+            "reason": "This tool lists all albums and provides their identifiers."
+          }
+        ]
+      }
+    ]
+  },
+  "274448075cdef01d": {
+    "params": [
+      {
+        "param": "rule_id",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_ACL_LIST",
+            "confidence": 0.9,
+            "reason": "This tool retrieves the list of ACL rules, providing the necessary rule_id values."
+          }
+        ]
+      }
+    ]
+  },
+  "41d2cf1acf19708f": {
+    "params": [
+      {
+        "param": "rule_id",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_ACL_LIST",
+            "confidence": 1,
+            "reason": "This tool retrieves existing ACL rule IDs needed for the update."
+          }
+        ]
+      }
+    ]
+  },
+  "25954a4530850a8e": {
+    "params": [
+      {
+        "param": "id",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_FIND_FOLDER",
+            "confidence": 0.9,
+            "reason": "This tool can find folders and return their IDs."
+          },
+          {
+            "tool": "GOOGLESUPER_FIND_FILE",
+            "confidence": 0.9,
+            "reason": "This tool can find files and folders, returning their IDs."
+          }
+        ]
+      }
+    ]
+  },
+  "655720d892051723": {
+    "params": [
+      {
+        "param": "media_item_ids",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_MEDIA_ITEMS",
+            "confidence": 0.9,
+            "reason": "Lists media items which can provide the required media item identifiers."
+          },
+          {
+            "tool": "GOOGLESUPER_SEARCH_MEDIA_ITEMS",
+            "confidence": 0.9,
+            "reason": "Searches for media items and can return their identifiers."
+          }
+        ]
+      }
+    ]
+  },
+  "ab57e4dcd3e55d01": {
+    "params": [
+      {
+        "param": "property",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+            "confidence": 0.9,
+            "reason": "This tool lists GA4 properties, providing the necessary property resource name."
+          },
+          {
+            "tool": "GOOGLESUPER_LIST_ACCOUNT_SUMMARIES",
+            "confidence": 0.8,
+            "reason": "This tool provides summaries of Google Analytics accounts, which can include properties."
+          }
+        ]
+      }
+    ]
+  },
+  "14b5c7929077fd5c": {
+    "params": [
+      {
+        "param": "property",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+            "confidence": 0.9,
+            "reason": "This tool lists GA4 properties, providing the necessary property resource name."
+          },
+          {
+            "tool": "GOOGLESUPER_LIST_ACCOUNT_SUMMARIES",
+            "confidence": 0.8,
+            "reason": "This tool provides summaries of accounts and their properties, which can help identify property resource names."
+          }
+        ]
+      }
+    ]
+  },
+  "4854429926b7a39d": {
+    "params": [
+      {
+        "param": "album_id",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_ALBUMS",
+            "confidence": 0.9,
+            "reason": "Lists all albums which can provide the album_id needed."
+          }
+        ]
+      },
+      {
+        "param": "media_item_ids",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_MEDIA_ITEMS",
+            "confidence": 0.9,
+            "reason": "Lists media items created by this application which can provide media_item_ids."
+          }
+        ]
+      }
+    ]
+  },
+  "01bdaeb56926e58e": {
+    "params": [
+      {
+        "param": "parent",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+            "confidence": 0.9,
+            "reason": "This tool lists GA4 properties which can provide the required property resource name."
+          }
+        ]
+      }
+    ]
+  },
+  "ae4374bc2c8e8c35": {
+    "params": [
+      {
+        "param": "parent",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+            "confidence": 0.9,
+            "reason": "This tool lists GA4 properties and provides the parent property resource name."
+          }
+        ]
+      }
+    ]
+  },
+  "79c4c22993489d32": {
+    "params": [
+      {
+        "param": "parent",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+            "confidence": 0.9,
+            "reason": "This tool lists GA4 properties which can provide the required property_id for the parent parameter."
+          }
+        ]
+      }
+    ]
+  },
+  "07f042eb16980a3d": {
+    "params": [
+      {
+        "param": "property",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+            "confidence": 0.9,
+            "reason": "This tool lists GA4 properties which can provide the required property resource name."
+          },
+          {
+            "tool": "GOOGLESUPER_LIST_ACCOUNT_SUMMARIES",
+            "confidence": 0.8,
+            "reason": "This tool provides summaries of Google Analytics accounts and their properties."
+          },
+          {
+            "tool": "GOOGLESUPER_LIST_ACCOUNTS_V1_BETA",
+            "confidence": 0.7,
+            "reason": "This tool lists Google Analytics accounts which may include properties."
+          }
+        ]
+      }
+    ]
+  },
+  "e90c18a564a0df2f": {
+    "params": [
+      {
+        "param": "parent",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+            "confidence": 0.9,
+            "reason": "This tool lists GA4 properties which can provide the required property_id for the parent parameter."
+          }
+        ]
+      }
+    ]
+  },
+  "a62837fa84cd3600": {
+    "params": [
+      {
+        "param": "header_id",
+        "producers": []
+      },
+      {
+        "param": "document_id",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_GET_DOCUMENT_END_INDEX",
+            "confidence": 0.8,
+            "reason": "This tool retrieves document details including document_id which can be used to identify the header."
+          }
+        ]
+      }
+    ]
+  },
+  "0e1a7fe34da44693": {
+    "params": [
+      {
+        "param": "target_id",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_FIND_FILE",
+            "confidence": 0.9,
+            "reason": "This tool can find files and folders in Google Drive and returns their IDs."
+          }
+        ]
+      }
+    ]
+  },
+  "bcf26f7f3800bd91": {
+    "params": [
+      {
+        "param": "parent",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+            "confidence": 0.9,
+            "reason": "This tool lists GA4 properties which can provide the required property identifier."
+          }
+        ]
+      }
+    ]
+  },
+  "4878ee09930573a7": {
+    "params": [
+      {
+        "param": "child_id",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_SUB_ACCOUNTS",
+            "confidence": 0.9,
+            "reason": "This tool returns sub-accounts which include customer IDs that can be used as child IDs."
+          }
+        ]
+      }
+    ]
+  },
+  "77f6e582a9f9976f": {
+    "params": [
+      {
+        "param": "parent_id",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_FIND_FILE",
+            "confidence": 0.9,
+            "reason": "It can find files and folders, returning their IDs."
+          },
+          {
+            "tool": "GOOGLESUPER_FIND_FOLDER",
+            "confidence": 0.9,
+            "reason": "It specifically finds folders and returns their IDs."
+          }
+        ]
+      }
+    ]
+  },
+  "989dc13d3b98bc4b": {
+    "params": [
+      {
+        "param": "reply_id",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_REPLIES",
+            "confidence": 1,
+            "reason": "This tool lists replies and provides their IDs, which can be used to resolve the reply_id parameter."
+          }
+        ]
+      }
+    ]
+  },
+  "44a46cb1c4e8e5ff": {
+    "params": [
+      {
+        "param": "revision_id",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_REVISIONS",
+            "confidence": 0.9,
+            "reason": "This tool lists file revisions and provides their IDs."
+          }
+        ]
+      }
+    ]
+  },
+  "fed855aec65ef47a": {
+    "params": [
+      {
+        "param": "tab_id",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_GET_DOCUMENT_END_INDEX",
+            "confidence": 0.9,
+            "reason": "This tool returns tab_id which can be used as the parameter for deleting a tab."
+          }
+        ]
+      }
+    ]
+  },
+  "b1a4646cc009ac4e": {
+    "params": [
+      {
+        "param": "space_name",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_CONFERENCE_RECORDS",
+            "confidence": 0.9,
+            "reason": "Lists conference records which include space information."
+          },
+          {
+            "tool": "GOOGLESUPER_GET_CONFERENCE_RECORD_BY_NAME",
+            "confidence": 0.9,
+            "reason": "Retrieves detailed information about a specific conference including its space."
+          }
+        ]
+      }
+    ]
+  },
+  "89e40824c4a346cd": {
+    "params": [
+      {
+        "param": "album_id",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_ALBUMS",
+            "confidence": 0.9,
+            "reason": "This tool lists all albums and can provide the album_id needed."
+          }
+        ]
+      }
+    ]
+  },
+  "07fe34b70fcbef63": {
+    "params": [
+      {
+        "param": "place_id",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_GET_PLACE_DETAILS",
+            "confidence": 0.9,
+            "reason": "Returns place details including place_id."
+          },
+          {
+            "tool": "GOOGLESUPER_NEARBY_SEARCH",
+            "confidence": 0.8,
+            "reason": "Returns places with their ids, which can be used as place_id."
+          },
+          {
+            "tool": "GOOGLESUPER_TEXT_SEARCH",
+            "confidence": 0.7,
+            "reason": "Returns places that include place ids."
+          }
+        ]
+      }
+    ]
+  },
+  "752662a3fcfeaa80": {
+    "params": [
+      {
+        "param": "destination",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_CALENDARS",
+            "confidence": 0.9,
+            "reason": "This tool lists calendars and provides their IDs, which can be used as the destination calendar identifier."
+          }
+        ]
+      }
+    ]
+  },
+  "fcbbe00d61649d36": {
+    "params": [
+      {
+        "param": "app_id",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_MEDIA_ITEMS",
+            "confidence": 0.8,
+            "reason": "This tool lists media items created by the application, which can provide the app ID indirectly through its context."
+          }
+        ]
+      }
+    ]
+  },
+  "ddfd6f71da3073f2": {
+    "params": [
+      {
+        "param": "audience_id",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_AUDIENCES",
+            "confidence": 0.9,
+            "reason": "This tool lists audiences and provides their IDs."
+          }
+        ]
+      },
+      {
+        "param": "property_id",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+            "confidence": 0.9,
+            "reason": "This tool lists properties and provides their IDs."
+          }
+        ]
+      }
+    ]
+  },
+  "978defebcf4a1a8d": {
+    "params": [
+      {
+        "param": "child_id",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_SUB_ACCOUNTS",
+            "confidence": 0.9,
+            "reason": "Returns customer_id which can be used as child_id."
+          }
+        ]
+      }
+    ]
+  },
+  "5c7c42ae169648cf": {
+    "params": [
+      {
+        "param": "id",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_GET_CAMPAIGN_BY_NAME",
+            "confidence": 0.8,
+            "reason": "This tool can retrieve the campaign by its name, which can then provide the id needed for the GetCampaignById tool."
+          }
+        ]
+      }
+    ]
+  },
+  "d87794a6e760e0a3": {
+    "params": [
+      {
+        "param": "name",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_ACCESSIBLE_CUSTOMERS",
+            "confidence": 0.8,
+            "reason": "This tool provides resource names that can be used to construct the required property_id for the attribution settings."
+          },
+          {
+            "tool": "GOOGLESUPER_LIST_CALENDARS",
+            "confidence": 0.7,
+            "reason": "This tool lists calendars which may provide IDs that can be formatted to match the required property_id structure."
+          },
+          {
+            "tool": "GOOGLESUPER_LIST_BUILDINGS",
+            "confidence": 0.6,
+            "reason": "This tool lists buildings with buildingId that can potentially be formatted to match the required property_id structure."
+          }
+        ]
+      }
+    ]
+  },
+  "71fd777dd0306615": {
+    "params": [
+      {
+        "param": "request_id",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_CONVERSION_EVENTS",
+            "confidence": 0.7,
+            "reason": "Can provide conversion events which may include request_id in their details."
+          },
+          {
+            "tool": "GOOGLESUPER_GET_CONVERSION_ACTION_TAG_SNIPPETS",
+            "confidence": 0.7,
+            "reason": "Can provide conversion action IDs which may relate to request_id."
+          }
+        ]
+      }
+    ]
+  },
+  "1904393fa0a36ac6": {
+    "params": [
+      {
+        "param": "conversion_action_id",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_DATA_MANAGER_CONVERSION_ACTIONS",
+            "confidence": 0.9,
+            "reason": "This tool lists conversion actions and provides their numeric IDs."
+          }
+        ]
+      }
+    ]
+  },
+  "ac384e50fc6da2aa": {
+    "params": [
+      {
+        "param": "name",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_ACCESSIBLE_CUSTOMERS",
+            "confidence": 0.8,
+            "reason": "This tool provides resource names that can be used to construct the required property_id for the data retention settings."
+          },
+          {
+            "tool": "GOOGLESUPER_LIST_BUILDINGS",
+            "confidence": 0.7,
+            "reason": "This tool lists buildings with buildingId that can be used to form the required property_id."
+          },
+          {
+            "tool": "GOOGLESUPER_LIST_CALENDARS",
+            "confidence": 0.6,
+            "reason": "This tool lists calendars with IDs that can be used to create the required property_id."
+          }
+        ]
+      }
+    ]
+  },
+  "c5dde5e78c2ce557": {
+    "params": [
+      {
+        "param": "name",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_ACCESSIBLE_CUSTOMERS",
+            "confidence": 0.8,
+            "reason": "This tool lists Google Ads customer resource names which can provide account_id needed for the data sharing settings."
+          },
+          {
+            "tool": "GOOGLESUPER_LIST_CALENDARS",
+            "confidence": 0.7,
+            "reason": "This tool lists calendars which may include account identifiers relevant for data sharing settings."
+          },
+          {
+            "tool": "GOOGLESUPER_LIST_BUILDINGS",
+            "confidence": 0.6,
+            "reason": "This tool lists buildings for a Google Workspace customer account, potentially providing account_id."
+          }
+        ]
+      }
+    ]
+  },
+  "93d19d839988240a": {
+    "params": [
+      {
+        "param": "media_item_id",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_MEDIA_ITEMS",
+            "confidence": 0.8,
+            "reason": "Lists media items which can provide media_item_id."
+          },
+          {
+            "tool": "GOOGLESUPER_SEARCH_MEDIA_ITEMS",
+            "confidence": 0.9,
+            "reason": "Searches for media items and returns their IDs."
+          },
+          {
+            "tool": "GOOGLESUPER_BATCH_GET_MEDIA_ITEMS",
+            "confidence": 0.7,
+            "reason": "Returns media items for specified identifiers, which can include media_item_id."
+          }
+        ]
+      }
+    ]
+  },
+  "80e6209a63475862": {
+    "params": [
+      {
+        "param": "name",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_ACCESSIBLE_CUSTOMERS",
+            "confidence": 0.8,
+            "reason": "This tool returns resource names which can be used to construct the required property_id for the metadata."
+          }
+        ]
+      }
+    ]
+  },
+  "a7df021d4376d187": {
+    "params": [
+      {
+        "param": "space_name",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_CONFERENCE_RECORDS",
+            "confidence": 0.8,
+            "reason": "Lists conference records which may include space names usable as space IDs."
+          }
+        ]
+      }
+    ]
+  },
+  "4d69b2aae742d8b7": {
+    "params": [
+      {
+        "param": "parent_id",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_FIND_FILE",
+            "confidence": 0.9,
+            "reason": "Can find files and return their IDs."
+          },
+          {
+            "tool": "GOOGLESUPER_FIND_FOLDER",
+            "confidence": 0.9,
+            "reason": "Can find folders and return their IDs."
+          }
+        ]
+      }
+    ]
+  },
+  "8d849cde0a8e418b": {
+    "params": [
+      {
+        "param": "page_object_id",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_DRIVE_CHANGES",
+            "confidence": 0.5,
+            "reason": "Lists changes in Google Drive which may include page object IDs."
+          },
+          {
+            "tool": "GOOGLESUPER_LIST_SHARED_DRIVES",
+            "confidence": 0.5,
+            "reason": "Lists shared drives which may contain page object IDs."
+          }
+        ]
+      },
+      {
+        "param": "presentation_id",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_DRIVE_CHANGES",
+            "confidence": 0.5,
+            "reason": "Lists changes in Google Drive which may include presentation IDs."
+          },
+          {
+            "tool": "GOOGLESUPER_LIST_SHARED_DRIVES",
+            "confidence": 0.5,
+            "reason": "Lists shared drives which may contain presentation IDs."
+          }
+        ]
+      }
+    ]
+  },
+  "c6b69d334ed19a32": {
+    "params": [
+      {
+        "param": "email",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_SEND_AS",
+            "confidence": 0.9,
+            "reason": "This tool provides email addresses that can be used to retrieve the permission ID."
+          },
+          {
+            "tool": "GOOGLESUPER_LIST_FORWARDING_ADDRESSES",
+            "confidence": 0.8,
+            "reason": "This tool lists email addresses that are allowed for forwarding, which can be used as valid email inputs."
+          }
+        ]
+      }
+    ]
+  },
+  "b8b59532cc8124f5": {
+    "params": [
+      {
+        "param": "name",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_ACCOUNT_SUMMARIES",
+            "confidence": 0.8,
+            "reason": "This tool provides account summaries which include the property_id needed for the Google Signals settings."
+          },
+          {
+            "tool": "GOOGLESUPER_LIST_ACCOUNTS_V1_BETA",
+            "confidence": 0.8,
+            "reason": "This tool lists Google Analytics accounts which can help identify the property_id required."
+          },
+          {
+            "tool": "GOOGLESUPER_LIST_GOOGLE_ADS_LINKS",
+            "confidence": 0.7,
+            "reason": "This tool lists Google Ads links that may include relevant property_id information."
+          },
+          {
+            "tool": "GOOGLESUPER_LIST_AUDIENCES",
+            "confidence": 0.7,
+            "reason": "This tool lists audiences on a property, which may help in identifying the property_id."
+          },
+          {
+            "tool": "GOOGLESUPER_LIST_BIGQUERY_LINKS",
+            "confidence": 0.7,
+            "reason": "This tool lists BigQuery links associated with a property, potentially revealing the property_id."
+          }
+        ]
+      }
+    ]
+  },
+  "fe1d774e0ec989e7": {
+    "params": [
+      {
+        "param": "reply_id",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_REPLIES",
+            "confidence": 1,
+            "reason": "This tool lists replies and provides their IDs, which can be used as reply_id."
+          }
+        ]
+      }
+    ]
+  },
+  "7831fc7e25ac4c56": {
+    "params": [
+      {
+        "param": "conference_record_id",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_CONFERENCE_RECORDS",
+            "confidence": 0.9,
+            "reason": "Lists past conference records which can provide the conference_record_id needed."
+          }
+        ]
+      }
+    ]
+  },
+  "b09c00039fafd6a0": {
+    "params": [
+      {
+        "param": "presentation_id",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_DRIVE_CHANGES",
+            "confidence": 0.5,
+            "reason": "Can provide fileId which may correspond to presentation_id."
+          },
+          {
+            "tool": "GOOGLESUPER_LIST_SHARED_DRIVES",
+            "confidence": 0.5,
+            "reason": "Can provide drive IDs which may relate to presentations."
+          }
+        ]
+      }
+    ]
+  },
+  "5a32645c1b6b58a0": {
+    "params": [
+      {
+        "param": "conference_record_id",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_CONFERENCE_RECORDS",
+            "confidence": 0.9,
+            "reason": "This tool lists conference records and provides the necessary conference_record_id."
+          }
+        ]
+      }
+    ]
+  },
+  "05dfb65f236764ec": {
+    "params": [
+      {
+        "param": "id",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_GET_CHILD",
+            "confidence": 0.9,
+            "reason": "This tool retrieves a specific child reference for a folder and returns the ID needed for the parameter."
+          }
+        ]
+      }
+    ]
+  },
+  "3df352b421eb96ef": {
+    "params": [
+      {
+        "param": "parent",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+            "confidence": 0.9,
+            "reason": "This tool lists GA4 properties which can provide the required property ID in the correct format."
+          }
+        ]
+      }
+    ]
+  },
+  "d124f2d279e22f7b": {
+    "params": [
+      {
+        "param": "parent",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+            "confidence": 0.8,
+            "reason": "This tool lists GA4 properties which can provide the required property ID."
+          }
+        ]
+      }
+    ]
+  },
+  "c1af49c556249646": {
+    "params": [
+      {
+        "param": "parent",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+            "confidence": 0.9,
+            "reason": "This tool lists GA4 properties which can provide the required property identifier."
+          }
+        ]
+      }
+    ]
+  },
+  "c8f997b951fb00e5": {
+    "params": [
+      {
+        "param": "parent",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+            "confidence": 0.9,
+            "reason": "This tool lists GA4 properties which can provide the required property identifier."
+          }
+        ]
+      }
+    ]
+  },
+  "535a1d6772020567": {
+    "params": [
+      {
+        "param": "parent",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+            "confidence": 0.9,
+            "reason": "This tool lists GA4 properties which can provide the required property ID in the correct format."
+          }
+        ]
+      }
+    ]
+  },
+  "11ffc772f90a63be": {
+    "params": [
+      {
+        "param": "parent",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+            "confidence": 0.9,
+            "reason": "This tool lists GA4 properties which can provide the required property ID."
+          }
+        ]
+      }
+    ]
+  },
+  "4fe3e711dae36d1a": {
+    "params": [
+      {
+        "param": "parent",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+            "confidence": 0.8,
+            "reason": "This tool lists GA4 properties which can provide the required propertyId for the parent parameter."
+          }
+        ]
+      }
+    ]
+  },
+  "757a13d9199f73f0": {
+    "params": [
+      {
+        "param": "parent",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+            "confidence": 0.9,
+            "reason": "This tool lists GA4 properties which can provide the required property identifier."
+          }
+        ]
+      }
+    ]
+  },
+  "3fd4f4b200a612b9": {
+    "params": [
+      {
+        "param": "form_id",
+        "producers": []
+      }
+    ]
+  },
+  "63e02e08137353d9": {
+    "params": [
+      {
+        "param": "parent",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+            "confidence": 0.8,
+            "reason": "This tool lists GA4 properties which can provide the required property resource name."
+          },
+          {
+            "tool": "GOOGLESUPER_LIST_ACCOUNT_SUMMARIES",
+            "confidence": 0.7,
+            "reason": "This tool retrieves summaries of Google Analytics accounts which may include properties."
+          },
+          {
+            "tool": "GOOGLESUPER_LIST_ACCOUNTS_V1_BETA",
+            "confidence": 0.6,
+            "reason": "This tool lists Google Analytics accounts that might have properties associated with them."
+          }
+        ]
+      }
+    ]
+  },
+  "f545569a699a1828": {
+    "params": [
+      {
+        "param": "parent",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+            "confidence": 0.9,
+            "reason": "This tool lists GA4 properties which can provide the required property ID for the parent parameter."
+          }
+        ]
+      }
+    ]
+  },
+  "1d3f0f86d27230f9": {
+    "params": [
+      {
+        "param": "parent",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+            "confidence": 0.9,
+            "reason": "This tool lists GA4 properties which can provide the required parent data stream information."
+          }
+        ]
+      }
+    ]
+  },
+  "f0a65b8e2c9914ce": {
+    "params": [
+      {
+        "param": "parent",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+            "confidence": 0.9,
+            "reason": "This tool lists GA4 properties which can provide the required property ID in the correct format."
+          }
+        ]
+      }
+    ]
+  },
+  "5a06609b27282a32": {
+    "params": [
+      {
+        "param": "filter",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_ACCOUNT_SUMMARIES",
+            "confidence": 0.8,
+            "reason": "Provides account summaries which can include parent account information for filtering."
+          },
+          {
+            "tool": "GOOGLESUPER_LIST_ACCOUNTS_V1_BETA",
+            "confidence": 0.8,
+            "reason": "Lists all Google Analytics accounts which can be used to derive parent account information."
+          }
+        ]
+      }
+    ]
+  },
+  "3e89bb4398a31caa": {
+    "params": [
+      {
+        "param": "parent",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+            "confidence": 0.9,
+            "reason": "This tool lists GA4 properties which can provide the required property identifier."
+          }
+        ]
+      }
+    ]
+  },
+  "d2d7d3ccd1297550": {
+    "params": [
+      {
+        "param": "participant_id",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_PARTICIPANTS",
+            "confidence": 0.9,
+            "reason": "Lists participants in a conference, providing their unique identifiers."
+          }
+        ]
+      },
+      {
+        "param": "conference_record_id",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_CONFERENCE_RECORDS",
+            "confidence": 0.9,
+            "reason": "Lists conference records, providing their unique identifiers."
+          }
+        ]
+      }
+    ]
+  },
+  "62fec29fe06fb6a7": {
+    "params": [
+      {
+        "param": "parent",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+            "confidence": 0.9,
+            "reason": "This tool lists GA4 properties and provides the required property format."
+          }
+        ]
+      }
+    ]
+  },
+  "3d939cd0e2f8b4e1": {
+    "params": [
+      {
+        "param": "parent",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+            "confidence": 0.9,
+            "reason": "This tool lists GA4 properties and provides the parent resource name."
+          }
+        ]
+      }
+    ]
+  },
+  "4193dc667cac7fd9": {
+    "params": [
+      {
+        "param": "parent",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+            "confidence": 0.9,
+            "reason": "This tool lists GA4 properties which can provide the required property resource name."
+          }
+        ]
+      }
+    ]
+  },
+  "4dc0ecaa0134fb99": {
+    "params": [
+      {
+        "param": "conference_record_id",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_CONFERENCE_RECORDS",
+            "confidence": 0.9,
+            "reason": "This tool lists conference records which can provide the conference_record_id needed."
+          }
+        ]
+      }
+    ]
+  },
+  "6bc2f93aeb33b834": {
+    "params": [
+      {
+        "param": "parent",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+            "confidence": 0.9,
+            "reason": "This tool lists GA4 properties which can provide the required property_id."
+          }
+        ]
+      }
+    ]
+  },
+  "c39f00720a172c67": {
+    "params": [
+      {
+        "param": "video_id",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_MEDIA_ITEMS",
+            "confidence": 0.5,
+            "reason": "This tool lists media items which may include video IDs."
+          }
+        ]
+      }
+    ]
+  },
+  "063a32edc37ce29b": {
+    "params": [
+      {
+        "param": "destination_folder_id",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_FIND_FOLDER",
+            "confidence": 0.9,
+            "reason": "This tool finds Google Drive folders and returns their IDs."
+          },
+          {
+            "tool": "GOOGLESUPER_FIND_FILE",
+            "confidence": 0.9,
+            "reason": "This tool can find files and folders in Google Drive, returning their IDs."
+          }
+        ]
+      }
+    ]
+  },
+  "fc510a7f2245eb9d": {
+    "params": [
+      {
+        "param": "presentation_id",
+        "producers": []
+      }
+    ]
+  },
+  "1bca029344734ba0": {
+    "params": [
+      {
+        "param": "user_id",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_CSE_IDENTITIES",
+            "confidence": 0.9,
+            "reason": "This tool retrieves the authenticated user's email address."
+          },
+          {
+            "tool": "GOOGLESUPER_LIST_LABELS",
+            "confidence": 0.8,
+            "reason": "This tool retrieves labels for a Gmail account, which can include the user's email."
+          }
+        ]
+      }
+    ]
+  },
+  "753f1a7c73f9b0f1": {
+    "params": [
+      {
+        "param": "template_presentation_id",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_GET_PRESENTATION",
+            "confidence": 0.9,
+            "reason": "It retrieves the presentation ID needed for the template."
+          },
+          {
+            "tool": "GOOGLESUPER_PRESENTATIONS_GET",
+            "confidence": 0.9,
+            "reason": "It provides the presentation ID required for duplication."
+          }
+        ]
+      }
+    ]
+  },
+  "23383f1391275721": {
+    "params": [
+      {
+        "param": "photo_reference",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_SEARCH_MEDIA_ITEMS",
+            "confidence": 0.7,
+            "reason": "Can search for media items which may include photo references."
+          },
+          {
+            "tool": "GOOGLESUPER_LIST_MEDIA_ITEMS",
+            "confidence": 0.6,
+            "reason": "Lists media items that may contain photo references."
+          }
+        ]
+      }
+    ]
+  },
+  "a031f416472ff1b9": {
+    "params": [
+      {
+        "param": "presentation_id",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_SHARED_DRIVES",
+            "confidence": 0.7,
+            "reason": "Lists shared drives which may contain presentations."
+          }
+        ]
+      }
+    ]
+  },
+  "cb36121c819fe37f": {
+    "params": [
+      {
+        "param": "property",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+            "confidence": 0.9,
+            "reason": "This tool lists GA4 properties, providing the necessary property resource name."
+          },
+          {
+            "tool": "GOOGLESUPER_GET_PROPERTY",
+            "confidence": 0.9,
+            "reason": "This tool retrieves detailed information about a specific GA4 property, including its resource name."
+          }
+        ]
+      }
+    ]
+  },
+  "f27c64e1c9ed8dcd": {
+    "params": [
+      {
+        "param": "property",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+            "confidence": 0.9,
+            "reason": "This tool lists GA4 properties, providing the necessary property resource name."
+          },
+          {
+            "tool": "GOOGLESUPER_GET_PROPERTY",
+            "confidence": 0.9,
+            "reason": "This tool retrieves a specific GA4 property by its resource name."
+          }
+        ]
+      }
+    ]
+  },
+  "7802aaeaf887533a": {
+    "params": [
+      {
+        "param": "property",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+            "confidence": 0.9,
+            "reason": "This tool lists GA4 properties, providing the necessary property_id."
+          },
+          {
+            "tool": "GOOGLESUPER_GET_PROPERTY",
+            "confidence": 0.9,
+            "reason": "This tool retrieves a specific GA4 property, which includes the property_id."
+          }
+        ]
+      }
+    ]
+  },
+  "af8221b63dafdb74": {
+    "params": [
+      {
+        "param": "recipient_email",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_FETCH_EMAILS",
+            "confidence": 0.9,
+            "reason": "Fetches email messages which include sender and recipient email addresses."
+          },
+          {
+            "tool": "GOOGLESUPER_LIST_FORWARDING_ADDRESSES",
+            "confidence": 0.8,
+            "reason": "Lists forwarding addresses which are valid email addresses."
+          },
+          {
+            "tool": "GOOGLESUPER_LIST_SEND_AS",
+            "confidence": 0.8,
+            "reason": "Lists send-as aliases which include valid email addresses."
+          },
+          {
+            "tool": "GOOGLESUPER_SEARCH_PEOPLE",
+            "confidence": 0.7,
+            "reason": "Searches contacts for email addresses."
+          }
+        ]
+      }
+    ]
+  },
+  "4d72d954297c71a6": {
+    "params": [
+      {
+        "param": "setting",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_SETTINGS_LIST",
+            "confidence": 0.9,
+            "reason": "Returns all user settings including their identifiers."
+          }
+        ]
+      }
+    ]
+  },
+  "8e253f60ea6a8ff1": {
+    "params": [
+      {
+        "param": "measurement_id",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_MEASUREMENT_PROTOCOL_SECRETS",
+            "confidence": 0.9,
+            "reason": "This tool lists measurement protocol secrets which include the measurement ID."
+          }
+        ]
+      }
+    ]
+  },
+  "9fab44c9d3840a8f": {
+    "params": [
+      {
+        "param": "property",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_PROPERTIES_FILTERED",
+            "confidence": 0.9,
+            "reason": "This tool lists GA4 properties, providing the necessary property ID."
+          },
+          {
+            "tool": "GOOGLESUPER_LIST_ACCOUNT_SUMMARIES",
+            "confidence": 0.8,
+            "reason": "This tool provides summaries of accounts and their properties, which can help identify property IDs."
+          },
+          {
+            "tool": "GOOGLESUPER_LIST_ACCOUNTS_V1_BETA",
+            "confidence": 0.7,
+            "reason": "This tool lists Google Analytics accounts, which may include properties."
+          },
+          {
+            "tool": "GOOGLESUPER_GET_PROPERTY",
+            "confidence": 0.9,
+            "reason": "This tool retrieves a specific GA4 property by its resource name, which includes the property ID."
+          }
+        ]
+      }
+    ]
+  },
+  "8f29e538ac9e1eca": {
+    "params": [
+      {
+        "param": "id",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_CHANNEL_GROUPS",
+            "confidence": 0.5,
+            "reason": "This tool lists channel groups which may include channel IDs."
+          }
+        ]
+      }
+    ]
+  },
+  "1d07d5a74bc3ae83": {
+    "params": [
+      {
+        "param": "album_id",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_ALBUMS",
+            "confidence": 1,
+            "reason": "This tool lists all albums and provides their identifiers."
+          }
+        ]
+      }
+    ]
+  },
+  "b0bab6d4ac369085": {
+    "params": [
+      {
+        "param": "document_id",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_SEARCH_DOCUMENTS",
+            "confidence": 0.9,
+            "reason": "It can search for documents and return their IDs."
+          },
+          {
+            "tool": "GOOGLESUPER_GET_DOCUMENT_BY_ID",
+            "confidence": 0.8,
+            "reason": "It retrieves a document by its ID, which can be used as the document_id."
+          }
+        ]
+      }
+    ]
+  },
+  "c17fcbf0bad342d3": {
+    "params": [
+      {
+        "param": "reply_id",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_REPLIES",
+            "confidence": 1,
+            "reason": "This tool lists replies and provides their IDs, which can be used as reply_id."
+          }
+        ]
+      }
+    ]
+  },
+  "b22a44ecda42ee07": {
+    "params": [
+      {
+        "param": "id",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_SEARCH_DOCUMENTS",
+            "confidence": 0.9,
+            "reason": "This tool can search for documents and return their IDs."
+          },
+          {
+            "tool": "GOOGLESUPER_GET_DOCUMENT",
+            "confidence": 0.8,
+            "reason": "This tool retrieves a document by ID and returns the documentId."
+          }
+        ]
+      }
+    ]
+  },
+  "af7c3a59affd9dbf": {
+    "params": [
+      {
+        "param": "media_item_id",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_MEDIA_ITEMS",
+            "confidence": 0.9,
+            "reason": "Lists media items which can provide the media_item_id."
+          },
+          {
+            "tool": "GOOGLESUPER_SEARCH_MEDIA_ITEMS",
+            "confidence": 0.9,
+            "reason": "Searches for media items which can provide the media_item_id."
+          },
+          {
+            "tool": "GOOGLESUPER_BATCH_GET_MEDIA_ITEMS",
+            "confidence": 0.9,
+            "reason": "Returns media item results which include media_item_id."
+          }
+        ]
+      }
+    ]
+  },
+  "d42c6bbb49b31bc9": {
+    "params": [
+      {
+        "param": "client_id",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_MEASUREMENT_PROTOCOL_SECRETS",
+            "confidence": 0.8,
+            "reason": "Lists measurement protocol secrets which may include client identifiers."
+          }
+        ]
+      },
+      {
+        "param": "measurement_id",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_MEASUREMENT_PROTOCOL_SECRETS",
+            "confidence": 0.8,
+            "reason": "Lists measurement protocol secrets which may include measurement IDs."
+          }
+        ]
+      }
+    ]
+  },
+  "c7dd3a8043bcefd8": {
+    "params": [
+      {
+        "param": "name",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_CONFERENCE_RECORDS",
+            "confidence": 0.8,
+            "reason": "Lists conference records which include space identifiers."
+          },
+          {
+            "tool": "GOOGLESUPER_LIST_CALENDAR_RESOURCES",
+            "confidence": 0.7,
+            "reason": "Lists calendar resources which may include conference spaces."
+          }
+        ]
+      }
+    ]
+  },
+  "d0d7919ebb14d853": {
+    "params": [
+      {
+        "param": "id",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_TASKS",
+            "confidence": 0.9,
+            "reason": "This tool retrieves tasks and their IDs from a Google Tasks list."
+          },
+          {
+            "tool": "GOOGLESUPER_LIST_ALL_TASKS",
+            "confidence": 0.9,
+            "reason": "This tool lists all tasks across all task lists, providing their IDs."
+          }
+        ]
+      }
+    ]
+  },
+  "935afcb3511992a7": {
+    "params": [
+      {
+        "param": "id",
+        "producers": [
+          {
+            "tool": "GOOGLESUPER_LIST_DRIVE_CHANGES",
+            "confidence": 0.8,
+            "reason": "It provides a unique token for monitoring changes which can be used as an ID."
+          },
+          {
+            "tool": "GOOGLESUPER_GET_DRIVE",
+            "confidence": 0.7,
+            "reason": "It returns the ID of a shared drive which can be used as a unique identifier."
+          }
+        ]
+      }
+    ]
+  },
+  "565e5434663be5a6": {
+    "params": [
+      {
+        "param": "installation_id",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_APP_INSTALLATIONS",
+            "confidence": 0.9,
+            "reason": "This tool lists GitHub App installations accessible to the authenticated user, which can provide the installation_id needed."
+          }
+        ]
+      }
+    ]
+  },
+  "f5c9f672f16fc83f": {
+    "params": [
+      {
+        "param": "migration_id",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_ACCESSIBLE_REPOSITORIES",
+            "confidence": 0.8,
+            "reason": "This tool returns repository IDs which may include migration IDs."
+          },
+          {
+            "tool": "GITHUB_FIND_REPOSITORIES",
+            "confidence": 0.7,
+            "reason": "This tool returns repository IDs that could potentially include migration IDs."
+          }
+        ]
+      }
+    ]
+  },
+  "83de95d3b71dbba7": {
+    "params": [
+      {
+        "param": "item_id",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_ORG_PROJECT_VIEW_ITEMS",
+            "confidence": 0.9,
+            "reason": "This tool lists items for an organization project view and provides item IDs."
+          },
+          {
+            "tool": "GITHUB_LIST_PROJECT_VIEW_ITEMS_FOR_USER",
+            "confidence": 0.9,
+            "reason": "This tool lists items for a user's GitHub Projects view and provides item IDs."
+          },
+          {
+            "tool": "GITHUB_LIST_PROJECT_ITEMS_FOR_USER",
+            "confidence": 0.9,
+            "reason": "This tool lists items for a user-owned GitHub project and provides item IDs."
+          }
+        ]
+      }
+    ]
+  },
+  "afc3105b378a69d2": {
+    "params": [
+      {
+        "param": "runner_group_id",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_SELF_HOSTED_RUNNERS_FOR_AN_ORGANIZATION",
+            "confidence": 0.9,
+            "reason": "This tool lists self-hosted runners which may include runner group IDs."
+          }
+        ]
+      }
+    ]
+  },
+  "5ee59d0036ec18ea": {
+    "params": [
+      {
+        "param": "sha",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_COMMITS",
+            "confidence": 0.9,
+            "reason": "Lists commits and provides SHA values."
+          },
+          {
+            "tool": "GITHUB_LIST_COMMITS_ON_A_PULL_REQUEST",
+            "confidence": 0.8,
+            "reason": "Lists commits for a pull request and provides SHA values."
+          },
+          {
+            "tool": "GITHUB_LIST_BRANCHES_FOR_HEAD_COMMIT",
+            "confidence": 0.7,
+            "reason": "Lists branches for a commit SHA, which can be used to identify the commit."
+          }
+        ]
+      }
+    ]
+  },
+  "a93bb11e459a8622": {
+    "params": [
+      {
+        "param": "client_id",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_APP_INSTALLATIONS",
+            "confidence": 0.8,
+            "reason": "Lists GitHub App installations which include client_id information."
+          }
+        ]
+      }
+    ]
+  },
+  "259dd3965a74f7d2": {
+    "params": [
+      {
+        "param": "discussion_number",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_COMMENT_CHANGES",
+            "confidence": 0.5,
+            "reason": "This tool lists comment changes which may include discussion numbers indirectly."
+          },
+          {
+            "tool": "GITHUB_LIST_ISSUE_COMMENTS",
+            "confidence": 0.5,
+            "reason": "This tool lists comments for issues which may relate to discussions."
+          },
+          {
+            "tool": "GITHUB_LIST_ISSUE_COMMENTS_FOR_A_REPOSITORY",
+            "confidence": 0.5,
+            "reason": "This tool lists issue comments that could include discussions."
+          }
+        ]
+      }
+    ]
+  },
+  "96dce8abf8055f94": {
+    "params": [
+      {
+        "param": "key_prefix",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_REPOSITORY_AUTOLINKS",
+            "confidence": 0.9,
+            "reason": "Returns key_prefix directly from existing autolinks."
+          }
+        ]
+      },
+      {
+        "param": "url_template",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_REPOSITORY_AUTOLINKS",
+            "confidence": 0.9,
+            "reason": "Returns url_template directly from existing autolinks."
+          }
+        ]
+      }
+    ]
+  },
+  "47897045b730dbfc": {
+    "params": [
+      {
+        "param": "sha",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_REPOSITORY",
+            "confidence": 0.8,
+            "reason": "This tool returns workflow runs which include head SHA values."
+          },
+          {
+            "tool": "GITHUB_LIST_CODE_SCANNING_ANALYSES_FOR_A_REPOSITORY",
+            "confidence": 0.7,
+            "reason": "This tool provides analyses that include IDs which can be related to commit SHAs."
+          }
+        ]
+      }
+    ]
+  },
+  "2ca9c8cd0db3bd9c": {
+    "params": [
+      {
+        "param": "sha",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_COMMITS",
+            "confidence": 0.9,
+            "reason": "Lists commits which include SHA values."
+          },
+          {
+            "tool": "GITHUB_GET_A_REFERENCE",
+            "confidence": 0.8,
+            "reason": "Retrieves a reference that includes the SHA of the object."
+          },
+          {
+            "tool": "GITHUB_LIST_CHECK_RUNS_FOR_A_REF",
+            "confidence": 0.7,
+            "reason": "Lists check runs for a commit SHA, providing the SHA as output."
+          },
+          {
+            "tool": "GITHUB_GET_THE_COMBINED_STATUS_FOR_A_SPECIFIC_REFERENCE",
+            "confidence": 0.7,
+            "reason": "Retrieves status for a specific reference, which includes SHA."
+          }
+        ]
+      }
+    ]
+  },
+  "ea82c56c450a358f": {
+    "params": [
+      {
+        "param": "ghsa_id",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_FORKS",
+            "confidence": 0.8,
+            "reason": "Lists forks of a repository which may include relevant GHSA IDs."
+          },
+          {
+            "tool": "GITHUB_LIST_REPOSITORIES",
+            "confidence": 0.7,
+            "reason": "Lists repositories which may have associated GHSA IDs."
+          }
+        ]
+      }
+    ]
+  },
+  "68d20608a4ab5ed9": {
+    "params": [
+      {
+        "param": "model",
+        "producers": [
+          {
+            "tool": "GITHUB_GET_CATALOG_MODELS",
+            "confidence": 1,
+            "reason": "This tool provides a list of available AI models, including their IDs, which can be used as the model parameter."
+          }
+        ]
+      }
+    ]
+  },
+  "5bc2f494ecd25153": {
+    "params": [
+      {
+        "param": "tag",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_REPOSITORY_TAGS",
+            "confidence": 0.9,
+            "reason": "Lists existing tags which can be used as tag names."
+          }
+        ]
+      },
+      {
+        "param": "object",
+        "producers": [
+          {
+            "tool": "GITHUB_GET_A_TAG",
+            "confidence": 0.8,
+            "reason": "Provides the SHA of the Git object that the tag points to."
+          },
+          {
+            "tool": "GITHUB_GET_COMMIT_OBJECT",
+            "confidence": 0.8,
+            "reason": "Returns the SHA of a specific commit which can be used as the object."
+          },
+          {
+            "tool": "GITHUB_COMPARE_TWO_COMMITS",
+            "confidence": 0.7,
+            "reason": "Can provide SHAs of commits for comparison."
+          }
+        ]
+      }
+    ]
+  },
+  "f6fd5f71e20b2b96": {
+    "params": [
+      {
+        "param": "model",
+        "producers": [
+          {
+            "tool": "GITHUB_GET_CATALOG_MODELS",
+            "confidence": 1,
+            "reason": "This tool provides a list of available AI models, including their IDs which can be used as the model parameter."
+          }
+        ]
+      }
+    ]
+  },
+  "a920cce883724a55": {
+    "params": [
+      {
+        "param": "runner_group_id",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_SELF_HOSTED_RUNNERS_FOR_AN_ORGANIZATION",
+            "confidence": 0.8,
+            "reason": "Lists self-hosted runners which may include runner group IDs."
+          },
+          {
+            "tool": "GITHUB_LIST_SELF_HOSTED_RUNNERS_FOR_A_REPOSITORY",
+            "confidence": 0.8,
+            "reason": "Lists self-hosted runners which may include runner group IDs."
+          },
+          {
+            "tool": "GITHUB_GET_A_SELF_HOSTED_RUNNER_FOR_AN_ORGANIZATION",
+            "confidence": 0.8,
+            "reason": "Retrieves details about a specific runner including its ID."
+          },
+          {
+            "tool": "GITHUB_GET_A_SELF_HOSTED_RUNNER_FOR_A_REPOSITORY",
+            "confidence": 0.8,
+            "reason": "Retrieves details about a specific runner including its ID."
+          }
+        ]
+      }
+    ]
+  },
+  "fccd5d095ecdbb70": {
+    "params": [
+      {
+        "param": "client_id",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_APP_INSTALLATIONS",
+            "confidence": 0.8,
+            "reason": "This tool lists GitHub App installations which may include the client_id of the OAuth App."
+          },
+          {
+            "tool": "GITHUB_GET_AN_APP",
+            "confidence": 0.9,
+            "reason": "This tool retrieves information about an existing GitHub App, including its client_id."
+          }
+        ]
+      }
+    ]
+  },
+  "01defff8aa0e5d3b": {
+    "params": [
+      {
+        "param": "discussion_number",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_TEAMS",
+            "confidence": 0.5,
+            "reason": "Lists teams which may include discussions."
+          },
+          {
+            "tool": "GITHUB_LIST_TEAM_REPOSITORIES",
+            "confidence": 0.5,
+            "reason": "Lists repositories that may contain discussions."
+          }
+        ]
+      }
+    ]
+  },
+  "b56ddf7a8e6daaee": {
+    "params": [
+      {
+        "param": "comment_number",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_ISSUE_COMMENTS",
+            "confidence": 0.8,
+            "reason": "Lists comments for a specified issue, which can include discussion comments."
+          },
+          {
+            "tool": "GITHUB_LIST_COMMENTS_FOR_A_PULL_REQUEST_REVIEW",
+            "confidence": 0.8,
+            "reason": "Lists comments for a specific review on a pull request, which can include discussion comments."
+          },
+          {
+            "tool": "GITHUB_LIST_COMMIT_COMMENTS",
+            "confidence": 0.8,
+            "reason": "Retrieves all comments for a specific commit, which can include discussion comments."
+          },
+          {
+            "tool": "GITHUB_LIST_COMMIT_COMMENTS_FOR_A_REPOSITORY",
+            "confidence": 0.8,
+            "reason": "Lists all commit comments for a specified repository, which can include discussion comments."
+          }
+        ]
+      }
+    ]
+  },
+  "30b042805ca36dee": {
+    "params": [
+      {
+        "param": "client_id",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_APP_INSTALLATIONS",
+            "confidence": 0.9,
+            "reason": "Lists GitHub App installations which include client_id information."
+          },
+          {
+            "tool": "GITHUB_LIST_APPS_WITH_ACCESS_TO_THE_PROTECTED_BRANCH",
+            "confidence": 0.8,
+            "reason": "Lists GitHub Apps which may include client_id as part of their details."
+          },
+          {
+            "tool": "GITHUB_LIST_ACCESSIBLE_REPOSITORIES",
+            "confidence": 0.7,
+            "reason": "Lists repositories accessible through a GitHub App installation, which may include client_id."
+          }
+        ]
+      }
+    ]
+  },
+  "0b8eb5a6af49b7f7": {
+    "params": [
+      {
+        "param": "thread_id",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_NOTIFICATIONS",
+            "confidence": 0.9,
+            "reason": "This tool lists notification threads and provides their IDs."
+          }
+        ]
+      }
+    ]
+  },
+  "7ee06710f78d2539": {
+    "params": [
+      {
+        "param": "analysis_id",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_CODE_SCANNING_ANALYSES_FOR_A_REPOSITORY",
+            "confidence": 0.9,
+            "reason": "This tool lists code scanning analyses and provides their IDs."
+          }
+        ]
+      }
+    ]
+  },
+  "0a504396e2ad80b7": {
+    "params": [
+      {
+        "param": "comment_id",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_GIST_COMMENTS",
+            "confidence": 1,
+            "reason": "Directly returns comment IDs for specified gists."
+          }
+        ]
+      }
+    ]
+  },
+  "21e9efc756f0cc9f": {
+    "params": [
+      {
+        "param": "discussion_number",
+        "producers": [
+          {
+            "tool": "GITHUB_SEARCH_GITHUB_GRAPHQL",
+            "confidence": 0.7,
+            "reason": "Can search for discussions which may include their numbers."
+          }
+        ]
+      }
+    ]
+  },
+  "675da2a115e6c42d": {
+    "params": [
+      {
+        "param": "cache_id",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_GITHUB_ACTIONS_CACHES_FOR_A_REPOSITORY",
+            "confidence": 0.9,
+            "reason": "This tool lists GitHub Actions caches for a repository and returns their IDs."
+          }
+        ]
+      }
+    ]
+  },
+  "d78edb25126d8fe3": {
+    "params": [
+      {
+        "param": "review_id",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_REVIEWS_FOR_A_PULL_REQUEST",
+            "confidence": 0.9,
+            "reason": "This tool lists reviews for a pull request, which includes pending reviews that can provide the review_id needed."
+          },
+          {
+            "tool": "GITHUB_LIST_REVIEW_COMMENTS_ON_A_PULL_REQUEST",
+            "confidence": 0.8,
+            "reason": "This tool lists review comments on a pull request, which may include pending reviews and their IDs."
+          }
+        ]
+      }
+    ]
+  },
+  "b09984c62fdac110": {
+    "params": [
+      {
+        "param": "item_id",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_PROJECT_VIEW_ITEMS_FOR_USER",
+            "confidence": 0.9,
+            "reason": "This tool lists items for a user's GitHub Projects (v2) view and returns the required item IDs."
+          },
+          {
+            "tool": "GITHUB_LIST_ORG_PROJECT_VIEW_ITEMS",
+            "confidence": 0.9,
+            "reason": "This tool lists items for an organization project view and returns the required item IDs."
+          },
+          {
+            "tool": "GITHUB_LIST_PROJECT_ITEMS_FOR_USER",
+            "confidence": 0.9,
+            "reason": "This tool lists items for a user-owned GitHub project and returns the required item IDs."
+          }
+        ]
+      }
+    ]
+  },
+  "b6d9612783edca0c": {
+    "params": [
+      {
+        "param": "reaction_id",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_REACTIONS_FOR_A_COMMIT_COMMENT",
+            "confidence": 0.8,
+            "reason": "Lists reactions for commit comments, providing reaction IDs."
+          },
+          {
+            "tool": "GITHUB_LIST_REACTIONS_FOR_AN_ISSUE",
+            "confidence": 0.8,
+            "reason": "Lists reactions for issues, providing reaction IDs."
+          },
+          {
+            "tool": "GITHUB_LIST_REACTIONS_FOR_AN_ISSUE_COMMENT",
+            "confidence": 0.8,
+            "reason": "Lists reactions for issue comments, providing reaction IDs."
+          },
+          {
+            "tool": "GITHUB_LIST_REACTIONS_FOR_A_PULL_REQUEST_REVIEW_COMMENT",
+            "confidence": 0.8,
+            "reason": "Lists reactions for pull request review comments, providing reaction IDs."
+          },
+          {
+            "tool": "GITHUB_LIST_REACTIONS_FOR_A_RELEASE",
+            "confidence": 0.8,
+            "reason": "Lists reactions for releases, providing reaction IDs."
+          }
+        ]
+      }
+    ]
+  },
+  "ac012d7bfdd5fa2f": {
+    "params": [
+      {
+        "param": "comment_number",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_ISSUE_COMMENTS",
+            "confidence": 0.9,
+            "reason": "Lists comments for a specified issue, providing comment IDs."
+          },
+          {
+            "tool": "GITHUB_LIST_ISSUE_COMMENTS_FOR_A_REPOSITORY",
+            "confidence": 0.9,
+            "reason": "Lists issue comments for an accessible repository, providing comment IDs."
+          },
+          {
+            "tool": "GITHUB_LIST_COMMENTS_FOR_A_PULL_REQUEST_REVIEW",
+            "confidence": 0.9,
+            "reason": "Lists comments for a specific review on a pull request, providing comment IDs."
+          },
+          {
+            "tool": "GITHUB_LIST_REVIEW_COMMENTS_ON_A_PULL_REQUEST",
+            "confidence": 0.9,
+            "reason": "Lists all review comments on a specific pull request, providing comment IDs."
+          },
+          {
+            "tool": "GITHUB_LIST_REVIEW_COMMENTS_IN_A_REPOSITORY",
+            "confidence": 0.9,
+            "reason": "Lists all review comments on all pull requests within a specified repository, providing comment IDs."
+          }
+        ]
+      },
+      {
+        "param": "discussion_number",
+        "producers": []
+      },
+      {
+        "param": "comment_number",
+        "producers": []
+      },
+      {
+        "param": "discussion_number",
+        "producers": []
+      }
+    ]
+  },
+  "d57b47fe82056582": {
+    "params": [
+      {
+        "param": "ref",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_REPOSITORY_RULE_SUITES",
+            "confidence": 0.8,
+            "reason": "Returns refs associated with rule suites."
+          },
+          {
+            "tool": "GITHUB_LIST_CODE_SCANNING_ANALYSES_FOR_A_REPOSITORY",
+            "confidence": 0.7,
+            "reason": "Returns refs associated with code scanning analyses."
+          }
+        ]
+      }
+    ]
+  },
+  "6f0447dffbbc6bc1": {
+    "params": [
+      {
+        "param": "attempt_number",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_WORKFLOW",
+            "confidence": 0.9,
+            "reason": "This tool lists workflow runs and provides the necessary attempt number."
+          },
+          {
+            "tool": "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_REPOSITORY",
+            "confidence": 0.9,
+            "reason": "This tool lists workflow runs for a repository and provides the necessary attempt number."
+          },
+          {
+            "tool": "GITHUB_LIST_JOBS_FOR_A_WORKFLOW_RUN",
+            "confidence": 0.8,
+            "reason": "This tool lists jobs for a specific workflow run, which can help identify the attempt number."
+          }
+        ]
+      }
+    ]
+  },
+  "406247bfc2c90079": {
+    "params": [
+      {
+        "param": "ref",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_REPOSITORY_RULE_SUITES",
+            "confidence": 0.8,
+            "reason": "Returns refs associated with rule suites."
+          },
+          {
+            "tool": "GITHUB_LIST_CODE_SCANNING_ANALYSES_FOR_A_REPOSITORY",
+            "confidence": 0.7,
+            "reason": "Returns refs associated with code scanning analyses."
+          }
+        ]
+      }
+    ]
+  },
+  "a517854dd3bbb226": {
+    "params": [
+      {
+        "param": "card_id",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_PROJECT_COLUMNS",
+            "confidence": 0.8,
+            "reason": "Lists columns of a project which can contain cards, providing their IDs."
+          },
+          {
+            "tool": "GITHUB_LIST_REPOSITORY_PROJECTS",
+            "confidence": 0.7,
+            "reason": "Lists classic projects associated with a repository, which can include project cards."
+          },
+          {
+            "tool": "GITHUB_LIST_ORG_PROJECT_VIEW_ITEMS",
+            "confidence": 0.6,
+            "reason": "Lists items for a project view, which can include project cards."
+          },
+          {
+            "tool": "GITHUB_LIST_TEAM_PROJECTS",
+            "confidence": 0.6,
+            "reason": "Lists projects accessible to a team, which may include project cards."
+          },
+          {
+            "tool": "GITHUB_LIST_USER_PROJECTS",
+            "confidence": 0.6,
+            "reason": "Retrieves a list of projects for a user, which may include project cards."
+          }
+        ]
+      }
+    ]
+  },
+  "7ddd6d702c259c64": {
+    "params": [
+      {
+        "param": "tag_sha",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_REPOSITORY_TAGS",
+            "confidence": 0.9,
+            "reason": "Lists tags which can provide the SHA of the tag object."
+          },
+          {
+            "tool": "GITHUB_GET_A_RELEASE_BY_TAG_NAME",
+            "confidence": 0.8,
+            "reason": "Can provide the ID of a release which may include the tag SHA."
+          },
+          {
+            "tool": "GITHUB_LIST_MATCHING_REFERENCES",
+            "confidence": 0.7,
+            "reason": "Lists references including tags which can help identify the SHA."
+          }
+        ]
+      }
+    ]
+  },
+  "6943546ff0f9f48a": {
+    "params": [
+      {
+        "param": "hook_id",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_ORGANIZATION_WEBHOOKS",
+            "confidence": 0.9,
+            "reason": "This tool lists all webhooks for a specified organization and provides their IDs."
+          }
+        ]
+      }
+    ]
+  },
+  "a2a7b1497fa4516a": {
+    "params": [
+      {
+        "param": "hook_id",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_REPOSITORY_WEBHOOKS",
+            "confidence": 0.9,
+            "reason": "This tool retrieves a list of webhooks for a repository, providing the hook_id directly."
+          }
+        ]
+      }
+    ]
+  },
+  "c6d08e827efa1d4d": {
+    "params": [
+      {
+        "param": "thread_id",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_NOTIFICATIONS",
+            "confidence": 1,
+            "reason": "This tool returns notification threads including their unique thread_id."
+          }
+        ]
+      }
+    ]
+  },
+  "edfb1a31ea6e420c": {
+    "params": [
+      {
+        "param": "analysis_id",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_CODE_SCANNING_ANALYSES_FOR_A_REPOSITORY",
+            "confidence": 0.9,
+            "reason": "This tool lists code scanning analyses and provides the analysis_id directly."
+          }
+        ]
+      }
+    ]
+  },
+  "8018327d36e90aaf": {
+    "params": [
+      {
+        "param": "attempt_number",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_WORKFLOW",
+            "confidence": 0.8,
+            "reason": "This tool lists workflow runs which can provide the necessary attempt numbers."
+          },
+          {
+            "tool": "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_REPOSITORY",
+            "confidence": 0.8,
+            "reason": "This tool lists workflow runs for a repository, allowing access to attempt numbers."
+          },
+          {
+            "tool": "GITHUB_LIST_JOBS_FOR_A_WORKFLOW_RUN",
+            "confidence": 0.7,
+            "reason": "This tool lists jobs for a specific workflow run, which can indirectly provide information about attempts."
+          }
+        ]
+      }
+    ]
+  },
+  "9ae3281376000562": {
+    "params": [
+      {
+        "param": "key",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_CODES_OF_CONDUCT",
+            "confidence": 0.9,
+            "reason": "Returns keys of available codes of conduct."
+          },
+          {
+            "tool": "GITHUB_LIST_CODES_OF_CONDUCT_GRAPHQL",
+            "confidence": 0.9,
+            "reason": "Returns keys of available codes of conduct."
+          }
+        ]
+      }
+    ]
+  },
+  "0fcea5064cfd3526": {
+    "params": [
+      {
+        "param": "ref",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_COMMITS",
+            "confidence": 0.9,
+            "reason": "Lists commits and provides SHA which can be used as a ref."
+          },
+          {
+            "tool": "GITHUB_LIST_COMMITS_ON_A_PULL_REQUEST",
+            "confidence": 0.9,
+            "reason": "Lists commits for a pull request and provides SHA which can be used as a ref."
+          },
+          {
+            "tool": "GITHUB_SEARCH_COMMITS",
+            "confidence": 0.8,
+            "reason": "Finds commits and provides SHA which can be used as a ref."
+          },
+          {
+            "tool": "GITHUB_SEARCH_COMMITS_BY_AUTHOR",
+            "confidence": 0.8,
+            "reason": "Searches commits and provides SHA which can be used as a ref."
+          }
+        ]
+      },
+      {
+        "param": "ref",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_BRANCHES_FOR_HEAD_COMMIT",
+            "confidence": 0.8,
+            "reason": "Lists branches for a commit SHA which can be used as a ref."
+          }
+        ]
+      }
+    ]
+  },
+  "70070d1911d57591": {
+    "params": [
+      {
+        "param": "status_id",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_DEPLOYMENT_STATUSES",
+            "confidence": 0.9,
+            "reason": "This tool lists all statuses for a given deployment and provides the status IDs directly."
+          }
+        ]
+      }
+    ]
+  },
+  "7da3a33fa4ba64e5": {
+    "params": [
+      {
+        "param": "discussion_number",
+        "producers": [
+          {
+            "tool": "GITHUB_SEARCH_GITHUB_GRAPHQL",
+            "confidence": 0.7,
+            "reason": "Can search discussions and return counts, which may include discussion numbers."
+          }
+        ]
+      }
+    ]
+  },
+  "ba580bba35f13517": {
+    "params": [
+      {
+        "param": "enterprise_slug",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_ORGANIZATIONS_FOR_THE_AUTHENTICATED_USER",
+            "confidence": 0.8,
+            "reason": "This tool lists organizations the authenticated user is a member of, which can provide the necessary enterprise slug."
+          },
+          {
+            "tool": "GITHUB_LIST_ORGANIZATIONS_FOR_USER",
+            "confidence": 0.8,
+            "reason": "This tool lists public organization memberships for a user, which can help identify the enterprise slug."
+          }
+        ]
+      }
+    ]
+  },
+  "b1088f583523ed76": {
+    "params": [
+      {
+        "param": "comment_id",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_GIST_COMMENTS",
+            "confidence": 1,
+            "reason": "Directly lists comments for a specified Gist, providing comment IDs."
+          }
+        ]
+      }
+    ]
+  },
+  "49ea461349b92a35": {
+    "params": [
+      {
+        "param": "sha",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_GIST_COMMITS",
+            "confidence": 0.8,
+            "reason": "Lists all commits for a specified gist, providing SHA values."
+          },
+          {
+            "tool": "GITHUB_GET_GIST",
+            "confidence": 0.7,
+            "reason": "Fetches a specific GitHub gist, which may include SHA in its details."
+          }
+        ]
+      }
+    ]
+  },
+  "3fa52927b1483d00": {
+    "params": [
+      {
+        "param": "comment_number",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_COMMENT_CHANGES",
+            "confidence": 0.8,
+            "reason": "Lists comment changes which include comment IDs."
+          },
+          {
+            "tool": "GITHUB_LIST_ISSUE_COMMENTS",
+            "confidence": 0.8,
+            "reason": "Lists comments for a specified issue, providing comment IDs."
+          },
+          {
+            "tool": "GITHUB_LIST_ISSUE_COMMENTS_FOR_A_REPOSITORY",
+            "confidence": 0.8,
+            "reason": "Lists issue comments including those on pull requests, providing comment IDs."
+          },
+          {
+            "tool": "GITHUB_LIST_COMMIT_COMMENTS",
+            "confidence": 0.8,
+            "reason": "Retrieves comments for a specific commit, providing comment IDs."
+          },
+          {
+            "tool": "GITHUB_LIST_COMMIT_COMMENTS_FOR_A_REPOSITORY",
+            "confidence": 0.8,
+            "reason": "Lists all commit comments for a specified repository, providing comment IDs."
+          },
+          {
+            "tool": "GITHUB_LIST_REVIEW_COMMENTS_IN_A_REPOSITORY",
+            "confidence": 0.8,
+            "reason": "Lists all review comments on all pull requests within a specified repository, providing comment IDs."
+          },
+          {
+            "tool": "GITHUB_LIST_REVIEW_COMMENTS_ON_A_PULL_REQUEST",
+            "confidence": 0.8,
+            "reason": "Lists all review comments on a specific pull request, providing comment IDs."
+          }
+        ]
+      },
+      {
+        "param": "discussion_number",
+        "producers": []
+      }
+    ]
+  },
+  "15004614eb8fe9b3": {
+    "params": [
+      {
+        "param": "build_id",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_GITHUB_PAGES_BUILDS",
+            "confidence": 0.9,
+            "reason": "Lists builds which include build_id as part of the output."
+          },
+          {
+            "tool": "GITHUB_GET_LATEST_PAGES_BUILD",
+            "confidence": 0.8,
+            "reason": "Provides information about the latest build which can include build_id."
+          }
+        ]
+      }
+    ]
+  },
+  "053c509b1027d984": {
+    "params": [
+      {
+        "param": "license",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_COMMONLY_USED_LICENSES",
+            "confidence": 0.9,
+            "reason": "Provides a list of commonly used licenses including their keys."
+          },
+          {
+            "tool": "GITHUB_LIST_LICENSES_GRAPH_QL",
+            "confidence": 0.9,
+            "reason": "Fetches all known open source licenses with their keys."
+          }
+        ]
+      }
+    ]
+  },
+  "635fd1f2d288b6de": {
+    "params": [
+      {
+        "param": "ghsa_id",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_GLOBAL_SECURITY_ADVISORIES",
+            "confidence": 0.9,
+            "reason": "This tool lists global security advisories and includes the ghsa_id in its output."
+          },
+          {
+            "tool": "GITHUB_LIST_SECURITY_ADVISORIES_GRAPHQL",
+            "confidence": 0.8,
+            "reason": "This tool can query security advisories and includes ghsa_id in the results."
+          },
+          {
+            "tool": "GITHUB_LIST_REPOSITORY_SECURITY_ADVISORIES",
+            "confidence": 0.7,
+            "reason": "This tool lists repository security advisories and includes ghsa_id in its output."
+          }
+        ]
+      }
+    ]
+  },
+  "2323df019acbcb18": {
+    "params": [
+      {
+        "param": "sarif_id",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_CODE_SCANNING_ANALYSES_FOR_A_REPOSITORY",
+            "confidence": 0.9,
+            "reason": "This tool returns analyses that include SARIF IDs."
+          }
+        ]
+      }
+    ]
+  },
+  "aa659ee44e0a396e": {
+    "params": [
+      {
+        "param": "export_id",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_CODESPACES_FOR_A_USER_IN_ORGANIZATION",
+            "confidence": 0.9,
+            "reason": "This tool lists codespaces and provides their IDs, which can be used to identify the latest export."
+          },
+          {
+            "tool": "GITHUB_LIST_CODESPACES_FOR_THE_AUTHENTICATED_USER",
+            "confidence": 0.9,
+            "reason": "This tool lists codespaces for the authenticated user and provides their IDs."
+          },
+          {
+            "tool": "GITHUB_LIST_CODESPACES_FOR_THE_ORGANIZATION",
+            "confidence": 0.9,
+            "reason": "This tool lists active/pending codespaces for an organization and provides their IDs."
+          },
+          {
+            "tool": "GITHUB_LIST_REPO_CODESPACES",
+            "confidence": 0.9,
+            "reason": "This tool lists codespaces within a specified repository and provides their IDs."
+          }
+        ]
+      }
+    ]
+  },
+  "9919a075cd477c00": {
+    "params": [
+      {
+        "param": "item_id",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_ORG_PROJECT_VIEW_ITEMS",
+            "confidence": 0.9,
+            "reason": "This tool returns a list of project items including their IDs."
+          },
+          {
+            "tool": "GITHUB_LIST_PROJECT_ITEMS_FOR_USER",
+            "confidence": 0.9,
+            "reason": "This tool returns a list of project items including their IDs."
+          },
+          {
+            "tool": "GITHUB_LIST_PROJECT_VIEW_ITEMS_FOR_USER",
+            "confidence": 0.9,
+            "reason": "This tool returns a list of project items including their IDs."
+          },
+          {
+            "tool": "GITHUB_LIST_TEAM_PROJECTS",
+            "confidence": 0.8,
+            "reason": "This tool returns project IDs which can be used to find items."
+          },
+          {
+            "tool": "GITHUB_LIST_ORGANIZATION_PROJECTS",
+            "confidence": 0.7,
+            "reason": "This tool returns project IDs which can be used to find items."
+          }
+        ]
+      }
+    ]
+  },
+  "b193604a7dc51c2d": {
+    "params": [
+      {
+        "param": "hook_id",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_REPOSITORY_WEBHOOKS",
+            "confidence": 0.9,
+            "reason": "This tool retrieves a list of webhooks for a repository, providing the necessary hook_id."
+          }
+        ]
+      }
+    ]
+  },
+  "68c4edc389135628": {
+    "params": [
+      {
+        "param": "key",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_LICENSES_GRAPH_QL",
+            "confidence": 0.9,
+            "reason": "Provides a complete list of licenses including their keys."
+          },
+          {
+            "tool": "GITHUB_LIST_COMMONLY_USED_LICENSES",
+            "confidence": 0.9,
+            "reason": "Retrieves commonly used licenses and their keys."
+          }
+        ]
+      }
+    ]
+  },
+  "5d1057caa6e61e04": {
+    "params": [
+      {
+        "param": "run_id",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_WORKFLOW",
+            "confidence": 0.9,
+            "reason": "This tool lists workflow runs and provides their IDs, which can be used as run_id."
+          },
+          {
+            "tool": "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_REPOSITORY",
+            "confidence": 0.9,
+            "reason": "This tool lists workflow runs for a repository and provides their IDs, which can be used as run_id."
+          }
+        ]
+      }
+    ]
+  },
+  "6b4b99e16abd669c": {
+    "params": [
+      {
+        "param": "ghsa_id",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_REPOSITORY_SECURITY_ADVISORIES",
+            "confidence": 0.9,
+            "reason": "This tool returns GHSA identifiers among other advisory details."
+          },
+          {
+            "tool": "GITHUB_LIST_GLOBAL_SECURITY_ADVISORIES",
+            "confidence": 0.9,
+            "reason": "This tool returns GHSA identifiers among other advisory details."
+          },
+          {
+            "tool": "GITHUB_LIST_SECURITY_ADVISORIES_GRAPHQL",
+            "confidence": 0.8,
+            "reason": "This tool can query for security advisories and return GHSA identifiers."
+          }
+        ]
+      }
+    ]
+  },
+  "6009098783fd2ee9": {
+    "params": [
+      {
+        "param": "ref",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_CHECK_RUNS_IN_A_CHECK_SUITE",
+            "confidence": 0.8,
+            "reason": "Returns check runs which can include commit references."
+          },
+          {
+            "tool": "GITHUB_LIST_INSTANCES_OF_A_CODE_SCANNING_ALERT",
+            "confidence": 0.7,
+            "reason": "Returns instances with commit SHA which can be used as a reference."
+          },
+          {
+            "tool": "GITHUB_FIND_PULL_REQUESTS",
+            "confidence": 0.6,
+            "reason": "Returns pull requests which can include branch names or commit SHAs."
+          }
+        ]
+      }
+    ]
+  },
+  "561bde4d8131373d": {
+    "params": [
+      {
+        "param": "run_id",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_WORKFLOW",
+            "confidence": 0.9,
+            "reason": "This tool lists workflow runs and provides their IDs."
+          },
+          {
+            "tool": "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_REPOSITORY",
+            "confidence": 0.9,
+            "reason": "This tool lists workflow runs for a repository and provides their IDs."
+          }
+        ]
+      }
+    ]
+  },
+  "18cdcd4b30be541c": {
+    "params": [
+      {
+        "param": "assignment_id",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_ASSIGNMENTS_FOR_A_CLASSROOM",
+            "confidence": 0.9,
+            "reason": "This tool provides the assignment IDs needed for the accepted assignments."
+          }
+        ]
+      }
+    ]
+  },
+  "7d8b0b11f15d65e5": {
+    "params": [
+      {
+        "param": "item_id",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_PROJECT_ITEMS_FOR_USER",
+            "confidence": 0.9,
+            "reason": "Returns item IDs directly."
+          },
+          {
+            "tool": "GITHUB_LIST_PROJECT_VIEW_ITEMS_FOR_USER",
+            "confidence": 0.9,
+            "reason": "Returns item IDs directly."
+          },
+          {
+            "tool": "GITHUB_LIST_ORG_PROJECT_VIEW_ITEMS",
+            "confidence": 0.9,
+            "reason": "Returns item IDs directly."
+          }
+        ]
+      }
+    ]
+  },
+  "9720dbc43778cd20": {
+    "params": [
+      {
+        "param": "pages_deployment_id",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_DEPLOYMENTS",
+            "confidence": 0.9,
+            "reason": "Lists deployments which include the deployment ID needed."
+          },
+          {
+            "tool": "GITHUB_LIST_DEPLOYMENT_STATUSES",
+            "confidence": 0.9,
+            "reason": "Lists statuses for deployments which include the deployment ID."
+          }
+        ]
+      }
+    ]
+  },
+  "3b93fb6d6e686247": {
+    "params": [
+      {
+        "param": "account_id",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_USERS_BLOCKED_BY_THE_AUTHENTICATED_USER",
+            "confidence": 0.5,
+            "reason": "Returns user IDs that can be used as account_id."
+          },
+          {
+            "tool": "GITHUB_LIST_REPOSITORIES_FOR_A_USER",
+            "confidence": 0.5,
+            "reason": "Returns user IDs that can be used as account_id."
+          },
+          {
+            "tool": "GITHUB_LIST_CODESPACES_FOR_THE_AUTHENTICATED_USER",
+            "confidence": 0.5,
+            "reason": "Returns user IDs that can be used as account_id."
+          },
+          {
+            "tool": "GITHUB_LIST_EVENTS_FOR_USER",
+            "confidence": 0.5,
+            "reason": "Returns user IDs that can be used as account_id."
+          }
+        ]
+      }
+    ]
+  },
+  "a10b6aa09b0588da": {
+    "params": [
+      {
+        "param": "attempt_number",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_JOBS_FOR_A_WORKFLOW_RUN",
+            "confidence": 0.9,
+            "reason": "It provides job details including the attempt number."
+          },
+          {
+            "tool": "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_WORKFLOW",
+            "confidence": 0.8,
+            "reason": "It lists workflow runs which can include attempt numbers."
+          },
+          {
+            "tool": "GITHUB_GET_A_WORKFLOW_RUN",
+            "confidence": 0.7,
+            "reason": "It retrieves specific workflow run details which may include attempt information."
+          }
+        ]
+      }
+    ]
+  },
+  "574898a5b23d1682": {
+    "params": [
+      {
+        "param": "ref",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_REPOSITORY_RULE_SUITES",
+            "confidence": 0.8,
+            "reason": "Returns ref values that can be used as input for the check suites."
+          },
+          {
+            "tool": "GITHUB_LIST_CODE_SCANNING_ANALYSES_FOR_A_REPOSITORY",
+            "confidence": 0.7,
+            "reason": "Returns ref values that can be used as input for the check suites."
+          },
+          {
+            "tool": "GITHUB_LIST_GITHUB_ACTIONS_CACHES_FOR_A_REPOSITORY",
+            "confidence": 0.6,
+            "reason": "Returns ref values that can be used as input for the check suites."
+          },
+          {
+            "tool": "GITHUB_LIST_INSTANCES_OF_A_CODE_SCANNING_ALERT",
+            "confidence": 0.5,
+            "reason": "Returns ref values that can be used as input for the check suites."
+          },
+          {
+            "tool": "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_REPOSITORY",
+            "confidence": 0.9,
+            "reason": "Returns branch or commit SHA values that can be used as input for the check suites."
+          }
+        ]
+      }
+    ]
+  },
+  "0f545bb75a8f7e46": {
+    "params": [
+      {
+        "param": "ref",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_REPOSITORY",
+            "confidence": 0.8,
+            "reason": "Lists workflow runs which can provide commit SHA, branch, or tag names."
+          },
+          {
+            "tool": "GITHUB_LIST_CHECK_RUNS_IN_A_CHECK_SUITE",
+            "confidence": 0.7,
+            "reason": "Lists check runs that can include commit SHA or branch names."
+          },
+          {
+            "tool": "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_WORKFLOW",
+            "confidence": 0.7,
+            "reason": "Lists workflow runs that can provide commit SHA, branch, or tag names."
+          }
+        ]
+      }
+    ]
+  },
+  "95fc9b7dd6fc0650": {
+    "params": [
+      {
+        "param": "view_number",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_USER_PROJECTS_V2",
+            "confidence": 0.9,
+            "reason": "This tool returns project numbers which can be used as view_number."
+          },
+          {
+            "tool": "GITHUB_GET_USERS_PROJECTS_V2",
+            "confidence": 0.9,
+            "reason": "This tool also returns project numbers which can be used as view_number."
+          }
+        ]
+      }
+    ]
+  },
+  "6d6d44669b91bdc0": {
+    "params": [
+      {
+        "param": "view_number",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_ORGANIZATION_PROJECTS",
+            "confidence": 0.8,
+            "reason": "This tool lists projects for a specified organization, which can help identify the view number."
+          },
+          {
+            "tool": "GITHUB_LIST_PROJECT_FIELDS_FOR_USER",
+            "confidence": 0.6,
+            "reason": "This tool lists fields in a GitHub Projects V2 project, which may include view numbers."
+          }
+        ]
+      }
+    ]
+  },
+  "c4dd26fb82a17bd8": {
+    "params": [
+      {
+        "param": "pat_id",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_ORG_RESOURCE_ACCESS_TOKENS",
+            "confidence": 1,
+            "reason": "This tool directly returns the 'id' of fine-grained personal access tokens."
+          }
+        ]
+      }
+    ]
+  },
+  "dc4e51c693ccf554": {
+    "params": [
+      {
+        "param": "discussion_number",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_TEAMS",
+            "confidence": 0.5,
+            "reason": "Lists teams which may include discussions."
+          },
+          {
+            "tool": "GITHUB_LIST_TEAM_MEMBERS",
+            "confidence": 0.5,
+            "reason": "Lists members of a team which may relate to discussions."
+          }
+        ]
+      }
+    ]
+  },
+  "4862ca9c35303438": {
+    "params": [
+      {
+        "param": "thread_id",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_NOTIFICATIONS",
+            "confidence": 1,
+            "reason": "Returns notification threads with their IDs."
+          }
+        ]
+      }
+    ]
+  },
+  "914745fb624153f9": {
+    "params": [
+      {
+        "param": "enterprise_slug",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_TEAMS_THAT_ARE_ASSIGNED_TO_AN_ORGANIZATION_ROLE",
+            "confidence": 0.7,
+            "reason": "This tool lists teams assigned to specific roles within an organization, which may include the enterprise slug."
+          }
+        ]
+      }
+    ]
+  },
+  "861f44e72b697cab": {
+    "params": [
+      {
+        "param": "thread_id",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_NOTIFICATIONS",
+            "confidence": 0.9,
+            "reason": "It provides the notification thread IDs needed for marking as read."
+          }
+        ]
+      }
+    ]
+  },
+  "dd42dd871f11d484": {
+    "params": [
+      {
+        "param": "comment_number",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_ISSUE_COMMENTS",
+            "confidence": 0.8,
+            "reason": "Lists comments for a specified issue, which can include discussion comments."
+          },
+          {
+            "tool": "GITHUB_LIST_COMMENTS_FOR_A_PULL_REQUEST_REVIEW",
+            "confidence": 0.8,
+            "reason": "Lists comments for a specific review on a pull request, which may include discussion comments."
+          },
+          {
+            "tool": "GITHUB_LIST_COMMIT_COMMENTS",
+            "confidence": 0.8,
+            "reason": "Retrieves all comments for a specific commit, which may include discussion comments."
+          },
+          {
+            "tool": "GITHUB_LIST_COMMIT_COMMENTS_FOR_A_REPOSITORY",
+            "confidence": 0.8,
+            "reason": "Lists all commit comments for a specified repository, which may include discussion comments."
+          }
+        ]
+      }
+    ]
+  },
+  "43796690c5de0784": {
+    "params": [
+      {
+        "param": "tier_id",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_SPONSORABLES",
+            "confidence": 0.8,
+            "reason": "This tool lists sponsorable entities which may include draft sponsors tiers."
+          }
+        ]
+      }
+    ]
+  },
+  "4d502fa8faade5cc": {
+    "params": [
+      {
+        "param": "head",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_BRANCHES",
+            "confidence": 0.9,
+            "reason": "Lists all branches in the repository, providing branch names that can be used as head."
+          },
+          {
+            "tool": "GITHUB_LIST_BRANCHES_FOR_HEAD_COMMIT",
+            "confidence": 0.9,
+            "reason": "Lists branches for a specific commit SHA, providing branch names that can be used as head."
+          },
+          {
+            "tool": "GITHUB_LIST_MATCHING_REFERENCES",
+            "confidence": 0.8,
+            "reason": "Lists references in the repository that can include branch names."
+          }
+        ]
+      }
+    ]
+  },
+  "5088942b12ef1eee": {
+    "params": [
+      {
+        "param": "installation_id",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_APP_INSTALLATIONS",
+            "confidence": 0.9,
+            "reason": "This tool lists GitHub App installations which will provide the installation_id."
+          }
+        ]
+      }
+    ]
+  },
+  "13dfb056924f65f6": {
+    "params": [
+      {
+        "param": "runner_id",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_SELF_HOSTED_RUNNERS_FOR_A_REPOSITORY",
+            "confidence": 0.9,
+            "reason": "Directly returns runner IDs for self-hosted runners in a repository."
+          },
+          {
+            "tool": "GITHUB_LIST_SELF_HOSTED_RUNNERS_FOR_AN_ORGANIZATION",
+            "confidence": 0.9,
+            "reason": "Directly returns runner IDs for self-hosted runners in an organization."
+          }
+        ]
+      }
+    ]
+  },
+  "a84e776407657666": {
+    "params": [
+      {
+        "param": "tier_id",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_SPONSORABLES",
+            "confidence": 0.8,
+            "reason": "This tool provides IDs of sponsorable entities, which may include tiers."
+          }
+        ]
+      }
+    ]
+  },
+  "74a5b8ca822d2af9": {
+    "params": [
+      {
+        "param": "client_id",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_APP_INSTALLATIONS",
+            "confidence": 0.8,
+            "reason": "This tool lists GitHub App installations which include client_id information."
+          }
+        ]
+      }
+    ]
+  },
+  "365ead99386e6e66": {
+    "params": [
+      {
+        "param": "thread_id",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_NOTIFICATIONS",
+            "confidence": 0.9,
+            "reason": "This tool lists notification threads and includes their IDs."
+          }
+        ]
+      }
+    ]
+  },
+  "ca6392106695fd78": {
+    "params": [
+      {
+        "param": "migration_id",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_ORGANIZATION_REPOSITORIES",
+            "confidence": 0.9,
+            "reason": "This tool lists repositories for an organization, which can include migration details."
+          },
+          {
+            "tool": "GITHUB_LIST_REPOSITORIES",
+            "confidence": 0.9,
+            "reason": "This tool lists repositories accessible to the user, which may include migration-related repositories."
+          },
+          {
+            "tool": "GITHUB_LIST_ATTESTATION_REPOSITORIES",
+            "confidence": 0.8,
+            "reason": "This tool lists attestation repositories, which may be relevant for migrations."
+          }
+        ]
+      }
+    ]
+  },
+  "67dd1fca0e316239": {
+    "params": [
+      {
+        "param": "discussion_number",
+        "producers": [
+          {
+            "tool": "GITHUB_SEARCH_GITHUB_GRAPHQL",
+            "confidence": 0.7,
+            "reason": "Can search discussions and return counts, which may include discussion numbers."
+          }
+        ]
+      }
+    ]
+  },
+  "1a9b1b7607618127": {
+    "params": [
+      {
+        "param": "run_id",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_WORKFLOW",
+            "confidence": 0.9,
+            "reason": "This tool lists workflow runs and provides their IDs."
+          },
+          {
+            "tool": "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_REPOSITORY",
+            "confidence": 0.9,
+            "reason": "This tool lists workflow runs for a repository and provides their IDs."
+          }
+        ]
+      }
+    ]
+  },
+  "4d9998254a8845d1": {
+    "params": [
+      {
+        "param": "comment_id",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_GIST_COMMENTS",
+            "confidence": 0.9,
+            "reason": "Directly returns comment IDs for existing gist comments."
+          }
+        ]
+      }
+    ]
+  },
+  "c7df73b1517648c7": {
+    "params": [
+      {
+        "param": "hook_id",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_ORGANIZATION_WEBHOOKS",
+            "confidence": 1,
+            "reason": "This tool lists all webhooks for a specified organization and returns their IDs."
+          }
+        ]
+      }
+    ]
+  },
+  "bb61d160e321703d": {
+    "params": [
+      {
+        "param": "migration_id",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_REPOSITORIES_FOR_A_USER",
+            "confidence": 0.8,
+            "reason": "Lists repositories for a user, which may include migration details."
+          },
+          {
+            "tool": "GITHUB_LIST_REPOSITORIES_FOR_THE_AUTHENTICATED_USER",
+            "confidence": 0.8,
+            "reason": "Lists repositories for the authenticated user, which may include migration details."
+          },
+          {
+            "tool": "GITHUB_LIST_REPOSITORIES_STARRED_BY_A_USER",
+            "confidence": 0.8,
+            "reason": "Lists starred repositories for a user, which may include migration details."
+          },
+          {
+            "tool": "GITHUB_LIST_REPOSITORIES_STARRED_BY_THE_AUTHENTICATED_USER",
+            "confidence": 0.8,
+            "reason": "Lists starred repositories for the authenticated user, which may include migration details."
+          },
+          {
+            "tool": "GITHUB_LIST_REPOSITORIES_WATCHED_BY_A_USER",
+            "confidence": 0.8,
+            "reason": "Lists watched repositories for a user, which may include migration details."
+          },
+          {
+            "tool": "GITHUB_LIST_REPOSITORIES_WATCHED_BY_THE_AUTHENTICATED_USER",
+            "confidence": 0.8,
+            "reason": "Lists watched repositories for the authenticated user, which may include migration details."
+          },
+          {
+            "tool": "GITHUB_LIST_SELECTED_REPOSITORIES_FOR_A_USER_SECRET",
+            "confidence": 0.8,
+            "reason": "Lists repositories with access to user Codespaces secrets, which may include migration details."
+          },
+          {
+            "tool": "GITHUB_LIST_STARRED_REPOSITORIES_FOR_USER",
+            "confidence": 0.8,
+            "reason": "Lists public repositories starred by a user, which may include migration details."
+          }
+        ]
+      }
+    ]
+  },
+  "30afef682836d35a": {
+    "params": [
+      {
+        "param": "pat_ids",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_ORG_RESOURCE_ACCESS_TOKENS",
+            "confidence": 1,
+            "reason": "This tool lists approved fine-grained personal access tokens and provides their IDs."
+          }
+        ]
+      }
+    ]
+  },
+  "cea221c3c24a47ff": {
+    "params": [
+      {
+        "param": "hook_id",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_REPOSITORY_WEBHOOKS",
+            "confidence": 1,
+            "reason": "This tool retrieves a list of webhooks for a repository, providing the necessary hook_id."
+          }
+        ]
+      }
+    ]
+  },
+  "b00fd4fe2ac4a291": {
+    "params": [
+      {
+        "param": "comment_number",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_COMMENT_CHANGES",
+            "confidence": 0.9,
+            "reason": "This tool lists comment changes and provides comment IDs."
+          },
+          {
+            "tool": "GITHUB_LIST_ISSUE_COMMENTS",
+            "confidence": 0.9,
+            "reason": "This tool lists comments for a specified issue and provides comment IDs."
+          },
+          {
+            "tool": "GITHUB_LIST_ISSUE_COMMENTS_FOR_A_REPOSITORY",
+            "confidence": 0.9,
+            "reason": "This tool lists issue comments for a repository and provides comment IDs."
+          },
+          {
+            "tool": "GITHUB_LIST_COMMIT_COMMENTS",
+            "confidence": 0.9,
+            "reason": "This tool retrieves comments for a specific commit and provides comment IDs."
+          },
+          {
+            "tool": "GITHUB_LIST_COMMIT_COMMENTS_FOR_A_REPOSITORY",
+            "confidence": 0.9,
+            "reason": "This tool lists commit comments for a specified repository and provides comment IDs."
+          },
+          {
+            "tool": "GITHUB_LIST_REVIEW_COMMENTS_IN_A_REPOSITORY",
+            "confidence": 0.9,
+            "reason": "This tool lists all review comments in a repository and provides comment IDs."
+          },
+          {
+            "tool": "GITHUB_LIST_REVIEW_COMMENTS_ON_A_PULL_REQUEST",
+            "confidence": 0.9,
+            "reason": "This tool lists review comments on a specific pull request and provides comment IDs."
+          }
+        ]
+      },
+      {
+        "param": "discussion_number",
+        "producers": []
+      }
+    ]
+  },
+  "ce7c51a06dac570f": {
+    "params": [
+      {
+        "param": "subscribable_id",
+        "producers": [
+          {
+            "tool": "GITHUB_GET_A_THREAD_SUBSCRIPTION_FOR_THE_AUTHENTICATED_USER",
+            "confidence": 0.8,
+            "reason": "This tool retrieves subscription details for a specific notification thread, which can provide the necessary subscribable_id."
+          },
+          {
+            "tool": "GITHUB_GET_A_REPOSITORY_SUBSCRIPTION",
+            "confidence": 0.7,
+            "reason": "This tool gets subscription details for a repository, which may include the subscribable_id."
+          }
+        ]
+      }
+    ]
+  },
+  "328036b06adf1380": {
+    "params": [
+      {
+        "param": "item_id",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_PROJECT_ITEMS_FOR_USER",
+            "confidence": 0.9,
+            "reason": "Returns item IDs from user-owned GitHub projects."
+          },
+          {
+            "tool": "GITHUB_LIST_PROJECT_VIEW_ITEMS_FOR_USER",
+            "confidence": 0.9,
+            "reason": "Returns item IDs from a user's GitHub Projects view."
+          }
+        ]
+      },
+      {
+        "param": "list_ids",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_PROJECT_ITEMS_FOR_USER",
+            "confidence": 0.9,
+            "reason": "Can provide list of item IDs that can be used as list IDs."
+          },
+          {
+            "tool": "GITHUB_LIST_PROJECT_VIEW_ITEMS_FOR_USER",
+            "confidence": 0.9,
+            "reason": "Can provide list of item IDs that can be used as list IDs."
+          }
+        ]
+      }
+    ]
+  },
+  "9ce184e6239dca21": {
+    "params": [
+      {
+        "param": "item_id",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_PROJECT_ITEMS_FOR_USER",
+            "confidence": 0.9,
+            "reason": "This tool lists items for a user-owned GitHub project and returns item IDs."
+          },
+          {
+            "tool": "GITHUB_LIST_PROJECT_VIEW_ITEMS_FOR_USER",
+            "confidence": 0.9,
+            "reason": "This tool lists items for a user's GitHub Projects (v2) view and returns item IDs."
+          },
+          {
+            "tool": "GITHUB_LIST_ORG_PROJECT_VIEW_ITEMS",
+            "confidence": 0.9,
+            "reason": "This tool lists items for an organization project view and returns item IDs."
+          }
+        ]
+      }
+    ]
+  },
+  "cbb6cb0d5c8b3fc6": {
+    "params": [
+      {
+        "param": "ref",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_REPO_DEV_CONTAINER_CONFIGS_FOR_USER",
+            "confidence": 0.9,
+            "reason": "This tool lists devcontainer configurations which include references."
+          }
+        ]
+      }
+    ]
+  }
+}
