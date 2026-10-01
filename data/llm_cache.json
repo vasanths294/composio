@@ -7385,5 +7385,125 @@
         ]
       }
     ]
+  },
+  "98f2c293d02f7f4a": {
+    "params": [
+      {
+        "param": "tree_sha",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_BRANCHES_FOR_HEAD_COMMIT",
+            "confidence": 0.8,
+            "reason": "Lists branches which can provide branch names for tree_sha."
+          },
+          {
+            "tool": "GITHUB_LIST_COMMITS",
+            "confidence": 0.7,
+            "reason": "Lists commits which can provide commit SHAs for tree_sha."
+          },
+          {
+            "tool": "GITHUB_GET_COMMIT_OBJECT",
+            "confidence": 0.9,
+            "reason": "Retrieves commit details including tree SHA."
+          },
+          {
+            "tool": "GITHUB_GET_A_TAG",
+            "confidence": 0.6,
+            "reason": "Retrieves tag details which can provide tag names for tree_sha."
+          }
+        ]
+      }
+    ]
+  },
+  "26dd42be35e105cf": {
+    "params": [
+      {
+        "param": "head_sha",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_CHECK_SUITES_FOR_A_GIT_REFERENCE",
+            "confidence": 0.8,
+            "reason": "This tool lists check suites for a specific commit SHA, which can provide the necessary head_sha."
+          },
+          {
+            "tool": "GITHUB_LIST_CHECK_RUNS_FOR_A_REF",
+            "confidence": 0.8,
+            "reason": "This tool lists check runs for a commit SHA, which can help identify the head_sha."
+          },
+          {
+            "tool": "GITHUB_LIST_BRANCHES_FOR_HEAD_COMMIT",
+            "confidence": 0.7,
+            "reason": "This tool lists branches for a specific commit SHA, which can indirectly provide the head_sha."
+          }
+        ]
+      }
+    ]
+  },
+  "4297cb93a0bc58f2": {
+    "params": [
+      {
+        "param": "head_sha",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_CHECK_RUNS_FOR_A_REF",
+            "confidence": 0.9,
+            "reason": "This tool lists check runs for a commit SHA, which can provide the required head_sha."
+          },
+          {
+            "tool": "GITHUB_LIST_CHECK_SUITES_FOR_A_GIT_REFERENCE",
+            "confidence": 0.8,
+            "reason": "This tool lists check suites for a commit SHA, which may include the head_sha."
+          },
+          {
+            "tool": "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_REPOSITORY",
+            "confidence": 0.7,
+            "reason": "This tool can filter by head SHA, potentially providing the required value."
+          }
+        ]
+      }
+    ]
+  },
+  "9f7cf79feb39b797": {
+    "params": [
+      {
+        "param": "app_slug",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_APPS_WITH_ACCESS_TO_THE_PROTECTED_BRANCH",
+            "confidence": 0.8,
+            "reason": "This tool returns app slugs which can be used to derive the app_slug parameter."
+          },
+          {
+            "tool": "GITHUB_LIST_APP_INSTALLATIONS",
+            "confidence": 0.7,
+            "reason": "This tool lists app installations which may include app slugs."
+          }
+        ]
+      }
+    ]
+  },
+  "0c16cc1b836c6e6f": {
+    "params": [
+      {
+        "param": "tag_sha",
+        "producers": [
+          {
+            "tool": "GITHUB_LIST_REPOSITORY_TAGS",
+            "confidence": 0.9,
+            "reason": "Lists tags which can provide the SHA of the tag object."
+          },
+          {
+            "tool": "GITHUB_GET_A_RELEASE_BY_TAG_NAME",
+            "confidence": 0.8,
+            "reason": "Can return the ID of a release associated with a tag, which may include the tag SHA."
+          },
+          {
+            "tool": "GITHUB_LIST_MATCHING_REFERENCES",
+            "confidence": 0.7,
+            "reason": "Lists references including tags, which can help identify the SHA."
+          }
+        ]
+      }
+    ]
   }
 }

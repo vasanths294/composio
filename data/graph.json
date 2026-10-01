@@ -18,8 +18,7 @@
           "param": "calendar_id",
           "kind": "tool",
           "producers": [
-            "GOOGLESUPER_LIST_CALENDARS",
-            "GOOGLESUPER_GET_CALENDAR"
+            "GOOGLESUPER_LIST_CALENDARS"
           ]
         }
       ]
@@ -42,8 +41,7 @@
           "param": "calendar_id",
           "kind": "tool",
           "producers": [
-            "GOOGLESUPER_LIST_CALENDARS",
-            "GOOGLESUPER_GET_CALENDAR"
+            "GOOGLESUPER_LIST_CALENDARS"
           ]
         }
       ]
@@ -64,8 +62,7 @@
           "param": "calendar_id",
           "kind": "tool",
           "producers": [
-            "GOOGLESUPER_LIST_CALENDARS",
-            "GOOGLESUPER_GET_CALENDAR"
+            "GOOGLESUPER_LIST_CALENDARS"
           ]
         }
       ]
@@ -81,8 +78,7 @@
           "param": "calendar_id",
           "kind": "tool",
           "producers": [
-            "GOOGLESUPER_LIST_CALENDARS",
-            "GOOGLESUPER_GET_CALENDAR"
+            "GOOGLESUPER_LIST_CALENDARS"
           ]
         }
       ]
@@ -105,8 +101,7 @@
           "param": "calendar_id",
           "kind": "tool",
           "producers": [
-            "GOOGLESUPER_LIST_CALENDARS",
-            "GOOGLESUPER_GET_CALENDAR"
+            "GOOGLESUPER_LIST_CALENDARS"
           ]
         }
       ]
@@ -134,8 +129,7 @@
           "param": "calendar_id",
           "kind": "tool",
           "producers": [
-            "GOOGLESUPER_LIST_CALENDARS",
-            "GOOGLESUPER_GET_CALENDAR"
+            "GOOGLESUPER_LIST_CALENDARS"
           ]
         }
       ]
@@ -161,8 +155,7 @@
           "param": "calendar_id",
           "kind": "tool",
           "producers": [
-            "GOOGLESUPER_LIST_CALENDARS",
-            "GOOGLESUPER_GET_CALENDAR"
+            "GOOGLESUPER_LIST_CALENDARS"
           ]
         }
       ]
@@ -710,8 +703,7 @@
           "param": "calendar_id",
           "kind": "tool",
           "producers": [
-            "GOOGLESUPER_LIST_CALENDARS",
-            "GOOGLESUPER_GET_CALENDAR"
+            "GOOGLESUPER_LIST_CALENDARS"
           ]
         }
       ]
@@ -727,8 +719,7 @@
           "param": "calendar_id",
           "kind": "tool",
           "producers": [
-            "GOOGLESUPER_LIST_CALENDARS",
-            "GOOGLESUPER_GET_CALENDAR"
+            "GOOGLESUPER_LIST_CALENDARS"
           ]
         }
       ]
@@ -758,8 +749,7 @@
           "param": "calendar_id",
           "kind": "tool",
           "producers": [
-            "GOOGLESUPER_LIST_CALENDARS",
-            "GOOGLESUPER_GET_CALENDAR"
+            "GOOGLESUPER_LIST_CALENDARS"
           ]
         }
       ]
@@ -775,8 +765,7 @@
           "param": "calendar_id",
           "kind": "tool",
           "producers": [
-            "GOOGLESUPER_LIST_CALENDARS",
-            "GOOGLESUPER_GET_CALENDAR"
+            "GOOGLESUPER_LIST_CALENDARS"
           ]
         }
       ]
@@ -816,8 +805,7 @@
           "param": "calendar_id",
           "kind": "tool",
           "producers": [
-            "GOOGLESUPER_LIST_CALENDARS",
-            "GOOGLESUPER_GET_CALENDAR"
+            "GOOGLESUPER_LIST_CALENDARS"
           ]
         }
       ]
@@ -838,8 +826,7 @@
           "param": "calendar_id",
           "kind": "tool",
           "producers": [
-            "GOOGLESUPER_LIST_CALENDARS",
-            "GOOGLESUPER_GET_CALENDAR"
+            "GOOGLESUPER_LIST_CALENDARS"
           ]
         }
       ]
@@ -917,8 +904,7 @@
           "param": "calendar_id",
           "kind": "tool",
           "producers": [
-            "GOOGLESUPER_LIST_CALENDARS",
-            "GOOGLESUPER_GET_CALENDAR"
+            "GOOGLESUPER_LIST_CALENDARS"
           ]
         }
       ]
@@ -1109,9 +1095,9 @@
           "param": "audience",
           "kind": "tool",
           "producers": [
-            "GOOGLESUPER_QUERY_AUDIENCE_LIST",
             "GOOGLESUPER_GET_AUDIENCE_EXPORT",
-            "GOOGLESUPER_GET_AUDIENCE_LIST"
+            "GOOGLESUPER_GET_AUDIENCE_LIST",
+            "GOOGLESUPER_GET_RECURRING_AUDIENCE_LIST"
           ]
         }
       ]
@@ -1134,9 +1120,9 @@
           "param": "audience",
           "kind": "tool",
           "producers": [
-            "GOOGLESUPER_QUERY_AUDIENCE_LIST",
             "GOOGLESUPER_GET_AUDIENCE_EXPORT",
-            "GOOGLESUPER_GET_AUDIENCE_LIST"
+            "GOOGLESUPER_GET_AUDIENCE_LIST",
+            "GOOGLESUPER_GET_RECURRING_AUDIENCE_LIST"
           ]
         },
         {
@@ -1639,9 +1625,9 @@
           "param": "audience",
           "kind": "tool",
           "producers": [
-            "GOOGLESUPER_QUERY_AUDIENCE_LIST",
             "GOOGLESUPER_GET_AUDIENCE_EXPORT",
-            "GOOGLESUPER_GET_AUDIENCE_LIST"
+            "GOOGLESUPER_GET_AUDIENCE_LIST",
+            "GOOGLESUPER_GET_RECURRING_AUDIENCE_LIST"
           ]
         },
         {
@@ -2105,8 +2091,7 @@
           "kind": "tool",
           "producers": [
             "GOOGLESUPER_FETCH_EMAILS",
-            "GOOGLESUPER_FETCH_MESSAGE_BY_THREAD_ID",
-            "GOOGLESUPER_GET_DRAFT"
+            "GOOGLESUPER_FETCH_MESSAGE_BY_THREAD_ID"
           ]
         }
       ]
@@ -2617,8 +2602,7 @@
           "param": "calendar_id",
           "kind": "tool",
           "producers": [
-            "GOOGLESUPER_LIST_CALENDARS",
-            "GOOGLESUPER_GET_CALENDAR"
+            "GOOGLESUPER_LIST_CALENDARS"
           ]
         }
       ]
@@ -2669,8 +2653,7 @@
           "param": "calendar_id",
           "kind": "tool",
           "producers": [
-            "GOOGLESUPER_LIST_CALENDARS",
-            "GOOGLESUPER_GET_CALENDAR"
+            "GOOGLESUPER_LIST_CALENDARS"
           ]
         },
         {
@@ -2703,8 +2686,7 @@
           "param": "calendar_id",
           "kind": "tool",
           "producers": [
-            "GOOGLESUPER_LIST_CALENDARS",
-            "GOOGLESUPER_GET_CALENDAR"
+            "GOOGLESUPER_LIST_CALENDARS"
           ]
         }
       ]
@@ -2806,8 +2788,7 @@
           "kind": "tool",
           "producers": [
             "GOOGLESUPER_FETCH_EMAILS",
-            "GOOGLESUPER_FETCH_MESSAGE_BY_THREAD_ID",
-            "GOOGLESUPER_GET_DRAFT"
+            "GOOGLESUPER_FETCH_MESSAGE_BY_THREAD_ID"
           ]
         }
       ]
@@ -2915,8 +2896,7 @@
           "kind": "tool",
           "producers": [
             "GOOGLESUPER_FETCH_EMAILS",
-            "GOOGLESUPER_FETCH_MESSAGE_BY_THREAD_ID",
-            "GOOGLESUPER_GET_DRAFT"
+            "GOOGLESUPER_FETCH_MESSAGE_BY_THREAD_ID"
           ]
         },
         {
@@ -3147,8 +3127,7 @@
           "kind": "tool",
           "producers": [
             "GOOGLESUPER_FETCH_EMAILS",
-            "GOOGLESUPER_FETCH_MESSAGE_BY_THREAD_ID",
-            "GOOGLESUPER_GET_DRAFT"
+            "GOOGLESUPER_FETCH_MESSAGE_BY_THREAD_ID"
           ]
         },
         {
@@ -3392,7 +3371,7 @@
       "toolkit": "googlesuper",
       "app": "googlesuper",
       "verb": "GET",
-      "resource": "conversion_ingestion_statu",
+      "resource": "conversion_ingestion_status",
       "needs": [
         {
           "param": "request_id",
@@ -3973,7 +3952,7 @@
       "toolkit": "googlesuper",
       "app": "analytics",
       "verb": "GET",
-      "resource": "property_quota_snapshot",
+      "resource": "property_quotas_snapshot",
       "needs": [
         {
           "param": "property",
@@ -5491,7 +5470,7 @@
       "toolkit": "googlesuper",
       "app": "analytics",
       "verb": "LIST",
-      "resource": "sk_ad_network_conversion_value_schema",
+      "resource": "sk_ad_network_conversion_value_schemas",
       "needs": [
         {
           "param": "parent",
@@ -5831,8 +5810,7 @@
           "kind": "tool",
           "producers": [
             "GOOGLESUPER_FETCH_EMAILS",
-            "GOOGLESUPER_FETCH_MESSAGE_BY_THREAD_ID",
-            "GOOGLESUPER_GET_DRAFT"
+            "GOOGLESUPER_FETCH_MESSAGE_BY_THREAD_ID"
           ]
         }
       ]
@@ -6149,8 +6127,7 @@
           "param": "calendar_id",
           "kind": "tool",
           "producers": [
-            "GOOGLESUPER_LIST_CALENDARS",
-            "GOOGLESUPER_GET_CALENDAR"
+            "GOOGLESUPER_LIST_CALENDARS"
           ]
         }
       ]
@@ -6174,8 +6151,7 @@
           "param": "calendar_id",
           "kind": "tool",
           "producers": [
-            "GOOGLESUPER_LIST_CALENDARS",
-            "GOOGLESUPER_GET_CALENDAR"
+            "GOOGLESUPER_LIST_CALENDARS"
           ]
         }
       ]
@@ -7276,8 +7252,7 @@
           "kind": "tool",
           "producers": [
             "GOOGLESUPER_FETCH_EMAILS",
-            "GOOGLESUPER_FETCH_MESSAGE_BY_THREAD_ID",
-            "GOOGLESUPER_GET_DRAFT"
+            "GOOGLESUPER_FETCH_MESSAGE_BY_THREAD_ID"
           ]
         }
       ]
@@ -8881,7 +8856,7 @@
       "toolkit": "github",
       "app": "github",
       "verb": "CREATE",
-      "resource": "statu_check_context",
+      "resource": "status_check_context",
       "needs": [
         {
           "param": "repo",
@@ -9450,7 +9425,7 @@
       "toolkit": "github",
       "app": "github",
       "verb": "CHECK",
-      "resource": "private_vulnerability_reporting_statu",
+      "resource": "private_vulnerability_reporting_status",
       "needs": [
         {
           "param": "repo",
@@ -9886,7 +9861,6 @@
           "param": "content",
           "kind": "either",
           "producers": [
-            "GITHUB_GET_RAW_REPOSITORY_CONTENT",
             "GITHUB_GET_REPOSITORY_CONTENT"
           ]
         }
@@ -9918,7 +9892,9 @@
           "param": "head_sha",
           "kind": "tool",
           "producers": [
-            "GITHUB_GET_A_PULL_REQUEST"
+            "GITHUB_LIST_CHECK_RUNS_FOR_A_REF",
+            "GITHUB_LIST_CHECK_SUITES_FOR_A_GIT_REFERENCE",
+            "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_REPOSITORY"
           ]
         }
       ]
@@ -9944,7 +9920,9 @@
           "param": "head_sha",
           "kind": "tool",
           "producers": [
-            "GITHUB_GET_A_PULL_REQUEST"
+            "GITHUB_LIST_CHECK_SUITES_FOR_A_GIT_REFERENCE",
+            "GITHUB_LIST_CHECK_RUNS_FOR_A_REF",
+            "GITHUB_LIST_BRANCHES_FOR_HEAD_COMMIT"
           ]
         }
       ]
@@ -10022,7 +10000,7 @@
           "producers": [
             "GITHUB_LIST_COMMITS",
             "GITHUB_COMPARE_TWO_COMMITS",
-            "GITHUB_GET_A_BRANCH"
+            "GITHUB_SEARCH_COMMITS"
           ]
         },
         {
@@ -10065,7 +10043,7 @@
           "producers": [
             "GITHUB_LIST_COMMITS",
             "GITHUB_COMPARE_TWO_COMMITS",
-            "GITHUB_GET_A_BRANCH"
+            "GITHUB_SEARCH_COMMITS"
           ]
         }
       ]
@@ -10075,7 +10053,7 @@
       "toolkit": "github",
       "app": "github",
       "verb": "CREATE",
-      "resource": "commit_statu",
+      "resource": "commit_status",
       "needs": [
         {
           "param": "sha",
@@ -10208,7 +10186,7 @@
       "toolkit": "github",
       "app": "github",
       "verb": "CREATE",
-      "resource": "deployment_statu",
+      "resource": "deployment_status",
       "needs": [
         {
           "param": "repo",
@@ -12880,7 +12858,7 @@
       "toolkit": "github",
       "app": "github",
       "verb": "DELETE",
-      "resource": "code_scanning_analysi",
+      "resource": "code_scanning_analysis",
       "needs": [
         {
           "param": "repo",
@@ -13561,9 +13539,7 @@
           "param": "milestone_number",
           "kind": "tool",
           "producers": [
-            "GITHUB_LIST_MILESTONES",
-            "GITHUB_SEARCH_ISSUES",
-            "GITHUB_SEARCH_ISSUES_AND_PULL_REQUESTS"
+            "GITHUB_LIST_MILESTONES"
           ]
         }
       ]
@@ -14188,8 +14164,7 @@
           "param": "protection_rule_id",
           "kind": "tool",
           "producers": [
-            "GITHUB_GET_AN_ENVIRONMENT",
-            "GITHUB_GET_CODE_SCANNING_ALERT"
+            "GITHUB_GET_AN_ENVIRONMENT"
           ]
         }
       ]
@@ -14290,7 +14265,6 @@
           "param": "review_id",
           "kind": "tool",
           "producers": [
-            "GITHUB_GET_AN_ISSUE_EVENT",
             "GITHUB_LIST_REVIEWS_FOR_A_PULL_REQUEST"
           ]
         },
@@ -14891,7 +14865,7 @@
           "producers": [
             "GITHUB_LIST_COMMITS",
             "GITHUB_COMPARE_TWO_COMMITS",
-            "GITHUB_GET_A_BRANCH"
+            "GITHUB_SEARCH_COMMITS"
           ]
         },
         {
@@ -15007,9 +14981,7 @@
           "param": "milestone_number",
           "kind": "tool",
           "producers": [
-            "GITHUB_LIST_MILESTONES",
-            "GITHUB_SEARCH_ISSUES",
-            "GITHUB_SEARCH_ISSUES_AND_PULL_REQUESTS"
+            "GITHUB_LIST_MILESTONES"
           ]
         }
       ]
@@ -15025,7 +14997,8 @@
           "param": "app_slug",
           "kind": "tool",
           "producers": [
-            "GITHUB_CHECK_TOKEN"
+            "GITHUB_LIST_APPS_WITH_ACCESS_TO_THE_PROTECTED_BRANCH",
+            "GITHUB_LIST_APP_INSTALLATIONS"
           ]
         }
       ]
@@ -16042,7 +16015,6 @@
           "param": "review_id",
           "kind": "tool",
           "producers": [
-            "GITHUB_GET_AN_ISSUE_EVENT",
             "GITHUB_LIST_REVIEWS_FOR_A_PULL_REQUEST"
           ]
         },
@@ -16245,7 +16217,9 @@
           "param": "tree_sha",
           "kind": "tool",
           "producers": [
-            "GITHUB_GET_COMMIT_OBJECT"
+            "GITHUB_GET_COMMIT_OBJECT",
+            "GITHUB_LIST_BRANCHES_FOR_HEAD_COMMIT",
+            "GITHUB_LIST_COMMITS"
           ]
         }
       ]
@@ -16518,7 +16492,6 @@
           "param": "check_suite_id",
           "kind": "tool",
           "producers": [
-            "GITHUB_GET_CHECK_RUN",
             "GITHUB_LIST_CHECK_SUITES_FOR_A_GIT_REFERENCE"
           ]
         }
@@ -16535,8 +16508,7 @@
           "param": "classroom_id",
           "kind": "tool",
           "producers": [
-            "GITHUB_LIST_CLASSROOMS",
-            "GITHUB_GET_AN_ASSIGNMENT"
+            "GITHUB_LIST_CLASSROOMS"
           ]
         }
       ]
@@ -16629,7 +16601,7 @@
       "toolkit": "github",
       "app": "github",
       "verb": "GET",
-      "resource": "code_scanning_analysi",
+      "resource": "code_scanning_analysis",
       "needs": [
         {
           "param": "repo",
@@ -16737,7 +16709,7 @@
           "producers": [
             "GITHUB_LIST_COMMITS",
             "GITHUB_COMPARE_TWO_COMMITS",
-            "GITHUB_GET_A_BRANCH"
+            "GITHUB_SEARCH_COMMITS"
           ]
         }
       ]
@@ -17031,7 +17003,7 @@
       "toolkit": "github",
       "app": "github",
       "verb": "GET",
-      "resource": "deployment_statu",
+      "resource": "deployment_status",
       "needs": [
         {
           "param": "repo",
@@ -17157,7 +17129,7 @@
       "toolkit": "github",
       "app": "github",
       "verb": "GET",
-      "resource": "emoji",
+      "resource": "emojis",
       "needs": []
     },
     {
@@ -17996,7 +17968,7 @@
       "toolkit": "github",
       "app": "github",
       "verb": "GET",
-      "resource": "rate_limit_statu_authenticated_user",
+      "resource": "rate_limit_status_authenticated_user",
       "needs": []
     },
     {
@@ -18356,7 +18328,7 @@
       "toolkit": "github",
       "app": "github",
       "verb": "GET",
-      "resource": "statu_check_protection",
+      "resource": "status_check_protection",
       "needs": [
         {
           "param": "repo",
@@ -18466,7 +18438,7 @@
       "toolkit": "github",
       "app": "github",
       "verb": "GET",
-      "resource": "combined_statu_specific_reference",
+      "resource": "combined_status_specific_reference",
       "needs": [
         {
           "param": "ref",
@@ -18595,7 +18567,7 @@
       "toolkit": "github",
       "app": "github",
       "verb": "GET",
-      "resource": "statu_github_page_deployment",
+      "resource": "status_github_page_deployment",
       "needs": [
         {
           "param": "repo",
@@ -19044,7 +19016,6 @@
           "param": "classroom_id",
           "kind": "tool",
           "producers": [
-            "GITHUB_GET_AN_ASSIGNMENT",
             "GITHUB_LIST_CLASSROOMS"
           ]
         }
@@ -19123,7 +19094,6 @@
           "param": "commit_sha",
           "kind": "tool",
           "producers": [
-            "GITHUB_GET_A_BRANCH",
             "GITHUB_LIST_COMMITS"
           ]
         }
@@ -19206,7 +19176,6 @@
           "param": "check_suite_id",
           "kind": "tool",
           "producers": [
-            "GITHUB_GET_CHECK_RUN",
             "GITHUB_LIST_CHECK_SUITES_FOR_A_GIT_REFERENCE",
             "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_REPOSITORY"
           ]
@@ -19490,7 +19459,7 @@
           "producers": [
             "GITHUB_LIST_COMMITS",
             "GITHUB_COMPARE_TWO_COMMITS",
-            "GITHUB_GET_A_BRANCH"
+            "GITHUB_SEARCH_COMMITS"
           ]
         }
       ]
@@ -20460,9 +20429,7 @@
           "param": "milestone_number",
           "kind": "tool",
           "producers": [
-            "GITHUB_SEARCH_ISSUES",
-            "GITHUB_SEARCH_ISSUES_AND_PULL_REQUESTS",
-            "GITHUB_GET_AN_ISSUE"
+            "GITHUB_LIST_MILESTONES"
           ]
         }
       ]
@@ -22569,7 +22536,7 @@
       "toolkit": "github",
       "app": "github",
       "verb": "LIST",
-      "resource": "statu_check_context",
+      "resource": "status_check_context",
       "needs": [
         {
           "param": "repo",
@@ -22790,7 +22757,6 @@
           "param": "issue_number",
           "kind": "tool",
           "producers": [
-            "GITHUB_GET_AN_ISSUE_EVENT",
             "GITHUB_LIST_ISSUES_ASSIGNED_TO_THE_AUTHENTICATED_USER",
             "GITHUB_LIST_REPOSITORY_ISSUES"
           ]
@@ -24273,7 +24239,7 @@
       "toolkit": "github",
       "app": "github",
       "verb": "DELETE",
-      "resource": "statu_check_context",
+      "resource": "status_check_context",
       "needs": [
         {
           "param": "repo",
@@ -24305,7 +24271,7 @@
       "toolkit": "github",
       "app": "github",
       "verb": "DELETE",
-      "resource": "statu_check_protection",
+      "resource": "status_check_protection",
       "needs": [
         {
           "param": "repo",
@@ -24813,7 +24779,6 @@
           "param": "check_suite_id",
           "kind": "tool",
           "producers": [
-            "GITHUB_GET_CHECK_RUN",
             "GITHUB_LIST_CHECK_SUITES_FOR_A_GIT_REFERENCE"
           ]
         }
@@ -25871,7 +25836,7 @@
       "toolkit": "github",
       "app": "github",
       "verb": "SET",
-      "resource": "statu_check_context",
+      "resource": "status_check_context",
       "needs": [
         {
           "param": "repo",
@@ -26119,7 +26084,6 @@
           "param": "review_id",
           "kind": "tool",
           "producers": [
-            "GITHUB_GET_AN_ISSUE_EVENT",
             "GITHUB_LIST_REVIEWS_FOR_A_PULL_REQUEST"
           ]
         },
@@ -26728,9 +26692,7 @@
           "param": "milestone_number",
           "kind": "tool",
           "producers": [
-            "GITHUB_LIST_MILESTONES",
-            "GITHUB_SEARCH_ISSUES",
-            "GITHUB_SEARCH_ISSUES_AND_PULL_REQUESTS"
+            "GITHUB_LIST_MILESTONES"
           ]
         }
       ]
@@ -27486,7 +27448,7 @@
       "toolkit": "github",
       "app": "github",
       "verb": "UPDATE",
-      "resource": "statu_check_protection",
+      "resource": "status_check_protection",
       "needs": [
         {
           "param": "repo",
@@ -27636,7 +27598,7 @@
       "toolkit": "github",
       "app": "github",
       "verb": "UPDATE",
-      "resource": "user_statu",
+      "resource": "user_status",
       "needs": []
     },
     {
@@ -27685,7 +27647,7 @@
       "toolkit": "github",
       "app": "github",
       "verb": "UPLOAD",
-      "resource": "sarif_analysi",
+      "resource": "sarif_analysis",
       "needs": [
         {
           "param": "ref",
@@ -27713,7 +27675,7 @@
           "producers": [
             "GITHUB_LIST_COMMITS",
             "GITHUB_COMPARE_TWO_COMMITS",
-            "GITHUB_GET_A_BRANCH"
+            "GITHUB_SEARCH_COMMITS"
           ]
         }
       ]
@@ -27799,25 +27761,11 @@
       "reason": "data.calendars[].id"
     },
     {
-      "from": "GOOGLESUPER_GET_CALENDAR",
-      "to": "GOOGLESUPER_ACL_DELETE",
-      "param": "calendar_id",
-      "score": 0.8,
-      "reason": "data.calendar_data.id"
-    },
-    {
       "from": "GOOGLESUPER_LIST_CALENDARS",
       "to": "GOOGLESUPER_ACL_GET",
       "param": "calendar_id",
       "score": 1,
       "reason": "data.calendars[].id"
-    },
-    {
-      "from": "GOOGLESUPER_GET_CALENDAR",
-      "to": "GOOGLESUPER_ACL_GET",
-      "param": "calendar_id",
-      "score": 0.8,
-      "reason": "data.calendar_data.id"
     },
     {
       "from": "GOOGLESUPER_LIST_CALENDARS",
@@ -27827,25 +27775,11 @@
       "reason": "data.calendars[].id"
     },
     {
-      "from": "GOOGLESUPER_GET_CALENDAR",
-      "to": "GOOGLESUPER_ACL_INSERT",
-      "param": "calendar_id",
-      "score": 0.8,
-      "reason": "data.calendar_data.id"
-    },
-    {
       "from": "GOOGLESUPER_LIST_CALENDARS",
       "to": "GOOGLESUPER_ACL_LIST",
       "param": "calendar_id",
       "score": 1,
       "reason": "data.calendars[].id"
-    },
-    {
-      "from": "GOOGLESUPER_GET_CALENDAR",
-      "to": "GOOGLESUPER_ACL_LIST",
-      "param": "calendar_id",
-      "score": 0.8,
-      "reason": "data.calendar_data.id"
     },
     {
       "from": "GOOGLESUPER_LIST_CALENDARS",
@@ -27855,13 +27789,6 @@
       "reason": "data.calendars[].id"
     },
     {
-      "from": "GOOGLESUPER_GET_CALENDAR",
-      "to": "GOOGLESUPER_ACL_PATCH",
-      "param": "calendar_id",
-      "score": 0.8,
-      "reason": "data.calendar_data.id"
-    },
-    {
       "from": "GOOGLESUPER_LIST_CALENDARS",
       "to": "GOOGLESUPER_ACL_UPDATE",
       "param": "calendar_id",
@@ -27869,25 +27796,11 @@
       "reason": "data.calendars[].id"
     },
     {
-      "from": "GOOGLESUPER_GET_CALENDAR",
-      "to": "GOOGLESUPER_ACL_UPDATE",
-      "param": "calendar_id",
-      "score": 0.8,
-      "reason": "data.calendar_data.id"
-    },
-    {
       "from": "GOOGLESUPER_LIST_CALENDARS",
       "to": "GOOGLESUPER_ACL_WATCH",
       "param": "calendar_id",
       "score": 1,
       "reason": "data.calendars[].id"
-    },
-    {
-      "from": "GOOGLESUPER_GET_CALENDAR",
-      "to": "GOOGLESUPER_ACL_WATCH",
-      "param": "calendar_id",
-      "score": 0.8,
-      "reason": "data.calendar_data.id"
     },
     {
       "from": "GOOGLESUPER_FETCH_EMAILS",
@@ -28135,25 +28048,11 @@
       "reason": "data.calendars[].id"
     },
     {
-      "from": "GOOGLESUPER_GET_CALENDAR",
-      "to": "GOOGLESUPER_CALENDAR_LIST_DELETE",
-      "param": "calendar_id",
-      "score": 0.8,
-      "reason": "data.calendar_data.id"
-    },
-    {
       "from": "GOOGLESUPER_LIST_CALENDARS",
       "to": "GOOGLESUPER_CALENDAR_LIST_GET",
       "param": "calendar_id",
       "score": 1,
       "reason": "data.calendars[].id"
-    },
-    {
-      "from": "GOOGLESUPER_GET_CALENDAR",
-      "to": "GOOGLESUPER_CALENDAR_LIST_GET",
-      "param": "calendar_id",
-      "score": 0.8,
-      "reason": "data.calendar_data.id"
     },
     {
       "from": "GOOGLESUPER_LIST_CALENDARS",
@@ -28163,25 +28062,11 @@
       "reason": "data.calendars[].id"
     },
     {
-      "from": "GOOGLESUPER_GET_CALENDAR",
-      "to": "GOOGLESUPER_CALENDAR_LIST_PATCH",
-      "param": "calendar_id",
-      "score": 0.8,
-      "reason": "data.calendar_data.id"
-    },
-    {
       "from": "GOOGLESUPER_LIST_CALENDARS",
       "to": "GOOGLESUPER_CALENDAR_LIST_UPDATE",
       "param": "calendar_id",
       "score": 1,
       "reason": "data.calendars[].id"
-    },
-    {
-      "from": "GOOGLESUPER_GET_CALENDAR",
-      "to": "GOOGLESUPER_CALENDAR_LIST_UPDATE",
-      "param": "calendar_id",
-      "score": 0.8,
-      "reason": "data.calendar_data.id"
     },
     {
       "from": "GOOGLESUPER_LIST_CALENDARS",
@@ -28191,25 +28076,11 @@
       "reason": "data.calendars[].id"
     },
     {
-      "from": "GOOGLESUPER_GET_CALENDAR",
-      "to": "GOOGLESUPER_CALENDARS_DELETE",
-      "param": "calendar_id",
-      "score": 0.8,
-      "reason": "data.calendar_data.id"
-    },
-    {
       "from": "GOOGLESUPER_LIST_CALENDARS",
       "to": "GOOGLESUPER_CALENDARS_UPDATE",
       "param": "calendar_id",
       "score": 1,
       "reason": "data.calendars[].id"
-    },
-    {
-      "from": "GOOGLESUPER_GET_CALENDAR",
-      "to": "GOOGLESUPER_CALENDARS_UPDATE",
-      "param": "calendar_id",
-      "score": 0.8,
-      "reason": "data.calendar_data.id"
     },
     {
       "from": "GOOGLESUPER_LIST_CALENDAR_RESOURCES",
@@ -28238,13 +28109,6 @@
       "param": "calendar_id",
       "score": 1,
       "reason": "data.calendars[].id"
-    },
-    {
-      "from": "GOOGLESUPER_GET_CALENDAR",
-      "to": "GOOGLESUPER_CLEAR_CALENDAR",
-      "param": "calendar_id",
-      "score": 0.8,
-      "reason": "data.calendar_data.id"
     },
     {
       "from": "GOOGLESUPER_SEARCH_SPREADSHEETS",
@@ -28331,13 +28195,6 @@
       "reason": "data.files[].id"
     },
     {
-      "from": "GOOGLESUPER_QUERY_AUDIENCE_LIST",
-      "to": "GOOGLESUPER_CREATE_AUDIENCE_EXPORT",
-      "param": "audience",
-      "score": 0.9,
-      "reason": "data.audienceList.audience"
-    },
-    {
       "from": "GOOGLESUPER_GET_AUDIENCE_EXPORT",
       "to": "GOOGLESUPER_CREATE_AUDIENCE_EXPORT",
       "param": "audience",
@@ -28352,11 +28209,11 @@
       "reason": "data.audience"
     },
     {
-      "from": "GOOGLESUPER_QUERY_AUDIENCE_LIST",
-      "to": "GOOGLESUPER_CREATE_AUDIENCE_LIST",
+      "from": "GOOGLESUPER_GET_RECURRING_AUDIENCE_LIST",
+      "to": "GOOGLESUPER_CREATE_AUDIENCE_EXPORT",
       "param": "audience",
-      "score": 0.9,
-      "reason": "data.audienceList.audience"
+      "score": 0.8,
+      "reason": "data.audience"
     },
     {
       "from": "GOOGLESUPER_GET_AUDIENCE_EXPORT",
@@ -28367,6 +28224,13 @@
     },
     {
       "from": "GOOGLESUPER_GET_AUDIENCE_LIST",
+      "to": "GOOGLESUPER_CREATE_AUDIENCE_LIST",
+      "param": "audience",
+      "score": 0.8,
+      "reason": "data.audience"
+    },
+    {
+      "from": "GOOGLESUPER_GET_RECURRING_AUDIENCE_LIST",
       "to": "GOOGLESUPER_CREATE_AUDIENCE_LIST",
       "param": "audience",
       "score": 0.8,
@@ -28541,13 +28405,6 @@
       "reason": "data.files[].id"
     },
     {
-      "from": "GOOGLESUPER_QUERY_AUDIENCE_LIST",
-      "to": "GOOGLESUPER_CREATE_RECURRING_AUDIENCE_LIST",
-      "param": "audience",
-      "score": 0.9,
-      "reason": "data.audienceList.audience"
-    },
-    {
       "from": "GOOGLESUPER_GET_AUDIENCE_EXPORT",
       "to": "GOOGLESUPER_CREATE_RECURRING_AUDIENCE_LIST",
       "param": "audience",
@@ -28556,6 +28413,13 @@
     },
     {
       "from": "GOOGLESUPER_GET_AUDIENCE_LIST",
+      "to": "GOOGLESUPER_CREATE_RECURRING_AUDIENCE_LIST",
+      "param": "audience",
+      "score": 0.8,
+      "reason": "data.audience"
+    },
+    {
+      "from": "GOOGLESUPER_GET_RECURRING_AUDIENCE_LIST",
       "to": "GOOGLESUPER_CREATE_RECURRING_AUDIENCE_LIST",
       "param": "audience",
       "score": 0.8,
@@ -28847,13 +28711,6 @@
       "param": "message_id",
       "score": 0.8,
       "reason": "data.messages[].messageId"
-    },
-    {
-      "from": "GOOGLESUPER_GET_DRAFT",
-      "to": "GOOGLESUPER_DELETE_MESSAGE",
-      "param": "message_id",
-      "score": 0.8,
-      "reason": "data.message.messageId"
     },
     {
       "from": "GOOGLESUPER_GET_DOCUMENT_BY_ID",
@@ -29227,13 +29084,6 @@
       "reason": "data.calendars[].id"
     },
     {
-      "from": "GOOGLESUPER_GET_CALENDAR",
-      "to": "GOOGLESUPER_EVENTS_INSTANCES",
-      "param": "calendar_id",
-      "score": 0.8,
-      "reason": "data.calendar_data.id"
-    },
-    {
       "from": "GOOGLESUPER_EVENTS_LIST",
       "to": "GOOGLESUPER_EVENTS_MOVE",
       "param": "event_id",
@@ -29255,25 +29105,11 @@
       "reason": "data.calendars[].id"
     },
     {
-      "from": "GOOGLESUPER_GET_CALENDAR",
-      "to": "GOOGLESUPER_EVENTS_MOVE",
-      "param": "calendar_id",
-      "score": 0.8,
-      "reason": "data.calendar_data.id"
-    },
-    {
       "from": "GOOGLESUPER_LIST_CALENDARS",
       "to": "GOOGLESUPER_EVENTS_WATCH",
       "param": "calendar_id",
       "score": 1,
       "reason": "data.calendars[].id"
-    },
-    {
-      "from": "GOOGLESUPER_GET_CALENDAR",
-      "to": "GOOGLESUPER_EVENTS_WATCH",
-      "param": "calendar_id",
-      "score": 0.8,
-      "reason": "data.calendar_data.id"
     },
     {
       "from": "GOOGLESUPER_FIND_FILE",
@@ -29367,13 +29203,6 @@
       "reason": "named in param description"
     },
     {
-      "from": "GOOGLESUPER_GET_DRAFT",
-      "to": "GOOGLESUPER_FETCH_MESSAGE_BY_MESSAGE_ID",
-      "param": "message_id",
-      "score": 0.8,
-      "reason": "data.message.messageId"
-    },
-    {
       "from": "GOOGLESUPER_LIST_THREADS",
       "to": "GOOGLESUPER_FETCH_MESSAGE_BY_THREAD_ID",
       "param": "thread_id",
@@ -29416,13 +29245,6 @@
       "reason": "data.messages[].messageId"
     },
     {
-      "from": "GOOGLESUPER_GET_DRAFT",
-      "to": "GOOGLESUPER_FORWARD_MESSAGE",
-      "param": "message_id",
-      "score": 0.8,
-      "reason": "data.message.messageId"
-    },
-    {
       "from": "GOOGLESUPER_LIST_ACCOUNTS_V1_BETA",
       "to": "GOOGLESUPER_GET_ACCOUNT",
       "param": "name",
@@ -29463,13 +29285,6 @@
       "param": "message_id",
       "score": 0.8,
       "reason": "data.messages[].messageId"
-    },
-    {
-      "from": "GOOGLESUPER_GET_DRAFT",
-      "to": "GOOGLESUPER_GET_ATTACHMENT",
-      "param": "message_id",
-      "score": 0.8,
-      "reason": "data.message.messageId"
     },
     {
       "from": "GOOGLESUPER_FETCH_MESSAGE_BY_MESSAGE_ID",
@@ -30522,13 +30337,6 @@
       "reason": "data.messages[].messageId"
     },
     {
-      "from": "GOOGLESUPER_GET_DRAFT",
-      "to": "GOOGLESUPER_MOVE_TO_TRASH",
-      "param": "message_id",
-      "score": 0.8,
-      "reason": "data.message.messageId"
-    },
-    {
       "from": "GOOGLESUPER_GET_SPREADSHEET_INFO",
       "to": "GOOGLESUPER_MUTATE_CONDITIONAL_FORMAT_RULES",
       "param": "sheet_id",
@@ -30557,13 +30365,6 @@
       "reason": "data.calendars[].id"
     },
     {
-      "from": "GOOGLESUPER_GET_CALENDAR",
-      "to": "GOOGLESUPER_PATCH_CALENDAR",
-      "param": "calendar_id",
-      "score": 0.8,
-      "reason": "data.calendar_data.id"
-    },
-    {
       "from": "GOOGLESUPER_EVENTS_LIST",
       "to": "GOOGLESUPER_PATCH_EVENT",
       "param": "event_id",
@@ -30583,13 +30384,6 @@
       "param": "calendar_id",
       "score": 1,
       "reason": "data.calendars[].id"
-    },
-    {
-      "from": "GOOGLESUPER_GET_CALENDAR",
-      "to": "GOOGLESUPER_PATCH_EVENT",
-      "param": "calendar_id",
-      "score": 0.8,
-      "reason": "data.calendar_data.id"
     },
     {
       "from": "GOOGLESUPER_LIST_LABELS",
@@ -31024,13 +30818,6 @@
       "param": "message_id",
       "score": 0.8,
       "reason": "data.messages[].messageId"
-    },
-    {
-      "from": "GOOGLESUPER_GET_DRAFT",
-      "to": "GOOGLESUPER_UNTRASH_MESSAGE",
-      "param": "message_id",
-      "score": 0.8,
-      "reason": "data.message.messageId"
     },
     {
       "from": "GOOGLESUPER_LIST_THREADS",
@@ -32129,28 +31916,28 @@
       "to": "GITHUB_CHECK_IF_USER_CAN_BE_ASSIGNED",
       "param": "assignee",
       "score": 0.8,
-      "reason": "data.assignee.name"
+      "reason": "data.assignees[].name"
     },
     {
       "from": "GITHUB_LIST_ISSUE_DEPENDENCIES_BLOCKED_BY",
       "to": "GITHUB_CHECK_IF_USER_CAN_BE_ASSIGNED",
       "param": "assignee",
       "score": 0.8,
-      "reason": "data.items[].assignee.name"
+      "reason": "data.items[].assignees[].name"
     },
     {
       "from": "GITHUB_GET_AN_ISSUE",
       "to": "GITHUB_CHECK_IF_USER_CAN_BE_ASSIGNED_TO_ISSUE",
       "param": "assignee",
       "score": 0.8,
-      "reason": "data.assignee.name"
+      "reason": "data.assignees[].name"
     },
     {
       "from": "GITHUB_LIST_ISSUE_DEPENDENCIES_BLOCKED_BY",
       "to": "GITHUB_CHECK_IF_USER_CAN_BE_ASSIGNED_TO_ISSUE",
       "param": "assignee",
       "score": 0.8,
-      "reason": "data.items[].assignee.name"
+      "reason": "data.items[].assignees[].name"
     },
     {
       "from": "GITHUB_LIST_ISSUES_ASSIGNED_TO_THE_AUTHENTICATED_USER",
@@ -32314,32 +32101,11 @@
       "reason": "data.requests[].id"
     },
     {
-      "from": "GITHUB_GET_RAW_REPOSITORY_CONTENT",
-      "to": "GITHUB_CREATE_A_BLOB",
-      "param": "content",
-      "score": 0.9,
-      "reason": "data.content.name"
-    },
-    {
       "from": "GITHUB_GET_REPOSITORY_CONTENT",
       "to": "GITHUB_CREATE_A_BLOB",
       "param": "content",
       "score": 0.9,
-      "reason": "data.content.name"
-    },
-    {
-      "from": "GITHUB_GET_A_PULL_REQUEST",
-      "to": "GITHUB_CREATE_A_CHECK_RUN",
-      "param": "head_sha",
-      "score": 0.8,
-      "reason": "data.head.sha"
-    },
-    {
-      "from": "GITHUB_GET_A_PULL_REQUEST",
-      "to": "GITHUB_CREATE_A_CHECK_SUITE",
-      "param": "head_sha",
-      "score": 0.8,
-      "reason": "data.head.sha"
+      "reason": "data.content[].name"
     },
     {
       "from": "GITHUB_FIND_PULL_REQUESTS",
@@ -32377,11 +32143,11 @@
       "reason": "data.commits[].sha"
     },
     {
-      "from": "GITHUB_GET_A_BRANCH",
+      "from": "GITHUB_SEARCH_COMMITS",
       "to": "GITHUB_CREATE_A_COMMIT",
       "param": "tree",
       "score": 0.9,
-      "reason": "data.commit.sha"
+      "reason": "data.items[].sha"
     },
     {
       "from": "GITHUB_LIST_COMMITS",
@@ -32398,11 +32164,11 @@
       "reason": "data.commits[].sha"
     },
     {
-      "from": "GITHUB_GET_A_BRANCH",
+      "from": "GITHUB_SEARCH_COMMITS",
       "to": "GITHUB_CREATE_A_COMMIT_COMMENT",
       "param": "commit_sha",
       "score": 0.9,
-      "reason": "data.commit.sha"
+      "reason": "data.items[].sha"
     },
     {
       "from": "GITHUB_LIST_DEPLOYMENTS",
@@ -33819,20 +33585,6 @@
       "reason": "data.milestones[].number"
     },
     {
-      "from": "GITHUB_SEARCH_ISSUES",
-      "to": "GITHUB_DELETE_MILESTONE",
-      "param": "milestone_number",
-      "score": 0.9,
-      "reason": "data.items[].milestone.number"
-    },
-    {
-      "from": "GITHUB_SEARCH_ISSUES_AND_PULL_REQUESTS",
-      "to": "GITHUB_DELETE_MILESTONE",
-      "param": "milestone_number",
-      "score": 0.9,
-      "reason": "data.items[].milestone.number"
-    },
-    {
       "from": "GITHUB_LIST_ORGANIZATION_CODESPACES_SECRETS",
       "to": "GITHUB_DELETE_ORGANIZATION_SECRET",
       "param": "secret_name",
@@ -34218,13 +33970,6 @@
       "reason": "data.protection_rules[].id"
     },
     {
-      "from": "GITHUB_GET_CODE_SCANNING_ALERT",
-      "to": "GITHUB_DISABLE_A_CUSTOM_PROTECTION_RULE_FOR_AN_ENVIRONMENT",
-      "param": "protection_rule_id",
-      "score": 0.8,
-      "reason": "data.rule.id"
-    },
-    {
       "from": "GITHUB_LIST_REPOSITORY_WORKFLOWS",
       "to": "GITHUB_DISABLE_A_WORKFLOW",
       "param": "workflow_id",
@@ -34265,13 +34010,6 @@
       "param": "repository_id",
       "score": 1,
       "reason": "data.repositories[].id"
-    },
-    {
-      "from": "GITHUB_GET_AN_ISSUE_EVENT",
-      "to": "GITHUB_DISMISS_A_REVIEW_FOR_A_PULL_REQUEST",
-      "param": "review_id",
-      "score": 0.8,
-      "reason": "data.data.dismissed_review.review_id"
     },
     {
       "from": "GITHUB_LIST_REVIEWS_FOR_A_PULL_REQUEST",
@@ -34603,11 +34341,11 @@
       "reason": "data.commits[].sha"
     },
     {
-      "from": "GITHUB_GET_A_BRANCH",
+      "from": "GITHUB_SEARCH_COMMITS",
       "to": "GITHUB_GET_A_COMMIT",
       "param": "ref",
       "score": 0.9,
-      "reason": "data.commit.sha"
+      "reason": "data.items[].sha"
     },
     {
       "from": "GITHUB_LIST_BRANCHES",
@@ -34636,27 +34374,6 @@
       "param": "milestone_number",
       "score": 1,
       "reason": "data.milestones[].number"
-    },
-    {
-      "from": "GITHUB_SEARCH_ISSUES",
-      "to": "GITHUB_GET_A_MILESTONE",
-      "param": "milestone_number",
-      "score": 0.9,
-      "reason": "data.items[].milestone.number"
-    },
-    {
-      "from": "GITHUB_SEARCH_ISSUES_AND_PULL_REQUESTS",
-      "to": "GITHUB_GET_A_MILESTONE",
-      "param": "milestone_number",
-      "score": 0.9,
-      "reason": "data.items[].milestone.number"
-    },
-    {
-      "from": "GITHUB_CHECK_TOKEN",
-      "to": "GITHUB_GET_AN_APP",
-      "param": "app_slug",
-      "score": 0.72,
-      "reason": "data.data.app.slug"
     },
     {
       "from": "GITHUB_LIST_ARTIFACTS_FOR_A_REPOSITORY",
@@ -35198,13 +34915,6 @@
       "reason": "data.comments[].id"
     },
     {
-      "from": "GITHUB_GET_AN_ISSUE_EVENT",
-      "to": "GITHUB_GET_A_REVIEW_FOR_A_PULL_REQUEST",
-      "param": "review_id",
-      "score": 0.8,
-      "reason": "data.data.dismissed_review.review_id"
-    },
-    {
       "from": "GITHUB_LIST_REVIEWS_FOR_A_PULL_REQUEST",
       "to": "GITHUB_GET_A_REVIEW_FOR_A_PULL_REQUEST",
       "param": "review_id",
@@ -35303,13 +35013,6 @@
       "reason": "data.teams[].slug"
     },
     {
-      "from": "GITHUB_GET_COMMIT_OBJECT",
-      "to": "GITHUB_GET_A_TREE",
-      "param": "tree_sha",
-      "score": 0.8,
-      "reason": "data.tree.sha"
-    },
-    {
       "from": "GITHUB_LIST_ORGANIZATION_WEBHOOKS",
       "to": "GITHUB_GET_A_WEBHOOK_DELIVERY_FOR_AN_ORGANIZATION_WEBHOOK",
       "param": "hook_id",
@@ -35380,13 +35083,6 @@
       "reason": "data.check_runs[].id"
     },
     {
-      "from": "GITHUB_GET_CHECK_RUN",
-      "to": "GITHUB_GET_CHECK_SUITE",
-      "param": "check_suite_id",
-      "score": 0.8,
-      "reason": "data.check_suite.id"
-    },
-    {
       "from": "GITHUB_LIST_CHECK_SUITES_FOR_A_GIT_REFERENCE",
       "to": "GITHUB_GET_CHECK_SUITE",
       "param": "check_suite_id",
@@ -35399,13 +35095,6 @@
       "param": "classroom_id",
       "score": 1,
       "reason": "data.classrooms[].id"
-    },
-    {
-      "from": "GITHUB_GET_AN_ASSIGNMENT",
-      "to": "GITHUB_GET_CLASSROOM",
-      "param": "classroom_id",
-      "score": 0.8,
-      "reason": "data.classroom.id"
     },
     {
       "from": "GITHUB_LIST_CODE_SCANNING_ALERTS_FOR_A_REPOSITORY",
@@ -35478,11 +35167,11 @@
       "reason": "data.commits[].sha"
     },
     {
-      "from": "GITHUB_GET_A_BRANCH",
+      "from": "GITHUB_SEARCH_COMMITS",
       "to": "GITHUB_GET_COMMIT_OBJECT",
       "param": "commit_sha",
       "score": 0.9,
-      "reason": "data.commit.sha"
+      "reason": "data.items[].sha"
     },
     {
       "from": "GITHUB_LIST_BRANCHES",
@@ -36017,25 +35706,11 @@
       "reason": "named in param description"
     },
     {
-      "from": "GITHUB_GET_AN_ASSIGNMENT",
-      "to": "GITHUB_LIST_ASSIGNMENTS_FOR_A_CLASSROOM",
-      "param": "classroom_id",
-      "score": 0.8,
-      "reason": "data.classroom.id"
-    },
-    {
       "from": "GITHUB_LIST_CLASSROOMS",
       "to": "GITHUB_LIST_ASSIGNMENTS_FOR_A_CLASSROOM",
       "param": "classroom_id",
       "score": 0.75,
       "reason": "data.classrooms[].id"
-    },
-    {
-      "from": "GITHUB_GET_A_BRANCH",
-      "to": "GITHUB_LIST_BRANCHES_FOR_HEAD_COMMIT",
-      "param": "commit_sha",
-      "score": 0.75,
-      "reason": "data.commit.sha"
     },
     {
       "from": "GITHUB_LIST_COMMITS",
@@ -36064,13 +35739,6 @@
       "param": "check_run_id",
       "score": 0.8,
       "reason": "data.check_runs[].id"
-    },
-    {
-      "from": "GITHUB_GET_CHECK_RUN",
-      "to": "GITHUB_LIST_CHECK_RUNS_IN_A_CHECK_SUITE",
-      "param": "check_suite_id",
-      "score": 0.8,
-      "reason": "data.check_suite.id"
     },
     {
       "from": "GITHUB_LIST_CHECK_SUITES_FOR_A_GIT_REFERENCE",
@@ -36150,11 +35818,11 @@
       "reason": "data.commits[].sha"
     },
     {
-      "from": "GITHUB_GET_A_BRANCH",
+      "from": "GITHUB_SEARCH_COMMITS",
       "to": "GITHUB_LIST_COMMIT_COMMENTS",
       "param": "commit_sha",
       "score": 0.9,
-      "reason": "data.commit.sha"
+      "reason": "data.items[].sha"
     },
     {
       "from": "GITHUB_FIND_PULL_REQUESTS",
@@ -36451,25 +36119,11 @@
       "reason": "data.runners[].id"
     },
     {
-      "from": "GITHUB_SEARCH_ISSUES",
-      "to": "GITHUB_LIST_LABELS_FOR_ISSUES_IN_A_MILESTONE",
-      "param": "milestone_number",
-      "score": 0.75,
-      "reason": "data.items[].milestone.number"
-    },
-    {
-      "from": "GITHUB_SEARCH_ISSUES_AND_PULL_REQUESTS",
-      "to": "GITHUB_LIST_LABELS_FOR_ISSUES_IN_A_MILESTONE",
-      "param": "milestone_number",
-      "score": 0.75,
-      "reason": "data.items[].milestone.number"
-    },
-    {
-      "from": "GITHUB_GET_AN_ISSUE",
+      "from": "GITHUB_LIST_MILESTONES",
       "to": "GITHUB_LIST_LABELS_FOR_ISSUES_IN_A_MILESTONE",
       "param": "milestone_number",
       "score": 0.67,
-      "reason": "data.milestone.number"
+      "reason": "data.milestones[].number"
     },
     {
       "from": "GITHUB_LIST_SELF_HOSTED_RUNNERS_FOR_AN_ORGANIZATION",
@@ -37051,13 +36705,6 @@
       "param": "role_id",
       "score": 0.67,
       "reason": "data.roles[].id"
-    },
-    {
-      "from": "GITHUB_GET_AN_ISSUE_EVENT",
-      "to": "GITHUB_LIST_TIMELINE_EVENTS_FOR_AN_ISSUE",
-      "param": "issue_number",
-      "score": 0.67,
-      "reason": "data.data.issue.number"
     },
     {
       "from": "GITHUB_LIST_ISSUES_ASSIGNED_TO_THE_AUTHENTICATED_USER",
@@ -38054,13 +37701,6 @@
       "reason": "data.check_runs[].id"
     },
     {
-      "from": "GITHUB_GET_CHECK_RUN",
-      "to": "GITHUB_REREQUEST_A_CHECK_SUITE",
-      "param": "check_suite_id",
-      "score": 0.8,
-      "reason": "data.check_suite.id"
-    },
-    {
       "from": "GITHUB_LIST_CHECK_SUITES_FOR_A_GIT_REFERENCE",
       "to": "GITHUB_REREQUEST_A_CHECK_SUITE",
       "param": "check_suite_id",
@@ -38628,13 +38268,6 @@
       "reason": "data.codespaces[].name"
     },
     {
-      "from": "GITHUB_GET_AN_ISSUE_EVENT",
-      "to": "GITHUB_SUBMIT_A_REVIEW_FOR_A_PULL_REQUEST",
-      "param": "review_id",
-      "score": 0.8,
-      "reason": "data.data.dismissed_review.review_id"
-    },
-    {
       "from": "GITHUB_LIST_REVIEWS_FOR_A_PULL_REQUEST",
       "to": "GITHUB_SUBMIT_A_REVIEW_FOR_A_PULL_REQUEST",
       "param": "review_id",
@@ -38962,20 +38595,6 @@
       "param": "milestone_number",
       "score": 1,
       "reason": "data.milestones[].number"
-    },
-    {
-      "from": "GITHUB_SEARCH_ISSUES",
-      "to": "GITHUB_UPDATE_A_MILESTONE",
-      "param": "milestone_number",
-      "score": 0.9,
-      "reason": "data.items[].milestone.number"
-    },
-    {
-      "from": "GITHUB_SEARCH_ISSUES_AND_PULL_REQUESTS",
-      "to": "GITHUB_UPDATE_A_MILESTONE",
-      "param": "milestone_number",
-      "score": 0.9,
-      "reason": "data.items[].milestone.number"
     },
     {
       "from": "GITHUB_LIST_ENVIRONMENT_VARIABLES",
@@ -39412,11 +39031,11 @@
       "reason": "data.commits[].sha"
     },
     {
-      "from": "GITHUB_GET_A_BRANCH",
+      "from": "GITHUB_SEARCH_COMMITS",
       "to": "GITHUB_UPLOAD_SARIF_ANALYSIS",
       "param": "commit_sha",
       "score": 0.9,
-      "reason": "data.commit.sha"
+      "reason": "data.items[].sha"
     },
     {
       "from": "GOOGLESUPER_ACL_LIST",
@@ -40777,27 +40396,6 @@
       "reason": "llm: This tool lists all columns of a project, which may include cards and their IDs."
     },
     {
-      "from": "GITHUB_LIST_REPOSITORY_TAGS",
-      "to": "GITHUB_GET_A_TAG",
-      "param": "tag_sha",
-      "score": 0.81,
-      "reason": "llm: Lists tags which can provide the SHA of the tag objects."
-    },
-    {
-      "from": "GITHUB_GET_A_RELEASE_BY_TAG_NAME",
-      "to": "GITHUB_GET_A_TAG",
-      "param": "tag_sha",
-      "score": 0.72,
-      "reason": "llm: Can retrieve a release by tag name, which may include the SHA."
-    },
-    {
-      "from": "GITHUB_LIST_MATCHING_REFERENCES",
-      "to": "GITHUB_GET_A_TAG",
-      "param": "tag_sha",
-      "score": 0.63,
-      "reason": "llm: Lists references including tags, which can provide the SHA."
-    },
-    {
       "from": "GITHUB_LIST_NOTIFICATIONS",
       "to": "GITHUB_GET_A_THREAD",
       "param": "thread_id",
@@ -40824,6 +40422,27 @@
       "param": "thread_id",
       "score": 0.63,
       "reason": "llm: Lists issues assigned to the user, which may include relevant IDs."
+    },
+    {
+      "from": "GITHUB_GET_COMMIT_OBJECT",
+      "to": "GITHUB_GET_A_TREE",
+      "param": "tree_sha",
+      "score": 0.81,
+      "reason": "llm: Retrieves commit details including tree SHA."
+    },
+    {
+      "from": "GITHUB_LIST_BRANCHES_FOR_HEAD_COMMIT",
+      "to": "GITHUB_GET_A_TREE",
+      "param": "tree_sha",
+      "score": 0.72,
+      "reason": "llm: Lists branches which can provide branch names for tree_sha."
+    },
+    {
+      "from": "GITHUB_LIST_COMMITS",
+      "to": "GITHUB_GET_A_TREE",
+      "param": "tree_sha",
+      "score": 0.63,
+      "reason": "llm: Lists commits which can provide commit SHAs for tree_sha."
     },
     {
       "from": "GITHUB_LIST_ORGANIZATION_WEBHOOKS",
@@ -41587,6 +41206,83 @@
       "param": "ref",
       "score": 0.81,
       "reason": "llm: This tool lists devcontainer configurations which can provide the necessary ref information."
+    },
+    {
+      "from": "GITHUB_LIST_CHECK_SUITES_FOR_A_GIT_REFERENCE",
+      "to": "GITHUB_CREATE_A_CHECK_SUITE",
+      "param": "head_sha",
+      "score": 0.72,
+      "reason": "llm: This tool lists check suites for a specific commit SHA, which can provide the necessary head_sha."
+    },
+    {
+      "from": "GITHUB_LIST_CHECK_RUNS_FOR_A_REF",
+      "to": "GITHUB_CREATE_A_CHECK_SUITE",
+      "param": "head_sha",
+      "score": 0.72,
+      "reason": "llm: This tool lists check runs for a commit SHA, which can help identify the head_sha."
+    },
+    {
+      "from": "GITHUB_LIST_BRANCHES_FOR_HEAD_COMMIT",
+      "to": "GITHUB_CREATE_A_CHECK_SUITE",
+      "param": "head_sha",
+      "score": 0.63,
+      "reason": "llm: This tool lists branches for a specific commit SHA, which can indirectly provide the head_sha."
+    },
+    {
+      "from": "GITHUB_LIST_CHECK_RUNS_FOR_A_REF",
+      "to": "GITHUB_CREATE_A_CHECK_RUN",
+      "param": "head_sha",
+      "score": 0.81,
+      "reason": "llm: This tool lists check runs for a commit SHA, which can provide the required head_sha."
+    },
+    {
+      "from": "GITHUB_LIST_CHECK_SUITES_FOR_A_GIT_REFERENCE",
+      "to": "GITHUB_CREATE_A_CHECK_RUN",
+      "param": "head_sha",
+      "score": 0.72,
+      "reason": "llm: This tool lists check suites for a commit SHA, which may include the head_sha."
+    },
+    {
+      "from": "GITHUB_LIST_WORKFLOW_RUNS_FOR_A_REPOSITORY",
+      "to": "GITHUB_CREATE_A_CHECK_RUN",
+      "param": "head_sha",
+      "score": 0.63,
+      "reason": "llm: This tool can filter by head SHA, potentially providing the required value."
+    },
+    {
+      "from": "GITHUB_LIST_APPS_WITH_ACCESS_TO_THE_PROTECTED_BRANCH",
+      "to": "GITHUB_GET_AN_APP",
+      "param": "app_slug",
+      "score": 0.72,
+      "reason": "llm: This tool returns app slugs which can be used to derive the app_slug parameter."
+    },
+    {
+      "from": "GITHUB_LIST_APP_INSTALLATIONS",
+      "to": "GITHUB_GET_AN_APP",
+      "param": "app_slug",
+      "score": 0.63,
+      "reason": "llm: This tool lists app installations which may include app slugs."
+    },
+    {
+      "from": "GITHUB_LIST_REPOSITORY_TAGS",
+      "to": "GITHUB_GET_A_TAG",
+      "param": "tag_sha",
+      "score": 0.81,
+      "reason": "llm: Lists tags which can provide the SHA of the tag object."
+    },
+    {
+      "from": "GITHUB_GET_A_RELEASE_BY_TAG_NAME",
+      "to": "GITHUB_GET_A_TAG",
+      "param": "tag_sha",
+      "score": 0.72,
+      "reason": "llm: Can return the ID of a release associated with a tag, which may include the tag SHA."
+    },
+    {
+      "from": "GITHUB_LIST_MATCHING_REFERENCES",
+      "to": "GITHUB_GET_A_TAG",
+      "param": "tag_sha",
+      "score": 0.63,
+      "reason": "llm: Lists references including tags, which can help identify the SHA."
     }
   ]
 }

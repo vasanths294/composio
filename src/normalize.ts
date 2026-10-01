@@ -1,11 +1,10 @@
 import { dataPath, readJson, writeJson } from "./lib/io";
 import { log, tally } from "./lib/log";
-import { type OutputField, type Param, type Tool, type Toolkit, TOOLKITS } from "./lib/types";
+import { type OutputField, type Param, TOOLKITS, type Tool, type Toolkit } from "./lib/types";
 
 type Json = Record<string, unknown>;
 
-export const isObj = (v: unknown): v is Json =>
-  typeof v === "object" && v !== null && !Array.isArray(v);
+export const isObj = (v: unknown): v is Json => typeof v === "object" && v !== null && !Array.isArray(v);
 const str = (v: unknown): string => (typeof v === "string" ? v : "");
 
 export const toSnake = (s: string): string =>
@@ -17,17 +16,39 @@ export const toSnake = (s: string): string =>
     .toLowerCase();
 
 export function singular(w: string): string {
-  if (w.length <= 3 || w.endsWith("ss")) return w;
+  if (w.length <= 3 || /(ss|us|is|as)$/.test(w)) return w; // status, analysis, alias are already singular
   if (w.endsWith("ies")) return `${w.slice(0, -3)}y`;
   if (/(ss|x|ch|sh)es$/.test(w)) return w.slice(0, -2);
   return w.endsWith("s") ? w.slice(0, -1) : w;
 }
 
 const VERB_ALIASES: Record<string, string> = {
-  FIND: "SEARCH", QUERY: "SEARCH", LOOKUP: "SEARCH", FETCH: "GET", RETRIEVE: "GET", READ: "GET",
-  ADD: "CREATE", INSERT: "CREATE", PATCH: "UPDATE", EDIT: "UPDATE", MODIFY: "UPDATE", REMOVE: "DELETE",
+  FIND: "SEARCH",
+  QUERY: "SEARCH",
+  LOOKUP: "SEARCH",
+  FETCH: "GET",
+  RETRIEVE: "GET",
+  READ: "GET",
+  ADD: "CREATE",
+  INSERT: "CREATE",
+  PATCH: "UPDATE",
+  EDIT: "UPDATE",
+  MODIFY: "UPDATE",
+  REMOVE: "DELETE",
 };
-const VERBS = new Set([...Object.keys(VERB_ALIASES), "LIST", "SEARCH", "GET", "CREATE", "UPDATE", "DELETE", "SEND", "REPLY", "MOVE", "COPY"]);
+const VERBS = new Set([
+  ...Object.keys(VERB_ALIASES),
+  "LIST",
+  "SEARCH",
+  "GET",
+  "CREATE",
+  "UPDATE",
+  "DELETE",
+  "SEND",
+  "REPLY",
+  "MOVE",
+  "COPY",
+]);
 const FILLER = new Set(["A", "AN", "THE", "FOR", "OF", "TO", "BY", "IN", "ON", "FROM", "WITH", "AND"]);
 
 export function parseSlug(slug: string, toolkit: Toolkit): Pick<Tool, "verb" | "resource"> {
@@ -66,7 +87,11 @@ function typeOf(p: Json): string {
   if (Array.isArray(p.type)) return p.type.filter((t) => t !== "null").join("|");
   const variants = p.anyOf ?? p.oneOf;
   if (Array.isArray(variants)) {
-    return variants.filter(isObj).map(typeOf).filter((t) => t && t !== "null").join("|");
+    return variants
+      .filter(isObj)
+      .map(typeOf)
+      .filter((t) => t && t !== "null")
+      .join("|");
   }
   return "unknown";
 }
@@ -91,7 +116,20 @@ function readParams(schema: unknown): { required: Param[]; optional: Param[] } {
 }
 
 const IGNORED_ROOT = new Set(["successful", "successfull", "error", "log_id"]);
-const WRAPPERS = new Set(["data", "response", "response_data", "result", "results", "items", "item", "value", "values", "body", "payload", "details"]);
+const WRAPPERS = new Set([
+  "data",
+  "response",
+  "response_data",
+  "result",
+  "results",
+  "items",
+  "item",
+  "value",
+  "values",
+  "body",
+  "payload",
+  "details",
+]);
 const CONTEXTUAL = new Set(["id", "number", "key", "sha", "slug", "name", "login", "email", "url"]);
 const MAX_DEPTH = 8;
 
@@ -135,10 +173,12 @@ function toFields(segments: string[], resource: string): OutputField[] {
   const leaf = names.at(-1);
   if (!leaf) return [];
 
-  const parents = names.slice(0, -1).filter((n) => !WRAPPERS.has(n));
+  const parentSegments = segments.slice(0, -1).filter((s) => !WRAPPERS.has(toSnake(s.replace("[]", ""))));
+  const parents = parentSegments.map((s) => toSnake(s.replace("[]", "")));
   const parent = parents.at(-1);
   const entity = parent ? singular(parent) : resource;
-  const field = (name: string): OutputField => ({ name, path, entity, depth: parents.length });
+  const listed = parentSegments.at(-1)?.endsWith("[]") ?? false;
+  const field = (name: string): OutputField => ({ name, path, entity, depth: parents.length, listed });
 
   const fields = [field(leaf)];
   if (CONTEXTUAL.has(leaf) && !leaf.startsWith(entity)) fields.push(field(`${entity}_${leaf}`));
@@ -197,7 +237,8 @@ export async function normalizeTools(): Promise<Tool[]> {
     tools.push(...kit);
 
     const required = kit.flatMap((t) => t.required);
-    const share = (name: string) => `${Math.round((100 * required.filter((p) => p.name === name).length) / kit.length)}%`;
+    const share = (name: string) =>
+      `${Math.round((100 * required.filter((p) => p.name === name).length) / kit.length)}%`;
     const topRequired = tally(required, (p) => p.name, 25)
       .split("  ")
       .map((e) => `${e}(${share(e.split(":")[0] ?? "")})`)

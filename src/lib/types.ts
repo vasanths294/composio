@@ -16,6 +16,7 @@ export interface OutputField {
   path: string; // data.issues[].number
   entity: string; // issue (the tool's own resource if top-level)
   depth: number; // entity nesting: 0 = top-level, 2+ = embedded in another entity
+  listed: boolean; // parent is an array item (issues[].number), not a sub-object (dismissed_review.review_id)
 }
 
 export interface Tool {

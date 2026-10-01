@@ -12,7 +12,25 @@ const MIN_CONFIDENCE = 0.7;
 const MAX_PRODUCERS = 3;
 const CONCURRENCY = 5;
 
-const STOP = new Set(["the", "and", "for", "with", "from", "that", "this", "list", "get", "returns", "data", "api", "use", "all", "are", "specified", "given"]);
+const STOP = new Set([
+  "the",
+  "and",
+  "for",
+  "with",
+  "from",
+  "that",
+  "this",
+  "list",
+  "get",
+  "returns",
+  "data",
+  "api",
+  "use",
+  "all",
+  "are",
+  "specified",
+  "given",
+]);
 
 const SYSTEM = `You map tool parameters to the tools that can supply their values.
 A candidate qualifies only if its output directly contains a value usable as the parameter (e.g. an id, number, name or email of the right entity).
@@ -37,12 +55,16 @@ const words = (s: string): string[] =>
     .filter((w) => w.length > 2 && !STOP.has(w))
     .map(singular);
 
-const needsLLM = (r: Requirement): boolean => r.kind === "unresolved" || (r.kind === "user" && r.param.endsWith("email"));
+const needsLLM = (r: Requirement): boolean =>
+  r.kind === "unresolved" || (r.kind === "user" && r.param.endsWith("email"));
 
 function shortlist(consumer: Tool, params: string[], tools: Tool[]): Tool[] {
   const target = new Set([...params.flatMap(words), ...words(consumer.resource)]);
   return tools
-    .filter((t) => t.toolkit === consumer.toolkit && t !== consumer && (t.readOnly || ["LIST", "GET", "SEARCH"].includes(t.verb)))
+    .filter(
+      (t) =>
+        t.toolkit === consumer.toolkit && t !== consumer && (t.readOnly || ["LIST", "GET", "SEARCH"].includes(t.verb)),
+    )
     .filter((t) => !t.required.some((r) => params.includes(r.name)))
     .map((t) => {
       const name = words(t.slug).filter((w) => target.has(w)).length;
@@ -61,7 +83,10 @@ function buildPrompt(consumer: Tool, params: string[], candidates: Tool[]): stri
     .filter((p) => params.includes(p.name))
     .map((p) => `- ${p.name} (${p.type}): ${p.description.slice(0, 300)}`);
   const candidateLines = candidates.map((t) => {
-    const fields = t.outputs.filter((f) => f.depth <= 1).map((f) => f.path).slice(0, 8);
+    const fields = t.outputs
+      .filter((f) => f.depth <= 1)
+      .map((f) => f.path)
+      .slice(0, 8);
     return `- ${t.slug}: ${t.description.slice(0, 200)} | returns: ${fields.join(", ") || "untyped results"}`;
   });
   return [
@@ -145,7 +170,13 @@ export async function refineWithLLM(graph: Graph, tools: Tool[]): Promise<Graph>
         .filter((p) => allowed.has(p.tool) && p.confidence >= MIN_CONFIDENCE)
         .sort((a, b) => b.confidence - a.confidence)
         .slice(0, MAX_PRODUCERS)
-        .map((p) => ({ from: p.tool, to: node.slug, param: need.param, score: Math.round(p.confidence * 90) / 100, reason: `llm: ${p.reason}` }));
+        .map((p) => ({
+          from: p.tool,
+          to: node.slug,
+          param: need.param,
+          score: Math.round(p.confidence * 90) / 100,
+          reason: `llm: ${p.reason}`,
+        }));
       if (edges.length === 0) continue;
       need.kind = need.kind === "user" ? "either" : "tool";
       need.producers = edges.map((e) => e.from);
@@ -161,7 +192,11 @@ export async function refineWithLLM(graph: Graph, tools: Tool[]): Promise<Graph>
   await log("refine", [
     `model: ${MODEL}  tools sent: ${jobs.length}  cached: ${cached}  errors: ${errors.length}`,
     `params resolved: ${resolved}  edges added: ${added.length}`,
-    `still unresolved: ${tally(graph.nodes.flatMap((n) => n.needs).filter((r) => r.kind === "unresolved"), (r) => r.param, 15)}`,
+    `still unresolved: ${tally(
+      graph.nodes.flatMap((n) => n.needs).filter((r) => r.kind === "unresolved"),
+      (r) => r.param,
+      15,
+    )}`,
     ...added.slice(0, 8).map((e) => `  + ${e.from} > ${e.to} [${e.param}] ${e.score}`),
     ...errors.slice(0, 3).map((e) => `  ! ${e}`),
   ]);

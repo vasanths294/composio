@@ -17,9 +17,11 @@ const singularIds = (name: string): string => name.replace(/(^|_)ids$/, "$1id").
 
 const ID_DESC = /\b(ID|IDs|SHA)\b/;
 const isIdentifier = (p: Param): boolean =>
-  ID_NAME.test(singularIds(p.name)) || ID_DESC.test(p.description) || /\b(identifier|resource name)\b/i.test(p.description);
+  ID_NAME.test(singularIds(p.name)) ||
+  ID_DESC.test(p.description) ||
+  /\b(identifier|resource name)\b/i.test(p.description);
 
-interface Key {
+export interface Key {
   name: string;
   loose: boolean; // allow entity-prefix matching (pull_number ↔ pull_request_number)
 }
@@ -44,19 +46,20 @@ function keysFor(p: Param, consumer: Tool): Key[] {
   // polymorphic refs: "ref … can be a commit SHA" → commit_sha
   if (identifier && !BARE.has(tokens.at(-1) ?? "")) {
     for (const word of ["sha", "id", "number"]) {
-      if (new RegExp(`\\b${word}\\b`, "i").test(p.description)) keys.push({ name: `${consumer.resource}_${word}`, loose: false });
+      if (new RegExp(`\\b${word}\\b`, "i").test(p.description))
+        keys.push({ name: `${consumer.resource}_${word}`, loose: false });
     }
   }
   return keys;
 }
 
-type Match = "exact" | "loose" | null;
+export type Match = "exact" | "loose" | null;
 
 /**
  * issue_number ↔ issue_number, tasklist_id ↔ task_list_id, pull_number ↔ pull_request_number, hook_id ↔ webhook_id.
  * A stem that is an entity itself (task) is never treated as an abbreviation of a longer one (task_list).
  */
-function fieldMatch(field: OutputField, key: Key, producer: Tool, entities: Set<string>): Match {
+export function fieldMatch(field: OutputField, key: Key, producer: Tool, entities: Set<string>): Match {
   if (compact(field.name) === compact(key.name)) return "exact";
   const i = key.name.lastIndexOf("_");
   if (!key.loose || i <= 0) return null;
@@ -74,14 +77,23 @@ function fieldMatch(field: OutputField, key: Key, producer: Tool, entities: Set<
 const isDetailEcho = (producer: Tool, field: OutputField): boolean =>
   field.depth === 0 &&
   [...producer.required, ...producer.optional].some(
-    (r) => compact(r.name) === compact(field.name) || (isIdentifier(r) && compact(r.name).startsWith(compact(field.entity))),
+    (r) =>
+      compact(r.name) === compact(field.name) || (isIdentifier(r) && compact(r.name).startsWith(compact(field.entity))),
   );
 
 const isLookup = (t: Tool): boolean => t.readOnly || ["LIST", "GET", "SEARCH"].includes(t.verb);
 
-function scoreProducer(consumer: Tool, producer: Tool, field: OutputField, match: Match, stem: string, context: Set<string>): number {
+function scoreProducer(
+  consumer: Tool,
+  producer: Tool,
+  field: OutputField,
+  match: Match,
+  stem: string,
+  context: Set<string>,
+): number {
   let score = match === "loose" ? 0.8 : 1;
-  if (field.depth >= 2) score *= 0.4; // value embedded in another entity (e.g. PR number inside a workflow run)
+  // embedded in another entity: a PR number inside a workflow run, a review inside an issue event
+  if (field.depth >= 2 || (field.depth === 1 && !field.listed)) score *= 0.4;
   if (producer.app !== consumer.app) score *= 0.85; // Google apps share Drive ids
 
   // same scope wins: repo secrets over org secrets, issue comments over commit comments
@@ -93,7 +105,8 @@ function scoreProducer(consumer: Tool, producer: Tool, field: OutputField, match
   const consumerParams = new Set(consumer.required.map((r) => r.name));
   for (const r of producer.required) {
     if (r.default !== undefined || r.enum) continue;
-    if (context.has(r.name)) score *= consumerParams.has(r.name) ? 1 : 0.7; // needs context the user didn't give
+    if (context.has(r.name))
+      score *= consumerParams.has(r.name) ? 1 : 0.7; // needs context the user didn't give
     else score *= isIdentifier(r) ? 0.8 : 0.9; // needs its own lookup first
   }
   return score;
@@ -128,7 +141,10 @@ export async function buildGraph(): Promise<Graph> {
   const bySlug = new Map(tools.map((t) => [t.slug, t]));
   const entities = new Set(tools.flatMap((t) => [t.resource, ...t.outputs.map((f) => f.entity)]));
   const contextByKit = new Map(
-    [...new Set(tools.map((t) => t.toolkit))].map((kit) => [kit, contextParams(tools.filter((t) => t.toolkit === kit))]),
+    [...new Set(tools.map((t) => t.toolkit))].map((kit) => [
+      kit,
+      contextParams(tools.filter((t) => t.toolkit === kit)),
+    ]),
   );
 
   const nodes: GraphNode[] = [];
@@ -168,7 +184,13 @@ export async function buildGraph(): Promise<Graph> {
       }
       for (const producer of hintedProducers(p, consumer, bySlug)) {
         if (producer !== consumer && isLookup(producer)) {
-          offer({ from: producer.slug, to: consumer.slug, param: p.name, score: HINT_SCORE, reason: "named in param description" });
+          offer({
+            from: producer.slug,
+            to: consumer.slug,
+            param: p.name,
+            score: HINT_SCORE,
+            reason: "named in param description",
+          });
         }
       }
 
@@ -200,4 +222,3 @@ export async function buildGraph(): Promise<Graph> {
   ]);
   return graph;
 }
-
