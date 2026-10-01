@@ -16,6 +16,7 @@ const STOP = new Set(["the", "and", "for", "with", "from", "that", "this", "list
 
 const SYSTEM = `You map tool parameters to the tools that can supply their values.
 A candidate qualifies only if its output directly contains a value usable as the parameter (e.g. an id, number, name or email of the right entity).
+When a candidate's output is untyped, judge it by its description (a contact search that matches names returns their emails).
 Never pick a tool that itself requires the same value. Prefer list/search tools. Return an empty producers list when no candidate fits.
 Reply with JSON only: {"params":[{"param":"<name>","producers":[{"tool":"<SLUG>","confidence":<0..1>,"reason":"<short>"}]}]}`;
 
@@ -80,6 +81,7 @@ async function askLLM(prompt: string): Promise<Reply> {
     body: JSON.stringify({
       model: MODEL,
       temperature: 0,
+      response_format: { type: "json_object" },
       messages: [
         { role: "system", content: SYSTEM },
         { role: "user", content: prompt },
@@ -127,7 +129,7 @@ export async function refineWithLLM(graph: Graph, tools: Tool[]): Promise<Graph>
     if (reply) cached++;
     else {
       try {
-        reply = await askLLM(prompt);
+        reply = await askLLM(prompt).catch(() => askLLM(prompt)); // one retry for malformed JSON
         cache[key] = reply;
       } catch (err) {
         errors.push(`${node.slug}: ${err instanceof Error ? err.message : String(err)}`);

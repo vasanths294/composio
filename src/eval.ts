@@ -31,11 +31,13 @@ export async function evaluate(graph: Graph, tools: Tool[]): Promise<boolean> {
   const hits = truth.mustExist.length - missed.length;
   const passed = [unknown, falsePositives, wronglyResolved, wronglyIncoming, invariants].every((list) => list.length === 0);
   const fmt = (rows: string[][]) => rows.map((r) => `  - ${r.join(" > ")}`);
+  const got = ([, to, param]: string[]) =>
+    graph.edges.filter((e) => e.to === to && e.param === param).map((e) => e.from).join(", ") || "nothing";
 
   await log("eval", [
     `${passed ? "PASS" : "FAIL"}  recall ${hits}/${truth.mustExist.length} (${Math.round((100 * hits) / truth.mustExist.length)}%)`,
     `false positives: ${falsePositives.length}  wrongly resolved: ${wronglyResolved.length}  wrongly incoming: ${wronglyIncoming.length}  invariant breaks: ${invariants.length}  unknown slugs: ${unknown.length}`,
-    ...(missed.length ? ["missed:", ...fmt(missed)] : []),
+    ...(missed.length ? ["missed:", ...missed.map((m) => `  - ${m.join(" > ")}  (got: ${got(m)})`)] : []),
     ...(falsePositives.length ? ["false positives:", ...fmt(falsePositives)] : []),
     ...(wronglyResolved.length ? ["wrongly resolved:", ...fmt(wronglyResolved)] : []),
     ...(wronglyIncoming.length ? ["wrongly incoming:", ...wronglyIncoming.map((s) => `  - ${s}`)] : []),
