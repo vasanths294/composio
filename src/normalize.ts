@@ -24,7 +24,7 @@ export function singular(w: string): string {
 }
 
 const VERB_ALIASES: Record<string, string> = {
-  FIND: "SEARCH", QUERY: "SEARCH", FETCH: "GET", RETRIEVE: "GET", READ: "GET",
+  FIND: "SEARCH", QUERY: "SEARCH", LOOKUP: "SEARCH", FETCH: "GET", RETRIEVE: "GET", READ: "GET",
   ADD: "CREATE", INSERT: "CREATE", PATCH: "UPDATE", EDIT: "UPDATE", MODIFY: "UPDATE", REMOVE: "DELETE",
 };
 const VERBS = new Set([...Object.keys(VERB_ALIASES), "LIST", "SEARCH", "GET", "CREATE", "UPDATE", "DELETE", "SEND", "REPLY", "MOVE", "COPY"]);
@@ -36,7 +36,8 @@ export function parseSlug(slug: string, toolkit: Toolkit): Pick<Tool, "verb" | "
   const known = tokens.findIndex((t) => VERBS.has(t));
   const i = known >= 0 ? known : 0;
   const verb = tokens[i] ?? "UNKNOWN";
-  const after = tokens.slice(i + 1);
+  const by = tokens.indexOf("BY", i + 1); // GET_DOCUMENT_BY_ID → document
+  const after = tokens.slice(i + 1, by > i ? by : undefined);
   const resource = (after.length > 0 ? after : tokens.slice(0, i))
     .filter((t) => !FILLER.has(t))
     .map((t) => singular(t.toLowerCase()))
@@ -70,6 +71,8 @@ function typeOf(p: Json): string {
   return "unknown";
 }
 
+const CONDITIONAL = /at least one of|must be provided|either .+ or .+ must/i;
+
 function readParams(schema: unknown): { required: Param[]; optional: Param[] } {
   const required: Param[] = [];
   const optional: Param[] = [];
@@ -81,14 +84,15 @@ function readParams(schema: unknown): { required: Param[]; optional: Param[] } {
     const param: Param = { name: toSnake(rawName), rawName, type: typeOf(p), description: str(p.description).trim() };
     if (p.default !== undefined && p.default !== null) param.default = p.default;
     if (Array.isArray(p.enum)) param.enum = p.enum;
-    (requiredNames.has(rawName) ? required : optional).push(param);
+    if (!requiredNames.has(rawName) && CONDITIONAL.test(param.description)) param.conditional = true;
+    (requiredNames.has(rawName) || param.conditional ? required : optional).push(param);
   }
   return { required, optional };
 }
 
 const IGNORED_ROOT = new Set(["successful", "successfull", "error", "log_id"]);
 const WRAPPERS = new Set(["data", "response", "response_data", "result", "results", "items", "item", "value", "values", "body", "payload", "details"]);
-const CONTEXTUAL = new Set(["id", "number", "key", "sha", "name", "login", "email", "url"]);
+const CONTEXTUAL = new Set(["id", "number", "key", "sha", "slug", "name", "login", "email", "url"]);
 const MAX_DEPTH = 8;
 
 function walk(node: unknown, root: Json, path: string[], out: string[][], depth: number, refs: Set<string>): void {
@@ -137,7 +141,7 @@ function toFields(segments: string[], resource: string): OutputField[] {
   const field = (name: string): OutputField => ({ name, path, entity, depth: parents.length });
 
   const fields = [field(leaf)];
-  if (parent && CONTEXTUAL.has(leaf) && !leaf.startsWith(entity)) fields.push(field(`${entity}_${leaf}`));
+  if (CONTEXTUAL.has(leaf) && !leaf.startsWith(entity)) fields.push(field(`${entity}_${leaf}`));
   if (parent && leaf === "login") fields.push(field(entity));
   return fields;
 }
@@ -162,6 +166,7 @@ function normalizeTool(raw: Json, toolkit: Toolkit): Tool | null {
   if (!slug || raw.isDeprecated === true) return null;
 
   const { verb, resource } = parseSlug(slug, toolkit);
+  const tags = Array.isArray(raw.tags) ? raw.tags : [];
   const { required, optional } = readParams(raw.inputParameters);
   return {
     slug,
@@ -174,6 +179,8 @@ function normalizeTool(raw: Json, toolkit: Toolkit): Tool | null {
     required,
     optional,
     outputs: readOutputs(raw.outputParameters, resource),
+    readOnly: tags.includes("readOnlyHint"),
+    destructive: tags.includes("destructiveHint"),
   };
 }
 

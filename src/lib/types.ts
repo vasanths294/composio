@@ -8,6 +8,7 @@ export interface Param {
   description: string;
   default?: unknown;
   enum?: unknown[];
+  conditional?: boolean; // optional in schema, but description says it must be provided
 }
 
 export interface OutputField {
@@ -28,4 +29,31 @@ export interface Tool {
   required: Param[];
   optional: Param[];
   outputs: OutputField[];
+  readOnly: boolean;
+  destructive: boolean;
+}
+
+export type ParamKind = "context" | "tool" | "either" | "user" | "unresolved";
+
+export interface Requirement {
+  param: string;
+  kind: ParamKind;
+  producers: string[];
+}
+
+export interface Edge {
+  from: string;
+  to: string;
+  param: string;
+  score: number;
+  reason: string;
+}
+
+export interface GraphNode extends Pick<Tool, "slug" | "toolkit" | "app" | "verb" | "resource"> {
+  needs: Requirement[];
+}
+
+export interface Graph {
+  nodes: GraphNode[];
+  edges: Edge[];
 }
